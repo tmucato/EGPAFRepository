@@ -5,3 +5,12 @@ C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\s
 C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.csprojResolveAssemblyReference.cache
 C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.dll
 C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.pdb
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\bin\Debug\smiDAL.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\bin\Debug\smiDAL.pdb
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\bin\Debug\MySql.Data.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\bin\Debug\MySql.Data.xml
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.csprojResolveAssemblyReference.cache
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.pdb
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\bin\smiDAL.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\bin\smiDAL.pdb

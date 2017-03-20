@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,36 @@ namespace smiDAL
     {
         public static MySqlConnection GetSMIDataBaseConnection()
         {
-            MySqlConnection con = new MySqlConnection("server=localhost;User Id=root;password=sapassword;database=smi;Persist Security Info=True");
+            List<string> dbconfig = GetDBConfigFromFile();
+            string conStr = "server = " + dbconfig[0] + "; User Id =" + dbconfig[1] + "; password = " + dbconfig[2] + "; database =" + dbconfig[3] + "; Persist Security Info = True";
+            MySqlConnection con = new MySqlConnection(conStr);
+
             return con;
         }
+
+        private static List<string> GetDBConfigFromFile()
+        {
+            List<string> configList = new List<string>();
+
+            try
+            {
+                string configLine;
+                using (StreamReader sr = new StreamReader("..\\smiDAL\\DbConnect.config"))
+                {
+                    while ((configLine = sr.ReadLine()) != null)
+                    {
+                        configList.Add(configLine.Split('|')[1]);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            return configList;
+
+        }
+
     }
 }
