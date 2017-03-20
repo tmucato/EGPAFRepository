@@ -1,0 +1,40 @@
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\bin\Debug\smi.exe.config
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\bin\Debug\smi.exe
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\bin\Debug\smi.pdb
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.frLogin.resources
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.Properties.Resources.resources
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.exe
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.pdb
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.frMain.resources
+c:\users\user\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.frMother.resources
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\bin\Debug\CustomControl.OrientedTextControls.dll
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\bin\Debug\VerticalLabel.dll
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\bin\Debug\VerticalLabel.xml
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.frmCPN.resources
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.frmCPN2.resources
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.csprojResolveAssemblyReference.cache
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.Variaveis.resources
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.frmLogin.resources
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.FrmHome.resources
+C:\Users\User\documents\visual studio 2010\Projects\smi\smi\obj\x86\Debug\smi.FrmPaciente.resources
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\smi.exe.config
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csprojResolveAssemblyReference.cache
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmLogin.resources
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmHome.resources
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmPaciente.resources
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmCPN.resources
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmCPN2.resources
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.Properties.Resources.resources
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\smi.exe
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\smi.pdb
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\CustomControl.OrientedTextControls.dll
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\MySql.Data.dll
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\smiDAL.dll
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\VerticalLabel.dll
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\smiDAL.pdb
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\MySql.Data.xml
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\bin\Debug\VerticalLabel.xml
+C:\Users\tmucato\Documents\EGPAF_Data\DotNetProject\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
