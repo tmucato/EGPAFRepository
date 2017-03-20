@@ -1,0 +1,5 @@
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.pdb
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.csprojResolveAssemblyReference.cache
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.pdb

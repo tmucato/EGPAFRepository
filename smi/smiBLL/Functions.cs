@@ -8,6 +8,6 @@ namespace smiBLL
 {
     public class Functions
     {
-
+       
     }
 }
