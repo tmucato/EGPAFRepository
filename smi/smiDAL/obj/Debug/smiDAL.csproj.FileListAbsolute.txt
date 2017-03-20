@@ -14,3 +14,8 @@ C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.dl
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.pdb
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\bin\smiDAL.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\bin\smiDAL.pdb
+C:\Users\User\Documents\GitHub\EGPAFRepository\smi\bin\smiDAL.dll
+C:\Users\User\Documents\GitHub\EGPAFRepository\smi\bin\smiDAL.pdb
+C:\Users\User\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.dll
+C:\Users\User\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.pdb
