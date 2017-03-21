@@ -36,6 +36,7 @@
     <Reference Include="log4net">
       <HintPath>..\third party\Log4Net\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +48,8 @@
     <Compile Include="Functions.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tables\Mother.cs" />
+    <Compile Include="Tables\Users.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Log4NetConfig.config" />

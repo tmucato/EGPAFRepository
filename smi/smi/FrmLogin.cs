@@ -34,7 +34,7 @@ namespace smi
                 connect = Connection.GetSMIDataBaseConnection();
                 connect.Open();
             }
-            catch (MySqlException e)
+            catch (MySqlException ex)
             {
                 throw;
             }
