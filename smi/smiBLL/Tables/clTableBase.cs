@@ -27,6 +27,5 @@ namespace smiBLL.Tables
         public abstract void UpdateEntity(T Entity);
 
 
-
     }
 }

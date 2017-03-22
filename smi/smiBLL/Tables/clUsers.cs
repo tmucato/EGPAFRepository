@@ -1,11 +1,12 @@
-﻿using smiBLL.Tables;
+﻿using smiBLL;
+using smiBLL.Tables;
 using smiDAL;
 using System;
 using System.Collections.Generic;
 
 namespace smiBLL
 {
-    public class clUsers : clTableBase
+    public class clUsers : clTableBase<clUsers>
     {
         public int ID;
         public string username;
@@ -26,30 +27,33 @@ namespace smiBLL
             systemrole = string.Empty;
         }
 
-        public List<clUsers> GetEntity()
+        public override List<clUsers> GetEntityList()
         {
             List<clUsers> List_Users = new List<clUsers>();
 
             try
             {
-               
+
+                
+
             }
             catch (Exception ex)
             {
                 Logger.LogError("Error getting list of users ", ex);
                 throw;
-
-            }
-            finally
-            {
-               
             }
 
             return List_Users;
-
         }
 
+        public override void InsertEntity(clUsers Entity)
+        {
+            throw new NotImplementedException();
+        }
 
-
+        public override void UpdateEntity(clUsers Entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
