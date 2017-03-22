@@ -1,8 +1,6 @@
-﻿using System;
+﻿using smiDAL;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace smiBLL
 {
@@ -33,13 +31,27 @@ namespace smiBLL
 
             try
             {
-          
+                //DBsmiContainer DBContext = new DBsmiContainer(Connection.GetMIDataBaseConStr());
+
+                //foreach (usuario usr in DBContext.usuario)
+                //{
+
+                //}
+                //{
+
+                //}
+
 
             }
             catch (Exception ex)
             {
                 Logger.LogError("Error getting list of users ", ex);
                 throw;
+
+            }
+            finally
+            {
+               
             }
 
             return List_Users;

@@ -19,6 +19,14 @@ namespace smiDAL
             return con;
         }
 
+        public static string GetMIDataBaseConStr()
+        {
+            List<string> dbconfig = GetDBConfigFromFile();
+            string conStr = "server = " + dbconfig[0] + "; User Id =" + dbconfig[1] + "; password = " + dbconfig[2] + "; database =" + dbconfig[3] + "; Persist Security Info = True";
+            return conStr;
+        }
+
+
         private static List<string> GetDBConfigFromFile()
         {
             List<string> configList = new List<string>();
