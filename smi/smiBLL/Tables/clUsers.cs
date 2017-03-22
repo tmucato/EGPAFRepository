@@ -1,10 +1,11 @@
-﻿using smiDAL;
+﻿using smiBLL.Tables;
+using smiDAL;
 using System;
 using System.Collections.Generic;
 
 namespace smiBLL
 {
-    public class Users
+    public class clUsers : clTableBase
     {
         public int ID;
         public string username;
@@ -14,7 +15,7 @@ namespace smiBLL
         public string posicao;
         public string systemrole;
 
-        public Users()
+        public clUsers()
         {
             ID = 0;
             username = string.Empty;
@@ -25,23 +26,13 @@ namespace smiBLL
             systemrole = string.Empty;
         }
 
-        public List<Users> GetEntity()
+        public List<clUsers> GetEntity()
         {
-            List<Users> List_Users = new List<Users>();
+            List<clUsers> List_Users = new List<clUsers>();
 
             try
             {
-                //DBsmiContainer DBContext = new DBsmiContainer(Connection.GetMIDataBaseConStr());
-
-                //foreach (usuario usr in DBContext.usuario)
-                //{
-
-                //}
-                //{
-
-                //}
-
-
+               
             }
             catch (Exception ex)
             {
