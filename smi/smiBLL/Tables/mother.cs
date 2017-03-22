@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace smiBLL.Tables
 {
-    class Mother
+    public class Mother
     {
+
     }
 }

@@ -25,5 +25,7 @@ namespace smiDAL
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<usuario> usuario { get; set; }
+        public DbSet<mother> mother { get; set; }
     }
 }
