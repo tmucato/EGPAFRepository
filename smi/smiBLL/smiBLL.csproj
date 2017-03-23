@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>smiBLL</RootNamespace>
     <AssemblyName>smiBLL</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.cs" />
     <Compile Include="Functions.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,13 +54,8 @@
     <Compile Include="Tables\clUsers.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DbConnect.config" />
     <None Include="Log4NetConfig.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\smiDAL\smiDAL.csproj">
-      <Project>{774aac0b-3e0f-4475-9b2f-ffee78063412}</Project>
-      <Name>smiDAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
