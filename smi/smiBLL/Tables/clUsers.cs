@@ -33,8 +33,8 @@ namespace smiBLL
 
             try
             {
-
-                
+                DBsmiEntities DbContext = new DBsmiEntities();
+                List<usuario> List_usuario = 
 
             }
             catch (Exception ex)

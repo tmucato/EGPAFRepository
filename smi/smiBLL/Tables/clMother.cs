@@ -1,4 +1,5 @@
-﻿using System;
+﻿using smiDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,22 @@ namespace smiBLL.Tables
 
         public override List<clMother> GetEntityList()
         {
-            throw new NotImplementedException();
+            List<clMother> List_mother = new List<clMother>();
+            try
+            {
+                //using (DbsmiContainer DbContext = new DbsmiContainer())
+                //{
+
+                //}
+
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+                Logger.LogError("Error getting list of mothers from database", ex);
+            }
+            return List_mother;
         }
 
         public override void InsertEntity(clMother Entity)
