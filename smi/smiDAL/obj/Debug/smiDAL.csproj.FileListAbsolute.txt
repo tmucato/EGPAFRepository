@@ -1,5 +1,5 @@
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\bin\smiDAL.dll.config
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\bin\smiDAL.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\bin\smiDAL.pdb
-C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.csprojResolveAssemblyReference.cache
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.pdb

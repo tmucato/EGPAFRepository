@@ -1,10 +1,10 @@
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.pdb
-C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.csprojResolveAssemblyReference.cache
-C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.dll
-C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.pdb
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\log4net.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\smiDAL.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\MySql.Data.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\smiDAL.pdb
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\MySql.Data.xml
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.csprojResolveAssemblyReference.cache
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.pdb
