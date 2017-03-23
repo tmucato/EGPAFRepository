@@ -1,0 +1,6 @@
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\Logging\obj\Debug\Logging.csprojResolveAssemblyReference.cache
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\Logging\bin\Debug\Logging.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\Logging\bin\Debug\Logging.pdb
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\Logging\bin\Debug\log4net.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\Logging\obj\Debug\Logging.dll
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\Logging\obj\Debug\Logging.pdb

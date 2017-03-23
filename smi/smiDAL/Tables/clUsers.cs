@@ -1,8 +1,8 @@
-﻿using smiBLL;
-using smiBLL.Tables;
+﻿using smiBLL.Tables;
 using smiDAL;
 using System;
 using System.Collections.Generic;
+
 
 namespace smiBLL
 {
@@ -33,8 +33,8 @@ namespace smiBLL
 
             try
             {
-                DBsmiEntities DbContext = new DBsmiEntities();
-                List<usuario> List_usuario = 
+                var DbContext = new DBsmiEntities();
+               var List_usuario =  DbContext.usuario;
 
             }
             catch (Exception ex)

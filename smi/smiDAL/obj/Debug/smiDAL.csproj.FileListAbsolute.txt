@@ -10,6 +10,5 @@ C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\bin\Debug\MySql.Web
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\bin\Debug\EntityFramework.xml
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\bin\Debug\MySql.Web.xml
-C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.csprojResolveAssemblyReference.cache
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.pdb
