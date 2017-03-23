@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection.cs" />
     <Compile Include="Functions.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,8 +53,14 @@
     <Compile Include="Tables\clUsers.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DbConnect.config" />
+    <None Include="app.config" />
     <None Include="Log4NetConfig.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\smiDAL\smiDAL.csproj">
+      <Project>{e36c762f-bef5-4f9c-97c7-d6d1e0f69237}</Project>
+      <Name>smiDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

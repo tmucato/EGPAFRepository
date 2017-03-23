@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("smiDAL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("EGPAF")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("smiDAL")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("774aac0b-3e0f-4475-9b2f-ffee78063412")]
+[assembly: Guid("e36c762f-bef5-4f9c-97c7-d6d1e0f69237")]
 
 // Version information for an assembly consists of the following four values:
 //

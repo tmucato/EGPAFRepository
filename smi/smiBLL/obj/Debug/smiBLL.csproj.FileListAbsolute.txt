@@ -1,3 +1,4 @@
+C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.dll.config
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.pdb
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\log4net.dll
