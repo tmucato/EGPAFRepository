@@ -57,10 +57,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="DBsmi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBsmi.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DbConnect.config" />
+    <EntityDeploy Include="DBsmi.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBsmi.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBsmi.edmx.diagram">
+      <DependentUpon>DBsmi.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

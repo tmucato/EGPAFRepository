@@ -1,31 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="DBsmi.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="mother">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nid_cpn" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="nid_tarv" Type="varchar" MaxLength="45" />
-    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="residence" Type="varchar" MaxLength="60" />
-    <Property Name="phone" Type="varchar" MaxLength="45" />
-    <Property Name="dob" Type="datetime" Precision="0" />
-  </EntityType>
-  <EntityType Name="usuario">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="username" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="apelido" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="password" Type="varchar" MaxLength="45" />
-    <Property Name="posicao" Type="varchar" MaxLength="45" />
-    <Property Name="systemrole" Type="varchar" MaxLength="45" />
-  </EntityType>
-  <EntityContainer Name="DBsmiStoreContainer">
-    <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
-    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
-  </EntityContainer>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="DBsmi.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+  <EntityContainer Name="DBsmiTargetContainer" />
 </Schema>

@@ -2,32 +2,5 @@
 <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
   <Alias Key="Model" Value="DBsmi" />
   <Alias Key="Target" Value="DBsmi.Store" />
-  <EntityContainerMapping CdmEntityContainer="DBsmiContainer" StorageEntityContainer="DBsmiStoreContainer">
-    <EntitySetMapping Name="usuario">
-      <EntityTypeMapping TypeName="DBsmi.usuario">
-        <MappingFragment StoreEntitySet="usuario">
-          <ScalarProperty Name="systemrole" ColumnName="systemrole" />
-          <ScalarProperty Name="posicao" ColumnName="posicao" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="apelido" ColumnName="apelido" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="mother">
-      <EntityTypeMapping TypeName="DBsmi.mother">
-        <MappingFragment StoreEntitySet="mother">
-          <ScalarProperty Name="dob" ColumnName="dob" />
-          <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="residence" ColumnName="residence" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="nid_tarv" ColumnName="nid_tarv" />
-          <ScalarProperty Name="nid_cpn" ColumnName="nid_cpn" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-  </EntityContainerMapping>
+  <EntityContainerMapping CdmEntityContainer="DBsmiContainer" StorageEntityContainer="DBsmiTargetContainer" />
 </Mapping>
