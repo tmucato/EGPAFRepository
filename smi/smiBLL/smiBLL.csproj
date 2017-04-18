@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Functions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tables\clMother.cs" />
+    <Compile Include="Tables\clTableBase.cs" />
+    <Compile Include="Tables\clUsers.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\smiDAL\smiDAL.csproj">
