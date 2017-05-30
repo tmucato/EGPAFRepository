@@ -26,6 +26,12 @@ namespace smiBLL.Tables
         /// <param name="Entity"></param>
         public abstract void UpdateEntity(T Entity);
 
+        /// <summary>
+        /// Delete an Entity on Database
+        /// </summary>
+        /// <param name="Entity"></param>
+        public abstract void DeleteEntity(T Entity);
+
 
     }
 }

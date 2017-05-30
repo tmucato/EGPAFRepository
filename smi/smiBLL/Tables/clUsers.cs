@@ -33,8 +33,21 @@ namespace smiBLL
 
             try
             {
-                var DbContext = new DBsmiEntities();
-               var List_usuario =  DbContext.usuario;
+            //    using (DBsmiEntities DbContext = new DBsmiEntities())
+            //    {
+            //        foreach (usuario user in DbContext.usuario)
+            //        {
+            //            clUsers clUsr = new clUsers();
+            //            clUsr.ID = user.id;
+            //            clUsr.username = user.username;
+            //            clUsr.name = user.name;
+            //            clUsr.apelido = user.apelido;
+            //            clUsr.password = user.password;
+            //            clUsr.posicao = user.posicao;
+            //            clUsr.systemrole = user.systemrole;
+            //            List_Users.Add(clUsr);
+            //        }
+            //    }
 
             }
             catch (Exception ex)
@@ -55,5 +68,11 @@ namespace smiBLL
         {
             throw new NotImplementedException();
         }
+
+        public override void DeleteEntity(clUsers Entity)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

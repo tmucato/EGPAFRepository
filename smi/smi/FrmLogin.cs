@@ -9,98 +9,61 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient; // required for MySQL connection after addition of MySQL References
 using smiDAL;
+using smiBLL;
 
 namespace smi
 {
     public partial class frmLogin : Form
     {
-        private string conn;
-        private MySqlConnection connect;
         public frmLogin()
         {
             InitializeComponent();
         }
-        public static class Variaveis
-        {
-
-            public static string Usuario;
-
-        }
-        private void db_connection()
-        {
-            try
-            {
-              
-                connect = Connection.GetSMIDataBaseConnection();
-                connect.Open();
-            }
-            catch (MySqlException ex)
-            {
-                throw;
-            }
-        }
 
         private bool validate_login(string user, string pass)
         {
-            
-            db_connection();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "Select * from usuario where username=@user and password=@pass";
-            cmd.Parameters.AddWithValue("@user", user);
-            cmd.Parameters.AddWithValue("@pass", pass);
-            cmd.Connection = connect;
-            MySqlDataReader login = cmd.ExecuteReader();
-            if (login.Read())
+            Boolean result = false;
+            try
             {
-                connect.Close();
-                return true;
-                
+                List<clUsers> List_User;
+                clUsers clusr = new clUsers();
+                List_User = clusr.GetEntityList().Where(u => u.username == user && u.password == pass).ToList();
+                if (List_User.Count > 0)
+                    result = true;
+                else
+                    result = false;
             }
-            else
+            catch (Exception ex)
             {
-                connect.Close();
-                return false;
+                Logger.LogError("Error getting list of mothers from database", ex);
+                throw ex;
             }
+            return result;
         }
 
         private void cmdSubmeter_Click(object sender, EventArgs e)
         {
-            string rolename = "";
+            clUsers clusr = new clUsers();
+
             string user = txtUsername.Text;
             string pass = txtPassword.Text;
-            //Para buscar o "role"
-            db_connection();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "Select * from usuario where username=@user and password=@pass";
-            cmd.Parameters.AddWithValue("@user", user);
-            cmd.Parameters.AddWithValue("@pass", pass);
-            cmd.Connection = connect;
-            MySqlDataReader login = cmd.ExecuteReader();
-            if (user == "" || pass == "")
+
+            if (validate_login(user, pass))
             {
-                MessageBox.Show("Empty Fields Detected ! Please fill up all the fields");
-                // return;
-                this.Close();
-            }
-            bool r = validate_login(user, pass);
-            if (r)
-            {
-                this.Hide();
-                if (login.Read())
+
+                List<clUsers> List_User = clusr.GetEntityList().Where(u => u.username == user && u.password == pass).ToList();
+                string rolename = List_User.FirstOrDefault().systemrole;
+                if (rolename == AppConstants.SYSTEM_ROLE_ADMIN)
                 {
-                    rolename = (string)login["systemrole"];
-                }
-                if (rolename=="ADMIN")
-                {
-                FrmHome frm = new FrmHome();
-                frm.Show();
+                    FrmHome frm = new FrmHome();
+                    frm.Show();
                 }
                 else
                 {
-                 //   FrmHome frm = new FrmHome();
-                  //  frm.Show();
+                    //TODO: Redicecionar para formulario de user no admin
                 }
-               // MessageBox.Show("Correct Login Credentials");
+
+                this.Hide();
             }
             else
             {
@@ -108,7 +71,7 @@ namespace smi
                 this.txtUsername.Clear();
                 MessageBox.Show("Incorrect Login Credentials");
             }
-             
+
         }
 
         private void cmdCancelar_Click(object sender, EventArgs e)
@@ -116,7 +79,7 @@ namespace smi
             this.Close();
         }
 
-      
-       
+
+
     }
 }

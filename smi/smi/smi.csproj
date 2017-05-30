@@ -167,6 +167,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{5b73265f-c910-41af-80ac-3dac98385df5}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\smiBLL\smiBLL.csproj">
+      <Project>{23601B83-7594-4F6E-A615-56BBA9F88643}</Project>
+      <Name>smiBLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\smiDAL\smiDAL.csproj">
       <Project>{e36c762f-bef5-4f9c-97c7-d6d1e0f69237}</Project>
       <Name>smiDAL</Name>

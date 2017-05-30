@@ -30,23 +30,36 @@ namespace smiBLL.Tables
         }
 
 
-
+        /// <summary>
+        /// Get from the database a list of mother
+        /// </summary>
+        /// <returns>List of mother class</returns>
         public override List<clMother> GetEntityList()
         {
             List<clMother> List_mother = new List<clMother>();
+           
             try
             {
-                //using (DbsmiContainer DbContext = new DbsmiContainer())
+                //using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetSMIDataBaseConStr()))
                 //{
-
+                //    foreach (mother moth in DbContext.mother)
+                //    {
+                //        clMother clMoth = new clMother();
+                //        clMoth.id = moth.id;
+                //        clMoth.nid_cpn = moth.nid_cpn;
+                //        clMoth.nid_tarv = moth.nid_tarv;
+                //        clMoth.name = moth.name;
+                //        clMoth.phone = moth.phone;
+                //        clMoth.residence = moth.residence;
+                //        clMoth.dob = DateTime.Parse(moth.dob.ToString());
+                //        List_mother.Add(clMoth);
+                //    }
                 //}
-
-
             }
             catch (Exception ex)
             {
-                throw;
                 Logger.LogError("Error getting list of mothers from database", ex);
+                throw;
             }
             return List_mother;
         }
@@ -57,6 +70,11 @@ namespace smiBLL.Tables
         }
 
         public override void UpdateEntity(clMother Entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DeleteEntity(clMother Entity)
         {
             throw new NotImplementedException();
         }

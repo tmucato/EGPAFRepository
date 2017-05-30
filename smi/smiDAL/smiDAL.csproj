@@ -54,7 +54,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -66,55 +65,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="DBsmi.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBsmi.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBsmi.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBsmi.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBsmi.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="mother.cs">
-      <DependentUpon>DBsmi.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="usuario.cs">
-      <DependentUpon>DBsmi.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="DbConnect.config" />
-    <EntityDeploy Include="DBsmi.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBsmi.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DBsmi.edmx.diagram">
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DBsmi.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-      <LastGenOutput>DBsmi.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DBsmi.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-      <LastGenOutput>DBsmi.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Logging\Logging.csproj">
