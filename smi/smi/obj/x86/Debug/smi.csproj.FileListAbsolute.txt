@@ -11,7 +11,6 @@ C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smi\obj\x86\Debug\smi.Prop
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
-C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\bin\smi.exe.config
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\bin\smi.exe
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\bin\smi.pdb
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csprojResolveAssemblyReference.cache

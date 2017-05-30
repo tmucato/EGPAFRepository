@@ -10,7 +10,6 @@ C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\bin\Debug\EntityFra
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.csprojResolveAssemblyReference.cache
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.dll
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.pdb
-C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.dll.config
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.dll
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.pdb
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\bin\Debug\Logging.dll
