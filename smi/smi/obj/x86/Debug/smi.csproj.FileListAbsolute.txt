@@ -12,8 +12,6 @@ C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smi\obj\x86\Debug\smi.cspr
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
 C:\Users\tmucato\Documents\GitHub\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\bin\smi.exe.config
-C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
-C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\bin\smi.exe
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\bin\smi.pdb
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csprojResolveAssemblyReference.cache
@@ -24,3 +22,5 @@ C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmCPN.re
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmCPN2.resources
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.Properties.Resources.resources
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
+C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
+C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
