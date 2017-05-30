@@ -1,14 +1,13 @@
-﻿using smiBLL.Tables;
-using smiDAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using smiDAL;
 
 
 namespace smiBLL
 {
     public class clUsers : clTableBase<clUsers>
     {
-        public int ID;
+        public long ID;
         public string username;
         public string name;
         public string apelido;
@@ -33,21 +32,21 @@ namespace smiBLL
 
             try
             {
-            //    using (DBsmiEntities DbContext = new DBsmiEntities())
-            //    {
-            //        foreach (usuario user in DbContext.usuario)
-            //        {
-            //            clUsers clUsr = new clUsers();
-            //            clUsr.ID = user.id;
-            //            clUsr.username = user.username;
-            //            clUsr.name = user.name;
-            //            clUsr.apelido = user.apelido;
-            //            clUsr.password = user.password;
-            //            clUsr.posicao = user.posicao;
-            //            clUsr.systemrole = user.systemrole;
-            //            List_Users.Add(clUsr);
-            //        }
-            //    }
+                using (DBsmiEntities DbContext = new DBsmiEntities())
+                {
+                    foreach (usuario user in DbContext.usuarios)
+                    {
+                        clUsers clUsr = new clUsers();
+                        clUsr.ID = user.id;
+                        clUsr.username = user.username;
+                        clUsr.name = user.name;
+                        clUsr.apelido = user.apelido;
+                        clUsr.password = user.password;
+                        clUsr.posicao = user.posicao;
+                        clUsr.systemrole = user.systemrole;
+                        List_Users.Add(clUsr);
+                    }
+                }
 
             }
             catch (Exception ex)

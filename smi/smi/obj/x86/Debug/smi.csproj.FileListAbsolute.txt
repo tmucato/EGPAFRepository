@@ -23,3 +23,4 @@ C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.Propertie
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
+C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\bin\smi.exe.config

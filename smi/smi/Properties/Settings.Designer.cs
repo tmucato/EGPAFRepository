@@ -22,5 +22,14 @@ namespace smi.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string con {
+            get {
+                return ((string)(this["con"]));
+            }
+        }
     }
 }

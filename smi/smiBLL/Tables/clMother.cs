@@ -1,11 +1,11 @@
-﻿using smiDAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using smiDAL;
 
-namespace smiBLL.Tables
+namespace smiBLL
 {
     public class clMother : clTableBase<clMother>
     {
@@ -40,25 +40,25 @@ namespace smiBLL.Tables
            
             try
             {
-                //using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetSMIDataBaseConStr()))
-                //{
-                //    foreach (mother moth in DbContext.mother)
-                //    {
-                //        clMother clMoth = new clMother();
-                //        clMoth.id = moth.id;
-                //        clMoth.nid_cpn = moth.nid_cpn;
-                //        clMoth.nid_tarv = moth.nid_tarv;
-                //        clMoth.name = moth.name;
-                //        clMoth.phone = moth.phone;
-                //        clMoth.residence = moth.residence;
-                //        clMoth.dob = DateTime.Parse(moth.dob.ToString());
-                //        List_mother.Add(clMoth);
-                //    }
-                //}
+                using (DBsmiEntities DbContext = new DBsmiEntities())
+                {
+                    foreach (mother moth in DbContext.mothers)
+                    {
+                        clMother clMoth = new clMother();
+                        clMoth.id = moth.id;
+                        clMoth.nid_cpn = moth.nid_cpn;
+                        clMoth.nid_tarv = moth.nid_tarv;
+                        clMoth.name = moth.name;
+                        clMoth.phone = moth.phone;
+                        clMoth.residence = moth.residence;
+                        clMoth.dob = DateTime.Parse(moth.dob.ToString());
+                        List_mother.Add(clMoth);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                Logger.LogError("Error getting list of mothers from database", ex);
+                //Logger.LogError("Error getting list of mothers from database", ex);
                 throw;
             }
             return List_mother;

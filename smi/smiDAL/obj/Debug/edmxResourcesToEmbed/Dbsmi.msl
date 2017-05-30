@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="smiModelStoreContainer" CdmEntityContainer="smiEntities">
-    <EntitySetMapping Name="mother">
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="smiModelStoreContainer" CdmEntityContainer="DBsmiEntities">
+    <EntitySetMapping Name="mothers">
       <EntityTypeMapping TypeName="smiModel.mother">
         <MappingFragment StoreEntitySet="mother">
           <ScalarProperty Name="id" ColumnName="id" />
@@ -14,7 +14,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="usuario">
+    <EntitySetMapping Name="usuarios">
       <EntityTypeMapping TypeName="smiModel.usuario">
         <MappingFragment StoreEntitySet="usuario">
           <ScalarProperty Name="id" ColumnName="id" />
