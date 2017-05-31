@@ -98,7 +98,7 @@ namespace smi
                      }
                    }
                  connect.Close();
-                 cmdNew.Enabled = true;
+                 btnNew.Enabled = true;
              }
 
              private void cmdMotApagar_Click(object sender, EventArgs e)
@@ -197,7 +197,7 @@ namespace smi
                  txtNid_cpn.Focus();
                 
 
-                 cmdNew.Enabled = false;
+                 btnNew.Enabled = false;
              }
 
              private void textBoxDOB_FormatDate(object sender, ConvertEventArgs e)
