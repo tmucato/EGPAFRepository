@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient; // required for MySQL connection after addition of MySQL References
 using smiDAL;
 using smiBLL;
+using smiGlobal;
 
 namespace smi
 {
     public partial class frmLogin : Form
     {
+
         public frmLogin()
         {
             InitializeComponent();
@@ -25,9 +27,8 @@ namespace smi
             Boolean result = false;
             try
             {
-                List<clUsers> List_User;
                 clUsers clusr = new clUsers();
-                List_User = clusr.GetEntityList().Where(u => u.username == user && u.password == pass).ToList();
+                List<clUsers> List_User = clusr.GetEntityList().Where(u => u.username.ToUpper() == user.ToUpper() && u.password.ToUpper() == pass.ToUpper()).ToList();
                 if (List_User.Count > 0)
                     result = true;
                 else
@@ -45,38 +46,68 @@ namespace smi
         {
             clUsers clusr = new clUsers();
 
-            string user = txtUsername.Text;
-            string pass = txtPassword.Text;
-
-            if (validate_login(user, pass))
+            if (validate_fields())
             {
-
-                List<clUsers> List_User = clusr.GetEntityList().Where(u => u.username == user && u.password == pass).ToList();
-                string rolename = List_User.FirstOrDefault().systemrole;
-                if (rolename == AppConstants.SYSTEM_ROLE_ADMIN)
+                string user = txtUsername.Text;
+                string pass = txtPassword.Text;
+                if (validate_login(user, pass))
                 {
-                    FrmHome frm = new FrmHome();
-                    frm.Show();
+                    List<clUsers> List_User = clusr.GetEntityList().Where(u => u.username.ToUpper() == user.ToUpper() && u.password.ToUpper() == pass.ToUpper()).ToList();
+                    string rolename = List_User.FirstOrDefault().systemrole;
+
+
+                    if (rolename == AppConstants.SYSTEM_ROLE_DATA_CLERK)
+                        GlobalVariables.USER_ROLE = AppConstants.SYSTEM_ROLE_DATA_CLERK;
+                    else if (rolename == AppConstants.SYSTEM_ROLE_ADMIN)
+                        GlobalVariables.USER_ROLE = AppConstants.SYSTEM_ROLE_ADMIN;
+                    this.Close();
+                    GlobalVariables.USER_IS_LOGGED_IN = true;
+                    FrmHome frmHome = new FrmHome();
+                    frmHome.Show();
+
                 }
                 else
                 {
-                    //TODO: Redicecionar para formulario de user no admin
+                    this.txtPassword.Text = "";
+                    this.txtUsername.Clear();
+                    MessageBox.Show("Incorrect Login Credentials");
                 }
-
-                this.Hide();
-            }
-            else
-            {
-                this.txtPassword.Text = "";
-                this.txtUsername.Clear();
-                MessageBox.Show("Incorrect Login Credentials");
             }
 
         }
 
+        private bool validate_fields()
+        {
+            bool result = false;
+
+            try
+            {
+                if (String.IsNullOrWhiteSpace(txtUsername.Text))
+                {
+                    MessageBox.Show("O Campo do utilizador encontra-se vazio");
+                }
+                else if (String.IsNullOrWhiteSpace(txtPassword.Text))
+                {
+                    MessageBox.Show("O Campo do password encontra-se vazio");
+                }
+                else
+                {
+                    result = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return result;
+        }
+
+
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
 

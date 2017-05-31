@@ -18,5 +18,6 @@ namespace smiBLL
         /// </summary>
         public static string SYSTEM_ROLE_DATA_CLERK = "DATA_CLERK";
 
+        
     }
 }

@@ -188,6 +188,10 @@
       <Project>{e36c762f-bef5-4f9c-97c7-d6d1e0f69237}</Project>
       <Name>smiDAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\smiGlobal\smiGlobal.csproj">
+      <Project>{c23603ab-ee6e-481a-b699-e458b79071b6}</Project>
+      <Name>smiGlobal</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

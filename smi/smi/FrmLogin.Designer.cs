@@ -144,8 +144,10 @@
             this.Controls.Add(this.txtUsername);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frLogin";
+            this.Name = "frmLogin";
+            this.ShowInTaskbar = false;
             this.Text = "Sistema Electronico de Seguimento de Paciente de SMI";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

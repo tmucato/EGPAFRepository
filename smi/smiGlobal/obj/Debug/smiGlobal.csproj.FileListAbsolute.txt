@@ -1,0 +1,5 @@
+C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiGlobal\bin\Debug\smiGlobal.dll
+C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiGlobal\bin\Debug\smiGlobal.pdb
+C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiGlobal\obj\Debug\smiGlobal.csprojResolveAssemblyReference.cache
+C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiGlobal\obj\Debug\smiGlobal.dll
+C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiGlobal\obj\Debug\smiGlobal.pdb

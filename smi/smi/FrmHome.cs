@@ -1,4 +1,5 @@
-﻿using System;
+﻿using smiGlobal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,17 @@ namespace smi
         public FrmHome()
         {
             InitializeComponent();
+            if (GlobalVariables.USER_IS_LOGGED_IN == true)
+            {
+                this.Enabled = true;
+            }
+            else
+            {
+                this.Enabled = false;
+                frmLogin frmlogin = new frmLogin();
+                frmlogin.Show();
+            }
+
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,7 +45,7 @@ namespace smi
             frm.Show();
         }
 
-       
-       
+
+
     }
 }
