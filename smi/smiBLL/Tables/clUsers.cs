@@ -32,7 +32,7 @@ namespace smiBLL
 
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities())
+                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
                 {
                     foreach (usuario user in DbContext.usuarios)
                     {

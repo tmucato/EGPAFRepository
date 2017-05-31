@@ -20,7 +20,7 @@ namespace smiDAL
         {
         }
 
-        public DBsmiEntities(string conStr) : base(conStr)
+        public DBsmiEntities(string conStr) : base( conStr)
         {
 
         }

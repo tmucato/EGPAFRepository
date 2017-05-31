@@ -26,6 +26,14 @@ namespace smiDAL
             return conStr;
         }
 
+        public static string GetEFSMIDataBaseConStr()
+        {
+            List<string> dbconfig = GetDBConfigFromFile();
+            string conStr = "metadata=res://*/DBsmi.csdl|res://*/DBsmi.ssdl|res://*/DBsmi.msl;provider=MySql.Data.MySqlClient;provider connection string=';server=" + dbconfig[0] + ";user id=" + dbconfig[1] + ";password=" + dbconfig[2] + ";database=" + dbconfig[3] + "';";
+            return conStr;
+        }
+
+
 
         private static List<string> GetDBConfigFromFile()
         {
