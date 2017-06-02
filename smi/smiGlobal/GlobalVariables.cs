@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace smiGlobal
 {
@@ -16,5 +17,9 @@ namespace smiGlobal
         /// Global variable that hold a logged user role
         /// </summary>
         public static string USER_ROLE;
+
+        public static Form MAIN_FORM;
+
+
     }
 }

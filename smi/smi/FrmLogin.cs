@@ -62,7 +62,8 @@ namespace smi
                         GlobalVariables.USER_ROLE = AppConstants.SYSTEM_ROLE_ADMIN;
                     this.Close();
                     GlobalVariables.USER_IS_LOGGED_IN = true;
-                    FrmHome frmHome = new FrmHome();
+                    FrmHome frmHome = (FrmHome)GlobalVariables.MAIN_FORM;
+                    frmHome.Enabled = true;
                     frmHome.Show();
 
                 }

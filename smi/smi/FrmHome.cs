@@ -22,6 +22,7 @@ namespace smi
             else
             {
                 this.Enabled = false;
+                GlobalVariables.MAIN_FORM = this;
                 frmLogin frmlogin = new frmLogin();
                 frmlogin.Show();
             }
