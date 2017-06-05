@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using smiDAL;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace smiBLL
 {
@@ -37,10 +39,10 @@ namespace smiBLL
         public override List<clMother> GetEntityList()
         {
             List<clMother> List_mother = new List<clMother>();
-           
+
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities())
+                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
                 {
                     foreach (mother moth in DbContext.mothers)
                     {
@@ -51,19 +53,36 @@ namespace smiBLL
                         clMoth.name = moth.name;
                         clMoth.phone = moth.phone;
                         clMoth.residence = moth.residence;
-                        clMoth.dob = DateTime.Parse(moth.dob.ToString());
+                        if (moth.dob != null)
+                            clMoth.dob = DateTime.Parse(moth.dob.ToString());
                         List_mother.Add(clMoth);
                     }
                 }
             }
             catch (Exception ex)
             {
-                //Logger.LogError("Error getting list of mothers from database", ex);
+                Logger.LogError("Error getting list of mothers from database", ex);
                 throw;
             }
             return List_mother;
         }
 
+
+        public DataTable getMotherDataTable()
+        {
+            DataTable rsdt = new DataTable();
+
+            MySqlConnection cn = Connection.GetSMIDataBaseConnection();
+            cn.Open();
+            string Query = "select * from mother;";
+            MySqlCommand myCmd = new MySqlCommand(Query, cn);
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            MyAdapter.SelectCommand = myCmd;
+            DataTable dTable = new DataTable();
+            MyAdapter.Fill(rsdt);
+
+            return rsdt;
+        }
         public override void InsertEntity(clMother Entity)
         {
             throw new NotImplementedException();

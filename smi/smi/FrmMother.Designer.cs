@@ -41,7 +41,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.grdMother = new System.Windows.Forms.DataGridView();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.cmdMotApagar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,15 +49,15 @@
             this.txtSearched = new System.Windows.Forms.TextBox();
             this.txtDob = new System.Windows.Forms.TextBox();
             this.cbProcurar = new System.Windows.Forms.ComboBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMother = new System.Windows.Forms.DataGridView();
+            this.Select = new System.Windows.Forms.DataGridViewLinkColumn();
             this.nid_cpn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nid_tarv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.select = new System.Windows.Forms.DataGridViewLinkColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.grdMother)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMother)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,9 +68,9 @@
             this.label1.Location = new System.Drawing.Point(316, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 24);
+            this.label1.Size = new System.Drawing.Size(171, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "REGISTO DE PACENTE";
+            this.label1.Text = "REGISTO DE MÃE";
             // 
             // label2
             // 
@@ -80,9 +79,9 @@
             this.label2.Location = new System.Drawing.Point(64, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 16);
+            this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "ID do Paciente";
+            this.label2.Text = "ID  da Mãe";
             // 
             // txtID
             // 
@@ -114,7 +113,7 @@
             // 
             // txtResidence
             // 
-            this.txtResidence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResidence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtResidence.Location = new System.Drawing.Point(369, 106);
             this.txtResidence.Name = "txtResidence";
             this.txtResidence.Size = new System.Drawing.Size(168, 22);
@@ -159,18 +158,19 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label6.Location = new System.Drawing.Point(366, 88);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Residência";
             // 
             // txtPhone
             // 
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtPhone.Location = new System.Drawing.Point(552, 106);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(168, 26);
+            this.txtPhone.Size = new System.Drawing.Size(168, 22);
             this.txtPhone.TabIndex = 13;
             // 
             // label7
@@ -183,23 +183,6 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Contacto";
             // 
-            // grdMother
-            // 
-            this.grdMother.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdMother.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.nid_cpn,
-            this.nid_tarv,
-            this.name,
-            this.residence,
-            this.phone,
-            this.dob,
-            this.select});
-            this.grdMother.Location = new System.Drawing.Point(12, 199);
-            this.grdMother.Name = "grdMother";
-            this.grdMother.Size = new System.Drawing.Size(1014, 195);
-            this.grdMother.TabIndex = 13;
-            // 
             // btnSubmit
             // 
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -209,7 +192,6 @@
             this.btnSubmit.TabIndex = 18;
             this.btnSubmit.Text = "Submeter";
             this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.cmdMotSubmit_Click_1);
             // 
             // cmdMotApagar
             // 
@@ -219,7 +201,6 @@
             this.cmdMotApagar.TabIndex = 19;
             this.cmdMotApagar.Text = "Apagar";
             this.cmdMotApagar.UseVisualStyleBackColor = true;
-            this.cmdMotApagar.Click += new System.EventHandler(this.cmdMotApagar_Click);
             // 
             // label9
             // 
@@ -238,7 +219,7 @@
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(149, 27);
             this.btnNew.TabIndex = 101;
-            this.btnNew.Text = "Nova Paciente";
+            this.btnNew.Text = "Nova Mãe";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.cmdNew_Click);
             // 
@@ -261,9 +242,10 @@
             // 
             // txtDob
             // 
+            this.txtDob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtDob.Location = new System.Drawing.Point(726, 106);
             this.txtDob.Name = "txtDob";
-            this.txtDob.Size = new System.Drawing.Size(130, 26);
+            this.txtDob.Size = new System.Drawing.Size(130, 22);
             this.txtDob.TabIndex = 105;
             // 
             // cbProcurar
@@ -280,55 +262,89 @@
             this.cbProcurar.Size = new System.Drawing.Size(114, 28);
             this.cbProcurar.TabIndex = 106;
             // 
-            // ID
+            // dgvMother
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
+            this.dgvMother.AllowUserToAddRows = false;
+            this.dgvMother.AllowUserToDeleteRows = false;
+            this.dgvMother.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMother.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
+            this.nid_cpn,
+            this.nid_tarv,
+            this.name,
+            this.residence,
+            this.phone,
+            this.dob});
+            this.dgvMother.Location = new System.Drawing.Point(15, 211);
+            this.dgvMother.Name = "dgvMother";
+            this.dgvMother.ReadOnly = true;
+            this.dgvMother.Size = new System.Drawing.Size(1033, 176);
+            this.dgvMother.TabIndex = 107;
+            this.dgvMother.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMother_CellContentClick);
+            // 
+            // Select
+            // 
+            this.Select.DataPropertyName = "id";
+            this.Select.HeaderText = "Seleccionar";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Text = "";
+            this.Select.Width = 120;
             // 
             // nid_cpn
             // 
+            this.nid_cpn.DataPropertyName = "nid_cpn";
             this.nid_cpn.HeaderText = "NID CPN";
             this.nid_cpn.Name = "nid_cpn";
+            this.nid_cpn.ReadOnly = true;
             this.nid_cpn.Width = 130;
             // 
             // nid_tarv
             // 
+            this.nid_tarv.DataPropertyName = "nid_tarv";
             this.nid_tarv.HeaderText = "NID TARV";
             this.nid_tarv.Name = "nid_tarv";
+            this.nid_tarv.ReadOnly = true;
             this.nid_tarv.Width = 130;
             // 
             // name
             // 
+            this.name.DataPropertyName = "name";
+            this.name.FillWeight = 200F;
             this.name.HeaderText = "Nome";
             this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 200;
             // 
             // residence
             // 
-            this.residence.HeaderText = "Residência";
+            this.residence.DataPropertyName = "residence";
+            this.residence.HeaderText = "Morada";
             this.residence.Name = "residence";
+            this.residence.ReadOnly = true;
+            this.residence.Width = 240;
             // 
             // phone
             // 
+            this.phone.DataPropertyName = "phone";
             this.phone.HeaderText = "Telefone";
             this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
             // 
             // dob
             // 
+            this.dob.DataPropertyName = "dob";
             this.dob.HeaderText = "Data Nascimento";
             this.dob.Name = "dob";
-            this.dob.Width = 180;
+            this.dob.ReadOnly = true;
+            this.dob.Width = 170;
             // 
-            // select
-            // 
-            this.select.HeaderText = "Selecccionar";
-            this.select.Name = "select";
-            this.select.Width = 130;
-            // 
-            // FrmPaciente
+            // FrmMother
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 499);
+            this.Controls.Add(this.dgvMother);
             this.Controls.Add(this.txtDob);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtName);
@@ -341,7 +357,6 @@
             this.Controls.Add(this.txtSearched);
             this.Controls.Add(this.cmdProcurar);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.grdMother);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -353,9 +368,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FrmPaciente";
+            this.Name = "FrmMother";
             this.Text = "Sistema Electronico de Seguimento de Paciente de SMI (SESP-SMI)";
-            ((System.ComponentModel.ISupportInitialize)(this.grdMother)).EndInit();
+            this.Load += new System.EventHandler(this.FrmMother_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMother)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,7 +392,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView grdMother;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button cmdMotApagar;
         private System.Windows.Forms.Label label9;
@@ -385,13 +400,14 @@
         private System.Windows.Forms.TextBox txtSearched;
         private System.Windows.Forms.TextBox txtDob;
         private System.Windows.Forms.ComboBox cbProcurar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMother;
+        private System.Windows.Forms.DataGridViewLinkColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn nid_cpn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nid_tarv;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn residence;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn dob;
-        private System.Windows.Forms.DataGridViewLinkColumn select;
     }
 }
