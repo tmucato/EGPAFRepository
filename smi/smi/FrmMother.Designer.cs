@@ -345,7 +345,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 499);
+            this.ClientSize = new System.Drawing.Size(1114, 499);
             this.Controls.Add(this.dgvMother);
             this.Controls.Add(this.txtDob);
             this.Controls.Add(this.txtPhone);

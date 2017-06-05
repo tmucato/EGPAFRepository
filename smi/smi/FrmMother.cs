@@ -101,9 +101,33 @@ namespace smi
                 if (validate_fields())
                 {
 
+                    clMother obj_mother = new clMother();
+
+                    obj_mother.id = Convert.ToInt32(txtID.Text);
+                    obj_mother.nid_cpn = txtNid_cpn.Text;
+                  obj_mother.nid_tarv= txtNid_tarv.Text;
+                    obj_mother.name= txtName.Text;
+                    obj_mother.residence = txtResidence.Text;
+                      obj_mother.phone = txtPhone.Name;
+                    obj_mother.dob = Convert.ToDateTime( txtDob.Text);
+
+
+                    if (string.IsNullOrWhiteSpace(txtID.Text))
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+
                 }
                 else
                 {
+
+
+
+
 
                 }
 
