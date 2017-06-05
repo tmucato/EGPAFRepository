@@ -15,9 +15,7 @@ namespace smi
 {
     public partial class FrmMother : Form
     {
-
-
-
+        
         public FrmMother()
         {
             InitializeComponent();
