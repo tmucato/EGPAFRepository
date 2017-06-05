@@ -192,6 +192,7 @@
             this.btnSubmit.TabIndex = 18;
             this.btnSubmit.Text = "Submeter";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // cmdMotApagar
             // 
@@ -201,6 +202,7 @@
             this.cmdMotApagar.TabIndex = 19;
             this.cmdMotApagar.Text = "Apagar";
             this.cmdMotApagar.UseVisualStyleBackColor = true;
+            this.cmdMotApagar.Click += new System.EventHandler(this.cmdMotApagar_Click);
             // 
             // label9
             // 

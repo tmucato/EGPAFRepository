@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using smiDAL;
 using smiBLL;
+using Microsoft.VisualBasic;
 
 namespace smi
 {
     public partial class FrmMother : Form
     {
-        
+
         public FrmMother()
         {
             InitializeComponent();
@@ -45,7 +46,16 @@ namespace smi
 
         private void cmdNew_Click(object sender, EventArgs e)
         {
-            ClearFormContrls();
+            try
+            {
+                ClearFormContrls();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error cleaning mother form", ex);
+                MessageBox.Show("Error ao limpar form Mae");
+            }
+
         }
 
         private void BindBindFormControls(clMother obj_mother)
@@ -65,19 +75,114 @@ namespace smi
         /// </summary>
         private void ClearFormContrls()
         {
-            dgvMother.ClearSelection();
-            txtID.Clear();
-            txtNid_cpn.Clear();
-            txtNid_tarv.Clear();
-            txtName.Clear();
-            txtResidence.Clear();
-            txtPhone.Clear();
-            txtDob.Clear();
-            txtNid_cpn.Focus();
+            try
+            {
+                dgvMother.ClearSelection();
+                txtID.Clear();
+                txtNid_cpn.Clear();
+                txtNid_tarv.Clear();
+                txtName.Clear();
+                txtResidence.Clear();
+                txtPhone.Clear();
+                txtDob.Clear();
+                txtNid_cpn.Focus();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (validate_fields())
+                {
+
+                }
+                else
+                {
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error sumiting mother form", ex);
+                MessageBox.Show("Error inserindo Mãe");
+            }
+        }
+
+        private bool validate_fields()
+        {
+            bool result = false;
+
+            try
+            {
+                if (String.IsNullOrWhiteSpace(txtNid_cpn.Text))
+                {
+                    MessageBox.Show("O campo do NID CPN encontra-se vazio");
+                }
+
+                if (string.IsNullOrWhiteSpace(txtNid_tarv.Text))
+                {
+                    MessageBox.Show("O campo do NID TARV encontra-se vazio");
+                }
+                if (string.IsNullOrWhiteSpace(txtName.Text))
+                {
+                    MessageBox.Show("O campo do Nome encontra-se vazio");
+                }
+                if (string.IsNullOrWhiteSpace(txtResidence.Text))
+                {
+                    MessageBox.Show("O campo do residencia encontra-se vazio");
+                }
+                if (!Functions.IsNumber(txtPhone.Text))
+                {
+                    MessageBox.Show("O numero de telefone invalido");
+                }
+                if (!Functions.IsDate(txtDob.Text))
+                {
+                    MessageBox.Show("O data de nascimento inserida é invalida");
+                }
+                result = true;
+
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error sumiting mother form", ex);
+                MessageBox.Show("Error inserindo mae");
+            }
+
+            return result;
+
         }
 
 
+        private void cmdMotApagar_Click(object sender, EventArgs e)
+        {
+            try
+            {
 
+                if (!string.IsNullOrWhiteSpace(txtID.Text))
+                {
+                    int motherID = Convert.ToInt32(txtID.Text);
+                    clMother obj_mother = new clMother();
+                    obj_mother = obj_mother.GetEntityList().Where(m => m.id == motherID).FirstOrDefault();
+                    obj_mother.DeleteEntity(obj_mother);
+                }
+                else
+                {
+                    MessageBox.Show("Nenhuma Mãe selecionada para ser apagada");
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error deleting mother form", ex);
+                MessageBox.Show("Error apagando Mãe do sistema");
+            }
+        }
 
 
         private void cmdProcurar_Click(object sender, EventArgs e)
@@ -256,7 +361,6 @@ namespace smi
             }
 
         }
-
 
     }
 }

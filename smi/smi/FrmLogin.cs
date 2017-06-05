@@ -44,36 +44,45 @@ namespace smi
 
         private void cmdSubmeter_Click(object sender, EventArgs e)
         {
-            clUsers clusr = new clUsers();
-
-            if (validate_fields())
+            try
             {
-                string user = txtUsername.Text;
-                string pass = txtPassword.Text;
-                if (validate_login(user, pass))
+                clUsers clusr = new clUsers();
+
+                if (validate_fields())
                 {
-                    List<clUsers> List_User = clusr.GetEntityList().Where(u => u.username.ToUpper() == user.ToUpper() && u.password.ToUpper() == pass.ToUpper()).ToList();
-                    string rolename = List_User.FirstOrDefault().systemrole;
+                    string user = txtUsername.Text;
+                    string pass = txtPassword.Text;
+                    if (validate_login(user, pass))
+                    {
+                        List<clUsers> List_User = clusr.GetEntityList().Where(u => u.username.ToUpper() == user.ToUpper() && u.password.ToUpper() == pass.ToUpper()).ToList();
+                        string rolename = List_User.FirstOrDefault().systemrole;
 
 
-                    if (rolename == AppConstants.SYSTEM_ROLE_DATA_CLERK)
-                        GlobalVariables.USER_ROLE = AppConstants.SYSTEM_ROLE_DATA_CLERK;
-                    else if (rolename == AppConstants.SYSTEM_ROLE_ADMIN)
-                        GlobalVariables.USER_ROLE = AppConstants.SYSTEM_ROLE_ADMIN;
-                    this.Close();
-                    GlobalVariables.USER_IS_LOGGED_IN = true;
-                    FrmHome frmHome = (FrmHome)GlobalVariables.MAIN_FORM;
-                    frmHome.Enabled = true;
-                    frmHome.Show();
+                        if (rolename == AppConstants.SYSTEM_ROLE_DATA_CLERK)
+                            GlobalVariables.USER_ROLE = AppConstants.SYSTEM_ROLE_DATA_CLERK;
+                        else if (rolename == AppConstants.SYSTEM_ROLE_ADMIN)
+                            GlobalVariables.USER_ROLE = AppConstants.SYSTEM_ROLE_ADMIN;
+                        this.Close();
+                        GlobalVariables.USER_IS_LOGGED_IN = true;
+                        FrmHome frmHome = (FrmHome)GlobalVariables.MAIN_FORM;
+                        frmHome.Enabled = true;
+                        frmHome.Show();
 
-                }
-                else
-                {
-                    this.txtPassword.Text = "";
-                    this.txtUsername.Clear();
-                    MessageBox.Show("Incorrect Login Credentials");
+                    }
+                    else
+                    {
+                        this.txtPassword.Text = "";
+                        this.txtUsername.Clear();
+                        MessageBox.Show("Incorrect Login Credentials");
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error submiting login form", ex);
+                MessageBox.Show("Error ao tentar entrar no sistema");
+            }
+
 
         }
 
