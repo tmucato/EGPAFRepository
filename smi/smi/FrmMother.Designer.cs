@@ -1,6 +1,6 @@
 ﻿namespace smi
 {
-    partial class FrmPaciente
+    partial class FrmMother
     {
         /// <summary>
         /// Required designer variable.

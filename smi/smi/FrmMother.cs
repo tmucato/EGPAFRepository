@@ -12,7 +12,7 @@ using smiDAL;
 
 namespace smi
 {
-    public partial class FrmPaciente : Form
+    public partial class FrmMother : Form
     {
         private string conn;
         private MySqlConnection connect;
@@ -20,7 +20,7 @@ namespace smi
         private DataViewManager dsView;
         private DataSet ds;
 
-       public FrmPaciente()
+       public FrmMother()
         {
             InitializeComponent();
             // Setup DB-Connection

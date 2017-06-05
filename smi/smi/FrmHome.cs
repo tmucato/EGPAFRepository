@@ -34,19 +34,26 @@ namespace smi
             Application.Exit();
         }
 
-        private void maeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmPaciente frm = new FrmPaciente();
-            frm.Show();
-        }
-
         private void cPNLivroDeConsultaPreNatalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCPN frm = new frmCPN();
             frm.Show();
         }
 
+        private void criancaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void cPNLivroDeConsultaPreNatalToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmMother frm = new FrmMother();
+            frm.Show();
+        }
     }
 }
