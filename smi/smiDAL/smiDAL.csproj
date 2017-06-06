@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="child.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="DBsmi.Context.cs">
       <AutoGen>True</AutoGen>

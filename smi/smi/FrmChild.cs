@@ -1,4 +1,5 @@
-﻿using System;
+﻿using smiBLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,28 @@ namespace smi
         public FrmChild()
         {
             InitializeComponent();
+        }
+
+
+        private void FrmChild_Load(object sender, EventArgs e)
+        {
+            BinddgvMother();
+        }
+
+        private void BinddgvMother()
+        {
+            try
+            {
+                clChild child = new clChild();
+                dgvChild.AutoGenerateColumns = false;
+                dgvChild.DataSource = child.getChidDataTable();
+                dgvChild.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

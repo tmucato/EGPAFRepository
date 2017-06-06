@@ -1,5 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="smiModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="child">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nid_ccr" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="residence" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="45" />
+    <Property Name="mot_nid_cpn" Type="varchar" MaxLength="45" />
+    <Property Name="dob" Type="datetime" Precision="0" />
+  </EntityType>
   <EntityType Name="mother">
     <Key>
       <PropertyRef Name="id" />
@@ -16,7 +29,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="username" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="apelido" Type="varchar" MaxLength="45" Nullable="false" />
@@ -25,6 +38,7 @@
     <Property Name="systemrole" Type="varchar" MaxLength="45" />
   </EntityType>
   <EntityContainer Name="smiModelStoreContainer">
+    <EntitySet Name="child" EntityType="Self.child" Schema="smi" store:Type="Tables" />
     <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
     <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
   </EntityContainer>

@@ -38,10 +38,19 @@ namespace smi
         /// </summary>
         private void BinddgvMother()
         {
-            clMother mother = new clMother();
-            dgvMother.AutoGenerateColumns = false;
-            dgvMother.DataSource = mother.getMotherDataTable();
-            dgvMother.Refresh();
+            try
+            {
+                clMother mother = new clMother();
+                dgvMother.AutoGenerateColumns = false;
+                dgvMother.DataSource = mother.getMotherDataTable();
+                dgvMother.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
         }
 
         /// <summary>
@@ -239,7 +248,7 @@ namespace smi
             return result;
 
         }
-        
+
         /// <summary>
         /// 
         /// </summary>

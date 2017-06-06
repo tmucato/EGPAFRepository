@@ -27,5 +27,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="children">
+      <EntityTypeMapping TypeName="smiModel.child">
+        <MappingFragment StoreEntitySet="child">
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="mot_nid_cpn" ColumnName="mot_nid_cpn" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="residence" ColumnName="residence" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="nid_ccr" ColumnName="nid_ccr" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

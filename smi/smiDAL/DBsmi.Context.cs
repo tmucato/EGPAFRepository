@@ -19,8 +19,7 @@ namespace smiDAL
             : base("name=DBsmiEntities")
         {
         }
-
-        public DBsmiEntities(string conStr) : base( conStr)
+        public DBsmiEntities(string conStr) : base(conStr)
         {
 
         }
@@ -32,5 +31,6 @@ namespace smiDAL
     
         public DbSet<mother> mothers { get; set; }
         public DbSet<usuario> usuarios { get; set; }
+        public DbSet<child> children { get; set; }
     }
 }

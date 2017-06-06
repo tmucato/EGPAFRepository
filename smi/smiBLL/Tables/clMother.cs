@@ -71,16 +71,24 @@ namespace smiBLL
         public DataTable getMotherDataTable()
         {
             DataTable rsdt = new DataTable();
-
-            MySqlConnection cn = Connection.GetSMIDataBaseConnection();
-            cn.Open();
-            string Query = "select * from mother;";
-            MySqlCommand myCmd = new MySqlCommand(Query, cn);
-            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
-            MyAdapter.SelectCommand = myCmd;
-            DataTable dTable = new DataTable();
-            MyAdapter.Fill(rsdt);
-
+            try
+            {
+                using (MySqlConnection cn = Connection.GetSMIDataBaseConnection())
+                {
+                    cn.Open();
+                    string Query = "select * from mother;";
+                    MySqlCommand myCmd = new MySqlCommand(Query, cn);
+                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                    MyAdapter.SelectCommand = myCmd;
+                    DataTable dTable = new DataTable();
+                    MyAdapter.Fill(rsdt);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error getting mother datatable from database", ex);
+                throw ex;
+            }
             return rsdt;
         }
 
@@ -123,8 +131,7 @@ namespace smiBLL
             {
                 using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
                 {
-                    mother db_mother;
-                    db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
+                    mother db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
                     db_mother.nid_cpn = this.nid_cpn;
                     db_mother.nid_tarv = this.nid_tarv;
                     db_mother.name = this.name;
@@ -151,8 +158,7 @@ namespace smiBLL
             {
                 using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
                 {
-                    mother db_mother;
-                    db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
+                    mother db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
                     DbContext.mothers.Remove(db_mother);
                     DbContext.SaveChanges();
                 }
