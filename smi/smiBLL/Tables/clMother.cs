@@ -83,17 +83,54 @@ namespace smiBLL
 
             return rsdt;
         }
-        public override void InsertEntity(clMother Entity)
+
+        /// <summary>
+        /// Insert mother entity on the database
+        /// </summary>
+        public override void InsertEntity()
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                {
+                    mother db_mother = new mother();
+                    db_mother.id = this.id;
+                    db_mother.nid_cpn = this.nid_cpn;
+                    db_mother.nid_tarv = this.nid_tarv;
+                    db_mother.name = this.name;
+                    db_mother.phone = this.phone;
+                    db_mother.residence = this.residence;
+                    DbContext.mothers.Add(db_mother);
+                    DbContext.SaveChanges();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error inserting Mother on database", ex);
+                throw ex;
+            }
+
         }
 
-        public override void UpdateEntity(clMother Entity)
+        public override void UpdateEntity()
         {
-            throw new NotImplementedException();
+            using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+            {
+                mother db_mother ;
+                db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
+                db_mother.nid_cpn = this.nid_cpn;
+                db_mother.nid_tarv = this.nid_tarv;
+                db_mother.name = this.name;
+                db_mother.phone = this.phone;
+                db_mother.residence = this.residence;
+                DbContext.SaveChanges();
+            }
+                           
         }
 
-        public override void DeleteEntity(clMother Entity)
+        public override void DeleteEntity()
         {
             throw new NotImplementedException();
         }

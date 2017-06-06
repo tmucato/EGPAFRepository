@@ -18,19 +18,19 @@ namespace smiBLL
         /// Insert a new entity in the data base
         /// </summary>
         /// <param name="Entity"></param>
-        public abstract void InsertEntity(T Entity);
+        public abstract void InsertEntity();
 
         /// <summary>
         /// Update an existing entity on database
         /// </summary>
         /// <param name="Entity"></param>
-        public abstract void UpdateEntity(T Entity);
+        public abstract void UpdateEntity();
 
         /// <summary>
         /// Delete an Entity on Database
         /// </summary>
         /// <param name="Entity"></param>
-        public abstract void DeleteEntity(T Entity);
+        public abstract void DeleteEntity();
 
 
     }

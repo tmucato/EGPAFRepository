@@ -58,17 +58,17 @@ namespace smiBLL
             return List_Users;
         }
 
-        public override void InsertEntity(clUsers Entity)
+        public override void InsertEntity()
         {
             throw new NotImplementedException();
         }
 
-        public override void UpdateEntity(clUsers Entity)
+        public override void UpdateEntity()
         {
             throw new NotImplementedException();
         }
 
-        public override void DeleteEntity(clUsers Entity)
+        public override void DeleteEntity()
         {
             throw new NotImplementedException();
         }
