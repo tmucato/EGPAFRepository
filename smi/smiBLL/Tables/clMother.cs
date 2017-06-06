@@ -89,7 +89,6 @@ namespace smiBLL
         /// </summary>
         public override void InsertEntity()
         {
-
             try
             {
                 using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
@@ -114,25 +113,55 @@ namespace smiBLL
 
         }
 
+        /// <summary>
+        /// Update entity mother on the database
+        /// </summary>
         public override void UpdateEntity()
         {
-            using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+            try
             {
-                mother db_mother ;
-                db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
-                db_mother.nid_cpn = this.nid_cpn;
-                db_mother.nid_tarv = this.nid_tarv;
-                db_mother.name = this.name;
-                db_mother.phone = this.phone;
-                db_mother.residence = this.residence;
-                DbContext.SaveChanges();
+                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                {
+                    mother db_mother;
+                    db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
+                    db_mother.nid_cpn = this.nid_cpn;
+                    db_mother.nid_tarv = this.nid_tarv;
+                    db_mother.name = this.name;
+                    db_mother.phone = this.phone;
+                    db_mother.residence = this.residence;
+                    DbContext.SaveChanges();
+                }
             }
-                           
+            catch (Exception ex)
+            {
+                Logger.LogError("Error updating Mother " + this.id + " on database", ex);
+                throw ex;
+            }
+
         }
 
+        /// <summary>
+        /// Delete entity mother on the database 
+        /// </summary>
         public override void DeleteEntity()
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                {
+                    mother db_mother;
+                    db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
+                    DbContext.mothers.Remove(db_mother);
+                    DbContext.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error deliting Mother " + this.id + " on database", ex);
+                throw ex;
+            }
         }
     }
 }
+
+
