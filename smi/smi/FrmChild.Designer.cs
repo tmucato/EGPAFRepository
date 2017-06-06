@@ -39,7 +39,7 @@
             this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtNid_tarv = new System.Windows.Forms.TextBox();
+            this.txtNidMaeCpn = new System.Windows.Forms.TextBox();
             this.txtResidence = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.cmdMotApagar = new System.Windows.Forms.Button();
@@ -82,6 +82,7 @@
             this.dgvChild.ReadOnly = true;
             this.dgvChild.Size = new System.Drawing.Size(1087, 176);
             this.dgvChild.TabIndex = 128;
+            this.dgvChild.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChild_CellContentClick);
             // 
             // Select
             // 
@@ -163,13 +164,13 @@
             this.txtName.Size = new System.Drawing.Size(168, 22);
             this.txtName.TabIndex = 115;
             // 
-            // txtNid_tarv
+            // txtNidMaeCpn
             // 
-            this.txtNid_tarv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNid_tarv.Location = new System.Drawing.Point(15, 121);
-            this.txtNid_tarv.Name = "txtNid_tarv";
-            this.txtNid_tarv.Size = new System.Drawing.Size(168, 22);
-            this.txtNid_tarv.TabIndex = 113;
+            this.txtNidMaeCpn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNidMaeCpn.Location = new System.Drawing.Point(15, 121);
+            this.txtNidMaeCpn.Name = "txtNidMaeCpn";
+            this.txtNidMaeCpn.Size = new System.Drawing.Size(168, 22);
+            this.txtNidMaeCpn.TabIndex = 113;
             // 
             // txtResidence
             // 
@@ -188,6 +189,7 @@
             this.btnNew.TabIndex = 123;
             this.btnNew.Text = "Nova Criança";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // cmdMotApagar
             // 
@@ -197,6 +199,7 @@
             this.cmdMotApagar.TabIndex = 121;
             this.cmdMotApagar.Text = "Apagar";
             this.cmdMotApagar.UseVisualStyleBackColor = true;
+            this.cmdMotApagar.Click += new System.EventHandler(this.cmdMotApagar_Click);
             // 
             // btnSubmit
             // 
@@ -207,6 +210,7 @@
             this.btnSubmit.TabIndex = 120;
             this.btnSubmit.Text = "Submeter";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // cbProcurar
             // 
@@ -381,7 +385,7 @@
             this.Controls.Add(this.dgvChild);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtNid_tarv);
+            this.Controls.Add(this.txtNidMaeCpn);
             this.Controls.Add(this.txtResidence);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.cmdMotApagar);
@@ -412,7 +416,7 @@
         private System.Windows.Forms.DataGridView dgvChild;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtNid_tarv;
+        private System.Windows.Forms.TextBox txtNidMaeCpn;
         private System.Windows.Forms.TextBox txtResidence;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button cmdMotApagar;

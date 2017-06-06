@@ -60,14 +60,23 @@ namespace smi
         /// <param name="e"></param>
         private void dgvMother_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var Grid = (DataGridView)sender;
-            clMother obj_mother = new clMother();
-
-            if (Grid.Columns[e.ColumnIndex] is DataGridViewLinkColumn && e.RowIndex >= 0)
+            try
             {
-                int motherID = (int)Grid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                BindBindFormControls(obj_mother.GetEntityList().Where(m => m.id == motherID).FirstOrDefault());
+                var Grid = (DataGridView)sender;
+                clMother obj_mother = new clMother();
+
+                if (Grid.Columns[e.ColumnIndex] is DataGridViewLinkColumn && e.RowIndex >= 0)
+                {
+                    int motherID = (int)Grid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+                    BindFormMotherControls(obj_mother.GetEntityList().Where(m => m.id == motherID).FirstOrDefault());
+                }
             }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error loading mother data to form", ex);
+                MessageBox.Show("Error carregando informacao da mãe no sistema");
+            }
+
         }
 
         /// <summary>
@@ -122,15 +131,24 @@ namespace smi
         /// 
         /// </summary>
         /// <param name="obj_mother"></param>
-        private void BindBindFormControls(clMother obj_mother)
+        private void BindFormMotherControls(clMother obj_mother)
         {
-            txtID.Text = obj_mother.id.ToString();
-            txtNid_cpn.Text = obj_mother.nid_cpn;
-            txtNid_tarv.Text = obj_mother.nid_tarv;
-            txtName.Text = obj_mother.name;
-            txtResidence.Text = obj_mother.residence;
-            txtPhone.Text = obj_mother.phone;
-            txtDob.Text = obj_mother.dob.ToString("dd/MM/yyyy");
+            try
+            {
+                txtID.Text = obj_mother.id.ToString();
+                txtNid_cpn.Text = obj_mother.nid_cpn;
+                txtNid_tarv.Text = obj_mother.nid_tarv;
+                txtName.Text = obj_mother.name;
+                txtResidence.Text = obj_mother.residence;
+                txtPhone.Text = obj_mother.phone;
+                txtDob.Text = obj_mother.dob.ToString("dd/MM/yyyy");
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error binding mother form", ex);
+                throw ex;
+            }
+
 
         }
 
