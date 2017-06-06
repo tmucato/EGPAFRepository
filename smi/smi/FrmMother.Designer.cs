@@ -280,7 +280,7 @@
             this.dgvMother.Location = new System.Drawing.Point(15, 211);
             this.dgvMother.Name = "dgvMother";
             this.dgvMother.ReadOnly = true;
-            this.dgvMother.Size = new System.Drawing.Size(1033, 176);
+            this.dgvMother.Size = new System.Drawing.Size(1087, 176);
             this.dgvMother.TabIndex = 107;
             this.dgvMother.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMother_CellContentClick);
             // 
@@ -341,7 +341,7 @@
             this.dob.ReadOnly = true;
             this.dob.Width = 170;
             // 
-            // FrmMother
+            // FrmChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -370,7 +370,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FrmMother";
+            this.Name = "FrmChild";
             this.Text = "Sistema Electronico de Seguimento de Paciente de SMI (SESP-SMI)";
             this.Load += new System.EventHandler(this.FrmMother_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMother)).EndInit();

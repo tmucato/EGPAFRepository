@@ -16,13 +16,27 @@ namespace smi
 {
     public partial class FrmMother : Form
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
         public FrmMother()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmMother_Load(object sender, EventArgs e)
+        {
+            BinddgvMother();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void BinddgvMother()
         {
             clMother mother = new clMother();
             dgvMother.AutoGenerateColumns = false;
@@ -30,7 +44,11 @@ namespace smi
             dgvMother.Refresh();
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvMother_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var Grid = (DataGridView)sender;
@@ -43,21 +61,58 @@ namespace smi
             }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdNew_Click(object sender, EventArgs e)
         {
             try
             {
                 ClearFormContrls();
+                BinddgvMother();
             }
             catch (Exception ex)
             {
                 Logger.LogError("Error cleaning mother form", ex);
                 MessageBox.Show("Error ao limpar form Mae");
             }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cmdMotApagar_Click(object sender, EventArgs e)
+        {
+            try
+            {
 
+                if (!string.IsNullOrWhiteSpace(txtID.Text))
+                {
+                    int motherID = Convert.ToInt32(txtID.Text);
+                    clMother obj_mother = new clMother();
+                    obj_mother = obj_mother.GetEntityList().Where(m => m.id == motherID).FirstOrDefault();
+                    obj_mother.DeleteEntity();
+                    BinddgvMother();
+                }
+                else
+                {
+                    MessageBox.Show("Nenhuma Mãe selecionada para ser apagada");
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error deleting mother form", ex);
+                MessageBox.Show("Error apagando Mãe do sistema");
+            }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj_mother"></param>
         private void BindBindFormControls(clMother obj_mother)
         {
             txtID.Text = obj_mother.id.ToString();
@@ -93,7 +148,11 @@ namespace smi
             }
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -106,12 +165,11 @@ namespace smi
                     obj_mother.nid_tarv = txtNid_tarv.Text;
                     obj_mother.name = txtName.Text;
                     obj_mother.residence = txtResidence.Text;
-                    obj_mother.phone = txtPhone.Name;
+                    obj_mother.phone = txtPhone.Text;
                     obj_mother.dob = Convert.ToDateTime(txtDob.Text);
 
                     if (string.IsNullOrWhiteSpace(txtID.Text))
                     {
-                        
                         obj_mother.InsertEntity();
                     }
                     else
@@ -119,7 +177,7 @@ namespace smi
                         obj_mother.id = Convert.ToInt32(txtID.Text);
                         obj_mother.UpdateEntity();
                     }
-
+                    BinddgvMother();
                 }
             }
             catch (Exception ex)
@@ -129,6 +187,10 @@ namespace smi
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private bool validate_fields()
         {
             bool result = false;
@@ -138,27 +200,32 @@ namespace smi
                 if (String.IsNullOrWhiteSpace(txtNid_cpn.Text))
                 {
                     MessageBox.Show("O campo do NID CPN encontra-se vazio");
+                    return result;
                 }
-
                 if (string.IsNullOrWhiteSpace(txtNid_tarv.Text))
                 {
                     MessageBox.Show("O campo do NID TARV encontra-se vazio");
+                    return result;
                 }
                 if (string.IsNullOrWhiteSpace(txtName.Text))
                 {
                     MessageBox.Show("O campo do Nome encontra-se vazio");
+                    return result;
                 }
                 if (string.IsNullOrWhiteSpace(txtResidence.Text))
                 {
                     MessageBox.Show("O campo do residencia encontra-se vazio");
+                    return result;
                 }
                 if (!Functions.IsNumber(txtPhone.Text))
                 {
                     MessageBox.Show("O numero de telefone invalido");
+                    return result;
                 }
                 if (!Functions.IsDate(txtDob.Text))
                 {
                     MessageBox.Show("O data de nascimento inserida é invalida");
+                    return result;
                 }
                 result = true;
 
@@ -172,33 +239,12 @@ namespace smi
             return result;
 
         }
-
-
-        private void cmdMotApagar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (!string.IsNullOrWhiteSpace(txtID.Text))
-                {
-                    int motherID = Convert.ToInt32(txtID.Text);
-                    clMother obj_mother = new clMother();
-                    obj_mother = obj_mother.GetEntityList().Where(m => m.id == motherID).FirstOrDefault();
-                    obj_mother.DeleteEntity();
-                }
-                else
-                {
-                    MessageBox.Show("Nenhuma Mãe selecionada para ser apagada");
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError("Error deleting mother form", ex);
-                MessageBox.Show("Error apagando Mãe do sistema");
-            }
-        }
-
-
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdProcurar_Click(object sender, EventArgs e)
         {
             string searchValueTxt = txtSearched.Text.Trim().ToUpper();

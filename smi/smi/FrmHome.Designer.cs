@@ -33,16 +33,16 @@
             this.mnMother = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criancaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.livroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cPNLivroDeConsultaPreNatalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cCRSeguimentoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.maeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.criancaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cPNLivroDeConsultaPreNatalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cCRSeguimentoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +82,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(368, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // pacientesToolStripMenuItem
             // 
@@ -94,6 +94,20 @@
             this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             // 
+            // maeToolStripMenuItem
+            // 
+            this.maeToolStripMenuItem.Name = "maeToolStripMenuItem";
+            this.maeToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.maeToolStripMenuItem.Text = "Mãe";
+            this.maeToolStripMenuItem.Click += new System.EventHandler(this.maeToolStripMenuItem_Click_1);
+            // 
+            // criancaToolStripMenuItem
+            // 
+            this.criancaToolStripMenuItem.Name = "criancaToolStripMenuItem";
+            this.criancaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.criancaToolStripMenuItem.Text = "Criança";
+            this.criancaToolStripMenuItem.Click += new System.EventHandler(this.criancaToolStripMenuItem_Click_1);
+            // 
             // livroToolStripMenuItem
             // 
             this.livroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -103,6 +117,24 @@
             this.livroToolStripMenuItem.Name = "livroToolStripMenuItem";
             this.livroToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.livroToolStripMenuItem.Text = "Livro";
+            // 
+            // cPNLivroDeConsultaPreNatalToolStripMenuItem1
+            // 
+            this.cPNLivroDeConsultaPreNatalToolStripMenuItem1.Name = "cPNLivroDeConsultaPreNatalToolStripMenuItem1";
+            this.cPNLivroDeConsultaPreNatalToolStripMenuItem1.Size = new System.Drawing.Size(371, 24);
+            this.cPNLivroDeConsultaPreNatalToolStripMenuItem1.Text = "CPN - Livro de Consulta Pre Natal";
+            // 
+            // cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem
+            // 
+            this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Name = "cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem";
+            this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Size = new System.Drawing.Size(371, 24);
+            this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Text = "CCR - Livro de Consulta de Criança em Risco";
+            // 
+            // cCRSeguimentoToolStripMenuItem1
+            // 
+            this.cCRSeguimentoToolStripMenuItem1.Name = "cCRSeguimentoToolStripMenuItem1";
+            this.cCRSeguimentoToolStripMenuItem1.Size = new System.Drawing.Size(371, 24);
+            this.cCRSeguimentoToolStripMenuItem1.Text = "CCR - Seguimento";
             // 
             // relatoriosToolStripMenuItem
             // 
@@ -136,37 +168,6 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // maeToolStripMenuItem
-            // 
-            this.maeToolStripMenuItem.Name = "maeToolStripMenuItem";
-            this.maeToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.maeToolStripMenuItem.Text = "Mãe";
-            this.maeToolStripMenuItem.Click += new System.EventHandler(this.maeToolStripMenuItem_Click_1);
-            // 
-            // criancaToolStripMenuItem
-            // 
-            this.criancaToolStripMenuItem.Name = "criancaToolStripMenuItem";
-            this.criancaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.criancaToolStripMenuItem.Text = "Criança";
-            // 
-            // cPNLivroDeConsultaPreNatalToolStripMenuItem1
-            // 
-            this.cPNLivroDeConsultaPreNatalToolStripMenuItem1.Name = "cPNLivroDeConsultaPreNatalToolStripMenuItem1";
-            this.cPNLivroDeConsultaPreNatalToolStripMenuItem1.Size = new System.Drawing.Size(371, 24);
-            this.cPNLivroDeConsultaPreNatalToolStripMenuItem1.Text = "CPN - Livro de Consulta Pre Natal";
-            // 
-            // cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem
-            // 
-            this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Name = "cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem";
-            this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Size = new System.Drawing.Size(371, 24);
-            this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Text = "CCR - Livro de Consulta de Criança em Risco";
-            // 
-            // cCRSeguimentoToolStripMenuItem1
-            // 
-            this.cCRSeguimentoToolStripMenuItem1.Name = "cCRSeguimentoToolStripMenuItem1";
-            this.cCRSeguimentoToolStripMenuItem1.Size = new System.Drawing.Size(371, 24);
-            this.cCRSeguimentoToolStripMenuItem1.Text = "CCR - Seguimento";
             // 
             // FrmHome
             // 

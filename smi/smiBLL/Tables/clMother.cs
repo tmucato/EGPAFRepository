@@ -100,6 +100,7 @@ namespace smiBLL
                     db_mother.name = this.name;
                     db_mother.phone = this.phone;
                     db_mother.residence = this.residence;
+                    db_mother.dob = this.dob;
                     DbContext.mothers.Add(db_mother);
                     DbContext.SaveChanges();
                 }
@@ -129,6 +130,7 @@ namespace smiBLL
                     db_mother.name = this.name;
                     db_mother.phone = this.phone;
                     db_mother.residence = this.residence;
+                    db_mother.dob = this.dob;
                     DbContext.SaveChanges();
                 }
             }

@@ -55,5 +55,10 @@ namespace smi
             FrmMother frm = new FrmMother();
             frm.Show();
         }
+
+        private void criancaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

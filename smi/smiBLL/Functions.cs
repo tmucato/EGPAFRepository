@@ -30,8 +30,9 @@ namespace smiBLL
                 DateTime dt = DateTime.Parse(date);
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                var a = ex;
                 return false;
             }
         }
