@@ -21,10 +21,10 @@ namespace smi
 
         private void FrmChild_Load(object sender, EventArgs e)
         {
-            BinddgvMother();
+            BinddgvChild();
         }
 
-        private void BinddgvMother()
+        private void BinddgvChild()
         {
             try
             {
@@ -61,30 +61,7 @@ namespace smi
         }
 
 
-        private void btnNew_Click(object sender, EventArgs e)
-        {
 
-
-
-
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
-
-
-
-        }
-
-        private void cmdMotApagar_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-        }
 
         /// <summary>
         /// 
@@ -113,9 +90,157 @@ namespace smi
 
             }
 
+        }
+
+        private void ClearFormContrls()
+        {
+            try
+            {
+                dgvChild.ClearSelection();
+                txtID.Clear();
+                txtDataNascimento.Clear();
+                txtName.Clear();
+                txtNidMaeCpn.Clear();
+                txtNid_ccr.Clear();
+                txtPhone.Clear();
+                txtResidence.Clear();
+                txtSearched.Clear();
+                txtNid_ccr.Focus();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        private void btnChildNew_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearFormContrls();
+                BinddgvChild();
+
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error cleaning mother form", ex);
+                MessageBox.Show("Error ao limpar form Mae");
+            }
+        }
+
+        private void btnChildSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (validate_fields())
+                {
+                    clChild obj_child = new clChild();
+                    obj_child.gender = cbxGenero.SelectedText;
+                    obj_child.dob = Convert.ToDateTime(txtDataNascimento.Text);
+                    obj_child.mot_nid_cpn = txtNidMaeCpn.Text;
+                    obj_child.name = txtName.Text;
+                    obj_child.nid_ccr = txtNid_ccr.Text;
+                    obj_child.phone = txtPhone.Text;
+                    obj_child.residence = txtResidence.Text;
+
+
+                    if (string.IsNullOrWhiteSpace(txtID.Text))
+                    {
+                        obj_child.InsertEntity();
+                    }
+                    else
+                    {
+                        obj_child.id = Convert.ToInt32(txtID.Text);
+                        obj_child.UpdateEntity();
+                    }
 
 
 
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        private bool validate_fields()
+        {
+            bool result = false;
+
+
+            try
+            {
+
+                if (string.IsNullOrWhiteSpace(txtName.Text))
+                {
+                    MessageBox.Show("O campo do Nome encontra-se vazio");
+                    return result;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtNidMaeCpn.Text))
+                {
+                    MessageBox.Show("O campo do Nid Mae CPN encontra-se vazio");
+                    return result;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtNid_ccr.Text))
+                {
+                    MessageBox.Show("O campo do Nid CCR encontra-se vazio");
+                    return result;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtPhone.Text))
+                {
+                    MessageBox.Show("O campo do telefone encontra-se vazio");
+                    return result;
+                }
+
+
+                if (string.IsNullOrWhiteSpace(txtResidence.Text))
+                {
+                    MessageBox.Show("O campo do residencia encontra-se vazio");
+                    return result;
+                }
+
+                result = true;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return result;
+        }
+
+        private void cmdChildApagar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(txtID.Text))
+                {
+                    int childID = Convert.ToInt32(txtID.Text);
+                    clChild obj_child = new clChild();
+                    obj_child = obj_child.GetEntityList().Where(c => c.id == childID).FirstOrDefault();
+                    obj_child.DeleteEntity();
+                    BinddgvChild();
+                }
+                else
+                {
+                    MessageBox.Show("Nenhuma registo selecionada para ser apagada");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Logger.LogError("Error deleting child form", ex);
+                MessageBox.Show("Error apagando registo do sistema");
+            }
         }
     }
 }

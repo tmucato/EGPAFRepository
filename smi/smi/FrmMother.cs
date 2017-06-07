@@ -117,13 +117,13 @@ namespace smi
                 }
                 else
                 {
-                    MessageBox.Show("Nenhuma Mãe selecionada para ser apagada");
+                    MessageBox.Show("Nenhuma registo selecionada para ser apagada");
                 }
             }
             catch (Exception ex)
             {
                 Logger.LogError("Error deleting mother form", ex);
-                MessageBox.Show("Error apagando Mãe do sistema");
+                MessageBox.Show("Error apagando registo do sistema");
             }
         }
 

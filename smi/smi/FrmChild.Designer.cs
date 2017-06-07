@@ -41,9 +41,9 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtNidMaeCpn = new System.Windows.Forms.TextBox();
             this.txtResidence = new System.Windows.Forms.TextBox();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.cmdMotApagar = new System.Windows.Forms.Button();
-            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnChildNew = new System.Windows.Forms.Button();
+            this.cmdChildApagar = new System.Windows.Forms.Button();
+            this.btnChildSubmit = new System.Windows.Forms.Button();
             this.cbProcurar = new System.Windows.Forms.ComboBox();
             this.txtSearched = new System.Windows.Forms.TextBox();
             this.cmdProcurar = new System.Windows.Forms.Button();
@@ -180,37 +180,40 @@
             this.txtResidence.Size = new System.Drawing.Size(168, 22);
             this.txtResidence.TabIndex = 117;
             // 
-            // btnNew
+            // btnChildNew
             // 
-            this.btnNew.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnNew.Location = new System.Drawing.Point(236, 165);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(149, 27);
-            this.btnNew.TabIndex = 123;
-            this.btnNew.Text = "Nova Criança";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            this.btnChildNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnChildNew.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnChildNew.Location = new System.Drawing.Point(236, 165);
+            this.btnChildNew.Name = "btnChildNew";
+            this.btnChildNew.Size = new System.Drawing.Size(149, 27);
+            this.btnChildNew.TabIndex = 123;
+            this.btnChildNew.Text = "Nova Criança";
+            this.btnChildNew.UseVisualStyleBackColor = true;
+            this.btnChildNew.Click += new System.EventHandler(this.btnChildNew_Click);
             // 
-            // cmdMotApagar
+            // cmdChildApagar
             // 
-            this.cmdMotApagar.Location = new System.Drawing.Point(608, 165);
-            this.cmdMotApagar.Name = "cmdMotApagar";
-            this.cmdMotApagar.Size = new System.Drawing.Size(127, 27);
-            this.cmdMotApagar.TabIndex = 121;
-            this.cmdMotApagar.Text = "Apagar";
-            this.cmdMotApagar.UseVisualStyleBackColor = true;
-            this.cmdMotApagar.Click += new System.EventHandler(this.cmdMotApagar_Click);
+            this.cmdChildApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cmdChildApagar.Location = new System.Drawing.Point(608, 165);
+            this.cmdChildApagar.Name = "cmdChildApagar";
+            this.cmdChildApagar.Size = new System.Drawing.Size(127, 27);
+            this.cmdChildApagar.TabIndex = 121;
+            this.cmdChildApagar.Text = "Apagar";
+            this.cmdChildApagar.UseVisualStyleBackColor = true;
+            this.cmdChildApagar.Click += new System.EventHandler(this.cmdChildApagar_Click);
             // 
-            // btnSubmit
+            // btnChildSubmit
             // 
-            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSubmit.Location = new System.Drawing.Point(422, 165);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(127, 27);
-            this.btnSubmit.TabIndex = 120;
-            this.btnSubmit.Text = "Submeter";
-            this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.btnChildSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnChildSubmit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnChildSubmit.Location = new System.Drawing.Point(422, 165);
+            this.btnChildSubmit.Name = "btnChildSubmit";
+            this.btnChildSubmit.Size = new System.Drawing.Size(127, 27);
+            this.btnChildSubmit.TabIndex = 120;
+            this.btnChildSubmit.Text = "Submeter";
+            this.btnChildSubmit.UseVisualStyleBackColor = true;
+            this.btnChildSubmit.Click += new System.EventHandler(this.btnChildSubmit_Click);
             // 
             // cbProcurar
             // 
@@ -387,9 +390,9 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtNidMaeCpn);
             this.Controls.Add(this.txtResidence);
-            this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.cmdMotApagar);
-            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.btnChildNew);
+            this.Controls.Add(this.cmdChildApagar);
+            this.Controls.Add(this.btnChildSubmit);
             this.Controls.Add(this.cbProcurar);
             this.Controls.Add(this.txtSearched);
             this.Controls.Add(this.cmdProcurar);
@@ -418,9 +421,9 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtNidMaeCpn;
         private System.Windows.Forms.TextBox txtResidence;
-        private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button cmdMotApagar;
-        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnChildNew;
+        private System.Windows.Forms.Button cmdChildApagar;
+        private System.Windows.Forms.Button btnChildSubmit;
         private System.Windows.Forms.ComboBox cbProcurar;
         private System.Windows.Forms.TextBox txtSearched;
         private System.Windows.Forms.Button cmdProcurar;
