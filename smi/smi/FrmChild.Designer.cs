@@ -406,7 +406,7 @@
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.label1);
             this.Name = "FrmChild";
-            this.Text = "FrmChild";
+            this.Text = "Sistema Electronico de Seguimento de Paciente de SMI (SESP-SMI)";
             this.Load += new System.EventHandler(this.FrmChild_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChild)).EndInit();
             this.ResumeLayout(false);

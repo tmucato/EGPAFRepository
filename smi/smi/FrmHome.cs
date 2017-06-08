@@ -65,7 +65,7 @@ namespace smi
 
         private void cPNLivroDeConsultaPreNatalToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmCPNOld cpn =  new frmCPNOld();
+            FrmCPN cpn =  new FrmCPN();
             cpn.Show();
         }
     }
