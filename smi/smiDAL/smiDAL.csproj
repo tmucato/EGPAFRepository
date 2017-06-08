@@ -58,6 +58,12 @@
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="cpn.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cpn_final.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
     <Compile Include="DBsmi.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

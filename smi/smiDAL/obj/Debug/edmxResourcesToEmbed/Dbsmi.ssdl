@@ -13,6 +13,101 @@
     <Property Name="mot_nid_cpn" Type="varchar" MaxLength="45" />
     <Property Name="dob" Type="datetime" Precision="0" />
   </EntityType>
+  <EntityType Name="cpn">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="nr_consulta" Type="int" />
+    <Property Name="idmother" Type="bigint" Nullable="false" />
+    <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nyear" Type="int" Nullable="false" />
+    <Property Name="visdate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="agegroup" Type="varchar" MaxLength="25" />
+    <Property Name="gestationalage" Type="tinyint" />
+    <Property Name="gageless12" Type="bool" />
+    <Property Name="partnerpresence" Type="bool" />
+    <Property Name="weight" Type="int" />
+    <Property Name="weightgainyno" Type="varchar" MaxLength="5" />
+    <Property Name="dag" Type="bool" />
+    <Property Name="dam" Type="bool" />
+    <Property Name="supnutr" Type="int" />
+    <Property Name="resultcured" Type="varchar" MaxLength="5" />
+    <Property Name="resultabandon" Type="varchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante" Type="varchar" MaxLength="5" />
+    <Property Name="salferr_acfolico" Type="varchar" MaxLength="5" />
+    <Property Name="ta" Type="varchar" MaxLength="5" />
+    <Property Name="hgb" Type="varchar" MaxLength="5" />
+    <Property Name="proteinuria" Type="varchar" MaxLength="5" />
+    <Property Name="glicosuria" Type="varchar" MaxLength="5" />
+    <Property Name="its_ulceragenital" Type="bool" />
+    <Property Name="its_leucorreia" Type="bool" />
+    <Property Name="its_syndromictreatment" Type="varchar" MaxLength="5" />
+    <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat" Type="varchar" MaxLength="5" />
+    <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
+    <Property Name="serostatusdesc" Type="bool" />
+    <Property Name="serostatusneg" Type="bool" />
+    <Property Name="serostatuspos" Type="bool" />
+    <Property Name="cpnhivtest" Type="varchar" MaxLength="5" />
+    <Property Name="partnerhivtest" Type="varchar" MaxLength="5" />
+    <Property Name="ctz" Type="bool" />
+    <Property Name="ctz_init_cont" Type="varchar" MaxLength="5" />
+    <Property Name="tarv" Type="bool" />
+    <Property Name="nvp" Type="bool" />
+    <Property Name="azt_nvp" Type="bool" />
+    <Property Name="tarv_init_visit" Type="bool" />
+    <Property Name="arv_cont" Type="bool" />
+    <Property Name="tip" Type="varchar" MaxLength="5" />
+    <Property Name="bednet" Type="varchar" MaxLength="5" />
+    <Property Name="tdr_htz" Type="varchar" MaxLength="5" />
+    <Property Name="result_tdr_htz" Type="varchar" MaxLength="5" />
+    <Property Name="pos_malaria_treated" Type="varchar" MaxLength="5" />
+    <Property Name="hpp" Type="varchar" MaxLength="5" />
+    <Property Name="vat_1_dose" Type="bool" />
+    <Property Name="vat_2_5_dose" Type="bool" />
+    <Property Name="tb_isoniazid" Type="varchar" MaxLength="5" />
+    <Property Name="tb_treatment" Type="varchar" MaxLength="5" />
+    <Property Name="obs" Type="varchar" MaxLength="60" />
+    <Property Name="providername" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="cpn_final">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="idmother" Type="bigint" Nullable="false" />
+    <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cons_more4" Type="bool" />
+    <Property Name="partnerpreence" Type="bool" />
+    <Property Name="weightgainyno" Type="varchar" MaxLength="5" />
+    <Property Name="dag" Type="bool" />
+    <Property Name="dam" Type="bool" />
+    <Property Name="supnutr" Type="varchar" MaxLength="5" />
+    <Property Name="resultcured" Type="varchar" MaxLength="5" />
+    <Property Name="resultabandon" Type="varchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante" Type="varchar" MaxLength="5" />
+    <Property Name="salferr_more3" Type="bool" />
+    <Property Name="its_diag" Type="bool" />
+    <Property Name="its_treatment" Type="varchar" MaxLength="5" />
+    <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat" Type="bool" />
+    <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
+    <Property Name="womanserostatus" Type="varchar" MaxLength="10" />
+    <Property Name="partnerserostatus" Type="varchar" MaxLength="5" />
+    <Property Name="ctz_entr" Type="bool" />
+    <Property Name="ctz_init" Type="bool" />
+    <Property Name="finalresult_arv" Type="varchar" MaxLength="10" />
+    <Property Name="tip" Type="varchar" MaxLength="5" />
+    <Property Name="bednet" Type="varchar" MaxLength="5" />
+    <Property Name="mal_diag_lab" Type="varchar" MaxLength="5" />
+    <Property Name="mal_treatment" Type="varchar" MaxLength="5" />
+    <Property Name="mp" Type="varchar" MaxLength="5" />
+    <Property Name="vat_1_dose" Type="bool" />
+    <Property Name="vat_2_5_dose" Type="bool" />
+    <Property Name="tb_isoniazid" Type="bool" />
+    <Property Name="tb_treatment" Type="bool" />
+  </EntityType>
   <EntityType Name="mother">
     <Key>
       <PropertyRef Name="id" />
@@ -39,6 +134,8 @@
   </EntityType>
   <EntityContainer Name="smiModelStoreContainer">
     <EntitySet Name="child" EntityType="Self.child" Schema="smi" store:Type="Tables" />
+    <EntitySet Name="cpn" EntityType="Self.cpn" Schema="smi" store:Type="Tables" />
+    <EntitySet Name="cpn_final" EntityType="Self.cpn_final" Schema="smi" store:Type="Tables" />
     <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
     <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
   </EntityContainer>

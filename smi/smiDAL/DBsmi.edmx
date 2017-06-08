@@ -18,6 +18,101 @@
           <Property Name="mot_nid_cpn" Type="varchar" MaxLength="45" />
           <Property Name="dob" Type="datetime" Precision="0" />
         </EntityType>
+        <EntityType Name="cpn">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="nr_consulta" Type="int" />
+          <Property Name="idmother" Type="bigint" Nullable="false" />
+          <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="nyear" Type="int" Nullable="false" />
+          <Property Name="visdate" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="agegroup" Type="varchar" MaxLength="25" />
+          <Property Name="gestationalage" Type="tinyint" />
+          <Property Name="gageless12" Type="bool" />
+          <Property Name="partnerpresence" Type="bool" />
+          <Property Name="weight" Type="int" />
+          <Property Name="weightgainyno" Type="varchar" MaxLength="5" />
+          <Property Name="dag" Type="bool" />
+          <Property Name="dam" Type="bool" />
+          <Property Name="supnutr" Type="int" />
+          <Property Name="resultcured" Type="varchar" MaxLength="5" />
+          <Property Name="resultabandon" Type="varchar" MaxLength="5" />
+          <Property Name="receiveddesparasitante" Type="varchar" MaxLength="5" />
+          <Property Name="salferr_acfolico" Type="varchar" MaxLength="5" />
+          <Property Name="ta" Type="varchar" MaxLength="5" />
+          <Property Name="hgb" Type="varchar" MaxLength="5" />
+          <Property Name="proteinuria" Type="varchar" MaxLength="5" />
+          <Property Name="glicosuria" Type="varchar" MaxLength="5" />
+          <Property Name="its_ulceragenital" Type="bool" />
+          <Property Name="its_leucorreia" Type="bool" />
+          <Property Name="its_syndromictreatment" Type="varchar" MaxLength="5" />
+          <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
+          <Property Name="its_wsyphilistreat" Type="varchar" MaxLength="5" />
+          <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
+          <Property Name="serostatusdesc" Type="bool" />
+          <Property Name="serostatusneg" Type="bool" />
+          <Property Name="serostatuspos" Type="bool" />
+          <Property Name="cpnhivtest" Type="varchar" MaxLength="5" />
+          <Property Name="partnerhivtest" Type="varchar" MaxLength="5" />
+          <Property Name="ctz" Type="bool" />
+          <Property Name="ctz_init_cont" Type="varchar" MaxLength="5" />
+          <Property Name="tarv" Type="bool" />
+          <Property Name="nvp" Type="bool" />
+          <Property Name="azt_nvp" Type="bool" />
+          <Property Name="tarv_init_visit" Type="bool" />
+          <Property Name="arv_cont" Type="bool" />
+          <Property Name="tip" Type="varchar" MaxLength="5" />
+          <Property Name="bednet" Type="varchar" MaxLength="5" />
+          <Property Name="tdr_htz" Type="varchar" MaxLength="5" />
+          <Property Name="result_tdr_htz" Type="varchar" MaxLength="5" />
+          <Property Name="pos_malaria_treated" Type="varchar" MaxLength="5" />
+          <Property Name="hpp" Type="varchar" MaxLength="5" />
+          <Property Name="vat_1_dose" Type="bool" />
+          <Property Name="vat_2_5_dose" Type="bool" />
+          <Property Name="tb_isoniazid" Type="varchar" MaxLength="5" />
+          <Property Name="tb_treatment" Type="varchar" MaxLength="5" />
+          <Property Name="obs" Type="varchar" MaxLength="60" />
+          <Property Name="providername" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="cpn_final">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="idmother" Type="bigint" Nullable="false" />
+          <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="cons_more4" Type="bool" />
+          <Property Name="partnerpreence" Type="bool" />
+          <Property Name="weightgainyno" Type="varchar" MaxLength="5" />
+          <Property Name="dag" Type="bool" />
+          <Property Name="dam" Type="bool" />
+          <Property Name="supnutr" Type="varchar" MaxLength="5" />
+          <Property Name="resultcured" Type="varchar" MaxLength="5" />
+          <Property Name="resultabandon" Type="varchar" MaxLength="5" />
+          <Property Name="receiveddesparasitante" Type="varchar" MaxLength="5" />
+          <Property Name="salferr_more3" Type="bool" />
+          <Property Name="its_diag" Type="bool" />
+          <Property Name="its_treatment" Type="varchar" MaxLength="5" />
+          <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
+          <Property Name="its_wsyphilistreat" Type="bool" />
+          <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
+          <Property Name="womanserostatus" Type="varchar" MaxLength="10" />
+          <Property Name="partnerserostatus" Type="varchar" MaxLength="5" />
+          <Property Name="ctz_entr" Type="bool" />
+          <Property Name="ctz_init" Type="bool" />
+          <Property Name="finalresult_arv" Type="varchar" MaxLength="10" />
+          <Property Name="tip" Type="varchar" MaxLength="5" />
+          <Property Name="bednet" Type="varchar" MaxLength="5" />
+          <Property Name="mal_diag_lab" Type="varchar" MaxLength="5" />
+          <Property Name="mal_treatment" Type="varchar" MaxLength="5" />
+          <Property Name="mp" Type="varchar" MaxLength="5" />
+          <Property Name="vat_1_dose" Type="bool" />
+          <Property Name="vat_2_5_dose" Type="bool" />
+          <Property Name="tb_isoniazid" Type="bool" />
+          <Property Name="tb_treatment" Type="bool" />
+        </EntityType>
         <EntityType Name="mother">
           <Key>
             <PropertyRef Name="id" />
@@ -44,6 +139,8 @@
         </EntityType>
         <EntityContainer Name="smiModelStoreContainer">
           <EntitySet Name="child" EntityType="Self.child" Schema="smi" store:Type="Tables" />
+          <EntitySet Name="cpn" EntityType="Self.cpn" Schema="smi" store:Type="Tables" />
+          <EntitySet Name="cpn_final" EntityType="Self.cpn_final" Schema="smi" store:Type="Tables" />
           <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
           <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
         </EntityContainer>
@@ -79,6 +176,8 @@
           <EntitySet Name="mothers" EntityType="Self.mother" />
           <EntitySet Name="usuarios" EntityType="Self.usuario" />
           <EntitySet Name="children" EntityType="smiModel.child" />
+          <EntitySet Name="cpn_final" EntityType="smiModel.cpn_final" />
+          <EntitySet Name="cpns" EntityType="smiModel.cpn" />
         </EntityContainer>
         <EntityType Name="child">
           <Key>
@@ -92,6 +191,101 @@
           <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="dob" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="cpn_final">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="idmother" Type="Int64" Nullable="false" />
+          <Property Name="nlivro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="cons_more4" Type="Boolean" />
+          <Property Name="partnerpreence" Type="Boolean" />
+          <Property Name="weightgainyno" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="dag" Type="Boolean" />
+          <Property Name="dam" Type="Boolean" />
+          <Property Name="supnutr" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="resultcured" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="resultabandon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="receiveddesparasitante" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="salferr_more3" Type="Boolean" />
+          <Property Name="its_diag" Type="Boolean" />
+          <Property Name="its_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="its_syphilistesting" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="its_wsyphilistreat" Type="Boolean" />
+          <Property Name="its_psyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="womanserostatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="partnerserostatus" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ctz_entr" Type="Boolean" />
+          <Property Name="ctz_init" Type="Boolean" />
+          <Property Name="finalresult_arv" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tip" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bednet" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="mal_diag_lab" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="mal_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="mp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="vat_1_dose" Type="Boolean" />
+          <Property Name="vat_2_5_dose" Type="Boolean" />
+          <Property Name="tb_isoniazid" Type="Boolean" />
+          <Property Name="tb_treatment" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="cpn">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="nr_consulta" Type="Int32" />
+          <Property Name="idmother" Type="Int64" Nullable="false" />
+          <Property Name="nlivro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="nyear" Type="Int32" Nullable="false" />
+          <Property Name="visdate" Type="DateTime" Nullable="false" />
+          <Property Name="agegroup" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="gestationalage" Type="SByte" />
+          <Property Name="gageless12" Type="Boolean" />
+          <Property Name="partnerpresence" Type="Boolean" />
+          <Property Name="weight" Type="Int32" />
+          <Property Name="weightgainyno" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="dag" Type="Boolean" />
+          <Property Name="dam" Type="Boolean" />
+          <Property Name="supnutr" Type="Int32" />
+          <Property Name="resultcured" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="resultabandon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="receiveddesparasitante" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="salferr_acfolico" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ta" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="hgb" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="proteinuria" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="glicosuria" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="its_ulceragenital" Type="Boolean" />
+          <Property Name="its_leucorreia" Type="Boolean" />
+          <Property Name="its_syndromictreatment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="its_syphilistesting" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="its_wsyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="its_psyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="serostatusdesc" Type="Boolean" />
+          <Property Name="serostatusneg" Type="Boolean" />
+          <Property Name="serostatuspos" Type="Boolean" />
+          <Property Name="cpnhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="partnerhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ctz" Type="Boolean" />
+          <Property Name="ctz_init_cont" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="tarv" Type="Boolean" />
+          <Property Name="nvp" Type="Boolean" />
+          <Property Name="azt_nvp" Type="Boolean" />
+          <Property Name="tarv_init_visit" Type="Boolean" />
+          <Property Name="arv_cont" Type="Boolean" />
+          <Property Name="tip" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bednet" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="tdr_htz" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="result_tdr_htz" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="pos_malaria_treated" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="hpp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="vat_1_dose" Type="Boolean" />
+          <Property Name="vat_2_5_dose" Type="Boolean" />
+          <Property Name="tb_isoniazid" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="tb_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -135,6 +329,103 @@
                 <ScalarProperty Name="residence" ColumnName="residence" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="nid_ccr" ColumnName="nid_ccr" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cpn_final">
+            <EntityTypeMapping TypeName="smiModel.cpn_final">
+              <MappingFragment StoreEntitySet="cpn_final">
+                <ScalarProperty Name="tb_treatment" ColumnName="tb_treatment" />
+                <ScalarProperty Name="tb_isoniazid" ColumnName="tb_isoniazid" />
+                <ScalarProperty Name="vat_2_5_dose" ColumnName="vat_2_5_dose" />
+                <ScalarProperty Name="vat_1_dose" ColumnName="vat_1_dose" />
+                <ScalarProperty Name="mp" ColumnName="mp" />
+                <ScalarProperty Name="mal_treatment" ColumnName="mal_treatment" />
+                <ScalarProperty Name="mal_diag_lab" ColumnName="mal_diag_lab" />
+                <ScalarProperty Name="bednet" ColumnName="bednet" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+                <ScalarProperty Name="finalresult_arv" ColumnName="finalresult_arv" />
+                <ScalarProperty Name="ctz_init" ColumnName="ctz_init" />
+                <ScalarProperty Name="ctz_entr" ColumnName="ctz_entr" />
+                <ScalarProperty Name="partnerserostatus" ColumnName="partnerserostatus" />
+                <ScalarProperty Name="womanserostatus" ColumnName="womanserostatus" />
+                <ScalarProperty Name="its_psyphilistreat" ColumnName="its_psyphilistreat" />
+                <ScalarProperty Name="its_wsyphilistreat" ColumnName="its_wsyphilistreat" />
+                <ScalarProperty Name="its_syphilistesting" ColumnName="its_syphilistesting" />
+                <ScalarProperty Name="its_treatment" ColumnName="its_treatment" />
+                <ScalarProperty Name="its_diag" ColumnName="its_diag" />
+                <ScalarProperty Name="salferr_more3" ColumnName="salferr_more3" />
+                <ScalarProperty Name="receiveddesparasitante" ColumnName="receiveddesparasitante" />
+                <ScalarProperty Name="resultabandon" ColumnName="resultabandon" />
+                <ScalarProperty Name="resultcured" ColumnName="resultcured" />
+                <ScalarProperty Name="supnutr" ColumnName="supnutr" />
+                <ScalarProperty Name="dam" ColumnName="dam" />
+                <ScalarProperty Name="dag" ColumnName="dag" />
+                <ScalarProperty Name="weightgainyno" ColumnName="weightgainyno" />
+                <ScalarProperty Name="partnerpreence" ColumnName="partnerpreence" />
+                <ScalarProperty Name="cons_more4" ColumnName="cons_more4" />
+                <ScalarProperty Name="nlivro" ColumnName="nlivro" />
+                <ScalarProperty Name="idmother" ColumnName="idmother" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cpns">
+            <EntityTypeMapping TypeName="smiModel.cpn">
+              <MappingFragment StoreEntitySet="cpn">
+                <ScalarProperty Name="providername" ColumnName="providername" />
+                <ScalarProperty Name="obs" ColumnName="obs" />
+                <ScalarProperty Name="tb_treatment" ColumnName="tb_treatment" />
+                <ScalarProperty Name="tb_isoniazid" ColumnName="tb_isoniazid" />
+                <ScalarProperty Name="vat_2_5_dose" ColumnName="vat_2_5_dose" />
+                <ScalarProperty Name="vat_1_dose" ColumnName="vat_1_dose" />
+                <ScalarProperty Name="hpp" ColumnName="hpp" />
+                <ScalarProperty Name="pos_malaria_treated" ColumnName="pos_malaria_treated" />
+                <ScalarProperty Name="result_tdr_htz" ColumnName="result_tdr_htz" />
+                <ScalarProperty Name="tdr_htz" ColumnName="tdr_htz" />
+                <ScalarProperty Name="bednet" ColumnName="bednet" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+                <ScalarProperty Name="arv_cont" ColumnName="arv_cont" />
+                <ScalarProperty Name="tarv_init_visit" ColumnName="tarv_init_visit" />
+                <ScalarProperty Name="azt_nvp" ColumnName="azt_nvp" />
+                <ScalarProperty Name="nvp" ColumnName="nvp" />
+                <ScalarProperty Name="tarv" ColumnName="tarv" />
+                <ScalarProperty Name="ctz_init_cont" ColumnName="ctz_init_cont" />
+                <ScalarProperty Name="ctz" ColumnName="ctz" />
+                <ScalarProperty Name="partnerhivtest" ColumnName="partnerhivtest" />
+                <ScalarProperty Name="cpnhivtest" ColumnName="cpnhivtest" />
+                <ScalarProperty Name="serostatuspos" ColumnName="serostatuspos" />
+                <ScalarProperty Name="serostatusneg" ColumnName="serostatusneg" />
+                <ScalarProperty Name="serostatusdesc" ColumnName="serostatusdesc" />
+                <ScalarProperty Name="its_psyphilistreat" ColumnName="its_psyphilistreat" />
+                <ScalarProperty Name="its_wsyphilistreat" ColumnName="its_wsyphilistreat" />
+                <ScalarProperty Name="its_syphilistesting" ColumnName="its_syphilistesting" />
+                <ScalarProperty Name="its_syndromictreatment" ColumnName="its_syndromictreatment" />
+                <ScalarProperty Name="its_leucorreia" ColumnName="its_leucorreia" />
+                <ScalarProperty Name="its_ulceragenital" ColumnName="its_ulceragenital" />
+                <ScalarProperty Name="glicosuria" ColumnName="glicosuria" />
+                <ScalarProperty Name="proteinuria" ColumnName="proteinuria" />
+                <ScalarProperty Name="hgb" ColumnName="hgb" />
+                <ScalarProperty Name="ta" ColumnName="ta" />
+                <ScalarProperty Name="salferr_acfolico" ColumnName="salferr_acfolico" />
+                <ScalarProperty Name="receiveddesparasitante" ColumnName="receiveddesparasitante" />
+                <ScalarProperty Name="resultabandon" ColumnName="resultabandon" />
+                <ScalarProperty Name="resultcured" ColumnName="resultcured" />
+                <ScalarProperty Name="supnutr" ColumnName="supnutr" />
+                <ScalarProperty Name="dam" ColumnName="dam" />
+                <ScalarProperty Name="dag" ColumnName="dag" />
+                <ScalarProperty Name="weightgainyno" ColumnName="weightgainyno" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="partnerpresence" ColumnName="partnerpresence" />
+                <ScalarProperty Name="gageless12" ColumnName="gageless12" />
+                <ScalarProperty Name="gestationalage" ColumnName="gestationalage" />
+                <ScalarProperty Name="agegroup" ColumnName="agegroup" />
+                <ScalarProperty Name="visdate" ColumnName="visdate" />
+                <ScalarProperty Name="nyear" ColumnName="nyear" />
+                <ScalarProperty Name="nlivro" ColumnName="nlivro" />
+                <ScalarProperty Name="idmother" ColumnName="idmother" />
+                <ScalarProperty Name="nr_consulta" ColumnName="nr_consulta" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
