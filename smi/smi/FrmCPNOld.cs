@@ -9,12 +9,12 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-
+using smiDAL;
 
 namespace smi
 {
     
-    public partial class frmCPN : Form
+    public partial class frmCPNOld : Form
     {
         public int RotateAngle { get; set; }  // to rotate your text
         public string NewText { get; set; }   // to draw text
@@ -31,11 +31,11 @@ namespace smi
             public static string Usuario;
             public static string g_nid_cpn;
         }
-        public frmCPN()
+        public frmCPNOld()
         {
             InitializeComponent();
             // Setup DB-Connection
-            MySqlConnection con = new MySqlConnection("server=localhost;User Id=root;password=WakaBanga2;database=smi;Persist Security Info=True");
+            MySqlConnection con = new MySqlConnection(Connection.GetSMIDataBaseConStr());
             con.Open();
 
             // Create the DataSet
@@ -311,7 +311,7 @@ namespace smi
         {
             try
             {
-                conn = "server=localhost;User Id=root;password=WakaBanga2;database=smi;Persist Security Info=True;";
+                conn = Connection.GetSMIDataBaseConStr();
                 connect = new MySqlConnection(conn);
                 connect.Open();
             }

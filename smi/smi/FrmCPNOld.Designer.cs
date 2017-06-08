@@ -1,6 +1,6 @@
 ﻿namespace smi
 {
-    partial class frmCPN
+    partial class frmCPNOld
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCPN));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCPNOld));
             this.label1 = new System.Windows.Forms.Label();
             this.lblData = new randz.CustomControls.VerticalLabel();
             this.orientedTextLabel1 = new CustomControl.OrientAbleTextControls.OrientedTextLabel();

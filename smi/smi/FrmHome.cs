@@ -36,7 +36,7 @@ namespace smi
 
         private void cPNLivroDeConsultaPreNatalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCPN frm = new frmCPN();
+            frmCPNOld frm = new frmCPNOld();
             frm.Show();
         }
 
@@ -61,6 +61,12 @@ namespace smi
 
             FrmChild frm = new FrmChild();
             frm.Show();
+        }
+
+        private void cPNLivroDeConsultaPreNatalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmCPNOld cpn =  new frmCPNOld();
+            cpn.Show();
         }
     }
 }

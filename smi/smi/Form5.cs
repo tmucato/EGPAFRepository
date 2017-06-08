@@ -43,7 +43,7 @@ namespace smi
            // MySqlDataAdapter da1 = new MySqlDataAdapter("SELECT nid_cpn FROM cpn", con);
             //DataSet ds_2 = new DataSet();
             //da1.Fill(ds_2);
-            txtNid_CPN.Text = frmCPN.Variaveis.g_nid_cpn;
+            txtNid_CPN.Text = frmCPNOld.Variaveis.g_nid_cpn;
             //txtNid_CPN.DisplayMember = "nid_cpn";
             //cbxNidCPN.ValueMember = "";
             //cbxNidCPN.DataBind();

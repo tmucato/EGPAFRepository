@@ -19,9 +19,9 @@ C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmChild.
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmLogin.resources
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmHome.resources
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmMother.resources
-C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmCPN.resources
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmCPN2.resources
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.Properties.Resources.resources
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
+C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmCPNOld.resources

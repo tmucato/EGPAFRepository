@@ -101,11 +101,11 @@
     <Compile Include="FrmMother.Designer.cs">
       <DependentUpon>FrmMother.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCPN.cs">
+    <Compile Include="FrmCPNOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCPN.Designer.cs">
-      <DependentUpon>FrmCPN.cs</DependentUpon>
+    <Compile Include="FrmCPNOld.Designer.cs">
+      <DependentUpon>FrmCPNOld.cs</DependentUpon>
     </Compile>
     <Compile Include="Form5.cs">
       <SubType>Form</SubType>
@@ -130,8 +130,8 @@
     <EmbeddedResource Include="FrmMother.resx">
       <DependentUpon>FrmMother.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCPN.resx">
-      <DependentUpon>FrmCPN.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCPNOld.resx">
+      <DependentUpon>FrmCPNOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>

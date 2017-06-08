@@ -105,6 +105,7 @@ namespace smi
                 txtPhone.Clear();
                 txtResidence.Clear();
                 txtSearched.Clear();
+                cbxGenero.Text = string.Empty;
                 txtNid_ccr.Focus();
             }
             catch (Exception ex)
@@ -136,7 +137,7 @@ namespace smi
                 if (validate_fields())
                 {
                     clChild obj_child = new clChild();
-                    obj_child.gender = cbxGenero.SelectedText;
+                    obj_child.gender = cbxGenero.Text;
                     obj_child.dob = Convert.ToDateTime(txtDataNascimento.Text);
                     obj_child.mot_nid_cpn = txtNidMaeCpn.Text;
                     obj_child.name = txtName.Text;
@@ -155,14 +156,14 @@ namespace smi
                         obj_child.UpdateEntity();
                     }
 
-
+                    BinddgvChild();
 
                 }
             }
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 
@@ -192,7 +193,7 @@ namespace smi
                     return result;
                 }
 
-                if (string.IsNullOrWhiteSpace(txtPhone.Text))
+                if (!Functions.IsNumber(txtPhone.Text))
                 {
                     MessageBox.Show("O campo do telefone encontra-se vazio");
                     return result;
@@ -204,6 +205,19 @@ namespace smi
                     MessageBox.Show("O campo do residencia encontra-se vazio");
                     return result;
                 }
+
+                if (cbxGenero.SelectedIndex < 0)
+                {
+                    MessageBox.Show("O campo do genero encontra-se vazio");
+                    return result;
+                }
+
+                if (!Functions.IsDate(txtDataNascimento.Text))
+                {
+                    MessageBox.Show("O campo do data de nascimento comtem uma data nao valida");
+                    return result;
+                }
+
 
                 result = true;
 
