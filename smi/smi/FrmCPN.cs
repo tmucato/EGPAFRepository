@@ -152,6 +152,29 @@ namespace smi
                     cbxSalFerrAcFol.SelectedItem = cpn.salferr_acfolico;
                 if (!string.IsNullOrWhiteSpace(cpn.ta))
                     cbxtensaoArte.SelectedItem = cpn.ta;
+                if (!string.IsNullOrWhiteSpace(cpn.hgb))
+                    cbxHemoglobina.SelectedItem = cpn.hgb;
+                if (!string.IsNullOrWhiteSpace(cpn.proteinuria))
+                    cbxProteinuria.SelectedItem = cpn.proteinuria;
+                if (!string.IsNullOrWhiteSpace(cpn.glicosuria))
+                    cbxGlicosuria.SelectedItem = cpn.glicosuria;
+                if (cpn.its_ulceragenital != null)
+                    cbxUlcera.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.its_ulceragenital));
+                if (cpn.its_leucorreia != null)
+                    cbxLeucorreia.SelectedItem = cpn.its_leucorreia;
+                if (!string.IsNullOrWhiteSpace(cpn.its_syndromictreatment))
+                    cbxSindromicoITS.SelectedItem = cpn.its_syndromictreatment;
+                if (!string.IsNullOrWhiteSpace(cpn.its_syphilistesting))
+                    cbxTesteSiflis.SelectedItem = cpn.its_syphilistesting;
+                //if (! string.IsNullOrWhiteSpace())
+                //    cbxtratSiflMulher.SelectedItem = cpn
+
+
+
+
+
+
+
 
             }
             catch (Exception ex)

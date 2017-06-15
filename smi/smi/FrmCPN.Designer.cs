@@ -31,7 +31,7 @@
             this.Page1 = new System.Windows.Forms.TabPage();
             this.gbExames = new System.Windows.Forms.GroupBox();
             this.cbxGlicosuria = new System.Windows.Forms.ComboBox();
-            this.cbxlblProteinuria = new System.Windows.Forms.ComboBox();
+            this.cbxProteinuria = new System.Windows.Forms.ComboBox();
             this.lblGlicosuria = new System.Windows.Forms.Label();
             this.lblProteinuria = new System.Windows.Forms.Label();
             this.cbxtensaoArte = new System.Windows.Forms.ComboBox();
@@ -240,7 +240,7 @@
             // gbExames
             // 
             this.gbExames.Controls.Add(this.cbxGlicosuria);
-            this.gbExames.Controls.Add(this.cbxlblProteinuria);
+            this.gbExames.Controls.Add(this.cbxProteinuria);
             this.gbExames.Controls.Add(this.lblGlicosuria);
             this.gbExames.Controls.Add(this.lblProteinuria);
             this.gbExames.Controls.Add(this.cbxtensaoArte);
@@ -266,17 +266,17 @@
             this.cbxGlicosuria.Size = new System.Drawing.Size(85, 21);
             this.cbxGlicosuria.TabIndex = 37;
             // 
-            // cbxlblProteinuria
+            // cbxProteinuria
             // 
-            this.cbxlblProteinuria.FormattingEnabled = true;
-            this.cbxlblProteinuria.Items.AddRange(new object[] {
+            this.cbxProteinuria.FormattingEnabled = true;
+            this.cbxProteinuria.Items.AddRange(new object[] {
             "SIM",
             "NÃO",
             "NÂO FEZ"});
-            this.cbxlblProteinuria.Location = new System.Drawing.Point(256, 71);
-            this.cbxlblProteinuria.Name = "cbxlblProteinuria";
-            this.cbxlblProteinuria.Size = new System.Drawing.Size(85, 21);
-            this.cbxlblProteinuria.TabIndex = 36;
+            this.cbxProteinuria.Location = new System.Drawing.Point(256, 71);
+            this.cbxProteinuria.Name = "cbxProteinuria";
+            this.cbxProteinuria.Size = new System.Drawing.Size(85, 21);
+            this.cbxProteinuria.TabIndex = 36;
             // 
             // lblGlicosuria
             // 
@@ -2263,7 +2263,7 @@
         private System.Windows.Forms.Label lblRecDesparasitante;
         private System.Windows.Forms.GroupBox gbExames;
         private System.Windows.Forms.ComboBox cbxGlicosuria;
-        private System.Windows.Forms.ComboBox cbxlblProteinuria;
+        private System.Windows.Forms.ComboBox cbxProteinuria;
         private System.Windows.Forms.Label lblGlicosuria;
         private System.Windows.Forms.Label lblProteinuria;
         private System.Windows.Forms.ComboBox cbxtensaoArte;
