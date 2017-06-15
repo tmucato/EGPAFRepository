@@ -35,31 +35,6 @@ namespace smiBLL
         }
 
 
-        public DataTable getChidDataTable()
-        {
-            DataTable rsdt = new DataTable();
-            try
-            {
-                using (MySqlConnection cn = Connection.GetSMIDataBaseConnection())
-                {
-                    cn.Open();
-                    string Query = "select * from child;";
-                    MySqlCommand myCmd = new MySqlCommand(Query, cn);
-                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
-                    MyAdapter.SelectCommand = myCmd;
-                    DataTable dTable = new DataTable();
-                    MyAdapter.Fill(rsdt);
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError("Error getting child datatable from database", ex);
-                throw ex;
-            }
-
-            return rsdt;
-        }
-
         /// <summary>
         /// 
         /// </summary>
@@ -170,6 +145,31 @@ namespace smiBLL
                 Logger.LogError("Error deliting child " + this.id + " on database", ex);
                 throw ex;
             }
+        }
+
+        public override DataTable GetEntityDatatable()
+        {
+            DataTable rsdt = new DataTable();
+            try
+            {
+                using (MySqlConnection cn = Connection.GetSMIDataBaseConnection())
+                {
+                    cn.Open();
+                    string Query = "select * from child;";
+                    MySqlCommand myCmd = new MySqlCommand(Query, cn);
+                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                    MyAdapter.SelectCommand = myCmd;
+                    DataTable dTable = new DataTable();
+                    MyAdapter.Fill(rsdt);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error getting child datatable from database", ex);
+                throw ex;
+            }
+
+            return rsdt;
         }
     }
 }

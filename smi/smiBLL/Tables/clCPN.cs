@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace smiBLL
 {
@@ -135,6 +136,11 @@ namespace smiBLL
         }
 
         public override void UpdateEntity()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override DataTable GetEntityDatatable()
         {
             throw new NotImplementedException();
         }

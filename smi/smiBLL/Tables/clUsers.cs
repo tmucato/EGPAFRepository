@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using smiDAL;
 
 
@@ -73,5 +74,9 @@ namespace smiBLL
             throw new NotImplementedException();
         }
 
+        public override DataTable GetEntityDatatable()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

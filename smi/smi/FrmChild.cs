@@ -30,7 +30,7 @@ namespace smi
             {
                 clChild child = new clChild();
                 dgvChild.AutoGenerateColumns = false;
-                dgvChild.DataSource = child.getChidDataTable();
+                dgvChild.DataSource = child.GetEntityDatatable();
                 dgvChild.Refresh();
             }
             catch (Exception ex)

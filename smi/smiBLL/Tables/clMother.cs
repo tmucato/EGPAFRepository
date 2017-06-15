@@ -68,31 +68,7 @@ namespace smiBLL
         }
 
 
-        public DataTable getMotherDataTable()
-        {
-            DataTable rsdt = new DataTable();
-            try
-            {
-                using (MySqlConnection cn = Connection.GetSMIDataBaseConnection())
-                {
-                    cn.Open();
-                    string Query = "select * from mother;";
-                    MySqlCommand myCmd = new MySqlCommand(Query, cn);
-                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
-                    MyAdapter.SelectCommand = myCmd;
-                    DataTable dTable = new DataTable();
-                    MyAdapter.Fill(rsdt);
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError("Error getting mother datatable from database", ex);
-                throw ex;
-            }
-            return rsdt;
-        }
-
-        /// <summary>
+             /// <summary>
         /// Insert mother entity on the database
         /// </summary>
         public override void InsertEntity()
@@ -168,6 +144,30 @@ namespace smiBLL
                 Logger.LogError("Error deliting Mother " + this.id + " on database", ex);
                 throw ex;
             }
+        }
+
+        public override DataTable GetEntityDatatable()
+        {
+            DataTable rsdt = new DataTable();
+            try
+            {
+                using (MySqlConnection cn = Connection.GetSMIDataBaseConnection())
+                {
+                    cn.Open();
+                    string Query = "select * from mother;";
+                    MySqlCommand myCmd = new MySqlCommand(Query, cn);
+                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                    MyAdapter.SelectCommand = myCmd;
+                    DataTable dTable = new DataTable();
+                    MyAdapter.Fill(rsdt);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error getting mother datatable from database", ex);
+                throw ex;
+            }
+            return rsdt;
         }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace smiBLL
 {
-    class clCPNFinal : clTableBase<clCPNFinal>
+   public class clCPNFinal : clTableBase<clCPNFinal>
     {
 
 
@@ -98,6 +99,11 @@ namespace smiBLL
         }
 
         public override void UpdateEntity()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override DataTable GetEntityDatatable()
         {
             throw new NotImplementedException();
         }

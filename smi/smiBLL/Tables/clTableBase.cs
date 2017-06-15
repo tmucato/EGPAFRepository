@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,12 @@ namespace smiBLL
         /// </summary>
         /// <returns>List of the T object</returns>
         public abstract List<T> GetEntityList();
+
+        /// <summary>
+        /// Get a Datatable contain all records of the entity
+        /// </summary>
+        /// <returns>Datatable of the entity data</returns>
+        public abstract DataTable GetEntityDatatable();
 
         /// <summary>
         /// Insert a new entity in the data base

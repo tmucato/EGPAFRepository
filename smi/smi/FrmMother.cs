@@ -42,7 +42,7 @@ namespace smi
             {
                 clMother mother = new clMother();
                 dgvMother.AutoGenerateColumns = false;
-                dgvMother.DataSource = mother.getMotherDataTable();
+                dgvMother.DataSource = mother.GetEntityDatatable();
                 dgvMother.Refresh();
             }
             catch (Exception ex)
