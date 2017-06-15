@@ -12,7 +12,7 @@ namespace smiDAL
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-
+    
     public partial class DBsmiEntities : DbContext
     {
         public DBsmiEntities()
@@ -21,7 +21,7 @@ namespace smiDAL
         }
 
         public DBsmiEntities(string conStr)
-            : base(conStr)
+        : base(conStr)
         {
         }
 
@@ -29,7 +29,7 @@ namespace smiDAL
         {
             throw new UnintentionalCodeFirstException();
         }
-
+    
         public DbSet<mother> mothers { get; set; }
         public DbSet<usuario> usuarios { get; set; }
         public DbSet<child> children { get; set; }

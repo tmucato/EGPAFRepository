@@ -36,5 +36,56 @@ namespace smiBLL
                 return false;
             }
         }
+
+        public static string ConvertBoolToComboValue(bool value)
+        {
+            string result = string.Empty;
+
+            try
+            {
+                if (value)
+                {
+                    result = "SIM";
+                }
+                else
+                {
+                    result = "NÃO";
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return result;
+        }
+
+        public static Nullable<bool> ConvertComboValueToBool(string value)
+        {
+            Nullable<bool> result = null;
+
+            try
+            {
+                if (value == "SIM")
+                {
+                    result = true;
+                }
+                else if (value == "NÃO")
+                {
+                    result = false;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return result;
+
+        }
+
+
     }
 }

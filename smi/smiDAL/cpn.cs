@@ -21,7 +21,7 @@ namespace smiDAL
         public int nyear { get; set; }
         public System.DateTime visdate { get; set; }
         public string agegroup { get; set; }
-        public Nullable<sbyte> gestationalage { get; set; }
+        public Nullable<int> gestationalage { get; set; }
         public Nullable<bool> gageless12 { get; set; }
         public Nullable<bool> partnerpresence { get; set; }
         public Nullable<int> weight { get; set; }
@@ -43,9 +43,7 @@ namespace smiDAL
         public string its_syphilistesting { get; set; }
         public string its_wsyphilistreat { get; set; }
         public string its_psyphilistreat { get; set; }
-        public Nullable<bool> serostatusdesc { get; set; }
-        public Nullable<bool> serostatusneg { get; set; }
-        public Nullable<bool> serostatuspos { get; set; }
+        public string serostatusentcpn { get; set; }
         public string cpnhivtest { get; set; }
         public string partnerhivtest { get; set; }
         public Nullable<bool> ctz { get; set; }

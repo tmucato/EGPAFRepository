@@ -44,17 +44,17 @@ namespace smiBLL
             {
                 using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
                 {
-                    foreach (mother moth in DbContext.mothers)
+                    foreach (mother db_moth in DbContext.mothers)
                     {
                         clMother clMoth = new clMother();
-                        clMoth.id = moth.id;
-                        clMoth.nid_cpn = moth.nid_cpn;
-                        clMoth.nid_tarv = moth.nid_tarv;
-                        clMoth.name = moth.name;
-                        clMoth.phone = moth.phone;
-                        clMoth.residence = moth.residence;
-                        if (moth.dob != null)
-                            clMoth.dob = DateTime.Parse(moth.dob.ToString());
+                        clMoth.id = db_moth.id;
+                        clMoth.nid_cpn = db_moth.nid_cpn;
+                        clMoth.nid_tarv = db_moth.nid_tarv;
+                        clMoth.name = db_moth.name;
+                        clMoth.phone = db_moth.phone;
+                        clMoth.residence = db_moth.residence;
+                        if (db_moth.dob != null)
+                            clMoth.dob = DateTime.Parse(db_moth.dob.ToString());
                         List_mother.Add(clMoth);
                     }
                 }

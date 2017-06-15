@@ -22,14 +22,14 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nr_consulta" Type="int" />
           <Property Name="idmother" Type="bigint" Nullable="false" />
           <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="nyear" Type="int" Nullable="false" />
           <Property Name="visdate" Type="datetime" Precision="0" Nullable="false" />
           <Property Name="agegroup" Type="varchar" MaxLength="25" />
-          <Property Name="gestationalage" Type="tinyint" />
+          <Property Name="gestationalage" Type="int" />
           <Property Name="gageless12" Type="bool" />
           <Property Name="partnerpresence" Type="bool" />
           <Property Name="weight" Type="int" />
@@ -51,9 +51,7 @@
           <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
           <Property Name="its_wsyphilistreat" Type="varchar" MaxLength="5" />
           <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
-          <Property Name="serostatusdesc" Type="bool" />
-          <Property Name="serostatusneg" Type="bool" />
-          <Property Name="serostatuspos" Type="bool" />
+          <Property Name="serostatusentcpn" Type="varchar" MaxLength="5" />
           <Property Name="cpnhivtest" Type="varchar" MaxLength="5" />
           <Property Name="partnerhivtest" Type="varchar" MaxLength="5" />
           <Property Name="ctz" Type="bool" />
@@ -80,7 +78,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idmother" Type="bigint" Nullable="false" />
           <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="cons_more4" Type="bool" />
@@ -233,14 +231,14 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nr_consulta" Type="Int32" />
           <Property Name="idmother" Type="Int64" Nullable="false" />
           <Property Name="nlivro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="nyear" Type="Int32" Nullable="false" />
           <Property Name="visdate" Type="DateTime" Nullable="false" />
           <Property Name="agegroup" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Name="gestationalage" Type="SByte" />
+          <Property Name="gestationalage" Type="Int32" />
           <Property Name="gageless12" Type="Boolean" />
           <Property Name="partnerpresence" Type="Boolean" />
           <Property Name="weight" Type="Int32" />
@@ -262,9 +260,7 @@
           <Property Name="its_syphilistesting" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="its_wsyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="its_psyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="serostatusdesc" Type="Boolean" />
-          <Property Name="serostatusneg" Type="Boolean" />
-          <Property Name="serostatuspos" Type="Boolean" />
+          <Property Name="serostatusentcpn" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="cpnhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="partnerhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="ctz" Type="Boolean" />
@@ -395,9 +391,7 @@
                 <ScalarProperty Name="ctz" ColumnName="ctz" />
                 <ScalarProperty Name="partnerhivtest" ColumnName="partnerhivtest" />
                 <ScalarProperty Name="cpnhivtest" ColumnName="cpnhivtest" />
-                <ScalarProperty Name="serostatuspos" ColumnName="serostatuspos" />
-                <ScalarProperty Name="serostatusneg" ColumnName="serostatusneg" />
-                <ScalarProperty Name="serostatusdesc" ColumnName="serostatusdesc" />
+                <ScalarProperty Name="serostatusentcpn" ColumnName="serostatusentcpn" />
                 <ScalarProperty Name="its_psyphilistreat" ColumnName="its_psyphilistreat" />
                 <ScalarProperty Name="its_wsyphilistreat" ColumnName="its_wsyphilistreat" />
                 <ScalarProperty Name="its_syphilistesting" ColumnName="its_syphilistesting" />

@@ -103,9 +103,7 @@
           <ScalarProperty Name="ctz" ColumnName="ctz" />
           <ScalarProperty Name="partnerhivtest" ColumnName="partnerhivtest" />
           <ScalarProperty Name="cpnhivtest" ColumnName="cpnhivtest" />
-          <ScalarProperty Name="serostatuspos" ColumnName="serostatuspos" />
-          <ScalarProperty Name="serostatusneg" ColumnName="serostatusneg" />
-          <ScalarProperty Name="serostatusdesc" ColumnName="serostatusdesc" />
+          <ScalarProperty Name="serostatusentcpn" ColumnName="serostatusentcpn" />
           <ScalarProperty Name="its_psyphilistreat" ColumnName="its_psyphilistreat" />
           <ScalarProperty Name="its_wsyphilistreat" ColumnName="its_wsyphilistreat" />
           <ScalarProperty Name="its_syphilistesting" ColumnName="its_syphilistesting" />

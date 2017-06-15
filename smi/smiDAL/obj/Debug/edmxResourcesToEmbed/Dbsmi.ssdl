@@ -17,14 +17,14 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nr_consulta" Type="int" />
     <Property Name="idmother" Type="bigint" Nullable="false" />
     <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="nyear" Type="int" Nullable="false" />
     <Property Name="visdate" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="agegroup" Type="varchar" MaxLength="25" />
-    <Property Name="gestationalage" Type="tinyint" />
+    <Property Name="gestationalage" Type="int" />
     <Property Name="gageless12" Type="bool" />
     <Property Name="partnerpresence" Type="bool" />
     <Property Name="weight" Type="int" />
@@ -46,9 +46,7 @@
     <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
     <Property Name="its_wsyphilistreat" Type="varchar" MaxLength="5" />
     <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
-    <Property Name="serostatusdesc" Type="bool" />
-    <Property Name="serostatusneg" Type="bool" />
-    <Property Name="serostatuspos" Type="bool" />
+    <Property Name="serostatusentcpn" Type="varchar" MaxLength="5" />
     <Property Name="cpnhivtest" Type="varchar" MaxLength="5" />
     <Property Name="partnerhivtest" Type="varchar" MaxLength="5" />
     <Property Name="ctz" Type="bool" />
@@ -75,7 +73,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idmother" Type="bigint" Nullable="false" />
     <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="cons_more4" Type="bool" />
