@@ -49,9 +49,9 @@ namespace smi
                     if (List_moth.Count > 0)
                     {
                         moth = List_moth.FirstOrDefault();
+                        BindMotherControls(moth);
                         cpn = new clCPN();
                         List<clCPN> list_cpn = new List<clCPN>();
-
                         list_cpn = cpn.GetEntityList().Where(c => c.idmother == moth.id).ToList();
 
                         if (list_cpn.Count > 0)
@@ -63,13 +63,13 @@ namespace smi
                             if (cbxNrConsultaMain.SelectedIndex >= 0)
                             {
                                 cpn = new clCPN();
-                                cpn = list_cpn.Where(c => c.nr_consulta == Convert.ToInt32(cbxNrConsultaMain.SelectedText)).FirstOrDefault();
+                                cpn = list_cpn.Where(c => c.nr_consulta == Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()))).FirstOrDefault();
                                 BindCPNControls(cpn);
                             }
                         }
                         else
                         {
-                            for (int i = 0; i < 6; i++)
+                            for (int i = 1; i < 7; i++)
                             {
                                 cpn = new clCPN();
                                 cpn.idmother = moth.id;
@@ -83,24 +83,38 @@ namespace smi
                                     cpn_final.InsertEntity();
                                 }
                             }
+                            cpn_final = new clCPNFinal();
+                            cpn_final = cpn_final.GetEntityList().Where(cf => cf.idmother == moth.id).FirstOrDefault();
+                            BindCPNFinalControls(cpn_final);
+
+                            if (cbxNrConsultaMain.SelectedIndex >= 0)
+                            {
+                                cpn = new clCPN();
+                                cpn = list_cpn.Where(c => c.nr_consulta == Convert.ToInt32(cbxNrConsultaMain.SelectedText)).FirstOrDefault();
+                                BindCPNControls(cpn);
+                            }
                         }
                     }
                     else
                     {
-
-
-
+                        MessageBox.Show("Não encontrada na base de dados uma mão com o NIC CPN igual a " + txtNidCpnMain.Text);
                     }
-
-
-
                 }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
-
-
-
-
-
+        private void BindMotherControls(clMother moth)
+        {
+            try
+            {
+                txtNidTarv.Text = moth.nid_tarv;
+                txtNome.Text = moth.name;
+                txtResidencia.Text = moth.residence;
+                txtTelefone.Text = moth.phone;
             }
             catch (Exception ex)
             {
@@ -110,12 +124,47 @@ namespace smi
 
         private void BindCPNControls(clCPN cpn)
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                cbxNrConulta.SelectedItem = Functions.ConvertNumbComboConsult(cpn.nr_consulta);
+                dtpDataConsulta.Value = cpn.visdate;
+                txtIdadeGest.Text = cpn.gestationalage.ToString();
+                if (cpn.partnerpresence != null)
+                    cbxParPresent.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.partnerpresence));
+                if (!string.IsNullOrWhiteSpace(cpn.agegroup))
+                    cbxFaixaEtaria.SelectedItem = cpn.agegroup;
+                if (cpn.gageless12 != null)
+                    cbxIdaMen12Sem.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.gageless12));
+                txtPeso.Text = cpn.weight.ToString();
+                if (cpn.dam != null)
+                    cbxDAM.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.dam));
+                if (cpn.dag != null)
+                    cbxDAG.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.dag));
+                if (!string.IsNullOrWhiteSpace(cpn.resultcured))
+                    cbxCurada.SelectedItem = cpn.resultcured;
+                if (!string.IsNullOrWhiteSpace(cpn.weightgainyno))
+                    cbxGanhoMaior15.SelectedItem = cpn.weightgainyno;
+                txtRecSuplNutrQty.Text = cpn.supnutr.ToString();
+                if (!string.IsNullOrWhiteSpace(cpn.receiveddesparasitante))
+                    cbxRecDesparasitante.SelectedItem = cpn.receiveddesparasitante;
+                if (!string.IsNullOrWhiteSpace(cpn.salferr_acfolico))
+                    cbxSalFerrAcFol.SelectedItem = cpn.salferr_acfolico;
+                if (!string.IsNullOrWhiteSpace(cpn.ta))
+                    cbxtensaoArte.SelectedItem = cpn.ta;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
 
         private void BindCPNFinalControls(clCPNFinal cnp_fin)
         {
-            throw new NotImplementedException();
+
         }
 
         private void btnGravarMain_Click(object sender, EventArgs e)
@@ -126,6 +175,11 @@ namespace smi
         private void btnAnteriorPage3_Click(object sender, EventArgs e)
         {
             this.tabCPN.SelectedIndex = 1;
+        }
+
+        private void cbxNrConsultaMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

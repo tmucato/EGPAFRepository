@@ -85,7 +85,75 @@ namespace smiBLL
             return result;
 
         }
+        public static int ConvertComboConsultToNumb(string value)
+        {
+            int result = 0;
+            try
+            {
+                switch (value)
+                {
+                    case "1ª":
+                        result = 1;
+                        break;
+                    case "2ª":
+                        result = 2;
+                        break;
+                    case "3ª":
+                        result = 3;
+                        break;
+                    case "4ª":
+                        result = 4;
+                        break;
+                    case "5ª":
+                        result = 5;
+                        break;
+                    case "6ª":
+                        result = 6;
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
+            return result;
+        }
 
+        public static string ConvertNumbComboConsult(int value)
+        {
+            string result = string.Empty;
+            try
+            {
+                switch (value)
+                {
+                    case 1:
+                        result = "1º";
+                        break;
+                    case 2:
+                        result = "2º";
+                        break;
+                    case 3:
+                        result = "3º";
+                        break;
+                    case 4:
+                        result = "4º";
+                        break;
+                    case 5:
+                        result = "5ª";
+                        break;
+                    case 6:
+                        result = "6º";
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return result;
+
+        }
     }
 }

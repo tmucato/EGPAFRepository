@@ -46,8 +46,8 @@
             this.lblRecDesparasitante = new System.Windows.Forms.Label();
             this.cbxCurada = new System.Windows.Forms.ComboBox();
             this.lblCurado = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblRecSuplNutr = new System.Windows.Forms.Label();
+            this.txtRecSuplNutrQty = new System.Windows.Forms.TextBox();
+            this.lblRecSuplNutrQty = new System.Windows.Forms.Label();
             this.cbxDAM = new System.Windows.Forms.ComboBox();
             this.cbxDAG = new System.Windows.Forms.ComboBox();
             this.lblDAG = new System.Windows.Forms.Label();
@@ -143,71 +143,71 @@
             this.lblLeucorreia = new System.Windows.Forms.Label();
             this.lblUlcera = new System.Windows.Forms.Label();
             this.EstadoFinal = new System.Windows.Forms.TabPage();
+            this.btnAnteriorPage3 = new System.Windows.Forms.Button();
+            this.cbxFinalTratTB = new System.Windows.Forms.ComboBox();
+            this.lblFinalTratTB = new System.Windows.Forms.Label();
+            this.cbxFinalINH = new System.Windows.Forms.ComboBox();
+            this.lblFinalINH = new System.Windows.Forms.Label();
+            this.cbxFinalVat1Dose = new System.Windows.Forms.ComboBox();
+            this.cbxFinalVat2_5Dose = new System.Windows.Forms.ComboBox();
+            this.lblFinalVat2_5Dose = new System.Windows.Forms.Label();
+            this.lblFinalVat1Dose = new System.Windows.Forms.Label();
+            this.cbxFinalRecHPP = new System.Windows.Forms.ComboBox();
+            this.lblFinalRecHPP = new System.Windows.Forms.Label();
+            this.cbxFinalTratMal = new System.Windows.Forms.ComboBox();
+            this.lblFinalTratMal = new System.Windows.Forms.Label();
+            this.cbxFinalDigLabMal = new System.Windows.Forms.ComboBox();
+            this.lblFinalDigLabMal = new System.Windows.Forms.Label();
+            this.cbxFinalRecRedeMosq = new System.Windows.Forms.ComboBox();
+            this.lblFinalRecRedeMosq = new System.Windows.Forms.Label();
+            this.cbxFinalTIP = new System.Windows.Forms.ComboBox();
+            this.lblFinalTIP = new System.Windows.Forms.Label();
+            this.cbxFinalResARV = new System.Windows.Forms.ComboBox();
+            this.lblFinalResARV = new System.Windows.Forms.Label();
+            this.txtFinalIniCTZ = new System.Windows.Forms.TextBox();
+            this.lblFinalIniCTZ = new System.Windows.Forms.Label();
+            this.cbxFinalCTZEntrada = new System.Windows.Forms.ComboBox();
+            this.lblFinalCTZEntrada = new System.Windows.Forms.Label();
+            this.cbxFinalEstadoHIVPar = new System.Windows.Forms.ComboBox();
+            this.lblFinalEstadoHIVPar = new System.Windows.Forms.Label();
+            this.cbxFinalEstadoHIVMulher = new System.Windows.Forms.ComboBox();
+            this.lblFinalEstadoHIVMulher = new System.Windows.Forms.Label();
+            this.cbxFinalTratSiflMulher = new System.Windows.Forms.ComboBox();
+            this.cbxFinalTratSiflParc = new System.Windows.Forms.ComboBox();
+            this.lblFinalTratSiflParc = new System.Windows.Forms.Label();
+            this.lblFinalTratSiflMulher = new System.Windows.Forms.Label();
+            this.cbxFinalTestSiflis = new System.Windows.Forms.ComboBox();
+            this.lblFinalTestSiflis = new System.Windows.Forms.Label();
+            this.cbxFinalTratITS = new System.Windows.Forms.ComboBox();
+            this.lblFinalTratITS = new System.Windows.Forms.Label();
+            this.txtFinalDiagITS = new System.Windows.Forms.TextBox();
+            this.lblFinalDiagITS = new System.Windows.Forms.Label();
+            this.cbxFinalSalFerrMais3 = new System.Windows.Forms.ComboBox();
+            this.lblFinalSalFerrMais3 = new System.Windows.Forms.Label();
+            this.cbxFinalRecDespara = new System.Windows.Forms.ComboBox();
+            this.lblFinalRecDespara = new System.Windows.Forms.Label();
+            this.cbxFinalCuradoDesntr = new System.Windows.Forms.ComboBox();
+            this.lblCuradoDesntr = new System.Windows.Forms.Label();
+            this.cbxFinalAbandDesnutr = new System.Windows.Forms.ComboBox();
+            this.lblAbandDesnutr = new System.Windows.Forms.Label();
+            this.cbxFinalRecSuplNutri = new System.Windows.Forms.ComboBox();
+            this.lblRecSuplNutri = new System.Windows.Forms.Label();
+            this.cbxFinalDAM = new System.Windows.Forms.ComboBox();
+            this.cbxFinalDAG = new System.Windows.Forms.ComboBox();
+            this.lblDAGFinal = new System.Windows.Forms.Label();
+            this.lblDAMFinal = new System.Windows.Forms.Label();
+            this.cbxFinalGanho15 = new System.Windows.Forms.ComboBox();
+            this.lblGanho15Fnal = new System.Windows.Forms.Label();
+            this.cbxFinalParcePrese = new System.Windows.Forms.ComboBox();
+            this.lblParcePreseFinal = new System.Windows.Forms.Label();
+            this.cbxFinalMaisConsult = new System.Windows.Forms.ComboBox();
+            this.lblMaisConsult = new System.Windows.Forms.Label();
             this.lblNidCpnMain = new System.Windows.Forms.Label();
             this.txtNidCpnMain = new System.Windows.Forms.TextBox();
             this.lblNrConsultaMain = new System.Windows.Forms.Label();
             this.cbxNrConsultaMain = new System.Windows.Forms.ComboBox();
             this.btnBuscarMain = new System.Windows.Forms.Button();
             this.btnGravarMain = new System.Windows.Forms.Button();
-            this.lblMaisConsult = new System.Windows.Forms.Label();
-            this.cbxFinalMaisConsult = new System.Windows.Forms.ComboBox();
-            this.lblParcePreseFinal = new System.Windows.Forms.Label();
-            this.cbxFinalParcePrese = new System.Windows.Forms.ComboBox();
-            this.lblGanho15Fnal = new System.Windows.Forms.Label();
-            this.cbxFinalGanho15 = new System.Windows.Forms.ComboBox();
-            this.cbxFinalDAM = new System.Windows.Forms.ComboBox();
-            this.cbxFinalDAG = new System.Windows.Forms.ComboBox();
-            this.lblDAGFinal = new System.Windows.Forms.Label();
-            this.lblDAMFinal = new System.Windows.Forms.Label();
-            this.lblRecSuplNutri = new System.Windows.Forms.Label();
-            this.cbxFinalRecSuplNutri = new System.Windows.Forms.ComboBox();
-            this.lblAbandDesnutr = new System.Windows.Forms.Label();
-            this.cbxFinalAbandDesnutr = new System.Windows.Forms.ComboBox();
-            this.cbxFinalCuradoDesntr = new System.Windows.Forms.ComboBox();
-            this.lblCuradoDesntr = new System.Windows.Forms.Label();
-            this.lblFinalRecDespara = new System.Windows.Forms.Label();
-            this.cbxFinalRecDespara = new System.Windows.Forms.ComboBox();
-            this.lblFinalSalFerrMais3 = new System.Windows.Forms.Label();
-            this.cbxFinalSalFerrMais3 = new System.Windows.Forms.ComboBox();
-            this.lblFinalDiagITS = new System.Windows.Forms.Label();
-            this.txtFinalDiagITS = new System.Windows.Forms.TextBox();
-            this.lblFinalTratITS = new System.Windows.Forms.Label();
-            this.cbxFinalTratITS = new System.Windows.Forms.ComboBox();
-            this.lblFinalTestSiflis = new System.Windows.Forms.Label();
-            this.cbxFinalTestSiflis = new System.Windows.Forms.ComboBox();
-            this.lblFinalTratSiflMulher = new System.Windows.Forms.Label();
-            this.lblFinalTratSiflParc = new System.Windows.Forms.Label();
-            this.cbxFinalTratSiflParc = new System.Windows.Forms.ComboBox();
-            this.cbxFinalTratSiflMulher = new System.Windows.Forms.ComboBox();
-            this.lblFinalEstadoHIVMulher = new System.Windows.Forms.Label();
-            this.cbxFinalEstadoHIVMulher = new System.Windows.Forms.ComboBox();
-            this.lblFinalEstadoHIVPar = new System.Windows.Forms.Label();
-            this.cbxFinalEstadoHIVPar = new System.Windows.Forms.ComboBox();
-            this.lblFinalCTZEntrada = new System.Windows.Forms.Label();
-            this.cbxFinalCTZEntrada = new System.Windows.Forms.ComboBox();
-            this.lblFinalIniCTZ = new System.Windows.Forms.Label();
-            this.txtFinalIniCTZ = new System.Windows.Forms.TextBox();
-            this.lblFinalResARV = new System.Windows.Forms.Label();
-            this.cbxFinalResARV = new System.Windows.Forms.ComboBox();
-            this.lblFinalTIP = new System.Windows.Forms.Label();
-            this.cbxFinalTIP = new System.Windows.Forms.ComboBox();
-            this.lblFinalRecRedeMosq = new System.Windows.Forms.Label();
-            this.cbxFinalRecRedeMosq = new System.Windows.Forms.ComboBox();
-            this.lblFinalDigLabMal = new System.Windows.Forms.Label();
-            this.cbxFinalDigLabMal = new System.Windows.Forms.ComboBox();
-            this.lblFinalTratMal = new System.Windows.Forms.Label();
-            this.cbxFinalTratMal = new System.Windows.Forms.ComboBox();
-            this.lblFinalRecHPP = new System.Windows.Forms.Label();
-            this.cbxFinalRecHPP = new System.Windows.Forms.ComboBox();
-            this.cbxFinalVat1Dose = new System.Windows.Forms.ComboBox();
-            this.cbxFinalVat2_5Dose = new System.Windows.Forms.ComboBox();
-            this.lblFinalVat2_5Dose = new System.Windows.Forms.Label();
-            this.lblFinalVat1Dose = new System.Windows.Forms.Label();
-            this.lblFinalINH = new System.Windows.Forms.Label();
-            this.cbxFinalINH = new System.Windows.Forms.ComboBox();
-            this.lblFinalTratTB = new System.Windows.Forms.Label();
-            this.cbxFinalTratTB = new System.Windows.Forms.ComboBox();
-            this.btnAnteriorPage3 = new System.Windows.Forms.Button();
             this.Page1.SuspendLayout();
             this.gbExames.SuspendLayout();
             this.gbNutricao.SuspendLayout();
@@ -356,8 +356,8 @@
             this.gbNutricao.Controls.Add(this.lblRecDesparasitante);
             this.gbNutricao.Controls.Add(this.cbxCurada);
             this.gbNutricao.Controls.Add(this.lblCurado);
-            this.gbNutricao.Controls.Add(this.textBox2);
-            this.gbNutricao.Controls.Add(this.lblRecSuplNutr);
+            this.gbNutricao.Controls.Add(this.txtRecSuplNutrQty);
+            this.gbNutricao.Controls.Add(this.lblRecSuplNutrQty);
             this.gbNutricao.Controls.Add(this.cbxDAM);
             this.gbNutricao.Controls.Add(this.cbxDAG);
             this.gbNutricao.Controls.Add(this.lblDAG);
@@ -433,21 +433,21 @@
             this.lblCurado.TabIndex = 27;
             this.lblCurado.Text = "Curada";
             // 
-            // textBox2
+            // txtRecSuplNutrQty
             // 
-            this.textBox2.Location = new System.Drawing.Point(408, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 20);
-            this.textBox2.TabIndex = 26;
+            this.txtRecSuplNutrQty.Location = new System.Drawing.Point(408, 61);
+            this.txtRecSuplNutrQty.Name = "txtRecSuplNutrQty";
+            this.txtRecSuplNutrQty.Size = new System.Drawing.Size(85, 20);
+            this.txtRecSuplNutrQty.TabIndex = 26;
             // 
-            // lblRecSuplNutr
+            // lblRecSuplNutrQty
             // 
-            this.lblRecSuplNutr.AutoSize = true;
-            this.lblRecSuplNutr.Location = new System.Drawing.Point(172, 64);
-            this.lblRecSuplNutr.Name = "lblRecSuplNutr";
-            this.lblRecSuplNutr.Size = new System.Drawing.Size(231, 13);
-            this.lblRecSuplNutr.TabIndex = 25;
-            this.lblRecSuplNutr.Text = "Recebeu suplementos nutricionais (quantidade)";
+            this.lblRecSuplNutrQty.AutoSize = true;
+            this.lblRecSuplNutrQty.Location = new System.Drawing.Point(172, 64);
+            this.lblRecSuplNutrQty.Name = "lblRecSuplNutrQty";
+            this.lblRecSuplNutrQty.Size = new System.Drawing.Size(231, 13);
+            this.lblRecSuplNutrQty.TabIndex = 25;
+            this.lblRecSuplNutrQty.Text = "Recebeu suplementos nutricionais (quantidade)";
             // 
             // cbxDAM
             // 
@@ -1519,565 +1519,55 @@
             this.EstadoFinal.TabIndex = 3;
             this.EstadoFinal.Text = "Estado Final";
             // 
-            // lblNidCpnMain
-            // 
-            this.lblNidCpnMain.AutoSize = true;
-            this.lblNidCpnMain.Location = new System.Drawing.Point(13, 19);
-            this.lblNidCpnMain.Name = "lblNidCpnMain";
-            this.lblNidCpnMain.Size = new System.Drawing.Size(90, 13);
-            this.lblNidCpnMain.TabIndex = 1;
-            this.lblNidCpnMain.Text = "NID CPN da Mãe";
-            // 
-            // txtNidCpnMain
-            // 
-            this.txtNidCpnMain.Location = new System.Drawing.Point(158, 16);
-            this.txtNidCpnMain.Name = "txtNidCpnMain";
-            this.txtNidCpnMain.Size = new System.Drawing.Size(235, 20);
-            this.txtNidCpnMain.TabIndex = 2;
-            // 
-            // lblNrConsultaMain
-            // 
-            this.lblNrConsultaMain.AutoSize = true;
-            this.lblNrConsultaMain.Location = new System.Drawing.Point(506, 19);
-            this.lblNrConsultaMain.Name = "lblNrConsultaMain";
-            this.lblNrConsultaMain.Size = new System.Drawing.Size(150, 13);
-            this.lblNrConsultaMain.TabIndex = 3;
-            this.lblNrConsultaMain.Text = "Número de Consulta Pre-Natal";
-            // 
-            // cbxNrConsultaMain
-            // 
-            this.cbxNrConsultaMain.FormattingEnabled = true;
-            this.cbxNrConsultaMain.Items.AddRange(new object[] {
-            "1ª",
-            "2ª",
-            "3ª",
-            "4ª",
-            "5ª",
-            "6ª"});
-            this.cbxNrConsultaMain.Location = new System.Drawing.Point(662, 13);
-            this.cbxNrConsultaMain.Name = "cbxNrConsultaMain";
-            this.cbxNrConsultaMain.Size = new System.Drawing.Size(174, 21);
-            this.cbxNrConsultaMain.TabIndex = 14;
-            // 
-            // btnBuscarMain
-            // 
-            this.btnBuscarMain.Location = new System.Drawing.Point(413, 13);
-            this.btnBuscarMain.Name = "btnBuscarMain";
-            this.btnBuscarMain.Size = new System.Drawing.Size(84, 23);
-            this.btnBuscarMain.TabIndex = 15;
-            this.btnBuscarMain.Text = "Buscar";
-            this.btnBuscarMain.UseVisualStyleBackColor = true;
-            this.btnBuscarMain.Click += new System.EventHandler(this.btnBuscarMain_Click);
-            // 
-            // btnGravarMain
-            // 
-            this.btnGravarMain.Location = new System.Drawing.Point(884, 14);
-            this.btnGravarMain.Name = "btnGravarMain";
-            this.btnGravarMain.Size = new System.Drawing.Size(127, 23);
-            this.btnGravarMain.TabIndex = 16;
-            this.btnGravarMain.Text = "Gravar";
-            this.btnGravarMain.UseVisualStyleBackColor = true;
-            this.btnGravarMain.Click += new System.EventHandler(this.btnGravarMain_Click);
-            // 
-            // lblMaisConsult
-            // 
-            this.lblMaisConsult.AutoSize = true;
-            this.lblMaisConsult.Location = new System.Drawing.Point(21, 9);
-            this.lblMaisConsult.Name = "lblMaisConsult";
-            this.lblMaisConsult.Size = new System.Drawing.Size(81, 13);
-            this.lblMaisConsult.TabIndex = 0;
-            this.lblMaisConsult.Text = "Nº Consulta ≥ 4";
-            // 
-            // cbxFinalMaisConsult
-            // 
-            this.cbxFinalMaisConsult.FormattingEnabled = true;
-            this.cbxFinalMaisConsult.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalMaisConsult.Location = new System.Drawing.Point(259, 6);
-            this.cbxFinalMaisConsult.Name = "cbxFinalMaisConsult";
-            this.cbxFinalMaisConsult.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalMaisConsult.TabIndex = 25;
-            // 
-            // lblParcePreseFinal
-            // 
-            this.lblParcePreseFinal.AutoSize = true;
-            this.lblParcePreseFinal.Location = new System.Drawing.Point(21, 36);
-            this.lblParcePreseFinal.Name = "lblParcePreseFinal";
-            this.lblParcePreseFinal.Size = new System.Drawing.Size(91, 13);
-            this.lblParcePreseFinal.TabIndex = 26;
-            this.lblParcePreseFinal.Text = "Parceiro Presente";
-            // 
-            // cbxFinalParcePrese
-            // 
-            this.cbxFinalParcePrese.FormattingEnabled = true;
-            this.cbxFinalParcePrese.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalParcePrese.Location = new System.Drawing.Point(259, 33);
-            this.cbxFinalParcePrese.Name = "cbxFinalParcePrese";
-            this.cbxFinalParcePrese.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalParcePrese.TabIndex = 27;
-            // 
-            // lblGanho15Fnal
-            // 
-            this.lblGanho15Fnal.AutoSize = true;
-            this.lblGanho15Fnal.Location = new System.Drawing.Point(21, 63);
-            this.lblGanho15Fnal.Name = "lblGanho15Fnal";
-            this.lblGanho15Fnal.Size = new System.Drawing.Size(208, 13);
-            this.lblGanho15Fnal.TabIndex = 28;
-            this.lblGanho15Fnal.Text = "Ganho ≥1.5 Kg/mês a partir do 2º trimestre";
-            // 
-            // cbxFinalGanho15
-            // 
-            this.cbxFinalGanho15.FormattingEnabled = true;
-            this.cbxFinalGanho15.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalGanho15.Location = new System.Drawing.Point(259, 60);
-            this.cbxFinalGanho15.Name = "cbxFinalGanho15";
-            this.cbxFinalGanho15.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalGanho15.TabIndex = 29;
-            // 
-            // cbxFinalDAM
-            // 
-            this.cbxFinalDAM.FormattingEnabled = true;
-            this.cbxFinalDAM.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalDAM.Location = new System.Drawing.Point(259, 87);
-            this.cbxFinalDAM.Name = "cbxFinalDAM";
-            this.cbxFinalDAM.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalDAM.TabIndex = 33;
-            // 
-            // cbxFinalDAG
-            // 
-            this.cbxFinalDAG.FormattingEnabled = true;
-            this.cbxFinalDAG.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalDAG.Location = new System.Drawing.Point(259, 114);
-            this.cbxFinalDAG.Name = "cbxFinalDAG";
-            this.cbxFinalDAG.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalDAG.TabIndex = 32;
-            // 
-            // lblDAGFinal
-            // 
-            this.lblDAGFinal.AutoSize = true;
-            this.lblDAGFinal.Location = new System.Drawing.Point(22, 117);
-            this.lblDAGFinal.Name = "lblDAGFinal";
-            this.lblDAGFinal.Size = new System.Drawing.Size(30, 13);
-            this.lblDAGFinal.TabIndex = 31;
-            this.lblDAGFinal.Text = "DAG";
-            // 
-            // lblDAMFinal
-            // 
-            this.lblDAMFinal.AutoSize = true;
-            this.lblDAMFinal.Location = new System.Drawing.Point(21, 90);
-            this.lblDAMFinal.Name = "lblDAMFinal";
-            this.lblDAMFinal.Size = new System.Drawing.Size(31, 13);
-            this.lblDAMFinal.TabIndex = 30;
-            this.lblDAMFinal.Text = "DAM";
-            // 
-            // lblRecSuplNutri
-            // 
-            this.lblRecSuplNutri.AutoSize = true;
-            this.lblRecSuplNutri.Location = new System.Drawing.Point(22, 144);
-            this.lblRecSuplNutri.Name = "lblRecSuplNutri";
-            this.lblRecSuplNutri.Size = new System.Drawing.Size(169, 13);
-            this.lblRecSuplNutri.TabIndex = 34;
-            this.lblRecSuplNutri.Text = "Recebeu suplementos nutricionais";
-            // 
-            // cbxFinalRecSuplNutri
-            // 
-            this.cbxFinalRecSuplNutri.FormattingEnabled = true;
-            this.cbxFinalRecSuplNutri.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalRecSuplNutri.Location = new System.Drawing.Point(259, 141);
-            this.cbxFinalRecSuplNutri.Name = "cbxFinalRecSuplNutri";
-            this.cbxFinalRecSuplNutri.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalRecSuplNutri.TabIndex = 35;
-            // 
-            // lblAbandDesnutr
-            // 
-            this.lblAbandDesnutr.AutoSize = true;
-            this.lblAbandDesnutr.Location = new System.Drawing.Point(22, 198);
-            this.lblAbandDesnutr.Name = "lblAbandDesnutr";
-            this.lblAbandDesnutr.Size = new System.Drawing.Size(116, 13);
-            this.lblAbandDesnutr.TabIndex = 36;
-            this.lblAbandDesnutr.Text = "Abandono Desnutrição";
-            // 
-            // cbxFinalAbandDesnutr
-            // 
-            this.cbxFinalAbandDesnutr.FormattingEnabled = true;
-            this.cbxFinalAbandDesnutr.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalAbandDesnutr.Location = new System.Drawing.Point(259, 195);
-            this.cbxFinalAbandDesnutr.Name = "cbxFinalAbandDesnutr";
-            this.cbxFinalAbandDesnutr.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalAbandDesnutr.TabIndex = 37;
-            // 
-            // cbxFinalCuradoDesntr
-            // 
-            this.cbxFinalCuradoDesntr.FormattingEnabled = true;
-            this.cbxFinalCuradoDesntr.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalCuradoDesntr.Location = new System.Drawing.Point(259, 168);
-            this.cbxFinalCuradoDesntr.Name = "cbxFinalCuradoDesntr";
-            this.cbxFinalCuradoDesntr.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalCuradoDesntr.TabIndex = 39;
-            // 
-            // lblCuradoDesntr
-            // 
-            this.lblCuradoDesntr.AutoSize = true;
-            this.lblCuradoDesntr.Location = new System.Drawing.Point(22, 171);
-            this.lblCuradoDesntr.Name = "lblCuradoDesntr";
-            this.lblCuradoDesntr.Size = new System.Drawing.Size(101, 13);
-            this.lblCuradoDesntr.TabIndex = 38;
-            this.lblCuradoDesntr.Text = "Curado Desnutrição";
-            // 
-            // lblFinalRecDespara
-            // 
-            this.lblFinalRecDespara.AutoSize = true;
-            this.lblFinalRecDespara.Location = new System.Drawing.Point(22, 225);
-            this.lblFinalRecDespara.Name = "lblFinalRecDespara";
-            this.lblFinalRecDespara.Size = new System.Drawing.Size(125, 13);
-            this.lblFinalRecDespara.TabIndex = 40;
-            this.lblFinalRecDespara.Text = "Recebeu Desparasitante";
-            // 
-            // cbxFinalRecDespara
-            // 
-            this.cbxFinalRecDespara.FormattingEnabled = true;
-            this.cbxFinalRecDespara.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalRecDespara.Location = new System.Drawing.Point(259, 222);
-            this.cbxFinalRecDespara.Name = "cbxFinalRecDespara";
-            this.cbxFinalRecDespara.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalRecDespara.TabIndex = 41;
-            // 
-            // lblFinalSalFerrMais3
-            // 
-            this.lblFinalSalFerrMais3.AutoSize = true;
-            this.lblFinalSalFerrMais3.Location = new System.Drawing.Point(21, 252);
-            this.lblFinalSalFerrMais3.Name = "lblFinalSalFerrMais3";
-            this.lblFinalSalFerrMais3.Size = new System.Drawing.Size(136, 13);
-            this.lblFinalSalFerrMais3.TabIndex = 42;
-            this.lblFinalSalFerrMais3.Text = "Recebeu ≥3 vezes Sal Ferr";
-            // 
-            // cbxFinalSalFerrMais3
-            // 
-            this.cbxFinalSalFerrMais3.FormattingEnabled = true;
-            this.cbxFinalSalFerrMais3.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalSalFerrMais3.Location = new System.Drawing.Point(259, 249);
-            this.cbxFinalSalFerrMais3.Name = "cbxFinalSalFerrMais3";
-            this.cbxFinalSalFerrMais3.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalSalFerrMais3.TabIndex = 43;
-            // 
-            // lblFinalDiagITS
-            // 
-            this.lblFinalDiagITS.AutoSize = true;
-            this.lblFinalDiagITS.Location = new System.Drawing.Point(22, 279);
-            this.lblFinalDiagITS.Name = "lblFinalDiagITS";
-            this.lblFinalDiagITS.Size = new System.Drawing.Size(83, 13);
-            this.lblFinalDiagITS.TabIndex = 44;
-            this.lblFinalDiagITS.Text = "Diagnostico ITS";
-            // 
-            // txtFinalDiagITS
-            // 
-            this.txtFinalDiagITS.Location = new System.Drawing.Point(259, 276);
-            this.txtFinalDiagITS.Name = "txtFinalDiagITS";
-            this.txtFinalDiagITS.Size = new System.Drawing.Size(162, 20);
-            this.txtFinalDiagITS.TabIndex = 45;
-            // 
-            // lblFinalTratITS
-            // 
-            this.lblFinalTratITS.AutoSize = true;
-            this.lblFinalTratITS.Location = new System.Drawing.Point(21, 305);
-            this.lblFinalTratITS.Name = "lblFinalTratITS";
-            this.lblFinalTratITS.Size = new System.Drawing.Size(81, 13);
-            this.lblFinalTratITS.TabIndex = 46;
-            this.lblFinalTratITS.Text = "Tratamento ITS";
-            // 
-            // cbxFinalTratITS
-            // 
-            this.cbxFinalTratITS.FormattingEnabled = true;
-            this.cbxFinalTratITS.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalTratITS.Location = new System.Drawing.Point(259, 302);
-            this.cbxFinalTratITS.Name = "cbxFinalTratITS";
-            this.cbxFinalTratITS.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalTratITS.TabIndex = 47;
-            // 
-            // lblFinalTestSiflis
-            // 
-            this.lblFinalTestSiflis.AutoSize = true;
-            this.lblFinalTestSiflis.Location = new System.Drawing.Point(21, 332);
-            this.lblFinalTestSiflis.Name = "lblFinalTestSiflis";
-            this.lblFinalTestSiflis.Size = new System.Drawing.Size(62, 13);
-            this.lblFinalTestSiflis.TabIndex = 48;
-            this.lblFinalTestSiflis.Text = "Teste Sífilis";
-            // 
-            // cbxFinalTestSiflis
-            // 
-            this.cbxFinalTestSiflis.FormattingEnabled = true;
-            this.cbxFinalTestSiflis.Items.AddRange(new object[] {
-            "Neg",
-            "Pos",
-            "NF"});
-            this.cbxFinalTestSiflis.Location = new System.Drawing.Point(259, 329);
-            this.cbxFinalTestSiflis.Name = "cbxFinalTestSiflis";
-            this.cbxFinalTestSiflis.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalTestSiflis.TabIndex = 49;
-            // 
-            // lblFinalTratSiflMulher
-            // 
-            this.lblFinalTratSiflMulher.AutoSize = true;
-            this.lblFinalTratSiflMulher.Location = new System.Drawing.Point(22, 364);
-            this.lblFinalTratSiflMulher.Name = "lblFinalTratSiflMulher";
-            this.lblFinalTratSiflMulher.Size = new System.Drawing.Size(124, 13);
-            this.lblFinalTratSiflMulher.TabIndex = 50;
-            this.lblFinalTratSiflMulher.Text = "Tratamento Sífilis Mulher";
-            // 
-            // lblFinalTratSiflParc
-            // 
-            this.lblFinalTratSiflParc.AutoSize = true;
-            this.lblFinalTratSiflParc.Location = new System.Drawing.Point(477, 383);
-            this.lblFinalTratSiflParc.Name = "lblFinalTratSiflParc";
-            this.lblFinalTratSiflParc.Size = new System.Drawing.Size(131, 13);
-            this.lblFinalTratSiflParc.TabIndex = 51;
-            this.lblFinalTratSiflParc.Text = "Tratamento Sífilis Parceiro";
-            // 
-            // cbxFinalTratSiflParc
-            // 
-            this.cbxFinalTratSiflParc.FormattingEnabled = true;
-            this.cbxFinalTratSiflParc.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalTratSiflParc.Location = new System.Drawing.Point(646, 380);
-            this.cbxFinalTratSiflParc.Name = "cbxFinalTratSiflParc";
-            this.cbxFinalTratSiflParc.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalTratSiflParc.TabIndex = 52;
-            // 
-            // cbxFinalTratSiflMulher
-            // 
-            this.cbxFinalTratSiflMulher.FormattingEnabled = true;
-            this.cbxFinalTratSiflMulher.Items.AddRange(new object[] {
-            "1º",
-            "3º"});
-            this.cbxFinalTratSiflMulher.Location = new System.Drawing.Point(259, 356);
-            this.cbxFinalTratSiflMulher.Name = "cbxFinalTratSiflMulher";
-            this.cbxFinalTratSiflMulher.Size = new System.Drawing.Size(162, 21);
-            this.cbxFinalTratSiflMulher.TabIndex = 53;
-            // 
-            // lblFinalEstadoHIVMulher
-            // 
-            this.lblFinalEstadoHIVMulher.AutoSize = true;
-            this.lblFinalEstadoHIVMulher.Location = new System.Drawing.Point(477, 9);
-            this.lblFinalEstadoHIVMulher.Name = "lblFinalEstadoHIVMulher";
-            this.lblFinalEstadoHIVMulher.Size = new System.Drawing.Size(111, 13);
-            this.lblFinalEstadoHIVMulher.TabIndex = 54;
-            this.lblFinalEstadoHIVMulher.Text = "Estado HIV da Mulher";
-            // 
-            // cbxFinalEstadoHIVMulher
-            // 
-            this.cbxFinalEstadoHIVMulher.FormattingEnabled = true;
-            this.cbxFinalEstadoHIVMulher.Items.AddRange(new object[] {
-            "Pos Entr",
-            "Neg",
-            "Pos",
-            "Ind",
-            "NF"});
-            this.cbxFinalEstadoHIVMulher.Location = new System.Drawing.Point(646, 6);
-            this.cbxFinalEstadoHIVMulher.Name = "cbxFinalEstadoHIVMulher";
-            this.cbxFinalEstadoHIVMulher.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalEstadoHIVMulher.TabIndex = 55;
-            // 
-            // lblFinalEstadoHIVPar
-            // 
-            this.lblFinalEstadoHIVPar.AutoSize = true;
-            this.lblFinalEstadoHIVPar.Location = new System.Drawing.Point(477, 36);
-            this.lblFinalEstadoHIVPar.Name = "lblFinalEstadoHIVPar";
-            this.lblFinalEstadoHIVPar.Size = new System.Drawing.Size(86, 13);
-            this.lblFinalEstadoHIVPar.TabIndex = 56;
-            this.lblFinalEstadoHIVPar.Text = "Estado HIV Parc";
-            // 
-            // cbxFinalEstadoHIVPar
-            // 
-            this.cbxFinalEstadoHIVPar.FormattingEnabled = true;
-            this.cbxFinalEstadoHIVPar.Items.AddRange(new object[] {
-            "Neg",
-            "Pos",
-            "Ind",
-            "NF"});
-            this.cbxFinalEstadoHIVPar.Location = new System.Drawing.Point(646, 33);
-            this.cbxFinalEstadoHIVPar.Name = "cbxFinalEstadoHIVPar";
-            this.cbxFinalEstadoHIVPar.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalEstadoHIVPar.TabIndex = 57;
-            // 
-            // lblFinalCTZEntrada
-            // 
-            this.lblFinalCTZEntrada.AutoSize = true;
-            this.lblFinalCTZEntrada.Location = new System.Drawing.Point(477, 63);
-            this.lblFinalCTZEntrada.Name = "lblFinalCTZEntrada";
-            this.lblFinalCTZEntrada.Size = new System.Drawing.Size(95, 13);
-            this.lblFinalCTZEntrada.TabIndex = 58;
-            this.lblFinalCTZEntrada.Text = "Em CTZ a Entrada";
-            // 
-            // cbxFinalCTZEntrada
-            // 
-            this.cbxFinalCTZEntrada.FormattingEnabled = true;
-            this.cbxFinalCTZEntrada.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalCTZEntrada.Location = new System.Drawing.Point(646, 60);
-            this.cbxFinalCTZEntrada.Name = "cbxFinalCTZEntrada";
-            this.cbxFinalCTZEntrada.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalCTZEntrada.TabIndex = 59;
-            // 
-            // lblFinalIniCTZ
-            // 
-            this.lblFinalIniCTZ.AutoSize = true;
-            this.lblFinalIniCTZ.Location = new System.Drawing.Point(477, 90);
-            this.lblFinalIniCTZ.Name = "lblFinalIniCTZ";
-            this.lblFinalIniCTZ.Size = new System.Drawing.Size(62, 13);
-            this.lblFinalIniCTZ.TabIndex = 60;
-            this.lblFinalIniCTZ.Text = "Iniciou CTZ";
-            // 
-            // txtFinalIniCTZ
-            // 
-            this.txtFinalIniCTZ.Location = new System.Drawing.Point(646, 87);
-            this.txtFinalIniCTZ.Name = "txtFinalIniCTZ";
-            this.txtFinalIniCTZ.Size = new System.Drawing.Size(174, 20);
-            this.txtFinalIniCTZ.TabIndex = 61;
-            // 
-            // lblFinalResARV
-            // 
-            this.lblFinalResARV.AutoSize = true;
-            this.lblFinalResARV.Location = new System.Drawing.Point(477, 117);
-            this.lblFinalResARV.Name = "lblFinalResARV";
-            this.lblFinalResARV.Size = new System.Drawing.Size(107, 13);
-            this.lblFinalResARV.TabIndex = 62;
-            this.lblFinalResARV.Text = "Resultado final ARVs";
-            // 
-            // cbxFinalResARV
-            // 
-            this.cbxFinalResARV.FormattingEnabled = true;
-            this.cbxFinalResARV.Items.AddRange(new object[] {
-            "TARV Ent",
-            "NVP",
-            "NVP/AZT",
-            "TARV CPN"});
-            this.cbxFinalResARV.Location = new System.Drawing.Point(646, 114);
-            this.cbxFinalResARV.Name = "cbxFinalResARV";
-            this.cbxFinalResARV.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalResARV.TabIndex = 63;
-            // 
-            // lblFinalTIP
-            // 
-            this.lblFinalTIP.AutoSize = true;
-            this.lblFinalTIP.Location = new System.Drawing.Point(477, 144);
-            this.lblFinalTIP.Name = "lblFinalTIP";
-            this.lblFinalTIP.Size = new System.Drawing.Size(71, 13);
-            this.lblFinalTIP.TabIndex = 64;
-            this.lblFinalTIP.Text = "Recebeu TIP";
-            // 
-            // cbxFinalTIP
-            // 
-            this.cbxFinalTIP.FormattingEnabled = true;
-            this.cbxFinalTIP.Items.AddRange(new object[] {
-            "2ª ",
-            "4ª +"});
-            this.cbxFinalTIP.Location = new System.Drawing.Point(646, 141);
-            this.cbxFinalTIP.Name = "cbxFinalTIP";
-            this.cbxFinalTIP.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalTIP.TabIndex = 65;
-            // 
-            // lblFinalRecRedeMosq
-            // 
-            this.lblFinalRecRedeMosq.AutoSize = true;
-            this.lblFinalRecRedeMosq.Location = new System.Drawing.Point(477, 171);
-            this.lblFinalRecRedeMosq.Name = "lblFinalRecRedeMosq";
-            this.lblFinalRecRedeMosq.Size = new System.Drawing.Size(137, 13);
-            this.lblFinalRecRedeMosq.TabIndex = 66;
-            this.lblFinalRecRedeMosq.Text = "Recebeu Rede Mosquiteira";
-            // 
-            // cbxFinalRecRedeMosq
-            // 
-            this.cbxFinalRecRedeMosq.FormattingEnabled = true;
-            this.cbxFinalRecRedeMosq.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalRecRedeMosq.Location = new System.Drawing.Point(646, 168);
-            this.cbxFinalRecRedeMosq.Name = "cbxFinalRecRedeMosq";
-            this.cbxFinalRecRedeMosq.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalRecRedeMosq.TabIndex = 67;
-            // 
-            // lblFinalDigLabMal
-            // 
-            this.lblFinalDigLabMal.AutoSize = true;
-            this.lblFinalDigLabMal.Location = new System.Drawing.Point(477, 198);
-            this.lblFinalDigLabMal.Name = "lblFinalDigLabMal";
-            this.lblFinalDigLabMal.Size = new System.Drawing.Size(158, 13);
-            this.lblFinalDigLabMal.TabIndex = 68;
-            this.lblFinalDigLabMal.Text = "Diagnostico Laboratorial Malária";
-            // 
-            // cbxFinalDigLabMal
-            // 
-            this.cbxFinalDigLabMal.FormattingEnabled = true;
-            this.cbxFinalDigLabMal.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalDigLabMal.Location = new System.Drawing.Point(646, 195);
-            this.cbxFinalDigLabMal.Name = "cbxFinalDigLabMal";
-            this.cbxFinalDigLabMal.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalDigLabMal.TabIndex = 69;
-            // 
-            // lblFinalTratMal
-            // 
-            this.lblFinalTratMal.AutoSize = true;
-            this.lblFinalTratMal.Location = new System.Drawing.Point(477, 225);
-            this.lblFinalTratMal.Name = "lblFinalTratMal";
-            this.lblFinalTratMal.Size = new System.Drawing.Size(113, 13);
-            this.lblFinalTratMal.TabIndex = 70;
-            this.lblFinalTratMal.Text = "Tratamento de Malária";
-            // 
-            // cbxFinalTratMal
-            // 
-            this.cbxFinalTratMal.FormattingEnabled = true;
-            this.cbxFinalTratMal.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalTratMal.Location = new System.Drawing.Point(646, 222);
-            this.cbxFinalTratMal.Name = "cbxFinalTratMal";
-            this.cbxFinalTratMal.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalTratMal.TabIndex = 71;
-            // 
-            // lblFinalRecHPP
-            // 
-            this.lblFinalRecHPP.AutoSize = true;
-            this.lblFinalRecHPP.Location = new System.Drawing.Point(477, 248);
-            this.lblFinalRecHPP.Name = "lblFinalRecHPP";
-            this.lblFinalRecHPP.Size = new System.Drawing.Size(157, 13);
-            this.lblFinalRecHPP.TabIndex = 72;
-            this.lblFinalRecHPP.Text = "Recebeu Misoprostol HPP (MP)";
-            // 
-            // cbxFinalRecHPP
-            // 
-            this.cbxFinalRecHPP.FormattingEnabled = true;
-            this.cbxFinalRecHPP.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalRecHPP.Location = new System.Drawing.Point(646, 245);
-            this.cbxFinalRecHPP.Name = "cbxFinalRecHPP";
-            this.cbxFinalRecHPP.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalRecHPP.TabIndex = 73;
+            // btnAnteriorPage3
+            // 
+            this.btnAnteriorPage3.Location = new System.Drawing.Point(6, 383);
+            this.btnAnteriorPage3.Name = "btnAnteriorPage3";
+            this.btnAnteriorPage3.Size = new System.Drawing.Size(109, 23);
+            this.btnAnteriorPage3.TabIndex = 82;
+            this.btnAnteriorPage3.Text = "Página Anterior";
+            this.btnAnteriorPage3.UseVisualStyleBackColor = true;
+            this.btnAnteriorPage3.Click += new System.EventHandler(this.btnAnteriorPage3_Click);
+            // 
+            // cbxFinalTratTB
+            // 
+            this.cbxFinalTratTB.FormattingEnabled = true;
+            this.cbxFinalTratTB.Items.AddRange(new object[] {
+            "Inic",
+            "Cont"});
+            this.cbxFinalTratTB.Location = new System.Drawing.Point(646, 353);
+            this.cbxFinalTratTB.Name = "cbxFinalTratTB";
+            this.cbxFinalTratTB.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalTratTB.TabIndex = 81;
+            // 
+            // lblFinalTratTB
+            // 
+            this.lblFinalTratTB.AutoSize = true;
+            this.lblFinalTratTB.Location = new System.Drawing.Point(477, 356);
+            this.lblFinalTratTB.Name = "lblFinalTratTB";
+            this.lblFinalTratTB.Size = new System.Drawing.Size(117, 13);
+            this.lblFinalTratTB.TabIndex = 80;
+            this.lblFinalTratTB.Text = "Iniciou Tratamentito TB";
+            // 
+            // cbxFinalINH
+            // 
+            this.cbxFinalINH.FormattingEnabled = true;
+            this.cbxFinalINH.Items.AddRange(new object[] {
+            "Inic",
+            "Cont"});
+            this.cbxFinalINH.Location = new System.Drawing.Point(646, 326);
+            this.cbxFinalINH.Name = "cbxFinalINH";
+            this.cbxFinalINH.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalINH.TabIndex = 79;
+            // 
+            // lblFinalINH
+            // 
+            this.lblFinalINH.AutoSize = true;
+            this.lblFinalINH.Location = new System.Drawing.Point(477, 329);
+            this.lblFinalINH.Name = "lblFinalINH";
+            this.lblFinalINH.Size = new System.Drawing.Size(60, 13);
+            this.lblFinalINH.TabIndex = 78;
+            this.lblFinalINH.Text = "Iniciou INH";
             // 
             // cbxFinalVat1Dose
             // 
@@ -2119,55 +1609,566 @@
             this.lblFinalVat1Dose.TabIndex = 74;
             this.lblFinalVat1Dose.Text = "VAT 1ª Dose";
             // 
-            // lblFinalINH
+            // cbxFinalRecHPP
             // 
-            this.lblFinalINH.AutoSize = true;
-            this.lblFinalINH.Location = new System.Drawing.Point(477, 329);
-            this.lblFinalINH.Name = "lblFinalINH";
-            this.lblFinalINH.Size = new System.Drawing.Size(60, 13);
-            this.lblFinalINH.TabIndex = 78;
-            this.lblFinalINH.Text = "Iniciou INH";
+            this.cbxFinalRecHPP.FormattingEnabled = true;
+            this.cbxFinalRecHPP.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalRecHPP.Location = new System.Drawing.Point(646, 245);
+            this.cbxFinalRecHPP.Name = "cbxFinalRecHPP";
+            this.cbxFinalRecHPP.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalRecHPP.TabIndex = 73;
             // 
-            // cbxFinalINH
+            // lblFinalRecHPP
             // 
-            this.cbxFinalINH.FormattingEnabled = true;
-            this.cbxFinalINH.Items.AddRange(new object[] {
-            "Inic",
-            "Cont"});
-            this.cbxFinalINH.Location = new System.Drawing.Point(646, 326);
-            this.cbxFinalINH.Name = "cbxFinalINH";
-            this.cbxFinalINH.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalINH.TabIndex = 79;
+            this.lblFinalRecHPP.AutoSize = true;
+            this.lblFinalRecHPP.Location = new System.Drawing.Point(477, 248);
+            this.lblFinalRecHPP.Name = "lblFinalRecHPP";
+            this.lblFinalRecHPP.Size = new System.Drawing.Size(157, 13);
+            this.lblFinalRecHPP.TabIndex = 72;
+            this.lblFinalRecHPP.Text = "Recebeu Misoprostol HPP (MP)";
             // 
-            // lblFinalTratTB
+            // cbxFinalTratMal
             // 
-            this.lblFinalTratTB.AutoSize = true;
-            this.lblFinalTratTB.Location = new System.Drawing.Point(477, 356);
-            this.lblFinalTratTB.Name = "lblFinalTratTB";
-            this.lblFinalTratTB.Size = new System.Drawing.Size(117, 13);
-            this.lblFinalTratTB.TabIndex = 80;
-            this.lblFinalTratTB.Text = "Iniciou Tratamentito TB";
+            this.cbxFinalTratMal.FormattingEnabled = true;
+            this.cbxFinalTratMal.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalTratMal.Location = new System.Drawing.Point(646, 222);
+            this.cbxFinalTratMal.Name = "cbxFinalTratMal";
+            this.cbxFinalTratMal.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalTratMal.TabIndex = 71;
             // 
-            // cbxFinalTratTB
+            // lblFinalTratMal
             // 
-            this.cbxFinalTratTB.FormattingEnabled = true;
-            this.cbxFinalTratTB.Items.AddRange(new object[] {
-            "Inic",
-            "Cont"});
-            this.cbxFinalTratTB.Location = new System.Drawing.Point(646, 353);
-            this.cbxFinalTratTB.Name = "cbxFinalTratTB";
-            this.cbxFinalTratTB.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalTratTB.TabIndex = 81;
+            this.lblFinalTratMal.AutoSize = true;
+            this.lblFinalTratMal.Location = new System.Drawing.Point(477, 225);
+            this.lblFinalTratMal.Name = "lblFinalTratMal";
+            this.lblFinalTratMal.Size = new System.Drawing.Size(113, 13);
+            this.lblFinalTratMal.TabIndex = 70;
+            this.lblFinalTratMal.Text = "Tratamento de Malária";
             // 
-            // btnAnteriorPage3
+            // cbxFinalDigLabMal
             // 
-            this.btnAnteriorPage3.Location = new System.Drawing.Point(6, 383);
-            this.btnAnteriorPage3.Name = "btnAnteriorPage3";
-            this.btnAnteriorPage3.Size = new System.Drawing.Size(109, 23);
-            this.btnAnteriorPage3.TabIndex = 82;
-            this.btnAnteriorPage3.Text = "Página Anterior";
-            this.btnAnteriorPage3.UseVisualStyleBackColor = true;
-            this.btnAnteriorPage3.Click += new System.EventHandler(this.btnAnteriorPage3_Click);
+            this.cbxFinalDigLabMal.FormattingEnabled = true;
+            this.cbxFinalDigLabMal.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalDigLabMal.Location = new System.Drawing.Point(646, 195);
+            this.cbxFinalDigLabMal.Name = "cbxFinalDigLabMal";
+            this.cbxFinalDigLabMal.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalDigLabMal.TabIndex = 69;
+            // 
+            // lblFinalDigLabMal
+            // 
+            this.lblFinalDigLabMal.AutoSize = true;
+            this.lblFinalDigLabMal.Location = new System.Drawing.Point(477, 198);
+            this.lblFinalDigLabMal.Name = "lblFinalDigLabMal";
+            this.lblFinalDigLabMal.Size = new System.Drawing.Size(158, 13);
+            this.lblFinalDigLabMal.TabIndex = 68;
+            this.lblFinalDigLabMal.Text = "Diagnostico Laboratorial Malária";
+            // 
+            // cbxFinalRecRedeMosq
+            // 
+            this.cbxFinalRecRedeMosq.FormattingEnabled = true;
+            this.cbxFinalRecRedeMosq.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalRecRedeMosq.Location = new System.Drawing.Point(646, 168);
+            this.cbxFinalRecRedeMosq.Name = "cbxFinalRecRedeMosq";
+            this.cbxFinalRecRedeMosq.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalRecRedeMosq.TabIndex = 67;
+            // 
+            // lblFinalRecRedeMosq
+            // 
+            this.lblFinalRecRedeMosq.AutoSize = true;
+            this.lblFinalRecRedeMosq.Location = new System.Drawing.Point(477, 171);
+            this.lblFinalRecRedeMosq.Name = "lblFinalRecRedeMosq";
+            this.lblFinalRecRedeMosq.Size = new System.Drawing.Size(137, 13);
+            this.lblFinalRecRedeMosq.TabIndex = 66;
+            this.lblFinalRecRedeMosq.Text = "Recebeu Rede Mosquiteira";
+            // 
+            // cbxFinalTIP
+            // 
+            this.cbxFinalTIP.FormattingEnabled = true;
+            this.cbxFinalTIP.Items.AddRange(new object[] {
+            "2ª ",
+            "4ª +"});
+            this.cbxFinalTIP.Location = new System.Drawing.Point(646, 141);
+            this.cbxFinalTIP.Name = "cbxFinalTIP";
+            this.cbxFinalTIP.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalTIP.TabIndex = 65;
+            // 
+            // lblFinalTIP
+            // 
+            this.lblFinalTIP.AutoSize = true;
+            this.lblFinalTIP.Location = new System.Drawing.Point(477, 144);
+            this.lblFinalTIP.Name = "lblFinalTIP";
+            this.lblFinalTIP.Size = new System.Drawing.Size(71, 13);
+            this.lblFinalTIP.TabIndex = 64;
+            this.lblFinalTIP.Text = "Recebeu TIP";
+            // 
+            // cbxFinalResARV
+            // 
+            this.cbxFinalResARV.FormattingEnabled = true;
+            this.cbxFinalResARV.Items.AddRange(new object[] {
+            "TARV Ent",
+            "NVP",
+            "NVP/AZT",
+            "TARV CPN"});
+            this.cbxFinalResARV.Location = new System.Drawing.Point(646, 114);
+            this.cbxFinalResARV.Name = "cbxFinalResARV";
+            this.cbxFinalResARV.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalResARV.TabIndex = 63;
+            // 
+            // lblFinalResARV
+            // 
+            this.lblFinalResARV.AutoSize = true;
+            this.lblFinalResARV.Location = new System.Drawing.Point(477, 117);
+            this.lblFinalResARV.Name = "lblFinalResARV";
+            this.lblFinalResARV.Size = new System.Drawing.Size(107, 13);
+            this.lblFinalResARV.TabIndex = 62;
+            this.lblFinalResARV.Text = "Resultado final ARVs";
+            // 
+            // txtFinalIniCTZ
+            // 
+            this.txtFinalIniCTZ.Location = new System.Drawing.Point(646, 87);
+            this.txtFinalIniCTZ.Name = "txtFinalIniCTZ";
+            this.txtFinalIniCTZ.Size = new System.Drawing.Size(174, 20);
+            this.txtFinalIniCTZ.TabIndex = 61;
+            // 
+            // lblFinalIniCTZ
+            // 
+            this.lblFinalIniCTZ.AutoSize = true;
+            this.lblFinalIniCTZ.Location = new System.Drawing.Point(477, 90);
+            this.lblFinalIniCTZ.Name = "lblFinalIniCTZ";
+            this.lblFinalIniCTZ.Size = new System.Drawing.Size(62, 13);
+            this.lblFinalIniCTZ.TabIndex = 60;
+            this.lblFinalIniCTZ.Text = "Iniciou CTZ";
+            // 
+            // cbxFinalCTZEntrada
+            // 
+            this.cbxFinalCTZEntrada.FormattingEnabled = true;
+            this.cbxFinalCTZEntrada.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalCTZEntrada.Location = new System.Drawing.Point(646, 60);
+            this.cbxFinalCTZEntrada.Name = "cbxFinalCTZEntrada";
+            this.cbxFinalCTZEntrada.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalCTZEntrada.TabIndex = 59;
+            // 
+            // lblFinalCTZEntrada
+            // 
+            this.lblFinalCTZEntrada.AutoSize = true;
+            this.lblFinalCTZEntrada.Location = new System.Drawing.Point(477, 63);
+            this.lblFinalCTZEntrada.Name = "lblFinalCTZEntrada";
+            this.lblFinalCTZEntrada.Size = new System.Drawing.Size(95, 13);
+            this.lblFinalCTZEntrada.TabIndex = 58;
+            this.lblFinalCTZEntrada.Text = "Em CTZ a Entrada";
+            // 
+            // cbxFinalEstadoHIVPar
+            // 
+            this.cbxFinalEstadoHIVPar.FormattingEnabled = true;
+            this.cbxFinalEstadoHIVPar.Items.AddRange(new object[] {
+            "Neg",
+            "Pos",
+            "Ind",
+            "NF"});
+            this.cbxFinalEstadoHIVPar.Location = new System.Drawing.Point(646, 33);
+            this.cbxFinalEstadoHIVPar.Name = "cbxFinalEstadoHIVPar";
+            this.cbxFinalEstadoHIVPar.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalEstadoHIVPar.TabIndex = 57;
+            // 
+            // lblFinalEstadoHIVPar
+            // 
+            this.lblFinalEstadoHIVPar.AutoSize = true;
+            this.lblFinalEstadoHIVPar.Location = new System.Drawing.Point(477, 36);
+            this.lblFinalEstadoHIVPar.Name = "lblFinalEstadoHIVPar";
+            this.lblFinalEstadoHIVPar.Size = new System.Drawing.Size(86, 13);
+            this.lblFinalEstadoHIVPar.TabIndex = 56;
+            this.lblFinalEstadoHIVPar.Text = "Estado HIV Parc";
+            // 
+            // cbxFinalEstadoHIVMulher
+            // 
+            this.cbxFinalEstadoHIVMulher.FormattingEnabled = true;
+            this.cbxFinalEstadoHIVMulher.Items.AddRange(new object[] {
+            "Pos Entr",
+            "Neg",
+            "Pos",
+            "Ind",
+            "NF"});
+            this.cbxFinalEstadoHIVMulher.Location = new System.Drawing.Point(646, 6);
+            this.cbxFinalEstadoHIVMulher.Name = "cbxFinalEstadoHIVMulher";
+            this.cbxFinalEstadoHIVMulher.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalEstadoHIVMulher.TabIndex = 55;
+            // 
+            // lblFinalEstadoHIVMulher
+            // 
+            this.lblFinalEstadoHIVMulher.AutoSize = true;
+            this.lblFinalEstadoHIVMulher.Location = new System.Drawing.Point(477, 9);
+            this.lblFinalEstadoHIVMulher.Name = "lblFinalEstadoHIVMulher";
+            this.lblFinalEstadoHIVMulher.Size = new System.Drawing.Size(111, 13);
+            this.lblFinalEstadoHIVMulher.TabIndex = 54;
+            this.lblFinalEstadoHIVMulher.Text = "Estado HIV da Mulher";
+            // 
+            // cbxFinalTratSiflMulher
+            // 
+            this.cbxFinalTratSiflMulher.FormattingEnabled = true;
+            this.cbxFinalTratSiflMulher.Items.AddRange(new object[] {
+            "1º",
+            "3º"});
+            this.cbxFinalTratSiflMulher.Location = new System.Drawing.Point(259, 356);
+            this.cbxFinalTratSiflMulher.Name = "cbxFinalTratSiflMulher";
+            this.cbxFinalTratSiflMulher.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalTratSiflMulher.TabIndex = 53;
+            // 
+            // cbxFinalTratSiflParc
+            // 
+            this.cbxFinalTratSiflParc.FormattingEnabled = true;
+            this.cbxFinalTratSiflParc.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalTratSiflParc.Location = new System.Drawing.Point(646, 380);
+            this.cbxFinalTratSiflParc.Name = "cbxFinalTratSiflParc";
+            this.cbxFinalTratSiflParc.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalTratSiflParc.TabIndex = 52;
+            // 
+            // lblFinalTratSiflParc
+            // 
+            this.lblFinalTratSiflParc.AutoSize = true;
+            this.lblFinalTratSiflParc.Location = new System.Drawing.Point(477, 383);
+            this.lblFinalTratSiflParc.Name = "lblFinalTratSiflParc";
+            this.lblFinalTratSiflParc.Size = new System.Drawing.Size(131, 13);
+            this.lblFinalTratSiflParc.TabIndex = 51;
+            this.lblFinalTratSiflParc.Text = "Tratamento Sífilis Parceiro";
+            // 
+            // lblFinalTratSiflMulher
+            // 
+            this.lblFinalTratSiflMulher.AutoSize = true;
+            this.lblFinalTratSiflMulher.Location = new System.Drawing.Point(22, 364);
+            this.lblFinalTratSiflMulher.Name = "lblFinalTratSiflMulher";
+            this.lblFinalTratSiflMulher.Size = new System.Drawing.Size(124, 13);
+            this.lblFinalTratSiflMulher.TabIndex = 50;
+            this.lblFinalTratSiflMulher.Text = "Tratamento Sífilis Mulher";
+            // 
+            // cbxFinalTestSiflis
+            // 
+            this.cbxFinalTestSiflis.FormattingEnabled = true;
+            this.cbxFinalTestSiflis.Items.AddRange(new object[] {
+            "Neg",
+            "Pos",
+            "NF"});
+            this.cbxFinalTestSiflis.Location = new System.Drawing.Point(259, 329);
+            this.cbxFinalTestSiflis.Name = "cbxFinalTestSiflis";
+            this.cbxFinalTestSiflis.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalTestSiflis.TabIndex = 49;
+            // 
+            // lblFinalTestSiflis
+            // 
+            this.lblFinalTestSiflis.AutoSize = true;
+            this.lblFinalTestSiflis.Location = new System.Drawing.Point(21, 332);
+            this.lblFinalTestSiflis.Name = "lblFinalTestSiflis";
+            this.lblFinalTestSiflis.Size = new System.Drawing.Size(62, 13);
+            this.lblFinalTestSiflis.TabIndex = 48;
+            this.lblFinalTestSiflis.Text = "Teste Sífilis";
+            // 
+            // cbxFinalTratITS
+            // 
+            this.cbxFinalTratITS.FormattingEnabled = true;
+            this.cbxFinalTratITS.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalTratITS.Location = new System.Drawing.Point(259, 302);
+            this.cbxFinalTratITS.Name = "cbxFinalTratITS";
+            this.cbxFinalTratITS.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalTratITS.TabIndex = 47;
+            // 
+            // lblFinalTratITS
+            // 
+            this.lblFinalTratITS.AutoSize = true;
+            this.lblFinalTratITS.Location = new System.Drawing.Point(21, 305);
+            this.lblFinalTratITS.Name = "lblFinalTratITS";
+            this.lblFinalTratITS.Size = new System.Drawing.Size(81, 13);
+            this.lblFinalTratITS.TabIndex = 46;
+            this.lblFinalTratITS.Text = "Tratamento ITS";
+            // 
+            // txtFinalDiagITS
+            // 
+            this.txtFinalDiagITS.Location = new System.Drawing.Point(259, 276);
+            this.txtFinalDiagITS.Name = "txtFinalDiagITS";
+            this.txtFinalDiagITS.Size = new System.Drawing.Size(162, 20);
+            this.txtFinalDiagITS.TabIndex = 45;
+            // 
+            // lblFinalDiagITS
+            // 
+            this.lblFinalDiagITS.AutoSize = true;
+            this.lblFinalDiagITS.Location = new System.Drawing.Point(22, 279);
+            this.lblFinalDiagITS.Name = "lblFinalDiagITS";
+            this.lblFinalDiagITS.Size = new System.Drawing.Size(83, 13);
+            this.lblFinalDiagITS.TabIndex = 44;
+            this.lblFinalDiagITS.Text = "Diagnostico ITS";
+            // 
+            // cbxFinalSalFerrMais3
+            // 
+            this.cbxFinalSalFerrMais3.FormattingEnabled = true;
+            this.cbxFinalSalFerrMais3.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalSalFerrMais3.Location = new System.Drawing.Point(259, 249);
+            this.cbxFinalSalFerrMais3.Name = "cbxFinalSalFerrMais3";
+            this.cbxFinalSalFerrMais3.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalSalFerrMais3.TabIndex = 43;
+            // 
+            // lblFinalSalFerrMais3
+            // 
+            this.lblFinalSalFerrMais3.AutoSize = true;
+            this.lblFinalSalFerrMais3.Location = new System.Drawing.Point(21, 252);
+            this.lblFinalSalFerrMais3.Name = "lblFinalSalFerrMais3";
+            this.lblFinalSalFerrMais3.Size = new System.Drawing.Size(136, 13);
+            this.lblFinalSalFerrMais3.TabIndex = 42;
+            this.lblFinalSalFerrMais3.Text = "Recebeu ≥3 vezes Sal Ferr";
+            // 
+            // cbxFinalRecDespara
+            // 
+            this.cbxFinalRecDespara.FormattingEnabled = true;
+            this.cbxFinalRecDespara.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalRecDespara.Location = new System.Drawing.Point(259, 222);
+            this.cbxFinalRecDespara.Name = "cbxFinalRecDespara";
+            this.cbxFinalRecDespara.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalRecDespara.TabIndex = 41;
+            // 
+            // lblFinalRecDespara
+            // 
+            this.lblFinalRecDespara.AutoSize = true;
+            this.lblFinalRecDespara.Location = new System.Drawing.Point(22, 225);
+            this.lblFinalRecDespara.Name = "lblFinalRecDespara";
+            this.lblFinalRecDespara.Size = new System.Drawing.Size(125, 13);
+            this.lblFinalRecDespara.TabIndex = 40;
+            this.lblFinalRecDespara.Text = "Recebeu Desparasitante";
+            // 
+            // cbxFinalCuradoDesntr
+            // 
+            this.cbxFinalCuradoDesntr.FormattingEnabled = true;
+            this.cbxFinalCuradoDesntr.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalCuradoDesntr.Location = new System.Drawing.Point(259, 168);
+            this.cbxFinalCuradoDesntr.Name = "cbxFinalCuradoDesntr";
+            this.cbxFinalCuradoDesntr.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalCuradoDesntr.TabIndex = 39;
+            // 
+            // lblCuradoDesntr
+            // 
+            this.lblCuradoDesntr.AutoSize = true;
+            this.lblCuradoDesntr.Location = new System.Drawing.Point(22, 171);
+            this.lblCuradoDesntr.Name = "lblCuradoDesntr";
+            this.lblCuradoDesntr.Size = new System.Drawing.Size(101, 13);
+            this.lblCuradoDesntr.TabIndex = 38;
+            this.lblCuradoDesntr.Text = "Curado Desnutrição";
+            // 
+            // cbxFinalAbandDesnutr
+            // 
+            this.cbxFinalAbandDesnutr.FormattingEnabled = true;
+            this.cbxFinalAbandDesnutr.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalAbandDesnutr.Location = new System.Drawing.Point(259, 195);
+            this.cbxFinalAbandDesnutr.Name = "cbxFinalAbandDesnutr";
+            this.cbxFinalAbandDesnutr.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalAbandDesnutr.TabIndex = 37;
+            // 
+            // lblAbandDesnutr
+            // 
+            this.lblAbandDesnutr.AutoSize = true;
+            this.lblAbandDesnutr.Location = new System.Drawing.Point(22, 198);
+            this.lblAbandDesnutr.Name = "lblAbandDesnutr";
+            this.lblAbandDesnutr.Size = new System.Drawing.Size(116, 13);
+            this.lblAbandDesnutr.TabIndex = 36;
+            this.lblAbandDesnutr.Text = "Abandono Desnutrição";
+            // 
+            // cbxFinalRecSuplNutri
+            // 
+            this.cbxFinalRecSuplNutri.FormattingEnabled = true;
+            this.cbxFinalRecSuplNutri.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalRecSuplNutri.Location = new System.Drawing.Point(259, 141);
+            this.cbxFinalRecSuplNutri.Name = "cbxFinalRecSuplNutri";
+            this.cbxFinalRecSuplNutri.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalRecSuplNutri.TabIndex = 35;
+            // 
+            // lblRecSuplNutri
+            // 
+            this.lblRecSuplNutri.AutoSize = true;
+            this.lblRecSuplNutri.Location = new System.Drawing.Point(22, 144);
+            this.lblRecSuplNutri.Name = "lblRecSuplNutri";
+            this.lblRecSuplNutri.Size = new System.Drawing.Size(169, 13);
+            this.lblRecSuplNutri.TabIndex = 34;
+            this.lblRecSuplNutri.Text = "Recebeu suplementos nutricionais";
+            // 
+            // cbxFinalDAM
+            // 
+            this.cbxFinalDAM.FormattingEnabled = true;
+            this.cbxFinalDAM.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalDAM.Location = new System.Drawing.Point(259, 87);
+            this.cbxFinalDAM.Name = "cbxFinalDAM";
+            this.cbxFinalDAM.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalDAM.TabIndex = 33;
+            // 
+            // cbxFinalDAG
+            // 
+            this.cbxFinalDAG.FormattingEnabled = true;
+            this.cbxFinalDAG.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalDAG.Location = new System.Drawing.Point(259, 114);
+            this.cbxFinalDAG.Name = "cbxFinalDAG";
+            this.cbxFinalDAG.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalDAG.TabIndex = 32;
+            // 
+            // lblDAGFinal
+            // 
+            this.lblDAGFinal.AutoSize = true;
+            this.lblDAGFinal.Location = new System.Drawing.Point(22, 117);
+            this.lblDAGFinal.Name = "lblDAGFinal";
+            this.lblDAGFinal.Size = new System.Drawing.Size(30, 13);
+            this.lblDAGFinal.TabIndex = 31;
+            this.lblDAGFinal.Text = "DAG";
+            // 
+            // lblDAMFinal
+            // 
+            this.lblDAMFinal.AutoSize = true;
+            this.lblDAMFinal.Location = new System.Drawing.Point(21, 90);
+            this.lblDAMFinal.Name = "lblDAMFinal";
+            this.lblDAMFinal.Size = new System.Drawing.Size(31, 13);
+            this.lblDAMFinal.TabIndex = 30;
+            this.lblDAMFinal.Text = "DAM";
+            // 
+            // cbxFinalGanho15
+            // 
+            this.cbxFinalGanho15.FormattingEnabled = true;
+            this.cbxFinalGanho15.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalGanho15.Location = new System.Drawing.Point(259, 60);
+            this.cbxFinalGanho15.Name = "cbxFinalGanho15";
+            this.cbxFinalGanho15.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalGanho15.TabIndex = 29;
+            // 
+            // lblGanho15Fnal
+            // 
+            this.lblGanho15Fnal.AutoSize = true;
+            this.lblGanho15Fnal.Location = new System.Drawing.Point(21, 63);
+            this.lblGanho15Fnal.Name = "lblGanho15Fnal";
+            this.lblGanho15Fnal.Size = new System.Drawing.Size(208, 13);
+            this.lblGanho15Fnal.TabIndex = 28;
+            this.lblGanho15Fnal.Text = "Ganho ≥1.5 Kg/mês a partir do 2º trimestre";
+            // 
+            // cbxFinalParcePrese
+            // 
+            this.cbxFinalParcePrese.FormattingEnabled = true;
+            this.cbxFinalParcePrese.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalParcePrese.Location = new System.Drawing.Point(259, 33);
+            this.cbxFinalParcePrese.Name = "cbxFinalParcePrese";
+            this.cbxFinalParcePrese.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalParcePrese.TabIndex = 27;
+            // 
+            // lblParcePreseFinal
+            // 
+            this.lblParcePreseFinal.AutoSize = true;
+            this.lblParcePreseFinal.Location = new System.Drawing.Point(21, 36);
+            this.lblParcePreseFinal.Name = "lblParcePreseFinal";
+            this.lblParcePreseFinal.Size = new System.Drawing.Size(91, 13);
+            this.lblParcePreseFinal.TabIndex = 26;
+            this.lblParcePreseFinal.Text = "Parceiro Presente";
+            // 
+            // cbxFinalMaisConsult
+            // 
+            this.cbxFinalMaisConsult.FormattingEnabled = true;
+            this.cbxFinalMaisConsult.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalMaisConsult.Location = new System.Drawing.Point(259, 6);
+            this.cbxFinalMaisConsult.Name = "cbxFinalMaisConsult";
+            this.cbxFinalMaisConsult.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalMaisConsult.TabIndex = 25;
+            // 
+            // lblMaisConsult
+            // 
+            this.lblMaisConsult.AutoSize = true;
+            this.lblMaisConsult.Location = new System.Drawing.Point(21, 9);
+            this.lblMaisConsult.Name = "lblMaisConsult";
+            this.lblMaisConsult.Size = new System.Drawing.Size(81, 13);
+            this.lblMaisConsult.TabIndex = 0;
+            this.lblMaisConsult.Text = "Nº Consulta ≥ 4";
+            // 
+            // lblNidCpnMain
+            // 
+            this.lblNidCpnMain.AutoSize = true;
+            this.lblNidCpnMain.Location = new System.Drawing.Point(13, 19);
+            this.lblNidCpnMain.Name = "lblNidCpnMain";
+            this.lblNidCpnMain.Size = new System.Drawing.Size(90, 13);
+            this.lblNidCpnMain.TabIndex = 1;
+            this.lblNidCpnMain.Text = "NID CPN da Mãe";
+            // 
+            // txtNidCpnMain
+            // 
+            this.txtNidCpnMain.Location = new System.Drawing.Point(158, 16);
+            this.txtNidCpnMain.Name = "txtNidCpnMain";
+            this.txtNidCpnMain.Size = new System.Drawing.Size(235, 20);
+            this.txtNidCpnMain.TabIndex = 2;
+            // 
+            // lblNrConsultaMain
+            // 
+            this.lblNrConsultaMain.AutoSize = true;
+            this.lblNrConsultaMain.Location = new System.Drawing.Point(506, 19);
+            this.lblNrConsultaMain.Name = "lblNrConsultaMain";
+            this.lblNrConsultaMain.Size = new System.Drawing.Size(150, 13);
+            this.lblNrConsultaMain.TabIndex = 3;
+            this.lblNrConsultaMain.Text = "Número de Consulta Pre-Natal";
+            // 
+            // cbxNrConsultaMain
+            // 
+            this.cbxNrConsultaMain.FormattingEnabled = true;
+            this.cbxNrConsultaMain.Items.AddRange(new object[] {
+            "1ª",
+            "2ª",
+            "3ª",
+            "4ª",
+            "5ª",
+            "6ª"});
+            this.cbxNrConsultaMain.Location = new System.Drawing.Point(662, 13);
+            this.cbxNrConsultaMain.Name = "cbxNrConsultaMain";
+            this.cbxNrConsultaMain.Size = new System.Drawing.Size(174, 21);
+            this.cbxNrConsultaMain.TabIndex = 14;
+            this.cbxNrConsultaMain.SelectedIndexChanged += new System.EventHandler(this.cbxNrConsultaMain_SelectedIndexChanged);
+            // 
+            // btnBuscarMain
+            // 
+            this.btnBuscarMain.Location = new System.Drawing.Point(413, 13);
+            this.btnBuscarMain.Name = "btnBuscarMain";
+            this.btnBuscarMain.Size = new System.Drawing.Size(84, 23);
+            this.btnBuscarMain.TabIndex = 15;
+            this.btnBuscarMain.Text = "Buscar";
+            this.btnBuscarMain.UseVisualStyleBackColor = true;
+            this.btnBuscarMain.Click += new System.EventHandler(this.btnBuscarMain_Click);
+            // 
+            // btnGravarMain
+            // 
+            this.btnGravarMain.Location = new System.Drawing.Point(884, 14);
+            this.btnGravarMain.Name = "btnGravarMain";
+            this.btnGravarMain.Size = new System.Drawing.Size(127, 23);
+            this.btnGravarMain.TabIndex = 16;
+            this.btnGravarMain.Text = "Gravar";
+            this.btnGravarMain.UseVisualStyleBackColor = true;
+            this.btnGravarMain.Click += new System.EventHandler(this.btnGravarMain_Click);
             // 
             // FrmCPN
             // 
@@ -2250,8 +2251,8 @@
         private System.Windows.Forms.Button btnGravarMain;
         private System.Windows.Forms.ComboBox cbxCurada;
         private System.Windows.Forms.Label lblCurado;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblRecSuplNutr;
+        private System.Windows.Forms.TextBox txtRecSuplNutrQty;
+        private System.Windows.Forms.Label lblRecSuplNutrQty;
         private System.Windows.Forms.ComboBox cbxDAM;
         private System.Windows.Forms.ComboBox cbxDAG;
         private System.Windows.Forms.Label lblDAG;

@@ -97,14 +97,14 @@
             // maeToolStripMenuItem
             // 
             this.maeToolStripMenuItem.Name = "maeToolStripMenuItem";
-            this.maeToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.maeToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.maeToolStripMenuItem.Text = "Mãe";
             this.maeToolStripMenuItem.Click += new System.EventHandler(this.maeToolStripMenuItem_Click_1);
             // 
             // criancaToolStripMenuItem
             // 
             this.criancaToolStripMenuItem.Name = "criancaToolStripMenuItem";
-            this.criancaToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.criancaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.criancaToolStripMenuItem.Text = "Criança";
             this.criancaToolStripMenuItem.Click += new System.EventHandler(this.criancaToolStripMenuItem_Click_1);
             // 
@@ -130,6 +130,7 @@
             this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Name = "cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem";
             this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Size = new System.Drawing.Size(371, 24);
             this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Text = "CCR - Livro de Consulta de Criança em Risco";
+            this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem.Click += new System.EventHandler(this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem_Click);
             // 
             // cCRSeguimentoToolStripMenuItem1
             // 
@@ -160,6 +161,7 @@
             this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
             this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.administraçãoToolStripMenuItem.Text = "Administração";
+            this.administraçãoToolStripMenuItem.Click += new System.EventHandler(this.administraçãoToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
