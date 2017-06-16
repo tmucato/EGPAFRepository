@@ -124,6 +124,7 @@
     <Property Name="tarv" Type="Boolean" />
     <Property Name="nvp" Type="Boolean" />
     <Property Name="azt_nvp" Type="Boolean" />
+    <Property Name="em_tarv_entrada" Type="Boolean" />
     <Property Name="tarv_init_visit" Type="Boolean" />
     <Property Name="arv_cont" Type="Boolean" />
     <Property Name="tip" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />

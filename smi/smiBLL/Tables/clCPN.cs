@@ -71,7 +71,7 @@ namespace smiBLL
             idmother = 0;
             nlivro = string.Empty;
             nyear = 0;
-            visdate = DateTime.MinValue;
+            visdate = new DateTime(1800,1,1);
             agegroup = string.Empty;
             gestationalage = 0;
             gageless12 = null;

@@ -96,6 +96,7 @@
           <ScalarProperty Name="tip" ColumnName="tip" />
           <ScalarProperty Name="arv_cont" ColumnName="arv_cont" />
           <ScalarProperty Name="tarv_init_visit" ColumnName="tarv_init_visit" />
+          <ScalarProperty Name="em_tarv_entrada" ColumnName="em_tarv_entrada" />
           <ScalarProperty Name="azt_nvp" ColumnName="azt_nvp" />
           <ScalarProperty Name="nvp" ColumnName="nvp" />
           <ScalarProperty Name="tarv" ColumnName="tarv" />

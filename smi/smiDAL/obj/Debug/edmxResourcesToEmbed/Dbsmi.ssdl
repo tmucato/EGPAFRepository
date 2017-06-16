@@ -56,6 +56,7 @@
     <Property Name="tarv" Type="bool" />
     <Property Name="nvp" Type="bool" />
     <Property Name="azt_nvp" Type="bool" />
+    <Property Name="em_tarv_entrada" Type="bool" />
     <Property Name="tarv_init_visit" Type="bool" />
     <Property Name="arv_cont" Type="bool" />
     <Property Name="tip" Type="varchar" MaxLength="5" />

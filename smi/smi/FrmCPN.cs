@@ -184,17 +184,38 @@ namespace smi
                     cbxEmTarvEntrada.SelectedItem = cpn.tarv_init_visit;
                 if (cpn.tarv_init_visit != null)
                     cbxIniTarvVis.SelectedItem = cpn.tarv_init_visit;
-
-
-
-
-
-
+                if (cpn.arv_cont != null)
+                    cbxContARVVisita.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.arv_cont));
+                if (cpn.nvp != null)
+                    cbxNVPVisita.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.nvp));
+                if (cpn.azt_nvp != null)
+                    cbxIniBiproAZTNVP.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.azt_nvp));
+                if (!string.IsNullOrWhiteSpace(cpn.tip))
+                    cbxRecebeiTip.SelectedItem = cpn.tip;
+                if (!string.IsNullOrWhiteSpace(cpn.bednet))
+                    cbxRecRedeMosqu.SelectedItem = cpn.bednet;
+                if (!string.IsNullOrWhiteSpace(cpn.tdr_htz))
+                    cbxTDRHTZ.SelectedItem = cpn.tdr_htz;
+                if (!string.IsNullOrWhiteSpace(cpn.result_tdr_htz))
+                    cbxResultadoTDRHTZ.SelectedItem = cpn.result_tdr_htz;
+                if (!string.IsNullOrWhiteSpace(cpn.pos_malaria_treated))
+                    cbxMulhTesteMalPosTrat.SelectedItem = cpn.pos_malaria_treated;
+                if (!string.IsNullOrWhiteSpace(cpn.tb_isoniazid))
+                    cbxProfIson.SelectedItem = cpn.tb_isoniazid;
+                if (!string.IsNullOrWhiteSpace(cpn.tb_treatment))
+                    cbxTratTB.SelectedItem = cpn.tb_treatment;
+                if (!string.IsNullOrWhiteSpace(cpn.hpp))
+                    cbxHPP.SelectedItem = cpn.hpp;
+                if (cpn.vat_1_dose != null)
+                    cbxVat1Dose.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.vat_1_dose));
+                if (cpn.vat_2_5_dose != null)
+                    cbxVat2_5Dose.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.vat_2_5_dose));
+                txtObs.Text = cpn.obs;
+                txtNomeProf.Text = cpn.providername;
 
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
 

@@ -31,7 +31,7 @@ namespace smiBLL
             gender = string.Empty;
             phone = string.Empty;
             mot_nid_cpn = string.Empty;
-            dob = DateTime.MinValue;
+            dob = new DateTime(1800, 1, 1);
         }
 
 

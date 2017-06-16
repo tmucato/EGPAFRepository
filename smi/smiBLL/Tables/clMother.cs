@@ -28,7 +28,7 @@ namespace smiBLL
             name = string.Empty;
             phone = string.Empty;
             residence = string.Empty;
-            dob = DateTime.MinValue;
+            dob = new DateTime(1800, 1, 1);
         }
 
 
