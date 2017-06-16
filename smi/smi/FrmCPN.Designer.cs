@@ -605,6 +605,8 @@
             // 
             // dtpDataConsulta
             // 
+            this.dtpDataConsulta.CustomFormat = "dd/MM/yyyy";
+            this.dtpDataConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDataConsulta.Location = new System.Drawing.Point(120, 54);
             this.dtpDataConsulta.Name = "dtpDataConsulta";
             this.dtpDataConsulta.Size = new System.Drawing.Size(105, 20);

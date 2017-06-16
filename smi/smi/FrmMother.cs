@@ -141,7 +141,7 @@ namespace smi
                 txtName.Text = obj_mother.name;
                 txtResidence.Text = obj_mother.residence;
                 txtPhone.Text = obj_mother.phone;
-                txtDob.Text = obj_mother.dob.ToString("dd/MM/yyyy");
+                dtpBithDate.Value = obj_mother.dob;
             }
             catch (Exception ex)
             {
@@ -166,7 +166,7 @@ namespace smi
                 txtName.Clear();
                 txtResidence.Clear();
                 txtPhone.Clear();
-                txtDob.Clear();
+                dtpBithDate.ResetText();
                 txtNid_cpn.Focus();
             }
             catch (Exception ex)
@@ -193,7 +193,7 @@ namespace smi
                     obj_mother.name = txtName.Text;
                     obj_mother.residence = txtResidence.Text;
                     obj_mother.phone = txtPhone.Text;
-                    obj_mother.dob = Convert.ToDateTime(txtDob.Text);
+                    obj_mother.dob = dtpBithDate.Value;
 
                     if (string.IsNullOrWhiteSpace(txtID.Text))
                     {
@@ -249,7 +249,7 @@ namespace smi
                     MessageBox.Show("O numero de telefone invalido");
                     return result;
                 }
-                if (!Functions.IsDate(txtDob.Text))
+                if (!Functions.IsDate(dtpBithDate.Text))
                 {
                     MessageBox.Show("O data de nascimento inserida é invalida");
                     return result;

@@ -128,22 +128,22 @@ namespace smiBLL
                 switch (value)
                 {
                     case 1:
-                        result = "1º";
+                        result = "1ª";
                         break;
                     case 2:
-                        result = "2º";
+                        result = "2ª";
                         break;
                     case 3:
-                        result = "3º";
+                        result = "3ª";
                         break;
                     case 4:
-                        result = "4º";
+                        result = "4ª";
                         break;
                     case 5:
                         result = "5ª";
                         break;
                     case 6:
-                        result = "6º";
+                        result = "6ª";
                         break;
                 }
             }

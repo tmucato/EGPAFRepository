@@ -49,7 +49,7 @@ namespace smi
                 txtNidMaeCpn.Text = obj_child.mot_nid_cpn;
                 txtPhone.Text = obj_child.phone;
                 txtResidence.Text = obj_child.residence;
-                txtDataNascimento.Text = obj_child.dob.ToString("dd/MM/yyyy");
+                dtpBirthDate.Value = obj_child.dob;
                 cbxGenero.SelectedText = obj_child.gender;
 
             }
@@ -98,7 +98,7 @@ namespace smi
             {
                 dgvChild.ClearSelection();
                 txtID.Clear();
-                txtDataNascimento.Clear();
+                dtpBirthDate.ResetText();
                 txtName.Clear();
                 txtNidMaeCpn.Clear();
                 txtNid_ccr.Clear();
@@ -138,7 +138,7 @@ namespace smi
                 {
                     clChild obj_child = new clChild();
                     obj_child.gender = cbxGenero.Text;
-                    obj_child.dob = Convert.ToDateTime(txtDataNascimento.Text);
+                    obj_child.dob = dtpBirthDate.Value;
                     obj_child.mot_nid_cpn = txtNidMaeCpn.Text;
                     obj_child.name = txtName.Text;
                     obj_child.nid_ccr = txtNid_ccr.Text;
@@ -212,7 +212,7 @@ namespace smi
                     return result;
                 }
 
-                if (!Functions.IsDate(txtDataNascimento.Text))
+                if (!Functions.IsDate(dtpBirthDate.Text))
                 {
                     MessageBox.Show("O campo do data de nascimento comtem uma data nao valida");
                     return result;

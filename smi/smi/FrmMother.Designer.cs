@@ -47,7 +47,6 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.cmdProcurar = new System.Windows.Forms.Button();
             this.txtSearched = new System.Windows.Forms.TextBox();
-            this.txtDob = new System.Windows.Forms.TextBox();
             this.cbProcurar = new System.Windows.Forms.ComboBox();
             this.dgvMother = new System.Windows.Forms.DataGridView();
             this.Select = new System.Windows.Forms.DataGridViewLinkColumn();
@@ -57,6 +56,7 @@
             this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpBithDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMother)).BeginInit();
             this.SuspendLayout();
             // 
@@ -242,14 +242,6 @@
             this.txtSearched.Size = new System.Drawing.Size(268, 26);
             this.txtSearched.TabIndex = 104;
             // 
-            // txtDob
-            // 
-            this.txtDob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtDob.Location = new System.Drawing.Point(726, 106);
-            this.txtDob.Name = "txtDob";
-            this.txtDob.Size = new System.Drawing.Size(130, 22);
-            this.txtDob.TabIndex = 105;
-            // 
             // cbProcurar
             // 
             this.cbProcurar.FormattingEnabled = true;
@@ -341,13 +333,23 @@
             this.dob.ReadOnly = true;
             this.dob.Width = 170;
             // 
-            // FrmChild
+            // dtpBithDate
+            // 
+            this.dtpBithDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpBithDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.dtpBithDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBithDate.Location = new System.Drawing.Point(726, 106);
+            this.dtpBithDate.Name = "dtpBithDate";
+            this.dtpBithDate.Size = new System.Drawing.Size(131, 22);
+            this.dtpBithDate.TabIndex = 108;
+            // 
+            // FrmMother
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 499);
+            this.Controls.Add(this.dtpBithDate);
             this.Controls.Add(this.dgvMother);
-            this.Controls.Add(this.txtDob);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtNid_tarv);
@@ -370,7 +372,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FrmChild";
+            this.Name = "FrmMother";
             this.Text = "Sistema Electronico de Seguimento de Paciente de SMI (SESP-SMI)";
             this.Load += new System.EventHandler(this.FrmMother_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMother)).EndInit();
@@ -400,7 +402,6 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button cmdProcurar;
         private System.Windows.Forms.TextBox txtSearched;
-        private System.Windows.Forms.TextBox txtDob;
         private System.Windows.Forms.ComboBox cbProcurar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dgvMother;
@@ -411,5 +412,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn residence;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn dob;
+        private System.Windows.Forms.DateTimePicker dtpBithDate;
     }
 }

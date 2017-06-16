@@ -58,8 +58,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblGenero = new System.Windows.Forms.Label();
             this.lblDataNascimento = new System.Windows.Forms.Label();
-            this.txtDataNascimento = new System.Windows.Forms.TextBox();
             this.cbxGenero = new System.Windows.Forms.ComboBox();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChild)).BeginInit();
             this.SuspendLayout();
             // 
@@ -356,14 +356,6 @@
             this.lblDataNascimento.TabIndex = 131;
             this.lblDataNascimento.Text = "Data Nascimento";
             // 
-            // txtDataNascimento
-            // 
-            this.txtDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtDataNascimento.Location = new System.Drawing.Point(889, 121);
-            this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(157, 22);
-            this.txtDataNascimento.TabIndex = 130;
-            // 
             // cbxGenero
             // 
             this.cbxGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -376,14 +368,24 @@
             this.cbxGenero.Size = new System.Drawing.Size(156, 21);
             this.cbxGenero.TabIndex = 132;
             // 
+            // dtpBirthDate
+            // 
+            this.dtpBirthDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBirthDate.Location = new System.Drawing.Point(888, 121);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(139, 20);
+            this.dtpBirthDate.TabIndex = 133;
+            // 
             // FrmChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 499);
+            this.Controls.Add(this.dtpBirthDate);
             this.Controls.Add(this.cbxGenero);
             this.Controls.Add(this.lblDataNascimento);
-            this.Controls.Add(this.txtDataNascimento);
             this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.dgvChild);
             this.Controls.Add(this.txtPhone);
@@ -438,7 +440,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.Label lblDataNascimento;
-        private System.Windows.Forms.TextBox txtDataNascimento;
         private System.Windows.Forms.ComboBox cbxGenero;
         private System.Windows.Forms.DataGridViewLinkColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn nid_ccr;
@@ -448,5 +449,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dob;
+        private System.Windows.Forms.DateTimePicker dtpBirthDate;
     }
 }
