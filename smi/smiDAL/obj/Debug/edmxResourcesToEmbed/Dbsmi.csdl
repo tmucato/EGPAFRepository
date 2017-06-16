@@ -114,6 +114,8 @@
     <Property Name="its_syphilistesting" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
     <Property Name="its_wsyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
     <Property Name="its_psyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="its_syphilistratmentmulhr" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="its_syphilistratmentparceir" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="serostatusentcpn" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
     <Property Name="cpnhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
     <Property Name="partnerhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />

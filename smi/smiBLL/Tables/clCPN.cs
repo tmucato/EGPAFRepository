@@ -38,6 +38,8 @@ namespace smiBLL
         public string its_syphilistesting;
         public string its_wsyphilistreat;
         public string its_psyphilistreat;
+        public string its_syphilistratmentmulhr;
+        public string its_syphilistratmentparceir;
         public string serostatusentcpn;
         public string cpnhivtest;
         public string partnerhivtest;
@@ -46,6 +48,7 @@ namespace smiBLL
         public Nullable<bool> tarv;
         public Nullable<bool> nvp;
         public Nullable<bool> azt_nvp;
+        public Nullable<bool> em_tarv_entrada;
         public Nullable<bool> tarv_init_visit;
         public Nullable<bool> arv_cont;
         public string tip;
@@ -92,6 +95,8 @@ namespace smiBLL
             its_syphilistesting = string.Empty;
             its_wsyphilistreat = string.Empty;
             its_psyphilistreat = string.Empty;
+            its_syphilistratmentmulhr = string.Empty;
+            its_syphilistratmentparceir = string.Empty;
             serostatusentcpn = string.Empty;
             cpnhivtest = string.Empty;
             partnerhivtest = string.Empty;
@@ -101,6 +106,7 @@ namespace smiBLL
             nvp = null;
             azt_nvp = null;
             tarv_init_visit = null;
+            em_tarv_entrada = null;
             arv_cont = null;
             tip = string.Empty;
             bednet = string.Empty;
@@ -121,7 +127,6 @@ namespace smiBLL
         public override List<clCPN> GetEntityList()
         {
             List<clCPN> List_cpn = new List<clCPN>();
-
             try
             {
                 using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
@@ -158,6 +163,8 @@ namespace smiBLL
                         obj_cpn.its_syphilistesting = db_cpn.its_syphilistesting;
                         obj_cpn.its_wsyphilistreat = db_cpn.its_wsyphilistreat;
                         obj_cpn.its_psyphilistreat = db_cpn.its_psyphilistreat;
+                        obj_cpn.its_wsyphilistreat = db_cpn.its_wsyphilistreat;
+                        obj_cpn.its_psyphilistreat = db_cpn.its_psyphilistreat;
                         obj_cpn.serostatusentcpn = db_cpn.serostatusentcpn;
                         obj_cpn.cpnhivtest = db_cpn.cpnhivtest;
                         obj_cpn.partnerhivtest = db_cpn.partnerhivtest;
@@ -167,6 +174,7 @@ namespace smiBLL
                         obj_cpn.nvp = db_cpn.nvp;
                         obj_cpn.azt_nvp = db_cpn.azt_nvp;
                         obj_cpn.tarv_init_visit = db_cpn.tarv_init_visit;
+                        obj_cpn.em_tarv_entrada = db_cpn.em_tarv_entrada;
                         obj_cpn.arv_cont = db_cpn.arv_cont;
                         obj_cpn.tip = db_cpn.tip;
                         obj_cpn.bednet = db_cpn.bednet;
@@ -180,7 +188,6 @@ namespace smiBLL
                         obj_cpn.tb_treatment = db_cpn.tb_treatment;
                         obj_cpn.obs = db_cpn.obs;
                         obj_cpn.providername = db_cpn.providername;
-
                         List_cpn.Add(obj_cpn);
                     }
                 }
@@ -228,6 +235,8 @@ namespace smiBLL
                     db_cpn.its_syphilistesting = this.its_syphilistesting;
                     db_cpn.its_wsyphilistreat = this.its_wsyphilistreat;
                     db_cpn.its_psyphilistreat = this.its_psyphilistreat;
+                    db_cpn.its_wsyphilistreat = this.its_wsyphilistreat;
+                    db_cpn.its_psyphilistreat = this.its_psyphilistreat;
                     db_cpn.serostatusentcpn = this.serostatusentcpn;
                     db_cpn.cpnhivtest = this.cpnhivtest;
                     db_cpn.partnerhivtest = this.partnerhivtest;
@@ -236,6 +245,7 @@ namespace smiBLL
                     db_cpn.tarv = this.tarv;
                     db_cpn.nvp = this.nvp;
                     db_cpn.azt_nvp = this.azt_nvp;
+                    db_cpn.em_tarv_entrada = this.em_tarv_entrada;
                     db_cpn.tarv_init_visit = this.tarv_init_visit;
                     db_cpn.arv_cont = this.arv_cont;
                     db_cpn.tip = this.tip;
@@ -297,6 +307,8 @@ namespace smiBLL
                     db_cpn.its_syphilistesting = this.its_syphilistesting;
                     db_cpn.its_wsyphilistreat = this.its_wsyphilistreat;
                     db_cpn.its_psyphilistreat = this.its_psyphilistreat;
+                    db_cpn.its_wsyphilistreat = this.its_wsyphilistreat;
+                    db_cpn.its_psyphilistreat = this.its_psyphilistreat;
                     db_cpn.serostatusentcpn = this.serostatusentcpn;
                     db_cpn.cpnhivtest = this.cpnhivtest;
                     db_cpn.partnerhivtest = this.partnerhivtest;
@@ -305,6 +317,7 @@ namespace smiBLL
                     db_cpn.tarv = this.tarv;
                     db_cpn.nvp = this.nvp;
                     db_cpn.azt_nvp = this.azt_nvp;
+                    db_cpn.em_tarv_entrada = this.em_tarv_entrada;
                     db_cpn.tarv_init_visit = this.tarv_init_visit;
                     db_cpn.arv_cont = this.arv_cont;
                     db_cpn.tip = this.tip;
@@ -348,8 +361,6 @@ namespace smiBLL
             }
 
         }
-
-
 
         public override DataTable GetEntityDatatable()
         {

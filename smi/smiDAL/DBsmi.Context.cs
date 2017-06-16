@@ -19,12 +19,10 @@ namespace smiDAL
             : base("name=DBsmiEntities")
         {
         }
-
         public DBsmiEntities(string conStr)
-        : base(conStr)
+            : base(conStr)
         {
         }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

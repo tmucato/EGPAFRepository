@@ -43,6 +43,8 @@ namespace smiDAL
         public string its_syphilistesting { get; set; }
         public string its_wsyphilistreat { get; set; }
         public string its_psyphilistreat { get; set; }
+        public string its_syphilistratmentmulhr { get; set; }
+        public string its_syphilistratmentparceir { get; set; }
         public string serostatusentcpn { get; set; }
         public string cpnhivtest { get; set; }
         public string partnerhivtest { get; set; }
@@ -51,6 +53,7 @@ namespace smiDAL
         public Nullable<bool> tarv { get; set; }
         public Nullable<bool> nvp { get; set; }
         public Nullable<bool> azt_nvp { get; set; }
+        public Nullable<bool> em_tarv_entrada { get; set; }
         public Nullable<bool> tarv_init_visit { get; set; }
         public Nullable<bool> arv_cont { get; set; }
         public string tip { get; set; }

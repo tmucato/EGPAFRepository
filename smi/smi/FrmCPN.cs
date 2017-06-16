@@ -155,7 +155,7 @@ namespace smi
                 if (!string.IsNullOrWhiteSpace(cpn.hgb))
                     cbxHemoglobina.SelectedItem = cpn.hgb;
                 if (!string.IsNullOrWhiteSpace(cpn.proteinuria))
-                    cbxProteinuria.SelectedItem = cpn.proteinuria;
+                    cbxlblProteinuria.SelectedItem = cpn.proteinuria;
                 if (!string.IsNullOrWhiteSpace(cpn.glicosuria))
                     cbxGlicosuria.SelectedItem = cpn.glicosuria;
                 if (cpn.its_ulceragenital != null)
@@ -166,9 +166,24 @@ namespace smi
                     cbxSindromicoITS.SelectedItem = cpn.its_syndromictreatment;
                 if (!string.IsNullOrWhiteSpace(cpn.its_syphilistesting))
                     cbxTesteSiflis.SelectedItem = cpn.its_syphilistesting;
-                //if (! string.IsNullOrWhiteSpace())
-                //    cbxtratSiflMulher.SelectedItem = cpn
-
+                if (!string.IsNullOrWhiteSpace(cpn.its_syphilistratmentmulhr))
+                    cbxtratSiflMulher.SelectedItem = cpn.its_syphilistratmentmulhr;
+                if (!string.IsNullOrWhiteSpace(cpn.its_syphilistratmentparceir))
+                    cbxtratSiflParceiro.SelectedItem = cpn.its_syphilistratmentparceir;
+                if (!string.IsNullOrWhiteSpace(cpn.serostatusentcpn))
+                    cbxSerEstad1CPN.SelectedItem = cpn.serostatusentcpn;
+                if (!string.IsNullOrWhiteSpace(cpn.cpnhivtest))
+                    cbxtesteHivCpn.SelectedItem = cpn.cpnhivtest;
+                if (!string.IsNullOrWhiteSpace(cpn.partnerhivtest))
+                    cbxTesteParceiro.SelectedItem = cpn.partnerhivtest;
+                if (cpn.ctz != null)
+                    cbxCTZEntrada.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn.ctz));
+                if (!string.IsNullOrWhiteSpace(cpn.ctz_init_cont))
+                    cbxIniContCTZ.SelectedItem = cpn.ctz_init_cont;
+                if (cpn.tarv_init_visit != null)
+                    cbxEmTarvEntrada.SelectedItem = cpn.tarv_init_visit;
+                if (cpn.tarv_init_visit != null)
+                    cbxIniTarvVis.SelectedItem = cpn.tarv_init_visit;
 
 
 

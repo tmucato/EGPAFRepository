@@ -46,6 +46,8 @@
     <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
     <Property Name="its_wsyphilistreat" Type="varchar" MaxLength="5" />
     <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
+    <Property Name="its_syphilistratmentmulhr" Type="varchar" MaxLength="45" />
+    <Property Name="its_syphilistratmentparceir" Type="varchar" MaxLength="45" />
     <Property Name="serostatusentcpn" Type="varchar" MaxLength="5" />
     <Property Name="cpnhivtest" Type="varchar" MaxLength="5" />
     <Property Name="partnerhivtest" Type="varchar" MaxLength="5" />

@@ -31,7 +31,7 @@
             this.Page1 = new System.Windows.Forms.TabPage();
             this.gbExames = new System.Windows.Forms.GroupBox();
             this.cbxGlicosuria = new System.Windows.Forms.ComboBox();
-            this.cbxProteinuria = new System.Windows.Forms.ComboBox();
+            this.cbxlblProteinuria = new System.Windows.Forms.ComboBox();
             this.lblGlicosuria = new System.Windows.Forms.Label();
             this.lblProteinuria = new System.Windows.Forms.Label();
             this.cbxtensaoArte = new System.Windows.Forms.ComboBox();
@@ -240,7 +240,7 @@
             // gbExames
             // 
             this.gbExames.Controls.Add(this.cbxGlicosuria);
-            this.gbExames.Controls.Add(this.cbxProteinuria);
+            this.gbExames.Controls.Add(this.cbxlblProteinuria);
             this.gbExames.Controls.Add(this.lblGlicosuria);
             this.gbExames.Controls.Add(this.lblProteinuria);
             this.gbExames.Controls.Add(this.cbxtensaoArte);
@@ -266,17 +266,17 @@
             this.cbxGlicosuria.Size = new System.Drawing.Size(85, 21);
             this.cbxGlicosuria.TabIndex = 37;
             // 
-            // cbxProteinuria
+            // cbxlblProteinuria
             // 
-            this.cbxProteinuria.FormattingEnabled = true;
-            this.cbxProteinuria.Items.AddRange(new object[] {
+            this.cbxlblProteinuria.FormattingEnabled = true;
+            this.cbxlblProteinuria.Items.AddRange(new object[] {
             "SIM",
             "NÃO",
             "NÂO FEZ"});
-            this.cbxProteinuria.Location = new System.Drawing.Point(256, 71);
-            this.cbxProteinuria.Name = "cbxProteinuria";
-            this.cbxProteinuria.Size = new System.Drawing.Size(85, 21);
-            this.cbxProteinuria.TabIndex = 36;
+            this.cbxlblProteinuria.Location = new System.Drawing.Point(256, 71);
+            this.cbxlblProteinuria.Name = "cbxlblProteinuria";
+            this.cbxlblProteinuria.Size = new System.Drawing.Size(85, 21);
+            this.cbxlblProteinuria.TabIndex = 36;
             // 
             // lblGlicosuria
             // 
@@ -1109,9 +1109,9 @@
             this.cbxContARVVisita.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxContARVVisita.Location = new System.Drawing.Point(429, 104);
+            this.cbxContARVVisita.Location = new System.Drawing.Point(417, 104);
             this.cbxContARVVisita.Name = "cbxContARVVisita";
-            this.cbxContARVVisita.Size = new System.Drawing.Size(61, 21);
+            this.cbxContARVVisita.Size = new System.Drawing.Size(73, 21);
             this.cbxContARVVisita.TabIndex = 49;
             // 
             // lblContARVVisita
@@ -1129,9 +1129,9 @@
             this.cbxIniTarvVis.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxIniTarvVis.Location = new System.Drawing.Point(429, 77);
+            this.cbxIniTarvVis.Location = new System.Drawing.Point(417, 77);
             this.cbxIniTarvVis.Name = "cbxIniTarvVis";
-            this.cbxIniTarvVis.Size = new System.Drawing.Size(61, 21);
+            this.cbxIniTarvVis.Size = new System.Drawing.Size(73, 21);
             this.cbxIniTarvVis.TabIndex = 47;
             // 
             // lblIniTarvVis
@@ -1189,9 +1189,9 @@
             this.cbxEmTarvEntrada.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxEmTarvEntrada.Location = new System.Drawing.Point(429, 50);
+            this.cbxEmTarvEntrada.Location = new System.Drawing.Point(417, 50);
             this.cbxEmTarvEntrada.Name = "cbxEmTarvEntrada";
-            this.cbxEmTarvEntrada.Size = new System.Drawing.Size(61, 21);
+            this.cbxEmTarvEntrada.Size = new System.Drawing.Size(73, 21);
             this.cbxEmTarvEntrada.TabIndex = 41;
             // 
             // lblEmTarvEntrada
@@ -1209,9 +1209,9 @@
             this.cbxIniContCTZ.Items.AddRange(new object[] {
             "Inic",
             "Cont"});
-            this.cbxIniContCTZ.Location = new System.Drawing.Point(429, 23);
+            this.cbxIniContCTZ.Location = new System.Drawing.Point(417, 23);
             this.cbxIniContCTZ.Name = "cbxIniContCTZ";
-            this.cbxIniContCTZ.Size = new System.Drawing.Size(61, 21);
+            this.cbxIniContCTZ.Size = new System.Drawing.Size(73, 21);
             this.cbxIniContCTZ.TabIndex = 39;
             // 
             // lblIniContCTZ
@@ -2263,7 +2263,7 @@
         private System.Windows.Forms.Label lblRecDesparasitante;
         private System.Windows.Forms.GroupBox gbExames;
         private System.Windows.Forms.ComboBox cbxGlicosuria;
-        private System.Windows.Forms.ComboBox cbxProteinuria;
+        private System.Windows.Forms.ComboBox cbxlblProteinuria;
         private System.Windows.Forms.Label lblGlicosuria;
         private System.Windows.Forms.Label lblProteinuria;
         private System.Windows.Forms.ComboBox cbxtensaoArte;

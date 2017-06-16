@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="smiModel.usuario" Width="1.5" PointX="2.125" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="smiModel.child" Width="1.5" PointX="3.75" PointY="0.5" />
         <EntityTypeShape EntityType="smiModel.cpn_final" Width="1.5" PointX="7.125" PointY="0.5" />
-        <EntityTypeShape EntityType="smiModel.cpn" Width="1.5" PointX="5.5" PointY="0.5" />
+        <EntityTypeShape EntityType="smiModel.cpn" Width="1.5" PointX="5.375" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
