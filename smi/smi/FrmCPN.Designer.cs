@@ -143,6 +143,7 @@
             this.lblLeucorreia = new System.Windows.Forms.Label();
             this.lblUlcera = new System.Windows.Forms.Label();
             this.EstadoFinal = new System.Windows.Forms.TabPage();
+            this.cbxFinalDiagITS = new System.Windows.Forms.ComboBox();
             this.btnAnteriorPage3 = new System.Windows.Forms.Button();
             this.cbxFinalTratTB = new System.Windows.Forms.ComboBox();
             this.lblFinalTratTB = new System.Windows.Forms.Label();
@@ -164,7 +165,6 @@
             this.lblFinalTIP = new System.Windows.Forms.Label();
             this.cbxFinalResARV = new System.Windows.Forms.ComboBox();
             this.lblFinalResARV = new System.Windows.Forms.Label();
-            this.txtFinalIniCTZ = new System.Windows.Forms.TextBox();
             this.lblFinalIniCTZ = new System.Windows.Forms.Label();
             this.cbxFinalCTZEntrada = new System.Windows.Forms.ComboBox();
             this.lblFinalCTZEntrada = new System.Windows.Forms.Label();
@@ -180,7 +180,6 @@
             this.lblFinalTestSiflis = new System.Windows.Forms.Label();
             this.cbxFinalTratITS = new System.Windows.Forms.ComboBox();
             this.lblFinalTratITS = new System.Windows.Forms.Label();
-            this.txtFinalDiagITS = new System.Windows.Forms.TextBox();
             this.lblFinalDiagITS = new System.Windows.Forms.Label();
             this.cbxFinalSalFerrMais3 = new System.Windows.Forms.ComboBox();
             this.lblFinalSalFerrMais3 = new System.Windows.Forms.Label();
@@ -208,6 +207,7 @@
             this.cbxNrConsultaMain = new System.Windows.Forms.ComboBox();
             this.btnBuscarMain = new System.Windows.Forms.Button();
             this.btnGravarMain = new System.Windows.Forms.Button();
+            this.cbxFinalIniCTZ = new System.Windows.Forms.ComboBox();
             this.Page1.SuspendLayout();
             this.gbExames.SuspendLayout();
             this.gbNutricao.SuspendLayout();
@@ -1455,6 +1455,8 @@
             // EstadoFinal
             // 
             this.EstadoFinal.BackColor = System.Drawing.Color.Silver;
+            this.EstadoFinal.Controls.Add(this.cbxFinalIniCTZ);
+            this.EstadoFinal.Controls.Add(this.cbxFinalDiagITS);
             this.EstadoFinal.Controls.Add(this.btnAnteriorPage3);
             this.EstadoFinal.Controls.Add(this.cbxFinalTratTB);
             this.EstadoFinal.Controls.Add(this.lblFinalTratTB);
@@ -1476,7 +1478,6 @@
             this.EstadoFinal.Controls.Add(this.lblFinalTIP);
             this.EstadoFinal.Controls.Add(this.cbxFinalResARV);
             this.EstadoFinal.Controls.Add(this.lblFinalResARV);
-            this.EstadoFinal.Controls.Add(this.txtFinalIniCTZ);
             this.EstadoFinal.Controls.Add(this.lblFinalIniCTZ);
             this.EstadoFinal.Controls.Add(this.cbxFinalCTZEntrada);
             this.EstadoFinal.Controls.Add(this.lblFinalCTZEntrada);
@@ -1492,7 +1493,6 @@
             this.EstadoFinal.Controls.Add(this.lblFinalTestSiflis);
             this.EstadoFinal.Controls.Add(this.cbxFinalTratITS);
             this.EstadoFinal.Controls.Add(this.lblFinalTratITS);
-            this.EstadoFinal.Controls.Add(this.txtFinalDiagITS);
             this.EstadoFinal.Controls.Add(this.lblFinalDiagITS);
             this.EstadoFinal.Controls.Add(this.cbxFinalSalFerrMais3);
             this.EstadoFinal.Controls.Add(this.lblFinalSalFerrMais3);
@@ -1521,6 +1521,17 @@
             this.EstadoFinal.TabIndex = 3;
             this.EstadoFinal.Text = "Estado Final";
             // 
+            // cbxFinalDiagITS
+            // 
+            this.cbxFinalDiagITS.FormattingEnabled = true;
+            this.cbxFinalDiagITS.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalDiagITS.Location = new System.Drawing.Point(259, 276);
+            this.cbxFinalDiagITS.Name = "cbxFinalDiagITS";
+            this.cbxFinalDiagITS.Size = new System.Drawing.Size(162, 21);
+            this.cbxFinalDiagITS.TabIndex = 83;
+            // 
             // btnAnteriorPage3
             // 
             this.btnAnteriorPage3.Location = new System.Drawing.Point(6, 383);
@@ -1537,7 +1548,7 @@
             this.cbxFinalTratTB.Items.AddRange(new object[] {
             "Inic",
             "Cont"});
-            this.cbxFinalTratTB.Location = new System.Drawing.Point(646, 353);
+            this.cbxFinalTratTB.Location = new System.Drawing.Point(646, 383);
             this.cbxFinalTratTB.Name = "cbxFinalTratTB";
             this.cbxFinalTratTB.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalTratTB.TabIndex = 81;
@@ -1545,7 +1556,7 @@
             // lblFinalTratTB
             // 
             this.lblFinalTratTB.AutoSize = true;
-            this.lblFinalTratTB.Location = new System.Drawing.Point(477, 356);
+            this.lblFinalTratTB.Location = new System.Drawing.Point(477, 386);
             this.lblFinalTratTB.Name = "lblFinalTratTB";
             this.lblFinalTratTB.Size = new System.Drawing.Size(117, 13);
             this.lblFinalTratTB.TabIndex = 80;
@@ -1557,7 +1568,7 @@
             this.cbxFinalINH.Items.AddRange(new object[] {
             "Inic",
             "Cont"});
-            this.cbxFinalINH.Location = new System.Drawing.Point(646, 326);
+            this.cbxFinalINH.Location = new System.Drawing.Point(646, 356);
             this.cbxFinalINH.Name = "cbxFinalINH";
             this.cbxFinalINH.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalINH.TabIndex = 79;
@@ -1565,7 +1576,7 @@
             // lblFinalINH
             // 
             this.lblFinalINH.AutoSize = true;
-            this.lblFinalINH.Location = new System.Drawing.Point(477, 329);
+            this.lblFinalINH.Location = new System.Drawing.Point(479, 359);
             this.lblFinalINH.Name = "lblFinalINH";
             this.lblFinalINH.Size = new System.Drawing.Size(60, 13);
             this.lblFinalINH.TabIndex = 78;
@@ -1577,7 +1588,7 @@
             this.cbxFinalVat1Dose.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxFinalVat1Dose.Location = new System.Drawing.Point(646, 270);
+            this.cbxFinalVat1Dose.Location = new System.Drawing.Point(646, 302);
             this.cbxFinalVat1Dose.Name = "cbxFinalVat1Dose";
             this.cbxFinalVat1Dose.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalVat1Dose.TabIndex = 77;
@@ -1588,7 +1599,7 @@
             this.cbxFinalVat2_5Dose.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxFinalVat2_5Dose.Location = new System.Drawing.Point(646, 297);
+            this.cbxFinalVat2_5Dose.Location = new System.Drawing.Point(646, 329);
             this.cbxFinalVat2_5Dose.Name = "cbxFinalVat2_5Dose";
             this.cbxFinalVat2_5Dose.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalVat2_5Dose.TabIndex = 75;
@@ -1596,7 +1607,7 @@
             // lblFinalVat2_5Dose
             // 
             this.lblFinalVat2_5Dose.AutoSize = true;
-            this.lblFinalVat2_5Dose.Location = new System.Drawing.Point(477, 300);
+            this.lblFinalVat2_5Dose.Location = new System.Drawing.Point(477, 332);
             this.lblFinalVat2_5Dose.Name = "lblFinalVat2_5Dose";
             this.lblFinalVat2_5Dose.Size = new System.Drawing.Size(80, 13);
             this.lblFinalVat2_5Dose.TabIndex = 76;
@@ -1605,7 +1616,7 @@
             // lblFinalVat1Dose
             // 
             this.lblFinalVat1Dose.AutoSize = true;
-            this.lblFinalVat1Dose.Location = new System.Drawing.Point(477, 273);
+            this.lblFinalVat1Dose.Location = new System.Drawing.Point(479, 305);
             this.lblFinalVat1Dose.Name = "lblFinalVat1Dose";
             this.lblFinalVat1Dose.Size = new System.Drawing.Size(69, 13);
             this.lblFinalVat1Dose.TabIndex = 74;
@@ -1617,7 +1628,7 @@
             this.cbxFinalRecHPP.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxFinalRecHPP.Location = new System.Drawing.Point(646, 245);
+            this.cbxFinalRecHPP.Location = new System.Drawing.Point(646, 276);
             this.cbxFinalRecHPP.Name = "cbxFinalRecHPP";
             this.cbxFinalRecHPP.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalRecHPP.TabIndex = 73;
@@ -1625,7 +1636,7 @@
             // lblFinalRecHPP
             // 
             this.lblFinalRecHPP.AutoSize = true;
-            this.lblFinalRecHPP.Location = new System.Drawing.Point(477, 248);
+            this.lblFinalRecHPP.Location = new System.Drawing.Point(477, 279);
             this.lblFinalRecHPP.Name = "lblFinalRecHPP";
             this.lblFinalRecHPP.Size = new System.Drawing.Size(157, 13);
             this.lblFinalRecHPP.TabIndex = 72;
@@ -1637,7 +1648,7 @@
             this.cbxFinalTratMal.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxFinalTratMal.Location = new System.Drawing.Point(646, 222);
+            this.cbxFinalTratMal.Location = new System.Drawing.Point(646, 249);
             this.cbxFinalTratMal.Name = "cbxFinalTratMal";
             this.cbxFinalTratMal.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalTratMal.TabIndex = 71;
@@ -1645,7 +1656,7 @@
             // lblFinalTratMal
             // 
             this.lblFinalTratMal.AutoSize = true;
-            this.lblFinalTratMal.Location = new System.Drawing.Point(477, 225);
+            this.lblFinalTratMal.Location = new System.Drawing.Point(477, 252);
             this.lblFinalTratMal.Name = "lblFinalTratMal";
             this.lblFinalTratMal.Size = new System.Drawing.Size(113, 13);
             this.lblFinalTratMal.TabIndex = 70;
@@ -1657,7 +1668,7 @@
             this.cbxFinalDigLabMal.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxFinalDigLabMal.Location = new System.Drawing.Point(646, 195);
+            this.cbxFinalDigLabMal.Location = new System.Drawing.Point(646, 222);
             this.cbxFinalDigLabMal.Name = "cbxFinalDigLabMal";
             this.cbxFinalDigLabMal.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalDigLabMal.TabIndex = 69;
@@ -1665,7 +1676,7 @@
             // lblFinalDigLabMal
             // 
             this.lblFinalDigLabMal.AutoSize = true;
-            this.lblFinalDigLabMal.Location = new System.Drawing.Point(477, 198);
+            this.lblFinalDigLabMal.Location = new System.Drawing.Point(476, 225);
             this.lblFinalDigLabMal.Name = "lblFinalDigLabMal";
             this.lblFinalDigLabMal.Size = new System.Drawing.Size(158, 13);
             this.lblFinalDigLabMal.TabIndex = 68;
@@ -1677,7 +1688,7 @@
             this.cbxFinalRecRedeMosq.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxFinalRecRedeMosq.Location = new System.Drawing.Point(646, 168);
+            this.cbxFinalRecRedeMosq.Location = new System.Drawing.Point(646, 195);
             this.cbxFinalRecRedeMosq.Name = "cbxFinalRecRedeMosq";
             this.cbxFinalRecRedeMosq.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalRecRedeMosq.TabIndex = 67;
@@ -1685,7 +1696,7 @@
             // lblFinalRecRedeMosq
             // 
             this.lblFinalRecRedeMosq.AutoSize = true;
-            this.lblFinalRecRedeMosq.Location = new System.Drawing.Point(477, 171);
+            this.lblFinalRecRedeMosq.Location = new System.Drawing.Point(477, 198);
             this.lblFinalRecRedeMosq.Name = "lblFinalRecRedeMosq";
             this.lblFinalRecRedeMosq.Size = new System.Drawing.Size(137, 13);
             this.lblFinalRecRedeMosq.TabIndex = 66;
@@ -1697,7 +1708,7 @@
             this.cbxFinalTIP.Items.AddRange(new object[] {
             "2ª ",
             "4ª +"});
-            this.cbxFinalTIP.Location = new System.Drawing.Point(646, 141);
+            this.cbxFinalTIP.Location = new System.Drawing.Point(646, 168);
             this.cbxFinalTIP.Name = "cbxFinalTIP";
             this.cbxFinalTIP.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalTIP.TabIndex = 65;
@@ -1705,7 +1716,7 @@
             // lblFinalTIP
             // 
             this.lblFinalTIP.AutoSize = true;
-            this.lblFinalTIP.Location = new System.Drawing.Point(477, 144);
+            this.lblFinalTIP.Location = new System.Drawing.Point(477, 171);
             this.lblFinalTIP.Name = "lblFinalTIP";
             this.lblFinalTIP.Size = new System.Drawing.Size(71, 13);
             this.lblFinalTIP.TabIndex = 64;
@@ -1719,7 +1730,7 @@
             "NVP",
             "NVP/AZT",
             "TARV CPN"});
-            this.cbxFinalResARV.Location = new System.Drawing.Point(646, 114);
+            this.cbxFinalResARV.Location = new System.Drawing.Point(646, 140);
             this.cbxFinalResARV.Name = "cbxFinalResARV";
             this.cbxFinalResARV.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalResARV.TabIndex = 63;
@@ -1727,23 +1738,16 @@
             // lblFinalResARV
             // 
             this.lblFinalResARV.AutoSize = true;
-            this.lblFinalResARV.Location = new System.Drawing.Point(477, 117);
+            this.lblFinalResARV.Location = new System.Drawing.Point(477, 144);
             this.lblFinalResARV.Name = "lblFinalResARV";
             this.lblFinalResARV.Size = new System.Drawing.Size(107, 13);
             this.lblFinalResARV.TabIndex = 62;
             this.lblFinalResARV.Text = "Resultado final ARVs";
             // 
-            // txtFinalIniCTZ
-            // 
-            this.txtFinalIniCTZ.Location = new System.Drawing.Point(646, 87);
-            this.txtFinalIniCTZ.Name = "txtFinalIniCTZ";
-            this.txtFinalIniCTZ.Size = new System.Drawing.Size(174, 20);
-            this.txtFinalIniCTZ.TabIndex = 61;
-            // 
             // lblFinalIniCTZ
             // 
             this.lblFinalIniCTZ.AutoSize = true;
-            this.lblFinalIniCTZ.Location = new System.Drawing.Point(477, 90);
+            this.lblFinalIniCTZ.Location = new System.Drawing.Point(477, 117);
             this.lblFinalIniCTZ.Name = "lblFinalIniCTZ";
             this.lblFinalIniCTZ.Size = new System.Drawing.Size(62, 13);
             this.lblFinalIniCTZ.TabIndex = 60;
@@ -1755,7 +1759,7 @@
             this.cbxFinalCTZEntrada.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxFinalCTZEntrada.Location = new System.Drawing.Point(646, 60);
+            this.cbxFinalCTZEntrada.Location = new System.Drawing.Point(646, 87);
             this.cbxFinalCTZEntrada.Name = "cbxFinalCTZEntrada";
             this.cbxFinalCTZEntrada.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalCTZEntrada.TabIndex = 59;
@@ -1763,7 +1767,7 @@
             // lblFinalCTZEntrada
             // 
             this.lblFinalCTZEntrada.AutoSize = true;
-            this.lblFinalCTZEntrada.Location = new System.Drawing.Point(477, 63);
+            this.lblFinalCTZEntrada.Location = new System.Drawing.Point(477, 90);
             this.lblFinalCTZEntrada.Name = "lblFinalCTZEntrada";
             this.lblFinalCTZEntrada.Size = new System.Drawing.Size(95, 13);
             this.lblFinalCTZEntrada.TabIndex = 58;
@@ -1777,7 +1781,7 @@
             "Pos",
             "Ind",
             "NF"});
-            this.cbxFinalEstadoHIVPar.Location = new System.Drawing.Point(646, 33);
+            this.cbxFinalEstadoHIVPar.Location = new System.Drawing.Point(646, 60);
             this.cbxFinalEstadoHIVPar.Name = "cbxFinalEstadoHIVPar";
             this.cbxFinalEstadoHIVPar.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalEstadoHIVPar.TabIndex = 57;
@@ -1785,7 +1789,7 @@
             // lblFinalEstadoHIVPar
             // 
             this.lblFinalEstadoHIVPar.AutoSize = true;
-            this.lblFinalEstadoHIVPar.Location = new System.Drawing.Point(477, 36);
+            this.lblFinalEstadoHIVPar.Location = new System.Drawing.Point(477, 63);
             this.lblFinalEstadoHIVPar.Name = "lblFinalEstadoHIVPar";
             this.lblFinalEstadoHIVPar.Size = new System.Drawing.Size(86, 13);
             this.lblFinalEstadoHIVPar.TabIndex = 56;
@@ -1800,7 +1804,7 @@
             "Pos",
             "Ind",
             "NF"});
-            this.cbxFinalEstadoHIVMulher.Location = new System.Drawing.Point(646, 6);
+            this.cbxFinalEstadoHIVMulher.Location = new System.Drawing.Point(646, 33);
             this.cbxFinalEstadoHIVMulher.Name = "cbxFinalEstadoHIVMulher";
             this.cbxFinalEstadoHIVMulher.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalEstadoHIVMulher.TabIndex = 55;
@@ -1808,7 +1812,7 @@
             // lblFinalEstadoHIVMulher
             // 
             this.lblFinalEstadoHIVMulher.AutoSize = true;
-            this.lblFinalEstadoHIVMulher.Location = new System.Drawing.Point(477, 9);
+            this.lblFinalEstadoHIVMulher.Location = new System.Drawing.Point(477, 36);
             this.lblFinalEstadoHIVMulher.Name = "lblFinalEstadoHIVMulher";
             this.lblFinalEstadoHIVMulher.Size = new System.Drawing.Size(111, 13);
             this.lblFinalEstadoHIVMulher.TabIndex = 54;
@@ -1831,7 +1835,7 @@
             this.cbxFinalTratSiflParc.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxFinalTratSiflParc.Location = new System.Drawing.Point(646, 380);
+            this.cbxFinalTratSiflParc.Location = new System.Drawing.Point(646, 6);
             this.cbxFinalTratSiflParc.Name = "cbxFinalTratSiflParc";
             this.cbxFinalTratSiflParc.Size = new System.Drawing.Size(174, 21);
             this.cbxFinalTratSiflParc.TabIndex = 52;
@@ -1839,7 +1843,7 @@
             // lblFinalTratSiflParc
             // 
             this.lblFinalTratSiflParc.AutoSize = true;
-            this.lblFinalTratSiflParc.Location = new System.Drawing.Point(477, 383);
+            this.lblFinalTratSiflParc.Location = new System.Drawing.Point(477, 9);
             this.lblFinalTratSiflParc.Name = "lblFinalTratSiflParc";
             this.lblFinalTratSiflParc.Size = new System.Drawing.Size(131, 13);
             this.lblFinalTratSiflParc.TabIndex = 51;
@@ -1848,7 +1852,7 @@
             // lblFinalTratSiflMulher
             // 
             this.lblFinalTratSiflMulher.AutoSize = true;
-            this.lblFinalTratSiflMulher.Location = new System.Drawing.Point(22, 364);
+            this.lblFinalTratSiflMulher.Location = new System.Drawing.Point(22, 359);
             this.lblFinalTratSiflMulher.Name = "lblFinalTratSiflMulher";
             this.lblFinalTratSiflMulher.Size = new System.Drawing.Size(124, 13);
             this.lblFinalTratSiflMulher.TabIndex = 50;
@@ -1894,13 +1898,6 @@
             this.lblFinalTratITS.Size = new System.Drawing.Size(81, 13);
             this.lblFinalTratITS.TabIndex = 46;
             this.lblFinalTratITS.Text = "Tratamento ITS";
-            // 
-            // txtFinalDiagITS
-            // 
-            this.txtFinalDiagITS.Location = new System.Drawing.Point(259, 276);
-            this.txtFinalDiagITS.Name = "txtFinalDiagITS";
-            this.txtFinalDiagITS.Size = new System.Drawing.Size(162, 20);
-            this.txtFinalDiagITS.TabIndex = 45;
             // 
             // lblFinalDiagITS
             // 
@@ -2172,6 +2169,17 @@
             this.btnGravarMain.UseVisualStyleBackColor = true;
             this.btnGravarMain.Click += new System.EventHandler(this.btnGravarMain_Click);
             // 
+            // cbxFinalIniCTZ
+            // 
+            this.cbxFinalIniCTZ.FormattingEnabled = true;
+            this.cbxFinalIniCTZ.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalIniCTZ.Location = new System.Drawing.Point(646, 114);
+            this.cbxFinalIniCTZ.Name = "cbxFinalIniCTZ";
+            this.cbxFinalIniCTZ.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalIniCTZ.TabIndex = 84;
+            // 
             // FrmCPN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2357,7 +2365,6 @@
         private System.Windows.Forms.Label lblFinalTestSiflis;
         private System.Windows.Forms.ComboBox cbxFinalTratITS;
         private System.Windows.Forms.Label lblFinalTratITS;
-        private System.Windows.Forms.TextBox txtFinalDiagITS;
         private System.Windows.Forms.Label lblFinalDiagITS;
         private System.Windows.Forms.ComboBox cbxFinalSalFerrMais3;
         private System.Windows.Forms.Label lblFinalSalFerrMais3;
@@ -2389,11 +2396,12 @@
         private System.Windows.Forms.Label lblFinalTIP;
         private System.Windows.Forms.ComboBox cbxFinalResARV;
         private System.Windows.Forms.Label lblFinalResARV;
-        private System.Windows.Forms.TextBox txtFinalIniCTZ;
         private System.Windows.Forms.Label lblFinalIniCTZ;
         private System.Windows.Forms.ComboBox cbxFinalCTZEntrada;
         private System.Windows.Forms.Label lblFinalCTZEntrada;
         private System.Windows.Forms.ComboBox cbxFinalEstadoHIVPar;
         private System.Windows.Forms.Label lblFinalEstadoHIVPar;
+        private System.Windows.Forms.ComboBox cbxFinalDiagITS;
+        private System.Windows.Forms.ComboBox cbxFinalIniCTZ;
     }
 }

@@ -221,9 +221,73 @@ namespace smi
 
         }
 
-        private void BindCPNFinalControls(clCPNFinal cnp_fin)
+        private void BindCPNFinalControls(clCPNFinal cpn_fin)
         {
-
+            try
+            {
+                if (cpn_fin.cons_more4 != null)
+                    cbxFinalMaisConsult.SelectedValue = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.cons_more4));
+                if (cpn_fin.partnerpreence != null)
+                    cbxFinalParcePrese.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.partnerpreence));
+                if (!string.IsNullOrWhiteSpace(cpn_fin.weightgainyno))
+                    cbxFinalGanho15.SelectedItem = cpn_fin.weightgainyno;
+                if (cpn_fin.dag != null)
+                    cbxFinalDAG.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.dag));
+                if (cpn_fin.dam != null)
+                    cbxFinalDAG.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.dam));
+                if (!string.IsNullOrWhiteSpace(cpn_fin.supnutr))
+                    cbxFinalRecSuplNutri.SelectedItem = cpn_fin.supnutr;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.resultcured))
+                    cbxFinalCuradoDesntr.SelectedItem = cpn_fin.resultcured;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.resultabandon))
+                    cbxFinalAbandDesnutr.SelectedItem = cpn_fin.resultabandon;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.receiveddesparasitante))
+                    cbxFinalRecDespara.SelectedItem = cpn_fin.receiveddesparasitante;
+                if (cpn_fin.salferr_more3 != null)
+                    cbxFinalSalFerrMais3.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.salferr_more3));
+                if (cpn_fin.its_diag != null)
+                    cbxFinalDiagITS.SelectedItem = cpn_fin.its_diag;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.its_treatment))
+                    cbxFinalTratITS.SelectedItem = cpn_fin.its_treatment;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.its_syphilistesting))
+                    cbxFinalTestSiflis.SelectedItem = cpn_fin.its_syphilistesting;
+                if (cpn_fin.its_wsyphilistreat != null)
+                    cbxFinalTratSiflMulher.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.its_wsyphilistreat));
+                if (!string.IsNullOrWhiteSpace(cpn_fin.its_psyphilistreat))
+                    cbxFinalTratSiflParc.SelectedItem = cpn_fin.its_psyphilistreat;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.womanserostatus))
+                    cbxFinalEstadoHIVMulher.SelectedItem = cpn_fin.womanserostatus;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.partnerserostatus))
+                    cbxFinalEstadoHIVPar.SelectedItem = cpn_fin.partnerserostatus;
+                if (cpn_fin.ctz_entr != null)
+                    cbxFinalCTZEntrada.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.ctz_entr));
+                if (cpn_fin.ctz_init != null)
+                    cbxFinalIniCTZ.SelectedItem = cpn_fin.ctz_init;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.finalresult_arv))
+                    cbxFinalResARV.SelectedItem = cpn_fin.finalresult_arv;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.tip))
+                    cbxFinalTIP.SelectedItem = cpn_fin.tip;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.bednet))
+                    cbxFinalRecRedeMosq.SelectedItem = cpn_fin.bednet;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.mal_diag_lab))
+                    cbxFinalDigLabMal.SelectedItem = cpn_fin.mal_diag_lab;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.mal_treatment))
+                    cbxFinalTratMal.SelectedItem = cpn_fin.mal_treatment;
+                if (!string.IsNullOrWhiteSpace(cpn_fin.mp))
+                    cbxFinalRecHPP.SelectedItem = cpn_fin.mp;
+                if (cpn_fin.vat_1_dose != null)
+                    cbxFinalVat1Dose.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.vat_1_dose));
+                if (cpn_fin.vat_2_5_dose != null)
+                    cbxFinalVat2_5Dose.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.vat_2_5_dose));
+                if (cpn_fin.tb_isoniazid != null)
+                    cbxFinalINH.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.tb_isoniazid));
+                if (cpn_fin.tb_treatment != null)
+                    cbxFinalINH.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(cpn_fin.tb_treatment));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void btnGravarMain_Click(object sender, EventArgs e)
@@ -238,7 +302,42 @@ namespace smi
 
         private void cbxNrConsultaMain_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                clMother moth = new clMother();
+                List<clCPN> list_cpn = new List<clCPN>();
+                clCPNFinal cpn_final = new clCPNFinal();
+                string nidcpn = txtNidCpnMain.Text;
+                
+                if (cbxNrConulta.SelectedIndex >= 0)
+                {
 
+                }
+                
+                if (string.IsNullOrWhiteSpace(txtNidCpnMain.Text))
+                {
+                    MessageBox.Show("O Compo NID CPN não esta preenchido. deve Preencher o campo primeiro");
+                }
+                else
+                {          
+                    int mother_id = moth.GetEntityList().Where(m => m.nid_cpn == nidcpn).FirstOrDefault().id;
+                    cpn_final = cpn_final.GetEntityList().Where(cf => cf.idmother == mother_id).FirstOrDefault();
+                    BindCPNFinalControls(cpn_final);
+
+                    if (cbxNrConsultaMain.SelectedIndex >= 0)
+                    {
+                        clCPN cpn = new clCPN();
+                        int rnConsl = Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()));
+                        list_cpn = cpn.GetEntityList().Where(cp => cp.idmother == mother_id).ToList();
+                        cpn = list_cpn.Where(c => c.nr_consulta == rnConsl).FirstOrDefault();
+                        BindCPNControls(cpn);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
