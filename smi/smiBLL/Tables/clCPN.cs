@@ -38,14 +38,11 @@ namespace smiBLL
         public string its_syphilistesting;
         public string its_wsyphilistreat;
         public string its_psyphilistreat;
-        public string its_syphilistratmentmulhr;
-        public string its_syphilistratmentparceir;
         public string serostatusentcpn;
         public string cpnhivtest;
         public string partnerhivtest;
         public Nullable<bool> ctz;
         public string ctz_init_cont;
-        public Nullable<bool> tarv;
         public Nullable<bool> nvp;
         public Nullable<bool> azt_nvp;
         public Nullable<bool> em_tarv_entrada;
@@ -71,7 +68,7 @@ namespace smiBLL
             idmother = 0;
             nlivro = string.Empty;
             nyear = 0;
-            visdate = new DateTime(1800,1,1);
+            visdate = new DateTime(1800, 1, 1);
             agegroup = string.Empty;
             gestationalage = 0;
             gageless12 = null;
@@ -95,14 +92,11 @@ namespace smiBLL
             its_syphilistesting = string.Empty;
             its_wsyphilistreat = string.Empty;
             its_psyphilistreat = string.Empty;
-            its_syphilistratmentmulhr = string.Empty;
-            its_syphilistratmentparceir = string.Empty;
             serostatusentcpn = string.Empty;
             cpnhivtest = string.Empty;
             partnerhivtest = string.Empty;
             ctz = null; ;
             ctz_init_cont = string.Empty;
-            tarv = null;
             nvp = null;
             azt_nvp = null;
             tarv_init_visit = null;
@@ -170,7 +164,6 @@ namespace smiBLL
                         obj_cpn.partnerhivtest = db_cpn.partnerhivtest;
                         obj_cpn.ctz = db_cpn.ctz;
                         obj_cpn.ctz_init_cont = db_cpn.ctz_init_cont;
-                        obj_cpn.tarv = db_cpn.tarv;
                         obj_cpn.nvp = db_cpn.nvp;
                         obj_cpn.azt_nvp = db_cpn.azt_nvp;
                         obj_cpn.tarv_init_visit = db_cpn.tarv_init_visit;
@@ -242,7 +235,6 @@ namespace smiBLL
                     db_cpn.partnerhivtest = this.partnerhivtest;
                     db_cpn.ctz = this.ctz;
                     db_cpn.ctz_init_cont = this.ctz_init_cont;
-                    db_cpn.tarv = this.tarv;
                     db_cpn.nvp = this.nvp;
                     db_cpn.azt_nvp = this.azt_nvp;
                     db_cpn.em_tarv_entrada = this.em_tarv_entrada;
@@ -314,7 +306,6 @@ namespace smiBLL
                     db_cpn.partnerhivtest = this.partnerhivtest;
                     db_cpn.ctz = this.ctz;
                     db_cpn.ctz_init_cont = this.ctz_init_cont;
-                    db_cpn.tarv = this.tarv;
                     db_cpn.nvp = this.nvp;
                     db_cpn.azt_nvp = this.azt_nvp;
                     db_cpn.em_tarv_entrada = this.em_tarv_entrada;

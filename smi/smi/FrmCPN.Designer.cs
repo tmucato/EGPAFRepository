@@ -31,7 +31,7 @@
             this.Page1 = new System.Windows.Forms.TabPage();
             this.gbExames = new System.Windows.Forms.GroupBox();
             this.cbxGlicosuria = new System.Windows.Forms.ComboBox();
-            this.cbxlblProteinuria = new System.Windows.Forms.ComboBox();
+            this.cbxProteinuria = new System.Windows.Forms.ComboBox();
             this.lblGlicosuria = new System.Windows.Forms.Label();
             this.lblProteinuria = new System.Windows.Forms.Label();
             this.cbxtensaoArte = new System.Windows.Forms.ComboBox();
@@ -57,6 +57,7 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.lblPeso = new System.Windows.Forms.Label();
             this.gbDadosConsult = new System.Windows.Forms.GroupBox();
+            this.lblIdCpn = new System.Windows.Forms.Label();
             this.cbxIdaMen12Sem = new System.Windows.Forms.ComboBox();
             this.ldlIdaMen12Sem = new System.Windows.Forms.Label();
             this.txtIdadeGest = new System.Windows.Forms.TextBox();
@@ -143,6 +144,8 @@
             this.lblLeucorreia = new System.Windows.Forms.Label();
             this.lblUlcera = new System.Windows.Forms.Label();
             this.EstadoFinal = new System.Windows.Forms.TabPage();
+            this.lblIdCpnFinal = new System.Windows.Forms.Label();
+            this.cbxFinalIniCTZ = new System.Windows.Forms.ComboBox();
             this.cbxFinalDiagITS = new System.Windows.Forms.ComboBox();
             this.btnAnteriorPage3 = new System.Windows.Forms.Button();
             this.cbxFinalTratTB = new System.Windows.Forms.ComboBox();
@@ -207,7 +210,11 @@
             this.cbxNrConsultaMain = new System.Windows.Forms.ComboBox();
             this.btnBuscarMain = new System.Windows.Forms.Button();
             this.btnGravarMain = new System.Windows.Forms.Button();
-            this.cbxFinalIniCTZ = new System.Windows.Forms.ComboBox();
+            this.lblIdMother = new System.Windows.Forms.Label();
+            this.lblNrLivro = new System.Windows.Forms.Label();
+            this.txtNrLivro = new System.Windows.Forms.TextBox();
+            this.lblAnoLivro = new System.Windows.Forms.Label();
+            this.txtAnoLivro = new System.Windows.Forms.TextBox();
             this.Page1.SuspendLayout();
             this.gbExames.SuspendLayout();
             this.gbNutricao.SuspendLayout();
@@ -239,8 +246,9 @@
             // 
             // gbExames
             // 
+            this.gbExames.Controls.Add(this.lblIdMother);
             this.gbExames.Controls.Add(this.cbxGlicosuria);
-            this.gbExames.Controls.Add(this.cbxlblProteinuria);
+            this.gbExames.Controls.Add(this.cbxProteinuria);
             this.gbExames.Controls.Add(this.lblGlicosuria);
             this.gbExames.Controls.Add(this.lblProteinuria);
             this.gbExames.Controls.Add(this.cbxtensaoArte);
@@ -266,17 +274,17 @@
             this.cbxGlicosuria.Size = new System.Drawing.Size(85, 21);
             this.cbxGlicosuria.TabIndex = 37;
             // 
-            // cbxlblProteinuria
+            // cbxProteinuria
             // 
-            this.cbxlblProteinuria.FormattingEnabled = true;
-            this.cbxlblProteinuria.Items.AddRange(new object[] {
+            this.cbxProteinuria.FormattingEnabled = true;
+            this.cbxProteinuria.Items.AddRange(new object[] {
             "SIM",
             "NÃO",
             "NÂO FEZ"});
-            this.cbxlblProteinuria.Location = new System.Drawing.Point(256, 71);
-            this.cbxlblProteinuria.Name = "cbxlblProteinuria";
-            this.cbxlblProteinuria.Size = new System.Drawing.Size(85, 21);
-            this.cbxlblProteinuria.TabIndex = 36;
+            this.cbxProteinuria.Location = new System.Drawing.Point(256, 71);
+            this.cbxProteinuria.Name = "cbxProteinuria";
+            this.cbxProteinuria.Size = new System.Drawing.Size(85, 21);
+            this.cbxProteinuria.TabIndex = 36;
             // 
             // lblGlicosuria
             // 
@@ -527,6 +535,11 @@
             // 
             // gbDadosConsult
             // 
+            this.gbDadosConsult.Controls.Add(this.txtAnoLivro);
+            this.gbDadosConsult.Controls.Add(this.lblAnoLivro);
+            this.gbDadosConsult.Controls.Add(this.txtNrLivro);
+            this.gbDadosConsult.Controls.Add(this.lblIdCpn);
+            this.gbDadosConsult.Controls.Add(this.lblNrLivro);
             this.gbDadosConsult.Controls.Add(this.cbxIdaMen12Sem);
             this.gbDadosConsult.Controls.Add(this.ldlIdaMen12Sem);
             this.gbDadosConsult.Controls.Add(this.txtIdadeGest);
@@ -545,6 +558,15 @@
             this.gbDadosConsult.TabIndex = 15;
             this.gbDadosConsult.TabStop = false;
             this.gbDadosConsult.Text = "Dados de Consulta";
+            // 
+            // lblIdCpn
+            // 
+            this.lblIdCpn.AutoSize = true;
+            this.lblIdCpn.Location = new System.Drawing.Point(234, 124);
+            this.lblIdCpn.Name = "lblIdCpn";
+            this.lblIdCpn.Size = new System.Drawing.Size(0, 13);
+            this.lblIdCpn.TabIndex = 24;
+            this.lblIdCpn.Visible = false;
             // 
             // cbxIdaMen12Sem
             // 
@@ -1455,6 +1477,7 @@
             // EstadoFinal
             // 
             this.EstadoFinal.BackColor = System.Drawing.Color.Silver;
+            this.EstadoFinal.Controls.Add(this.lblIdCpnFinal);
             this.EstadoFinal.Controls.Add(this.cbxFinalIniCTZ);
             this.EstadoFinal.Controls.Add(this.cbxFinalDiagITS);
             this.EstadoFinal.Controls.Add(this.btnAnteriorPage3);
@@ -1520,6 +1543,27 @@
             this.EstadoFinal.Size = new System.Drawing.Size(995, 409);
             this.EstadoFinal.TabIndex = 3;
             this.EstadoFinal.Text = "Estado Final";
+            // 
+            // lblIdCpnFinal
+            // 
+            this.lblIdCpnFinal.AutoSize = true;
+            this.lblIdCpnFinal.Location = new System.Drawing.Point(259, 386);
+            this.lblIdCpnFinal.Name = "lblIdCpnFinal";
+            this.lblIdCpnFinal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblIdCpnFinal.Size = new System.Drawing.Size(0, 13);
+            this.lblIdCpnFinal.TabIndex = 85;
+            this.lblIdCpnFinal.Visible = false;
+            // 
+            // cbxFinalIniCTZ
+            // 
+            this.cbxFinalIniCTZ.FormattingEnabled = true;
+            this.cbxFinalIniCTZ.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxFinalIniCTZ.Location = new System.Drawing.Point(646, 114);
+            this.cbxFinalIniCTZ.Name = "cbxFinalIniCTZ";
+            this.cbxFinalIniCTZ.Size = new System.Drawing.Size(174, 21);
+            this.cbxFinalIniCTZ.TabIndex = 84;
             // 
             // cbxFinalDiagITS
             // 
@@ -2169,16 +2213,46 @@
             this.btnGravarMain.UseVisualStyleBackColor = true;
             this.btnGravarMain.Click += new System.EventHandler(this.btnGravarMain_Click);
             // 
-            // cbxFinalIniCTZ
+            // lblIdMother
             // 
-            this.cbxFinalIniCTZ.FormattingEnabled = true;
-            this.cbxFinalIniCTZ.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxFinalIniCTZ.Location = new System.Drawing.Point(646, 114);
-            this.cbxFinalIniCTZ.Name = "cbxFinalIniCTZ";
-            this.cbxFinalIniCTZ.Size = new System.Drawing.Size(174, 21);
-            this.cbxFinalIniCTZ.TabIndex = 84;
+            this.lblIdMother.AutoSize = true;
+            this.lblIdMother.Location = new System.Drawing.Point(26, 123);
+            this.lblIdMother.Name = "lblIdMother";
+            this.lblIdMother.Size = new System.Drawing.Size(0, 13);
+            this.lblIdMother.TabIndex = 38;
+            this.lblIdMother.Visible = false;
+            // 
+            // lblNrLivro
+            // 
+            this.lblNrLivro.AutoSize = true;
+            this.lblNrLivro.Location = new System.Drawing.Point(231, 92);
+            this.lblNrLivro.Name = "lblNrLivro";
+            this.lblNrLivro.Size = new System.Drawing.Size(44, 13);
+            this.lblNrLivro.TabIndex = 11;
+            this.lblNrLivro.Text = "Nr Livro";
+            // 
+            // txtNrLivro
+            // 
+            this.txtNrLivro.Location = new System.Drawing.Point(281, 89);
+            this.txtNrLivro.Name = "txtNrLivro";
+            this.txtNrLivro.Size = new System.Drawing.Size(178, 20);
+            this.txtNrLivro.TabIndex = 12;
+            // 
+            // lblAnoLivro
+            // 
+            this.lblAnoLivro.AutoSize = true;
+            this.lblAnoLivro.Location = new System.Drawing.Point(231, 120);
+            this.lblAnoLivro.Name = "lblAnoLivro";
+            this.lblAnoLivro.Size = new System.Drawing.Size(52, 13);
+            this.lblAnoLivro.TabIndex = 25;
+            this.lblAnoLivro.Text = "Ano Livro";
+            // 
+            // txtAnoLivro
+            // 
+            this.txtAnoLivro.Location = new System.Drawing.Point(281, 115);
+            this.txtAnoLivro.Name = "txtAnoLivro";
+            this.txtAnoLivro.Size = new System.Drawing.Size(178, 20);
+            this.txtAnoLivro.TabIndex = 26;
             // 
             // FrmCPN
             // 
@@ -2273,7 +2347,7 @@
         private System.Windows.Forms.Label lblRecDesparasitante;
         private System.Windows.Forms.GroupBox gbExames;
         private System.Windows.Forms.ComboBox cbxGlicosuria;
-        private System.Windows.Forms.ComboBox cbxlblProteinuria;
+        private System.Windows.Forms.ComboBox cbxProteinuria;
         private System.Windows.Forms.Label lblGlicosuria;
         private System.Windows.Forms.Label lblProteinuria;
         private System.Windows.Forms.ComboBox cbxtensaoArte;
@@ -2403,5 +2477,12 @@
         private System.Windows.Forms.Label lblFinalEstadoHIVPar;
         private System.Windows.Forms.ComboBox cbxFinalDiagITS;
         private System.Windows.Forms.ComboBox cbxFinalIniCTZ;
+        private System.Windows.Forms.Label lblIdCpnFinal;
+        private System.Windows.Forms.Label lblIdCpn;
+        private System.Windows.Forms.Label lblIdMother;
+        private System.Windows.Forms.TextBox txtNrLivro;
+        private System.Windows.Forms.Label lblNrLivro;
+        private System.Windows.Forms.TextBox txtAnoLivro;
+        private System.Windows.Forms.Label lblAnoLivro;
     }
 }
