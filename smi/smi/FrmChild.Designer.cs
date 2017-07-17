@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvChild = new System.Windows.Forms.DataGridView();
-            this.Select = new System.Windows.Forms.DataGridViewLinkColumn();
             this.nid_ccr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mot_nid_cpn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,8 +68,7 @@
             this.dgvChild.AllowUserToDeleteRows = false;
             this.dgvChild.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChild.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Select,
-            this.nid_ccr,
+                     this.nid_ccr,
             this.mot_nid_cpn,
             this.name,
             this.residence,
@@ -83,15 +81,7 @@
             this.dgvChild.Size = new System.Drawing.Size(1087, 176);
             this.dgvChild.TabIndex = 128;
             this.dgvChild.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChild_CellContentClick);
-            // 
-            // Select
-            // 
-            this.Select.DataPropertyName = "id";
-            this.Select.HeaderText = "Seleccionar";
-            this.Select.Name = "Select";
-            this.Select.ReadOnly = true;
-            this.Select.Text = "";
-            this.Select.Width = 120;
+
             // 
             // nid_ccr
             // 
@@ -441,7 +431,6 @@
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.Label lblDataNascimento;
         private System.Windows.Forms.ComboBox cbxGenero;
-        private System.Windows.Forms.DataGridViewLinkColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn nid_ccr;
         private System.Windows.Forms.DataGridViewTextBoxColumn mot_nid_cpn;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;

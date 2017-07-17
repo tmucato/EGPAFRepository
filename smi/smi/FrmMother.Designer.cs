@@ -49,7 +49,6 @@
             this.txtSearched = new System.Windows.Forms.TextBox();
             this.cbProcurar = new System.Windows.Forms.ComboBox();
             this.dgvMother = new System.Windows.Forms.DataGridView();
-            this.Select = new System.Windows.Forms.DataGridViewLinkColumn();
             this.nid_cpn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nid_tarv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -262,8 +261,7 @@
             this.dgvMother.AllowUserToDeleteRows = false;
             this.dgvMother.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMother.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Select,
-            this.nid_cpn,
+                    this.nid_cpn,
             this.nid_tarv,
             this.name,
             this.residence,
@@ -275,15 +273,7 @@
             this.dgvMother.Size = new System.Drawing.Size(1087, 176);
             this.dgvMother.TabIndex = 107;
             this.dgvMother.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMother_CellContentClick);
-            // 
-            // Select
-            // 
-            this.Select.DataPropertyName = "id";
-            this.Select.HeaderText = "Seleccionar";
-            this.Select.Name = "Select";
-            this.Select.ReadOnly = true;
-            this.Select.Text = "";
-            this.Select.Width = 120;
+
             // 
             // nid_cpn
             // 
@@ -403,9 +393,7 @@
         private System.Windows.Forms.Button cmdProcurar;
         private System.Windows.Forms.TextBox txtSearched;
         private System.Windows.Forms.ComboBox cbProcurar;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dgvMother;
-        private System.Windows.Forms.DataGridViewLinkColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn nid_cpn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nid_tarv;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;

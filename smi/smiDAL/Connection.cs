@@ -52,7 +52,7 @@ namespace smiDAL
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
 
             return configList;

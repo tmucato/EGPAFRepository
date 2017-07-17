@@ -19,10 +19,13 @@ namespace smiDAL
             : base("name=DBsmiEntities")
         {
         }
-        public DBsmiEntities(string conStr)
-            : base(conStr)
+
+        public DBsmiEntities(String conStr): base(conStr)
         {
         }
+
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -33,5 +36,6 @@ namespace smiDAL
         public DbSet<child> children { get; set; }
         public DbSet<cpn_final> cpn_final { get; set; }
         public DbSet<cpn> cpns { get; set; }
+        public DbSet<ccr> ccrs { get; set; }
     }
 }

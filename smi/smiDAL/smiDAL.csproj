@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ccr.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
     <Compile Include="child.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>

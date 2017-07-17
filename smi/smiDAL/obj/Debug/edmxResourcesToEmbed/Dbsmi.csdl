@@ -30,6 +30,11 @@
     <EntitySet Name="children" EntityType="smiModel.child" />
     <EntitySet Name="cpn_final" EntityType="smiModel.cpn_final" />
     <EntitySet Name="cpns" EntityType="smiModel.cpn" />
+    <EntitySet Name="ccrs" EntityType="smiModel.ccr" />
+    <AssociationSet Name="idchild" Association="smiModel.idchild">
+      <End Role="child" EntitySet="children" />
+      <End Role="ccr" EntitySet="ccrs" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="child">
     <Key>
@@ -43,6 +48,7 @@
     <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="dob" Type="DateTime" />
+    <NavigationProperty Name="ccrs" Relationship="smiModel.idchild" FromRole="child" ToRole="ccr" />
   </EntityType>
   <EntityType Name="cpn_final">
     <Key>
@@ -140,4 +146,83 @@
     <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
     <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="ccr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idchild" Type="Int32" Nullable="false" />
+    <Property Name="nyear" Type="Int32" Nullable="false" />
+    <Property Name="nlivro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nr_consulta" Type="Boolean" />
+    <Property Name="dataconsulta" Type="DateTime" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="ageunit" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="mot_nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="mot_lact" Type="Boolean" />
+    <Property Name="mot_tarv" Type="Boolean" />
+    <Property Name="mot_tarv_init" Type="Boolean" />
+    <Property Name="mot_tarv_cont" Type="Boolean" />
+    <Property Name="contactotb" Type="Boolean" />
+    <Property Name="desnutricao_aguda" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="exposicaoHIV" Type="Boolean" />
+    <Property Name="outracondicaorisco" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="pisoniazidainicio" Type="DateTime" />
+    <Property Name="pisoniazida" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="aleitmaternomenor6m" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="aleitmaternonaior6m" Type="Boolean" />
+    <Property Name="atpu" Type="Int32" />
+    <Property Name="csb_nut_sup" Type="Boolean" />
+    <Property Name="recuperada" Type="Boolean" />
+    <Property Name="internamento" Type="Boolean" />
+    <Property Name="ctz" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="profiaxia_arv" Type="Boolean" />
+    <Property Name="colheitapcr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="resultadopcr" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="resultadotesterapido" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="resultadofinal" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="resulttrapido_nexp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="saidaccr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="chd_nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="motart_5m_chd" Type="Boolean" Nullable="false" />
+    <Property Name="tb" Type="Boolean" />
+    <Property Name="dam_dag" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ce" Type="Boolean" />
+    <Property Name="tpicomp" Type="Boolean" />
+    <Property Name="ame_5m" Type="Boolean" />
+    <Property Name="mixed_5m" Type="Boolean" />
+    <Property Name="rec" Type="Boolean" />
+    <Property Name="trans_int" Type="Boolean" />
+    <Property Name="arv_5m" Type="Boolean" />
+    <Property Name="pcr_under2m" Type="Boolean" />
+    <Property Name="pcr_above2m" Type="Boolean" />
+    <Property Name="pcrpos_under2m" Type="Boolean" />
+    <Property Name="pcrpos_above2m" Type="Boolean" />
+    <Property Name="pnctl" Type="Boolean" />
+    <Property Name="lostfollowup" Type="Boolean" />
+    <Property Name="death" Type="Boolean" />
+    <Property Name="ce2" Type="Boolean" />
+    <Property Name="defresult" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ccs" Type="Boolean" />
+    <Property Name="ci" Type="Boolean" />
+    <Property Name="ot_us" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="lostfollowup2" Type="Boolean" />
+    <Property Name="death_2" Type="Boolean" />
+    <NavigationProperty Name="child" Relationship="smiModel.idchild" FromRole="ccr" ToRole="child" />
+  </EntityType>
+  <Association Name="idchild">
+    <End Type="smiModel.child" Role="child" Multiplicity="1" />
+    <End Type="smiModel.ccr" Role="ccr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ccr">
+        <PropertyRef Name="idchild" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

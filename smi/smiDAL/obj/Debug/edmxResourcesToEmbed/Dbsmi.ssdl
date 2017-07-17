@@ -1,5 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="smiModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ccr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idchild" Type="int" Nullable="false" />
+    <Property Name="nyear" Type="int" Nullable="false" />
+    <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nr_consulta" Type="bool" />
+    <Property Name="dataconsulta" Type="date" />
+    <Property Name="age" Type="int" />
+    <Property Name="ageunit" Type="char" MaxLength="1" />
+    <Property Name="mot_nid_cpn" Type="varchar" MaxLength="45" />
+    <Property Name="mot_nid_tarv" Type="varchar" MaxLength="45" />
+    <Property Name="mot_lact" Type="bool" />
+    <Property Name="mot_tarv" Type="bool" />
+    <Property Name="mot_tarv_init" Type="bool" />
+    <Property Name="mot_tarv_cont" Type="bool" />
+    <Property Name="contactotb" Type="bool" />
+    <Property Name="desnutricao_aguda" Type="varchar" MaxLength="12" />
+    <Property Name="exposicaoHIV" Type="bool" />
+    <Property Name="outracondicaorisco" Type="varchar" MaxLength="60" />
+    <Property Name="pisoniazidainicio" Type="date" />
+    <Property Name="pisoniazida" Type="varchar" MaxLength="15" />
+    <Property Name="aleitmaternomenor6m" Type="varchar" MaxLength="10" />
+    <Property Name="aleitmaternonaior6m" Type="bool" />
+    <Property Name="atpu" Type="int" />
+    <Property Name="csb_nut_sup" Type="bool" />
+    <Property Name="recuperada" Type="bool" />
+    <Property Name="internamento" Type="bool" />
+    <Property Name="ctz" Type="varchar" MaxLength="15" />
+    <Property Name="profiaxia_arv" Type="bool" />
+    <Property Name="colheitapcr" Type="varchar" MaxLength="20" />
+    <Property Name="resultadopcr" Type="varchar" MaxLength="5" />
+    <Property Name="resultadotesterapido" Type="varchar" MaxLength="5" />
+    <Property Name="resultadofinal" Type="varchar" MaxLength="5" />
+    <Property Name="resulttrapido_nexp" Type="varchar" MaxLength="5" />
+    <Property Name="saidaccr" Type="varchar" MaxLength="20" />
+    <Property Name="chd_nid_tarv" Type="varchar" MaxLength="45" />
+    <Property Name="obs" Type="varchar" MaxLength="60" />
+    <Property Name="providername" Type="varchar" MaxLength="60" />
+    <Property Name="motart_5m_chd" Type="bool" Nullable="false" />
+    <Property Name="tb" Type="bool" />
+    <Property Name="dam_dag" Type="varchar" MaxLength="3" />
+    <Property Name="ce" Type="bool" />
+    <Property Name="tpicomp" Type="bool" />
+    <Property Name="ame_5m" Type="bool" />
+    <Property Name="mixed_5m" Type="bool" />
+    <Property Name="rec" Type="bool" />
+    <Property Name="trans_int" Type="bool" />
+    <Property Name="arv_5m" Type="bool" />
+    <Property Name="pcr_under2m" Type="bool" />
+    <Property Name="pcr_above2m" Type="bool" />
+    <Property Name="pcrpos_under2m" Type="bool" />
+    <Property Name="pcrpos_above2m" Type="bool" />
+    <Property Name="pnctl" Type="bool" />
+    <Property Name="lostfollowup" Type="bool" />
+    <Property Name="death" Type="bool" />
+    <Property Name="ce2" Type="bool" />
+    <Property Name="defresult" Type="varchar" MaxLength="5" />
+    <Property Name="ccs" Type="bool" />
+    <Property Name="ci" Type="bool" />
+    <Property Name="ot_us" Type="varchar" MaxLength="45" />
+    <Property Name="lostfollowup2" Type="bool" />
+    <Property Name="death_2" Type="bool" />
+  </EntityType>
   <EntityType Name="child">
     <Key>
       <PropertyRef Name="id" />
@@ -133,11 +199,28 @@
     <Property Name="posicao" Type="varchar" MaxLength="45" />
     <Property Name="systemrole" Type="varchar" MaxLength="45" />
   </EntityType>
+  <Association Name="idchild">
+    <End Role="child" Type="Self.child" Multiplicity="1" />
+    <End Role="ccr" Type="Self.ccr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ccr">
+        <PropertyRef Name="idchild" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="smiModelStoreContainer">
+    <EntitySet Name="ccr" EntityType="Self.ccr" Schema="smi" store:Type="Tables" />
     <EntitySet Name="child" EntityType="Self.child" Schema="smi" store:Type="Tables" />
     <EntitySet Name="cpn" EntityType="Self.cpn" Schema="smi" store:Type="Tables" />
     <EntitySet Name="cpn_final" EntityType="Self.cpn_final" Schema="smi" store:Type="Tables" />
     <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
     <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
+    <AssociationSet Name="idchild" Association="Self.idchild">
+      <End Role="child" EntitySet="child" />
+      <End Role="ccr" EntitySet="ccr" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>
