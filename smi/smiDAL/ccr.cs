@@ -14,6 +14,11 @@ namespace smiDAL
     
     public partial class ccr
     {
+        public ccr()
+        {
+            this.ccrsegs = new HashSet<ccrseg>();
+        }
+    
         public int id { get; set; }
         public int idchild { get; set; }
         public int nyear { get; set; }
@@ -24,10 +29,8 @@ namespace smiDAL
         public string ageunit { get; set; }
         public string mot_nid_cpn { get; set; }
         public string mot_nid_tarv { get; set; }
-        public Nullable<bool> mot_lact { get; set; }
-        public Nullable<bool> mot_tarv { get; set; }
-        public Nullable<bool> mot_tarv_init { get; set; }
-        public Nullable<bool> mot_tarv_cont { get; set; }
+        public Nullable<bool> mot_hiv_lact { get; set; }
+        public Nullable<bool> mot_hiv_tarv { get; set; }
         public Nullable<bool> contactotb { get; set; }
         public string desnutricao_aguda { get; set; }
         public Nullable<bool> exposicaoHIV { get; set; }
@@ -66,16 +69,8 @@ namespace smiDAL
         public Nullable<bool> pcrpos_under2m { get; set; }
         public Nullable<bool> pcrpos_above2m { get; set; }
         public Nullable<bool> pnctl { get; set; }
-        public Nullable<bool> lostfollowup { get; set; }
-        public Nullable<bool> death { get; set; }
-        public Nullable<bool> ce2 { get; set; }
-        public string defresult { get; set; }
-        public Nullable<bool> ccs { get; set; }
-        public Nullable<bool> ci { get; set; }
-        public string ot_us { get; set; }
-        public Nullable<bool> lostfollowup2 { get; set; }
-        public Nullable<bool> death_2 { get; set; }
     
         public virtual child child { get; set; }
+        public virtual ICollection<ccrseg> ccrsegs { get; set; }
     }
 }

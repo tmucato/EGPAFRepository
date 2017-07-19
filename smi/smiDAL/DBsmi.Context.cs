@@ -20,11 +20,9 @@ namespace smiDAL
         {
         }
 
-        public DBsmiEntities(String conStr): base(conStr)
+        public DBsmiEntities(string conStr) : base(conStr)
         {
         }
-
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,5 +35,6 @@ namespace smiDAL
         public DbSet<cpn_final> cpn_final { get; set; }
         public DbSet<cpn> cpns { get; set; }
         public DbSet<ccr> ccrs { get; set; }
+        public DbSet<ccrseg> ccrsegs { get; set; }
     }
 }

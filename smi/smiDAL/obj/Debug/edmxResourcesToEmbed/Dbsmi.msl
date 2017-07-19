@@ -142,15 +142,6 @@
     <EntitySetMapping Name="ccrs">
       <EntityTypeMapping TypeName="smiModel.ccr">
         <MappingFragment StoreEntitySet="ccr">
-          <ScalarProperty Name="death_2" ColumnName="death_2" />
-          <ScalarProperty Name="lostfollowup2" ColumnName="lostfollowup2" />
-          <ScalarProperty Name="ot_us" ColumnName="ot_us" />
-          <ScalarProperty Name="ci" ColumnName="ci" />
-          <ScalarProperty Name="ccs" ColumnName="ccs" />
-          <ScalarProperty Name="defresult" ColumnName="defresult" />
-          <ScalarProperty Name="ce2" ColumnName="ce2" />
-          <ScalarProperty Name="death" ColumnName="death" />
-          <ScalarProperty Name="lostfollowup" ColumnName="lostfollowup" />
           <ScalarProperty Name="pnctl" ColumnName="pnctl" />
           <ScalarProperty Name="pcrpos_above2m" ColumnName="pcrpos_above2m" />
           <ScalarProperty Name="pcrpos_under2m" ColumnName="pcrpos_under2m" />
@@ -189,10 +180,8 @@
           <ScalarProperty Name="exposicaoHIV" ColumnName="exposicaoHIV" />
           <ScalarProperty Name="desnutricao_aguda" ColumnName="desnutricao_aguda" />
           <ScalarProperty Name="contactotb" ColumnName="contactotb" />
-          <ScalarProperty Name="mot_tarv_cont" ColumnName="mot_tarv_cont" />
-          <ScalarProperty Name="mot_tarv_init" ColumnName="mot_tarv_init" />
-          <ScalarProperty Name="mot_tarv" ColumnName="mot_tarv" />
-          <ScalarProperty Name="mot_lact" ColumnName="mot_lact" />
+          <ScalarProperty Name="mot_hiv_tarv" ColumnName="mot_hiv_tarv" />
+          <ScalarProperty Name="mot_hiv_lact" ColumnName="mot_hiv_lact" />
           <ScalarProperty Name="mot_nid_tarv" ColumnName="mot_nid_tarv" />
           <ScalarProperty Name="mot_nid_cpn" ColumnName="mot_nid_cpn" />
           <ScalarProperty Name="ageunit" ColumnName="ageunit" />
@@ -202,6 +191,27 @@
           <ScalarProperty Name="nlivro" ColumnName="nlivro" />
           <ScalarProperty Name="nyear" ColumnName="nyear" />
           <ScalarProperty Name="idchild" ColumnName="idchild" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ccrsegs">
+      <EntityTypeMapping TypeName="smiModel.ccrseg">
+        <MappingFragment StoreEntitySet="ccrseg">
+          <ScalarProperty Name="death_3" ColumnName="death_3" />
+          <ScalarProperty Name="saidaccr" ColumnName="saidaccr" />
+          <ScalarProperty Name="resultadofinal" ColumnName="resultadofinal" />
+          <ScalarProperty Name="ce3" ColumnName="ce3" />
+          <ScalarProperty Name="death_2" ColumnName="death_2" />
+          <ScalarProperty Name="lostfollowup2" ColumnName="lostfollowup2" />
+          <ScalarProperty Name="ot_us" ColumnName="ot_us" />
+          <ScalarProperty Name="ci" ColumnName="ci" />
+          <ScalarProperty Name="ccs" ColumnName="ccs" />
+          <ScalarProperty Name="defresult" ColumnName="defresult" />
+          <ScalarProperty Name="ce2" ColumnName="ce2" />
+          <ScalarProperty Name="death" ColumnName="death" />
+          <ScalarProperty Name="lostfollowup" ColumnName="lostfollowup" />
+          <ScalarProperty Name="idccr" ColumnName="idccr" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

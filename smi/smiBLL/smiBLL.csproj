@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tables\clCCR.cs" />
+    <Compile Include="Tables\clCCRSeg.cs" />
     <Compile Include="Tables\clCPNFinal.cs" />
     <Compile Include="Functions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

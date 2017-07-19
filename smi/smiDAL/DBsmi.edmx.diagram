@@ -12,6 +12,8 @@
         <EntityTypeShape EntityType="smiModel.cpn" Width="1.5" PointX="8" PointY="0.5" />
         <EntityTypeShape EntityType="smiModel.ccr" Width="1.5" PointX="6.125" PointY="0.5" />
         <AssociationConnector Association="smiModel.idchild" />
+        <EntityTypeShape EntityType="smiModel.ccrseg" Width="1.5" PointX="4.25" PointY="3.375" />
+        <AssociationConnector Association="smiModel.idccr" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

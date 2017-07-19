@@ -14,10 +14,8 @@
     <Property Name="ageunit" Type="char" MaxLength="1" />
     <Property Name="mot_nid_cpn" Type="varchar" MaxLength="45" />
     <Property Name="mot_nid_tarv" Type="varchar" MaxLength="45" />
-    <Property Name="mot_lact" Type="bool" />
-    <Property Name="mot_tarv" Type="bool" />
-    <Property Name="mot_tarv_init" Type="bool" />
-    <Property Name="mot_tarv_cont" Type="bool" />
+    <Property Name="mot_hiv_lact" Type="bool" />
+    <Property Name="mot_hiv_tarv" Type="bool" />
     <Property Name="contactotb" Type="bool" />
     <Property Name="desnutricao_aguda" Type="varchar" MaxLength="12" />
     <Property Name="exposicaoHIV" Type="bool" />
@@ -56,6 +54,13 @@
     <Property Name="pcrpos_under2m" Type="bool" />
     <Property Name="pcrpos_above2m" Type="bool" />
     <Property Name="pnctl" Type="bool" />
+  </EntityType>
+  <EntityType Name="ccrseg">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idccr" Type="int" Nullable="false" />
     <Property Name="lostfollowup" Type="bool" />
     <Property Name="death" Type="bool" />
     <Property Name="ce2" Type="bool" />
@@ -65,6 +70,10 @@
     <Property Name="ot_us" Type="varchar" MaxLength="45" />
     <Property Name="lostfollowup2" Type="bool" />
     <Property Name="death_2" Type="bool" />
+    <Property Name="ce3" Type="bool" />
+    <Property Name="resultadofinal" Type="varchar" MaxLength="5" />
+    <Property Name="saidaccr" Type="varchar" MaxLength="20" />
+    <Property Name="death_3" Type="bool" />
   </EntityType>
   <EntityType Name="child">
     <Key>
@@ -199,6 +208,18 @@
     <Property Name="posicao" Type="varchar" MaxLength="45" />
     <Property Name="systemrole" Type="varchar" MaxLength="45" />
   </EntityType>
+  <Association Name="idccr">
+    <End Role="ccr" Type="Self.ccr" Multiplicity="1" />
+    <End Role="ccrseg" Type="Self.ccrseg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ccr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ccrseg">
+        <PropertyRef Name="idccr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="idchild">
     <End Role="child" Type="Self.child" Multiplicity="1" />
     <End Role="ccr" Type="Self.ccr" Multiplicity="*" />
@@ -213,11 +234,16 @@
   </Association>
   <EntityContainer Name="smiModelStoreContainer">
     <EntitySet Name="ccr" EntityType="Self.ccr" Schema="smi" store:Type="Tables" />
+    <EntitySet Name="ccrseg" EntityType="Self.ccrseg" Schema="smi" store:Type="Tables" />
     <EntitySet Name="child" EntityType="Self.child" Schema="smi" store:Type="Tables" />
     <EntitySet Name="cpn" EntityType="Self.cpn" Schema="smi" store:Type="Tables" />
     <EntitySet Name="cpn_final" EntityType="Self.cpn_final" Schema="smi" store:Type="Tables" />
     <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
     <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
+    <AssociationSet Name="idccr" Association="Self.idccr">
+      <End Role="ccr" EntitySet="ccr" />
+      <End Role="ccrseg" EntitySet="ccrseg" />
+    </AssociationSet>
     <AssociationSet Name="idchild" Association="Self.idchild">
       <End Role="child" EntitySet="child" />
       <End Role="ccr" EntitySet="ccr" />

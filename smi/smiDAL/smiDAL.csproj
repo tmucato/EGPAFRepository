@@ -57,6 +57,9 @@
     <Compile Include="ccr.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
+    <Compile Include="ccrseg.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
     <Compile Include="child.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
