@@ -8,5 +8,8 @@ namespace smiBLL.Tables
 {
    public class clCCR
     {
+
+
+
     }
 }
