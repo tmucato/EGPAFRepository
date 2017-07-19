@@ -113,6 +113,18 @@
     <Compile Include="FrmMother.Designer.cs">
       <DependentUpon>FrmMother.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPF.Designer.cs">
+      <DependentUpon>FrmPF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPP.Designer.cs">
+      <DependentUpon>FrmPP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAdmin.resx">
@@ -135,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMother.resx">
       <DependentUpon>FrmMother.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPF.resx">
+      <DependentUpon>FrmPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPP.resx">
+      <DependentUpon>FrmPP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

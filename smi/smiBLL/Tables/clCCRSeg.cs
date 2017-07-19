@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace smiBLL.Tables
 {
-    public class clCCRSeg
+    public class clCCRSeg : clTableBase<clCCRSeg>
     {
         public int id;
         public int idccr;
@@ -44,9 +45,29 @@ namespace smiBLL.Tables
             death_3 = null;
         }
 
+        public override List<clCCRSeg> GetEntityList()
+        {
+            throw new NotImplementedException();
+        }
 
+        public override DataTable GetEntityDatatable()
+        {
+            throw new NotImplementedException();
+        }
 
+        public override void InsertEntity()
+        {
+            throw new NotImplementedException();
+        }
 
+        public override void UpdateEntity()
+        {
+            throw new NotImplementedException();
+        }
 
+        public override void DeleteEntity()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

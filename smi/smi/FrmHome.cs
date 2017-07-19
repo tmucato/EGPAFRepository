@@ -70,7 +70,8 @@ namespace smi
 
         private void cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmCCR ccr = new FrmCCR();
+            ccr.Show();
         }
 
         private void administraçãoToolStripMenuItem_Click(object sender, EventArgs e)
