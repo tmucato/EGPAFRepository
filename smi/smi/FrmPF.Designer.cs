@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 487);
             this.Name = "FrmPF";
-            this.Text = "FrmPF";
+            this.Text = "FrmPF - Formulário de Registo de Planeamento Familiar";
             this.ResumeLayout(false);
 
         }

@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 487);
             this.Name = "FrmCCR";
-            this.Text = "FrmCCR";
+            this.Text = "FrmCCR - Fofmulário  de Registo de Consulta de Criança em Risco ";
             this.ResumeLayout(false);
 
         }
