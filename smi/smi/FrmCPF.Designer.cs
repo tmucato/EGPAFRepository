@@ -1,6 +1,6 @@
 ﻿namespace smi
 {
-    partial class FrmPP
+    partial class FrmCPF
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // FrmPP
+            // FrmPF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 487);
-            this.Name = "FrmPP";
-            this.Text = "FrmPP";
+            this.Name = "FrmPF";
+            this.Text = "FrmPF - Formulário de Registo de Planeamento Familiar";
             this.ResumeLayout(false);
 
         }

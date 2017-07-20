@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace smi
 {
-    public partial class FrmPP : Form
+    public partial class FrmCPF : Form
     {
-        public FrmPP()
+        public FrmCPF()
         {
             InitializeComponent();
         }

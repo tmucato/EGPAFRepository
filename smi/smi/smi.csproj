@@ -113,17 +113,17 @@
     <Compile Include="FrmMother.Designer.cs">
       <DependentUpon>FrmMother.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPF.cs">
+    <Compile Include="FrmCPF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPF.Designer.cs">
-      <DependentUpon>FrmPF.cs</DependentUpon>
+    <Compile Include="FrmCPF.Designer.cs">
+      <DependentUpon>FrmCPF.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPP.cs">
+    <Compile Include="FrmCPP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPP.Designer.cs">
-      <DependentUpon>FrmPP.cs</DependentUpon>
+    <Compile Include="FrmCPP.Designer.cs">
+      <DependentUpon>FrmCPP.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,11 +148,11 @@
     <EmbeddedResource Include="FrmMother.resx">
       <DependentUpon>FrmMother.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPF.resx">
-      <DependentUpon>FrmPF.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCPF.resx">
+      <DependentUpon>FrmCPF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPP.resx">
-      <DependentUpon>FrmPP.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCPP.resx">
+      <DependentUpon>FrmCPP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
