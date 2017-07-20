@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // FrmPP
+            // FrmCPP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 487);
-            this.Name = "FrmPP";
-            this.Text = "FrmPP";
+            this.Name = "FrmCPP";
+            this.Text = "FrmPP - Formulário de Registo de Consultas Pós Parto";
             this.ResumeLayout(false);
 
         }

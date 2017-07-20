@@ -39,11 +39,11 @@
             this.cPNLivroDeConsultaPreNatalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cCRLivroDeConsultaDeCriançaEmRiscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ppPosPartoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pFPlaneamentoFamiliarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pFPlaneamentoFamiliarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,6 +139,14 @@
             this.ppPosPartoToolStripMenuItem1.Name = "ppPosPartoToolStripMenuItem1";
             this.ppPosPartoToolStripMenuItem1.Size = new System.Drawing.Size(371, 24);
             this.ppPosPartoToolStripMenuItem1.Text = "PP - Consulta Pós Parto";
+            this.ppPosPartoToolStripMenuItem1.Click += new System.EventHandler(this.ppPosPartoToolStripMenuItem1_Click);
+            // 
+            // pFPlaneamentoFamiliarToolStripMenuItem
+            // 
+            this.pFPlaneamentoFamiliarToolStripMenuItem.Name = "pFPlaneamentoFamiliarToolStripMenuItem";
+            this.pFPlaneamentoFamiliarToolStripMenuItem.Size = new System.Drawing.Size(371, 24);
+            this.pFPlaneamentoFamiliarToolStripMenuItem.Text = "PF - Planeamento Familiar";
+            this.pFPlaneamentoFamiliarToolStripMenuItem.Click += new System.EventHandler(this.pFPlaneamentoFamiliarToolStripMenuItem_Click);
             // 
             // relatoriosToolStripMenuItem
             // 
@@ -173,12 +181,6 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // pFPlaneamentoFamiliarToolStripMenuItem
-            // 
-            this.pFPlaneamentoFamiliarToolStripMenuItem.Name = "pFPlaneamentoFamiliarToolStripMenuItem";
-            this.pFPlaneamentoFamiliarToolStripMenuItem.Size = new System.Drawing.Size(371, 24);
-            this.pFPlaneamentoFamiliarToolStripMenuItem.Text = "PF - Planeamento Familiar";
             // 
             // FrmHome
             // 

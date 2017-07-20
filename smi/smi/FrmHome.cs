@@ -34,21 +34,6 @@ namespace smi
             Application.Exit();
         }
 
-        private void cPNLivroDeConsultaPreNatalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void criancaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cPNLivroDeConsultaPreNatalToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void maeToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmMother frm = new FrmMother();
@@ -64,7 +49,7 @@ namespace smi
 
         private void cPNLivroDeConsultaPreNatalToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmCPN cpn =  new FrmCPN();
+            FrmCPN cpn = new FrmCPN();
             cpn.Show();
         }
 
@@ -76,7 +61,20 @@ namespace smi
 
         private void administraçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FrmAdmin admin = new FrmAdmin();
+            admin.Show();
+        }
 
+        private void ppPosPartoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmCPP cpp = new FrmCPP();
+            cpp.Show();
+        }
+
+        private void pFPlaneamentoFamiliarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCPF cpf = new FrmCPF();
+            cpf.Show();
         }
     }
 }
