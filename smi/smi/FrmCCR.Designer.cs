@@ -100,10 +100,28 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.cbx = new System.Windows.Forms.Label();
+            this.cbxObito = new System.Windows.Forms.ComboBox();
+            this.cbxAbandono = new System.Windows.Forms.ComboBox();
+            this.cbxTPIComp = new System.Windows.Forms.ComboBox();
+            this.cbxPNCTL = new System.Windows.Forms.ComboBox();
+            this.cbxPCRposMaior2Meses = new System.Windows.Forms.ComboBox();
+            this.cbxPCRposMenor2Meses = new System.Windows.Forms.ComboBox();
+            this.cbxPCRMaior2Meses = new System.Windows.Forms.ComboBox();
+            this.cbxPCRMen2Meses = new System.Windows.Forms.ComboBox();
+            this.cbxCE = new System.Windows.Forms.ComboBox();
+            this.cbxARV5Meses = new System.Windows.Forms.ComboBox();
+            this.cbxTransfInternam = new System.Windows.Forms.ComboBox();
+            this.cbxRecuperd = new System.Windows.Forms.ComboBox();
+            this.cbxDAG = new System.Windows.Forms.ComboBox();
+            this.cbxAleitMist5Meses = new System.Windows.Forms.ComboBox();
+            this.cbxDAM = new System.Windows.Forms.ComboBox();
+            this.cbxAME5Meses = new System.Windows.Forms.ComboBox();
+            this.cbxTB = new System.Windows.Forms.ComboBox();
+            this.txtMaeTarv5mesesCri = new System.Windows.Forms.TextBox();
+            this.lblObito = new System.Windows.Forms.Label();
+            this.lblAbandono = new System.Windows.Forms.Label();
+            this.lblPNCTL = new System.Windows.Forms.Label();
+            this.lblPCRposMaior2Meses = new System.Windows.Forms.Label();
             this.lblPCRApos2Meses = new System.Windows.Forms.Label();
             this.lblPCRMen2Meses = new System.Windows.Forms.Label();
             this.lblARV5Meses = new System.Windows.Forms.Label();
@@ -111,8 +129,8 @@
             this.lblRecuperd = new System.Windows.Forms.Label();
             this.lblAleitMist5Meses = new System.Windows.Forms.Label();
             this.lblAME5Meses = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTPIComp = new System.Windows.Forms.Label();
+            this.lblCE = new System.Windows.Forms.Label();
             this.lblDAG = new System.Windows.Forms.Label();
             this.lblDAM = new System.Windows.Forms.Label();
             this.lblTB = new System.Windows.Forms.Label();
@@ -124,7 +142,7 @@
             this.lblNomeProfSaude = new System.Windows.Forms.Label();
             this.lblObs = new System.Windows.Forms.Label();
             this.lblNidCriTarv = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxSaidaCri = new System.Windows.Forms.ComboBox();
             this.lblSaidaCri = new System.Windows.Forms.Label();
             this.lblNidCrc = new System.Windows.Forms.Label();
             this.txtNidCCR = new System.Windows.Forms.TextBox();
@@ -132,24 +150,22 @@
             this.lblNrConsultaMain = new System.Windows.Forms.Label();
             this.cbxNrConsultaMain = new System.Windows.Forms.ComboBox();
             this.btnGravarMain = new System.Windows.Forms.Button();
-            this.txtMaeTarv5mesesCri = new System.Windows.Forms.TextBox();
-            this.cbxTB = new System.Windows.Forms.ComboBox();
-            this.cbxAME5Meses = new System.Windows.Forms.ComboBox();
-            this.cbxDAM = new System.Windows.Forms.ComboBox();
-            this.cbxAleitMist5Meses = new System.Windows.Forms.ComboBox();
-            this.cbxDAG = new System.Windows.Forms.ComboBox();
-            this.cbxRecuperd = new System.Windows.Forms.ComboBox();
-            this.cbxTransfInternam = new System.Windows.Forms.ComboBox();
-            this.cbxARV5Meses = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.cbxPCRMen2Meses = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.cbxPCRApos2Meses = new System.Windows.Forms.ComboBox();
-            this.cbxPCRMaior2Meses = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.btnAnteriorPage = new System.Windows.Forms.Button();
+            this.lblCE18Meses = new System.Windows.Forms.Label();
+            this.lblResDef18Meses = new System.Windows.Forms.Label();
+            this.lblTransCCS18Meses = new System.Windows.Forms.Label();
+            this.lblTransConsIntgrCI18Meses = new System.Windows.Forms.Label();
+            this.lblTransfOutrUniSanit = new System.Windows.Forms.Label();
+            this.lblAbandono18Meses = new System.Windows.Forms.Label();
+            this.lblObito18Meses = new System.Windows.Forms.Label();
+            this.cbxCE18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxResDef18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxTransCCS18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxTransConsIntgrCI18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxTransfOutrUniSanit = new System.Windows.Forms.ComboBox();
+            this.cbxAbandono18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxObito18Meses = new System.Windows.Forms.ComboBox();
             lblPCRMaior2Meses = new System.Windows.Forms.Label();
             this.ccrPage1.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -164,7 +180,17 @@
             this.tabPage1.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblPCRMaior2Meses
+            // 
+            lblPCRMaior2Meses.AutoSize = true;
+            lblPCRMaior2Meses.Location = new System.Drawing.Point(7, 205);
+            lblPCRMaior2Meses.Name = "lblPCRMaior2Meses";
+            lblPCRMaior2Meses.Size = new System.Drawing.Size(99, 13);
+            lblPCRMaior2Meses.TabIndex = 12;
+            lblPCRMaior2Meses.Text = "PCR maior 2 meses";
             // 
             // ccrPage1
             // 
@@ -891,6 +917,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.btnAnteriorPage);
+            this.tabPage1.Controls.Add(this.groupBox11);
             this.tabPage1.Controls.Add(this.groupBox10);
             this.tabPage1.Controls.Add(this.groupBox9);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -902,15 +930,15 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.comboBox10);
-            this.groupBox10.Controls.Add(this.comboBox9);
-            this.groupBox10.Controls.Add(this.comboBox8);
-            this.groupBox10.Controls.Add(this.comboBox7);
+            this.groupBox10.Controls.Add(this.cbxObito);
+            this.groupBox10.Controls.Add(this.cbxAbandono);
+            this.groupBox10.Controls.Add(this.cbxTPIComp);
+            this.groupBox10.Controls.Add(this.cbxPNCTL);
+            this.groupBox10.Controls.Add(this.cbxPCRposMaior2Meses);
+            this.groupBox10.Controls.Add(this.cbxPCRposMenor2Meses);
             this.groupBox10.Controls.Add(this.cbxPCRMaior2Meses);
-            this.groupBox10.Controls.Add(this.cbxPCRApos2Meses);
-            this.groupBox10.Controls.Add(this.comboBox4);
             this.groupBox10.Controls.Add(this.cbxPCRMen2Meses);
-            this.groupBox10.Controls.Add(this.comboBox2);
+            this.groupBox10.Controls.Add(this.cbxCE);
             this.groupBox10.Controls.Add(this.cbxARV5Meses);
             this.groupBox10.Controls.Add(this.cbxTransfInternam);
             this.groupBox10.Controls.Add(this.cbxRecuperd);
@@ -920,10 +948,10 @@
             this.groupBox10.Controls.Add(this.cbxAME5Meses);
             this.groupBox10.Controls.Add(this.cbxTB);
             this.groupBox10.Controls.Add(this.txtMaeTarv5mesesCri);
-            this.groupBox10.Controls.Add(this.label21);
-            this.groupBox10.Controls.Add(this.label20);
-            this.groupBox10.Controls.Add(this.label19);
-            this.groupBox10.Controls.Add(this.cbx);
+            this.groupBox10.Controls.Add(this.lblObito);
+            this.groupBox10.Controls.Add(this.lblAbandono);
+            this.groupBox10.Controls.Add(this.lblPNCTL);
+            this.groupBox10.Controls.Add(this.lblPCRposMaior2Meses);
             this.groupBox10.Controls.Add(this.lblPCRApos2Meses);
             this.groupBox10.Controls.Add(lblPCRMaior2Meses);
             this.groupBox10.Controls.Add(this.lblPCRMen2Meses);
@@ -932,8 +960,8 @@
             this.groupBox10.Controls.Add(this.lblRecuperd);
             this.groupBox10.Controls.Add(this.lblAleitMist5Meses);
             this.groupBox10.Controls.Add(this.lblAME5Meses);
-            this.groupBox10.Controls.Add(this.label9);
-            this.groupBox10.Controls.Add(this.label8);
+            this.groupBox10.Controls.Add(this.lblTPIComp);
+            this.groupBox10.Controls.Add(this.lblCE);
             this.groupBox10.Controls.Add(this.lblDAG);
             this.groupBox10.Controls.Add(this.lblDAM);
             this.groupBox10.Controls.Add(this.lblTB);
@@ -945,41 +973,235 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Coorte - 9 meses de seguimento";
             // 
-            // label21
+            // cbxObito
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(400, 209);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(32, 13);
-            this.label21.TabIndex = 17;
-            this.label21.Text = "Obito";
+            this.cbxObito.FormattingEnabled = true;
+            this.cbxObito.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxObito.Location = new System.Drawing.Point(460, 206);
+            this.cbxObito.Name = "cbxObito";
+            this.cbxObito.Size = new System.Drawing.Size(109, 21);
+            this.cbxObito.TabIndex = 42;
             // 
-            // label20
+            // cbxAbandono
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(400, 178);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 13);
-            this.label20.TabIndex = 16;
-            this.label20.Text = "Abandono";
+            this.cbxAbandono.FormattingEnabled = true;
+            this.cbxAbandono.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxAbandono.Location = new System.Drawing.Point(460, 175);
+            this.cbxAbandono.Name = "cbxAbandono";
+            this.cbxAbandono.Size = new System.Drawing.Size(109, 21);
+            this.cbxAbandono.TabIndex = 41;
             // 
-            // label19
+            // cbxTPIComp
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(400, 124);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(42, 13);
-            this.label19.TabIndex = 15;
-            this.label19.Text = "PNCTL";
+            this.cbxTPIComp.FormattingEnabled = true;
+            this.cbxTPIComp.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxTPIComp.Location = new System.Drawing.Point(460, 148);
+            this.cbxTPIComp.Name = "cbxTPIComp";
+            this.cbxTPIComp.Size = new System.Drawing.Size(109, 21);
+            this.cbxTPIComp.TabIndex = 40;
             // 
-            // cbx
+            // cbxPNCTL
             // 
-            this.cbx.AutoSize = true;
-            this.cbx.Location = new System.Drawing.Point(7, 259);
-            this.cbx.Name = "cbx";
-            this.cbx.Size = new System.Drawing.Size(119, 13);
-            this.cbx.TabIndex = 14;
-            this.cbx.Text = "PCR pos maior 2 meses";
+            this.cbxPNCTL.FormattingEnabled = true;
+            this.cbxPNCTL.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxPNCTL.Location = new System.Drawing.Point(460, 121);
+            this.cbxPNCTL.Name = "cbxPNCTL";
+            this.cbxPNCTL.Size = new System.Drawing.Size(109, 21);
+            this.cbxPNCTL.TabIndex = 39;
+            // 
+            // cbxPCRposMaior2Meses
+            // 
+            this.cbxPCRposMaior2Meses.FormattingEnabled = true;
+            this.cbxPCRposMaior2Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxPCRposMaior2Meses.Location = new System.Drawing.Point(242, 256);
+            this.cbxPCRposMaior2Meses.Name = "cbxPCRposMaior2Meses";
+            this.cbxPCRposMaior2Meses.Size = new System.Drawing.Size(140, 21);
+            this.cbxPCRposMaior2Meses.TabIndex = 38;
+            // 
+            // cbxPCRposMenor2Meses
+            // 
+            this.cbxPCRposMenor2Meses.FormattingEnabled = true;
+            this.cbxPCRposMenor2Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxPCRposMenor2Meses.Location = new System.Drawing.Point(242, 229);
+            this.cbxPCRposMenor2Meses.Name = "cbxPCRposMenor2Meses";
+            this.cbxPCRposMenor2Meses.Size = new System.Drawing.Size(140, 21);
+            this.cbxPCRposMenor2Meses.TabIndex = 37;
+            // 
+            // cbxPCRMaior2Meses
+            // 
+            this.cbxPCRMaior2Meses.FormattingEnabled = true;
+            this.cbxPCRMaior2Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxPCRMaior2Meses.Location = new System.Drawing.Point(242, 202);
+            this.cbxPCRMaior2Meses.Name = "cbxPCRMaior2Meses";
+            this.cbxPCRMaior2Meses.Size = new System.Drawing.Size(140, 21);
+            this.cbxPCRMaior2Meses.TabIndex = 36;
+            // 
+            // cbxPCRMen2Meses
+            // 
+            this.cbxPCRMen2Meses.FormattingEnabled = true;
+            this.cbxPCRMen2Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxPCRMen2Meses.Location = new System.Drawing.Point(242, 175);
+            this.cbxPCRMen2Meses.Name = "cbxPCRMen2Meses";
+            this.cbxPCRMen2Meses.Size = new System.Drawing.Size(140, 21);
+            this.cbxPCRMen2Meses.TabIndex = 35;
+            // 
+            // cbxCE
+            // 
+            this.cbxCE.FormattingEnabled = true;
+            this.cbxCE.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxCE.Location = new System.Drawing.Point(460, 94);
+            this.cbxCE.Name = "cbxCE";
+            this.cbxCE.Size = new System.Drawing.Size(109, 21);
+            this.cbxCE.TabIndex = 34;
+            // 
+            // cbxARV5Meses
+            // 
+            this.cbxARV5Meses.FormattingEnabled = true;
+            this.cbxARV5Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxARV5Meses.Location = new System.Drawing.Point(242, 148);
+            this.cbxARV5Meses.Name = "cbxARV5Meses";
+            this.cbxARV5Meses.Size = new System.Drawing.Size(140, 21);
+            this.cbxARV5Meses.TabIndex = 33;
+            // 
+            // cbxTransfInternam
+            // 
+            this.cbxTransfInternam.FormattingEnabled = true;
+            this.cbxTransfInternam.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxTransfInternam.Location = new System.Drawing.Point(242, 121);
+            this.cbxTransfInternam.Name = "cbxTransfInternam";
+            this.cbxTransfInternam.Size = new System.Drawing.Size(140, 21);
+            this.cbxTransfInternam.TabIndex = 32;
+            // 
+            // cbxRecuperd
+            // 
+            this.cbxRecuperd.FormattingEnabled = true;
+            this.cbxRecuperd.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxRecuperd.Location = new System.Drawing.Point(242, 94);
+            this.cbxRecuperd.Name = "cbxRecuperd";
+            this.cbxRecuperd.Size = new System.Drawing.Size(140, 21);
+            this.cbxRecuperd.TabIndex = 31;
+            // 
+            // cbxDAG
+            // 
+            this.cbxDAG.FormattingEnabled = true;
+            this.cbxDAG.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxDAG.Location = new System.Drawing.Point(460, 68);
+            this.cbxDAG.Name = "cbxDAG";
+            this.cbxDAG.Size = new System.Drawing.Size(109, 21);
+            this.cbxDAG.TabIndex = 30;
+            // 
+            // cbxAleitMist5Meses
+            // 
+            this.cbxAleitMist5Meses.FormattingEnabled = true;
+            this.cbxAleitMist5Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxAleitMist5Meses.Location = new System.Drawing.Point(242, 68);
+            this.cbxAleitMist5Meses.Name = "cbxAleitMist5Meses";
+            this.cbxAleitMist5Meses.Size = new System.Drawing.Size(140, 21);
+            this.cbxAleitMist5Meses.TabIndex = 29;
+            // 
+            // cbxDAM
+            // 
+            this.cbxDAM.FormattingEnabled = true;
+            this.cbxDAM.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxDAM.Location = new System.Drawing.Point(460, 42);
+            this.cbxDAM.Name = "cbxDAM";
+            this.cbxDAM.Size = new System.Drawing.Size(109, 21);
+            this.cbxDAM.TabIndex = 28;
+            // 
+            // cbxAME5Meses
+            // 
+            this.cbxAME5Meses.FormattingEnabled = true;
+            this.cbxAME5Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxAME5Meses.Location = new System.Drawing.Point(242, 42);
+            this.cbxAME5Meses.Name = "cbxAME5Meses";
+            this.cbxAME5Meses.Size = new System.Drawing.Size(140, 21);
+            this.cbxAME5Meses.TabIndex = 27;
+            // 
+            // cbxTB
+            // 
+            this.cbxTB.FormattingEnabled = true;
+            this.cbxTB.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxTB.Location = new System.Drawing.Point(460, 17);
+            this.cbxTB.Name = "cbxTB";
+            this.cbxTB.Size = new System.Drawing.Size(109, 21);
+            this.cbxTB.TabIndex = 26;
+            // 
+            // txtMaeTarv5mesesCri
+            // 
+            this.txtMaeTarv5mesesCri.Location = new System.Drawing.Point(242, 17);
+            this.txtMaeTarv5mesesCri.Name = "txtMaeTarv5mesesCri";
+            this.txtMaeTarv5mesesCri.Size = new System.Drawing.Size(140, 20);
+            this.txtMaeTarv5mesesCri.TabIndex = 18;
+            // 
+            // lblObito
+            // 
+            this.lblObito.AutoSize = true;
+            this.lblObito.Location = new System.Drawing.Point(400, 209);
+            this.lblObito.Name = "lblObito";
+            this.lblObito.Size = new System.Drawing.Size(32, 13);
+            this.lblObito.TabIndex = 17;
+            this.lblObito.Text = "Obito";
+            // 
+            // lblAbandono
+            // 
+            this.lblAbandono.AutoSize = true;
+            this.lblAbandono.Location = new System.Drawing.Point(400, 178);
+            this.lblAbandono.Name = "lblAbandono";
+            this.lblAbandono.Size = new System.Drawing.Size(56, 13);
+            this.lblAbandono.TabIndex = 16;
+            this.lblAbandono.Text = "Abandono";
+            // 
+            // lblPNCTL
+            // 
+            this.lblPNCTL.AutoSize = true;
+            this.lblPNCTL.Location = new System.Drawing.Point(400, 124);
+            this.lblPNCTL.Name = "lblPNCTL";
+            this.lblPNCTL.Size = new System.Drawing.Size(42, 13);
+            this.lblPNCTL.TabIndex = 15;
+            this.lblPNCTL.Text = "PNCTL";
+            // 
+            // lblPCRposMaior2Meses
+            // 
+            this.lblPCRposMaior2Meses.AutoSize = true;
+            this.lblPCRposMaior2Meses.Location = new System.Drawing.Point(7, 259);
+            this.lblPCRposMaior2Meses.Name = "lblPCRposMaior2Meses";
+            this.lblPCRposMaior2Meses.Size = new System.Drawing.Size(119, 13);
+            this.lblPCRposMaior2Meses.TabIndex = 14;
+            this.lblPCRposMaior2Meses.Text = "PCR pos maior 2 meses";
             // 
             // lblPCRApos2Meses
             // 
@@ -989,15 +1211,6 @@
             this.lblPCRApos2Meses.Size = new System.Drawing.Size(123, 13);
             this.lblPCRApos2Meses.TabIndex = 13;
             this.lblPCRApos2Meses.Text = "PCR pos menor 2 meses";
-            // 
-            // lblPCRMaior2Meses
-            // 
-            lblPCRMaior2Meses.AutoSize = true;
-            lblPCRMaior2Meses.Location = new System.Drawing.Point(7, 205);
-            lblPCRMaior2Meses.Name = "lblPCRMaior2Meses";
-            lblPCRMaior2Meses.Size = new System.Drawing.Size(99, 13);
-            lblPCRMaior2Meses.TabIndex = 12;
-            lblPCRMaior2Meses.Text = "PCR maior 2 meses";
             // 
             // lblPCRMen2Meses
             // 
@@ -1053,23 +1266,23 @@
             this.lblAME5Meses.TabIndex = 6;
             this.lblAME5Meses.Text = "AME aos 5 meses";
             // 
-            // label9
+            // lblTPIComp
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(400, 151);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "TPI Comp";
+            this.lblTPIComp.AutoSize = true;
+            this.lblTPIComp.Location = new System.Drawing.Point(400, 151);
+            this.lblTPIComp.Name = "lblTPIComp";
+            this.lblTPIComp.Size = new System.Drawing.Size(54, 13);
+            this.lblTPIComp.TabIndex = 5;
+            this.lblTPIComp.Text = "TPI Comp";
             // 
-            // label8
+            // lblCE
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(400, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "CE";
+            this.lblCE.AutoSize = true;
+            this.lblCE.Location = new System.Drawing.Point(400, 97);
+            this.lblCE.Name = "lblCE";
+            this.lblCE.Size = new System.Drawing.Size(21, 13);
+            this.lblCE.TabIndex = 4;
+            this.lblCE.Text = "CE";
             // 
             // lblDAG
             // 
@@ -1115,7 +1328,7 @@
             this.groupBox9.Controls.Add(this.lblNomeProfSaude);
             this.groupBox9.Controls.Add(this.lblObs);
             this.groupBox9.Controls.Add(this.lblNidCriTarv);
-            this.groupBox9.Controls.Add(this.comboBox1);
+            this.groupBox9.Controls.Add(this.cbxSaidaCri);
             this.groupBox9.Controls.Add(this.lblSaidaCri);
             this.groupBox9.Location = new System.Drawing.Point(6, 6);
             this.groupBox9.Name = "groupBox9";
@@ -1172,20 +1385,20 @@
             this.lblNidCriTarv.TabIndex = 2;
             this.lblNidCriTarv.Text = "NID da criança TARV";
             // 
-            // comboBox1
+            // cbxSaidaCri
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxSaidaCri.FormattingEnabled = true;
+            this.cbxSaidaCri.Items.AddRange(new object[] {
             "Transferida para CCS",
             "Transferida para Consultas Integradas (CI)",
             "Referido para PNCT",
             "Transferida para outra Unidade Sanitária",
             "Abandono",
             "Óbito"});
-            this.comboBox1.Location = new System.Drawing.Point(183, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cbxSaidaCri.Location = new System.Drawing.Point(183, 18);
+            this.cbxSaidaCri.Name = "cbxSaidaCri";
+            this.cbxSaidaCri.Size = new System.Drawing.Size(187, 21);
+            this.cbxSaidaCri.TabIndex = 1;
             // 
             // lblSaidaCri
             // 
@@ -1254,199 +1467,177 @@
             this.btnGravarMain.Text = "Gravar";
             this.btnGravarMain.UseVisualStyleBackColor = true;
             // 
-            // txtMaeTarv5mesesCri
+            // groupBox11
             // 
-            this.txtMaeTarv5mesesCri.Location = new System.Drawing.Point(242, 17);
-            this.txtMaeTarv5mesesCri.Name = "txtMaeTarv5mesesCri";
-            this.txtMaeTarv5mesesCri.Size = new System.Drawing.Size(140, 20);
-            this.txtMaeTarv5mesesCri.TabIndex = 18;
+            this.groupBox11.Controls.Add(this.cbxObito18Meses);
+            this.groupBox11.Controls.Add(this.cbxAbandono18Meses);
+            this.groupBox11.Controls.Add(this.cbxTransfOutrUniSanit);
+            this.groupBox11.Controls.Add(this.cbxTransConsIntgrCI18Meses);
+            this.groupBox11.Controls.Add(this.cbxTransCCS18Meses);
+            this.groupBox11.Controls.Add(this.cbxResDef18Meses);
+            this.groupBox11.Controls.Add(this.cbxCE18Meses);
+            this.groupBox11.Controls.Add(this.lblObito18Meses);
+            this.groupBox11.Controls.Add(this.lblAbandono18Meses);
+            this.groupBox11.Controls.Add(this.lblTransfOutrUniSanit);
+            this.groupBox11.Controls.Add(this.lblTransConsIntgrCI18Meses);
+            this.groupBox11.Controls.Add(this.lblTransCCS18Meses);
+            this.groupBox11.Controls.Add(this.lblResDef18Meses);
+            this.groupBox11.Controls.Add(this.lblCE18Meses);
+            this.groupBox11.Location = new System.Drawing.Point(7, 143);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(376, 227);
+            this.groupBox11.TabIndex = 2;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Coorte 18 meses de seguimento";
             // 
-            // cbxTB
+            // btnAnteriorPage
             // 
-            this.cbxTB.FormattingEnabled = true;
-            this.cbxTB.Items.AddRange(new object[] {
+            this.btnAnteriorPage.Location = new System.Drawing.Point(6, 383);
+            this.btnAnteriorPage.Name = "btnAnteriorPage";
+            this.btnAnteriorPage.Size = new System.Drawing.Size(109, 23);
+            this.btnAnteriorPage.TabIndex = 83;
+            this.btnAnteriorPage.Text = "Página Anterior";
+            this.btnAnteriorPage.UseVisualStyleBackColor = true;
+            // 
+            // lblCE18Meses
+            // 
+            this.lblCE18Meses.AutoSize = true;
+            this.lblCE18Meses.Location = new System.Drawing.Point(22, 20);
+            this.lblCE18Meses.Name = "lblCE18Meses";
+            this.lblCE18Meses.Size = new System.Drawing.Size(70, 13);
+            this.lblCE18Meses.TabIndex = 0;
+            this.lblCE18Meses.Text = "CE 18 Meses";
+            // 
+            // lblResDef18Meses
+            // 
+            this.lblResDef18Meses.AutoSize = true;
+            this.lblResDef18Meses.Location = new System.Drawing.Point(22, 47);
+            this.lblResDef18Meses.Name = "lblResDef18Meses";
+            this.lblResDef18Meses.Size = new System.Drawing.Size(149, 13);
+            this.lblResDef18Meses.TabIndex = 1;
+            this.lblResDef18Meses.Text = "Resultado definitivo 18 Meses";
+            // 
+            // lblTransCCS18Meses
+            // 
+            this.lblTransCCS18Meses.AutoSize = true;
+            this.lblTransCCS18Meses.Location = new System.Drawing.Point(22, 74);
+            this.lblTransCCS18Meses.Name = "lblTransCCS18Meses";
+            this.lblTransCCS18Meses.Size = new System.Drawing.Size(108, 13);
+            this.lblTransCCS18Meses.TabIndex = 2;
+            this.lblTransCCS18Meses.Text = "Transferida para CCS";
+            // 
+            // lblTransConsIntgrCI18Meses
+            // 
+            this.lblTransConsIntgrCI18Meses.AutoSize = true;
+            this.lblTransConsIntgrCI18Meses.Location = new System.Drawing.Point(22, 101);
+            this.lblTransConsIntgrCI18Meses.Name = "lblTransConsIntgrCI18Meses";
+            this.lblTransConsIntgrCI18Meses.Size = new System.Drawing.Size(205, 13);
+            this.lblTransConsIntgrCI18Meses.TabIndex = 3;
+            this.lblTransConsIntgrCI18Meses.Text = "Transferida para Consultas Integradas (CI)";
+            // 
+            // lblTransfOutrUniSanit
+            // 
+            this.lblTransfOutrUniSanit.AutoSize = true;
+            this.lblTransfOutrUniSanit.Location = new System.Drawing.Point(22, 128);
+            this.lblTransfOutrUniSanit.Name = "lblTransfOutrUniSanit";
+            this.lblTransfOutrUniSanit.Size = new System.Drawing.Size(198, 13);
+            this.lblTransfOutrUniSanit.TabIndex = 4;
+            this.lblTransfOutrUniSanit.Text = "Transferida para outra Unidade Sanitária";
+            // 
+            // lblAbandono18Meses
+            // 
+            this.lblAbandono18Meses.AutoSize = true;
+            this.lblAbandono18Meses.Location = new System.Drawing.Point(22, 155);
+            this.lblAbandono18Meses.Name = "lblAbandono18Meses";
+            this.lblAbandono18Meses.Size = new System.Drawing.Size(56, 13);
+            this.lblAbandono18Meses.TabIndex = 5;
+            this.lblAbandono18Meses.Text = "Abandono";
+            // 
+            // lblObito18Meses
+            // 
+            this.lblObito18Meses.AutoSize = true;
+            this.lblObito18Meses.Location = new System.Drawing.Point(22, 182);
+            this.lblObito18Meses.Name = "lblObito18Meses";
+            this.lblObito18Meses.Size = new System.Drawing.Size(32, 13);
+            this.lblObito18Meses.TabIndex = 6;
+            this.lblObito18Meses.Text = "Obito";
+            // 
+            // cbxCE18Meses
+            // 
+            this.cbxCE18Meses.FormattingEnabled = true;
+            this.cbxCE18Meses.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxTB.Location = new System.Drawing.Point(460, 17);
-            this.cbxTB.Name = "cbxTB";
-            this.cbxTB.Size = new System.Drawing.Size(109, 21);
-            this.cbxTB.TabIndex = 26;
+            this.cbxCE18Meses.Location = new System.Drawing.Point(260, 17);
+            this.cbxCE18Meses.Name = "cbxCE18Meses";
+            this.cbxCE18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxCE18Meses.TabIndex = 35;
             // 
-            // cbxAME5Meses
+            // cbxResDef18Meses
             // 
-            this.cbxAME5Meses.FormattingEnabled = true;
-            this.cbxAME5Meses.Items.AddRange(new object[] {
+            this.cbxResDef18Meses.FormattingEnabled = true;
+            this.cbxResDef18Meses.Items.AddRange(new object[] {
+            "Neg ",
+            "Pos"});
+            this.cbxResDef18Meses.Location = new System.Drawing.Point(260, 44);
+            this.cbxResDef18Meses.Name = "cbxResDef18Meses";
+            this.cbxResDef18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxResDef18Meses.TabIndex = 36;
+            // 
+            // cbxTransCCS18Meses
+            // 
+            this.cbxTransCCS18Meses.FormattingEnabled = true;
+            this.cbxTransCCS18Meses.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxAME5Meses.Location = new System.Drawing.Point(242, 42);
-            this.cbxAME5Meses.Name = "cbxAME5Meses";
-            this.cbxAME5Meses.Size = new System.Drawing.Size(140, 21);
-            this.cbxAME5Meses.TabIndex = 27;
+            this.cbxTransCCS18Meses.Location = new System.Drawing.Point(260, 71);
+            this.cbxTransCCS18Meses.Name = "cbxTransCCS18Meses";
+            this.cbxTransCCS18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxTransCCS18Meses.TabIndex = 37;
             // 
-            // cbxDAM
+            // cbxTransConsIntgrCI18Meses
             // 
-            this.cbxDAM.FormattingEnabled = true;
-            this.cbxDAM.Items.AddRange(new object[] {
+            this.cbxTransConsIntgrCI18Meses.FormattingEnabled = true;
+            this.cbxTransConsIntgrCI18Meses.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxDAM.Location = new System.Drawing.Point(460, 42);
-            this.cbxDAM.Name = "cbxDAM";
-            this.cbxDAM.Size = new System.Drawing.Size(109, 21);
-            this.cbxDAM.TabIndex = 28;
+            this.cbxTransConsIntgrCI18Meses.Location = new System.Drawing.Point(260, 98);
+            this.cbxTransConsIntgrCI18Meses.Name = "cbxTransConsIntgrCI18Meses";
+            this.cbxTransConsIntgrCI18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxTransConsIntgrCI18Meses.TabIndex = 38;
             // 
-            // cbxAleitMist5Meses
+            // cbxTransfOutrUniSanit
             // 
-            this.cbxAleitMist5Meses.FormattingEnabled = true;
-            this.cbxAleitMist5Meses.Items.AddRange(new object[] {
+            this.cbxTransfOutrUniSanit.FormattingEnabled = true;
+            this.cbxTransfOutrUniSanit.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxAleitMist5Meses.Location = new System.Drawing.Point(242, 68);
-            this.cbxAleitMist5Meses.Name = "cbxAleitMist5Meses";
-            this.cbxAleitMist5Meses.Size = new System.Drawing.Size(140, 21);
-            this.cbxAleitMist5Meses.TabIndex = 29;
+            this.cbxTransfOutrUniSanit.Location = new System.Drawing.Point(260, 125);
+            this.cbxTransfOutrUniSanit.Name = "cbxTransfOutrUniSanit";
+            this.cbxTransfOutrUniSanit.Size = new System.Drawing.Size(109, 21);
+            this.cbxTransfOutrUniSanit.TabIndex = 39;
             // 
-            // cbxDAG
+            // cbxAbandono18Meses
             // 
-            this.cbxDAG.FormattingEnabled = true;
-            this.cbxDAG.Items.AddRange(new object[] {
+            this.cbxAbandono18Meses.FormattingEnabled = true;
+            this.cbxAbandono18Meses.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxDAG.Location = new System.Drawing.Point(460, 68);
-            this.cbxDAG.Name = "cbxDAG";
-            this.cbxDAG.Size = new System.Drawing.Size(109, 21);
-            this.cbxDAG.TabIndex = 30;
+            this.cbxAbandono18Meses.Location = new System.Drawing.Point(260, 152);
+            this.cbxAbandono18Meses.Name = "cbxAbandono18Meses";
+            this.cbxAbandono18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxAbandono18Meses.TabIndex = 40;
             // 
-            // cbxRecuperd
+            // cbxObito18Meses
             // 
-            this.cbxRecuperd.FormattingEnabled = true;
-            this.cbxRecuperd.Items.AddRange(new object[] {
+            this.cbxObito18Meses.FormattingEnabled = true;
+            this.cbxObito18Meses.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.cbxRecuperd.Location = new System.Drawing.Point(242, 94);
-            this.cbxRecuperd.Name = "cbxRecuperd";
-            this.cbxRecuperd.Size = new System.Drawing.Size(140, 21);
-            this.cbxRecuperd.TabIndex = 31;
-            // 
-            // cbxTransfInternam
-            // 
-            this.cbxTransfInternam.FormattingEnabled = true;
-            this.cbxTransfInternam.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxTransfInternam.Location = new System.Drawing.Point(242, 121);
-            this.cbxTransfInternam.Name = "cbxTransfInternam";
-            this.cbxTransfInternam.Size = new System.Drawing.Size(140, 21);
-            this.cbxTransfInternam.TabIndex = 32;
-            // 
-            // cbxARV5Meses
-            // 
-            this.cbxARV5Meses.FormattingEnabled = true;
-            this.cbxARV5Meses.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxARV5Meses.Location = new System.Drawing.Point(242, 148);
-            this.cbxARV5Meses.Name = "cbxARV5Meses";
-            this.cbxARV5Meses.Size = new System.Drawing.Size(140, 21);
-            this.cbxARV5Meses.TabIndex = 33;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.comboBox2.Location = new System.Drawing.Point(460, 94);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(109, 21);
-            this.comboBox2.TabIndex = 34;
-            // 
-            // cbxPCRMen2Meses
-            // 
-            this.cbxPCRMen2Meses.FormattingEnabled = true;
-            this.cbxPCRMen2Meses.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxPCRMen2Meses.Location = new System.Drawing.Point(242, 175);
-            this.cbxPCRMen2Meses.Name = "cbxPCRMen2Meses";
-            this.cbxPCRMen2Meses.Size = new System.Drawing.Size(140, 21);
-            this.cbxPCRMen2Meses.TabIndex = 35;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.comboBox4.Location = new System.Drawing.Point(242, 202);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(140, 21);
-            this.comboBox4.TabIndex = 36;
-            // 
-            // cbxPCRApos2Meses
-            // 
-            this.cbxPCRApos2Meses.FormattingEnabled = true;
-            this.cbxPCRApos2Meses.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxPCRApos2Meses.Location = new System.Drawing.Point(242, 229);
-            this.cbxPCRApos2Meses.Name = "cbxPCRApos2Meses";
-            this.cbxPCRApos2Meses.Size = new System.Drawing.Size(140, 21);
-            this.cbxPCRApos2Meses.TabIndex = 37;
-            // 
-            // cbxPCRMaior2Meses
-            // 
-            this.cbxPCRMaior2Meses.FormattingEnabled = true;
-            this.cbxPCRMaior2Meses.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxPCRMaior2Meses.Location = new System.Drawing.Point(242, 256);
-            this.cbxPCRMaior2Meses.Name = "cbxPCRMaior2Meses";
-            this.cbxPCRMaior2Meses.Size = new System.Drawing.Size(140, 21);
-            this.cbxPCRMaior2Meses.TabIndex = 38;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.comboBox7.Location = new System.Drawing.Point(460, 121);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(109, 21);
-            this.comboBox7.TabIndex = 39;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.comboBox8.Location = new System.Drawing.Point(460, 148);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(109, 21);
-            this.comboBox8.TabIndex = 40;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.comboBox9.Location = new System.Drawing.Point(460, 175);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(109, 21);
-            this.comboBox9.TabIndex = 41;
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.comboBox10.Location = new System.Drawing.Point(460, 206);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(109, 21);
-            this.comboBox10.TabIndex = 42;
+            this.cbxObito18Meses.Location = new System.Drawing.Point(260, 179);
+            this.cbxObito18Meses.Name = "cbxObito18Meses";
+            this.cbxObito18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxObito18Meses.TabIndex = 41;
             // 
             // FrmCCR
             // 
@@ -1485,6 +1676,8 @@
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1569,7 +1762,7 @@
         private System.Windows.Forms.Label lblNrConsultaMain;
         private System.Windows.Forms.ComboBox cbxNrConsultaMain;
         private System.Windows.Forms.Button btnGravarMain;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxSaidaCri;
         private System.Windows.Forms.Label lblSaidaCri;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox txtNomeProfSaude;
@@ -1578,10 +1771,10 @@
         private System.Windows.Forms.Label lblNomeProfSaude;
         private System.Windows.Forms.Label lblObs;
         private System.Windows.Forms.Label lblNidCriTarv;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label cbx;
+        private System.Windows.Forms.Label lblObito;
+        private System.Windows.Forms.Label lblAbandono;
+        private System.Windows.Forms.Label lblPNCTL;
+        private System.Windows.Forms.Label lblPCRposMaior2Meses;
         private System.Windows.Forms.Label lblPCRApos2Meses;
         private System.Windows.Forms.Label lblPCRMen2Meses;
         private System.Windows.Forms.Label lblARV5Meses;
@@ -1589,8 +1782,8 @@
         private System.Windows.Forms.Label lblRecuperd;
         private System.Windows.Forms.Label lblAleitMist5Meses;
         private System.Windows.Forms.Label lblAME5Meses;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTPIComp;
+        private System.Windows.Forms.Label lblCE;
         private System.Windows.Forms.Label lblDAG;
         private System.Windows.Forms.Label lblDAM;
         private System.Windows.Forms.Label lblTB;
@@ -1604,14 +1797,30 @@
         private System.Windows.Forms.ComboBox cbxARV5Meses;
         private System.Windows.Forms.ComboBox cbxTransfInternam;
         private System.Windows.Forms.ComboBox cbxRecuperd;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cbxObito;
+        private System.Windows.Forms.ComboBox cbxAbandono;
+        private System.Windows.Forms.ComboBox cbxTPIComp;
+        private System.Windows.Forms.ComboBox cbxPNCTL;
+        private System.Windows.Forms.ComboBox cbxPCRposMaior2Meses;
+        private System.Windows.Forms.ComboBox cbxPCRposMenor2Meses;
         private System.Windows.Forms.ComboBox cbxPCRMaior2Meses;
-        private System.Windows.Forms.ComboBox cbxPCRApos2Meses;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox cbxPCRMen2Meses;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxCE;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Button btnAnteriorPage;
+        private System.Windows.Forms.ComboBox cbxCE18Meses;
+        private System.Windows.Forms.Label lblObito18Meses;
+        private System.Windows.Forms.Label lblAbandono18Meses;
+        private System.Windows.Forms.Label lblTransfOutrUniSanit;
+        private System.Windows.Forms.Label lblTransConsIntgrCI18Meses;
+        private System.Windows.Forms.Label lblTransCCS18Meses;
+        private System.Windows.Forms.Label lblResDef18Meses;
+        private System.Windows.Forms.Label lblCE18Meses;
+        private System.Windows.Forms.ComboBox cbxResDef18Meses;
+        private System.Windows.Forms.ComboBox cbxTransCCS18Meses;
+        private System.Windows.Forms.ComboBox cbxTransConsIntgrCI18Meses;
+        private System.Windows.Forms.ComboBox cbxTransfOutrUniSanit;
+        private System.Windows.Forms.ComboBox cbxObito18Meses;
+        private System.Windows.Forms.ComboBox cbxAbandono18Meses;
     }
 }
