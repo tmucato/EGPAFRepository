@@ -99,6 +99,22 @@
             this.txtNidTarv = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnAnteriorPage = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.cbxObito18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxAbandono18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxTransfOutrUniSanit = new System.Windows.Forms.ComboBox();
+            this.cbxTransConsIntgrCI18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxTransCCS18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxResDef18Meses = new System.Windows.Forms.ComboBox();
+            this.cbxCE18Meses = new System.Windows.Forms.ComboBox();
+            this.lblObito18Meses = new System.Windows.Forms.Label();
+            this.lblAbandono18Meses = new System.Windows.Forms.Label();
+            this.lblTransfOutrUniSanit = new System.Windows.Forms.Label();
+            this.lblTransConsIntgrCI18Meses = new System.Windows.Forms.Label();
+            this.lblTransCCS18Meses = new System.Windows.Forms.Label();
+            this.lblResDef18Meses = new System.Windows.Forms.Label();
+            this.lblCE18Meses = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.cbxObito = new System.Windows.Forms.ComboBox();
             this.cbxAbandono = new System.Windows.Forms.ComboBox();
@@ -150,22 +166,6 @@
             this.lblNrConsultaMain = new System.Windows.Forms.Label();
             this.cbxNrConsultaMain = new System.Windows.Forms.ComboBox();
             this.btnGravarMain = new System.Windows.Forms.Button();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.btnAnteriorPage = new System.Windows.Forms.Button();
-            this.lblCE18Meses = new System.Windows.Forms.Label();
-            this.lblResDef18Meses = new System.Windows.Forms.Label();
-            this.lblTransCCS18Meses = new System.Windows.Forms.Label();
-            this.lblTransConsIntgrCI18Meses = new System.Windows.Forms.Label();
-            this.lblTransfOutrUniSanit = new System.Windows.Forms.Label();
-            this.lblAbandono18Meses = new System.Windows.Forms.Label();
-            this.lblObito18Meses = new System.Windows.Forms.Label();
-            this.cbxCE18Meses = new System.Windows.Forms.ComboBox();
-            this.cbxResDef18Meses = new System.Windows.Forms.ComboBox();
-            this.cbxTransCCS18Meses = new System.Windows.Forms.ComboBox();
-            this.cbxTransConsIntgrCI18Meses = new System.Windows.Forms.ComboBox();
-            this.cbxTransfOutrUniSanit = new System.Windows.Forms.ComboBox();
-            this.cbxAbandono18Meses = new System.Windows.Forms.ComboBox();
-            this.cbxObito18Meses = new System.Windows.Forms.ComboBox();
             lblPCRMaior2Meses = new System.Windows.Forms.Label();
             this.ccrPage1.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -178,9 +178,9 @@
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPCRMaior2Meses
@@ -908,7 +908,7 @@
             // 
             this.tabControl1.Controls.Add(this.ccrPage1);
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(12, 54);
+            this.tabControl1.Location = new System.Drawing.Point(12, 48);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1003, 435);
@@ -927,6 +927,178 @@
             this.tabPage1.Size = new System.Drawing.Size(995, 409);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Página 2";
+            // 
+            // btnAnteriorPage
+            // 
+            this.btnAnteriorPage.Location = new System.Drawing.Point(6, 383);
+            this.btnAnteriorPage.Name = "btnAnteriorPage";
+            this.btnAnteriorPage.Size = new System.Drawing.Size(109, 23);
+            this.btnAnteriorPage.TabIndex = 83;
+            this.btnAnteriorPage.Text = "Página Anterior";
+            this.btnAnteriorPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.cbxObito18Meses);
+            this.groupBox11.Controls.Add(this.cbxAbandono18Meses);
+            this.groupBox11.Controls.Add(this.cbxTransfOutrUniSanit);
+            this.groupBox11.Controls.Add(this.cbxTransConsIntgrCI18Meses);
+            this.groupBox11.Controls.Add(this.cbxTransCCS18Meses);
+            this.groupBox11.Controls.Add(this.cbxResDef18Meses);
+            this.groupBox11.Controls.Add(this.cbxCE18Meses);
+            this.groupBox11.Controls.Add(this.lblObito18Meses);
+            this.groupBox11.Controls.Add(this.lblAbandono18Meses);
+            this.groupBox11.Controls.Add(this.lblTransfOutrUniSanit);
+            this.groupBox11.Controls.Add(this.lblTransConsIntgrCI18Meses);
+            this.groupBox11.Controls.Add(this.lblTransCCS18Meses);
+            this.groupBox11.Controls.Add(this.lblResDef18Meses);
+            this.groupBox11.Controls.Add(this.lblCE18Meses);
+            this.groupBox11.Location = new System.Drawing.Point(7, 143);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(376, 227);
+            this.groupBox11.TabIndex = 2;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Coorte 18 meses de seguimento";
+            // 
+            // cbxObito18Meses
+            // 
+            this.cbxObito18Meses.FormattingEnabled = true;
+            this.cbxObito18Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxObito18Meses.Location = new System.Drawing.Point(260, 179);
+            this.cbxObito18Meses.Name = "cbxObito18Meses";
+            this.cbxObito18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxObito18Meses.TabIndex = 41;
+            // 
+            // cbxAbandono18Meses
+            // 
+            this.cbxAbandono18Meses.FormattingEnabled = true;
+            this.cbxAbandono18Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxAbandono18Meses.Location = new System.Drawing.Point(260, 152);
+            this.cbxAbandono18Meses.Name = "cbxAbandono18Meses";
+            this.cbxAbandono18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxAbandono18Meses.TabIndex = 40;
+            // 
+            // cbxTransfOutrUniSanit
+            // 
+            this.cbxTransfOutrUniSanit.FormattingEnabled = true;
+            this.cbxTransfOutrUniSanit.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxTransfOutrUniSanit.Location = new System.Drawing.Point(260, 125);
+            this.cbxTransfOutrUniSanit.Name = "cbxTransfOutrUniSanit";
+            this.cbxTransfOutrUniSanit.Size = new System.Drawing.Size(109, 21);
+            this.cbxTransfOutrUniSanit.TabIndex = 39;
+            // 
+            // cbxTransConsIntgrCI18Meses
+            // 
+            this.cbxTransConsIntgrCI18Meses.FormattingEnabled = true;
+            this.cbxTransConsIntgrCI18Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxTransConsIntgrCI18Meses.Location = new System.Drawing.Point(260, 98);
+            this.cbxTransConsIntgrCI18Meses.Name = "cbxTransConsIntgrCI18Meses";
+            this.cbxTransConsIntgrCI18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxTransConsIntgrCI18Meses.TabIndex = 38;
+            // 
+            // cbxTransCCS18Meses
+            // 
+            this.cbxTransCCS18Meses.FormattingEnabled = true;
+            this.cbxTransCCS18Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxTransCCS18Meses.Location = new System.Drawing.Point(260, 71);
+            this.cbxTransCCS18Meses.Name = "cbxTransCCS18Meses";
+            this.cbxTransCCS18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxTransCCS18Meses.TabIndex = 37;
+            // 
+            // cbxResDef18Meses
+            // 
+            this.cbxResDef18Meses.FormattingEnabled = true;
+            this.cbxResDef18Meses.Items.AddRange(new object[] {
+            "Neg ",
+            "Pos"});
+            this.cbxResDef18Meses.Location = new System.Drawing.Point(260, 44);
+            this.cbxResDef18Meses.Name = "cbxResDef18Meses";
+            this.cbxResDef18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxResDef18Meses.TabIndex = 36;
+            // 
+            // cbxCE18Meses
+            // 
+            this.cbxCE18Meses.FormattingEnabled = true;
+            this.cbxCE18Meses.Items.AddRange(new object[] {
+            "SIM",
+            "NÃO"});
+            this.cbxCE18Meses.Location = new System.Drawing.Point(260, 17);
+            this.cbxCE18Meses.Name = "cbxCE18Meses";
+            this.cbxCE18Meses.Size = new System.Drawing.Size(109, 21);
+            this.cbxCE18Meses.TabIndex = 35;
+            // 
+            // lblObito18Meses
+            // 
+            this.lblObito18Meses.AutoSize = true;
+            this.lblObito18Meses.Location = new System.Drawing.Point(22, 182);
+            this.lblObito18Meses.Name = "lblObito18Meses";
+            this.lblObito18Meses.Size = new System.Drawing.Size(32, 13);
+            this.lblObito18Meses.TabIndex = 6;
+            this.lblObito18Meses.Text = "Obito";
+            // 
+            // lblAbandono18Meses
+            // 
+            this.lblAbandono18Meses.AutoSize = true;
+            this.lblAbandono18Meses.Location = new System.Drawing.Point(22, 155);
+            this.lblAbandono18Meses.Name = "lblAbandono18Meses";
+            this.lblAbandono18Meses.Size = new System.Drawing.Size(56, 13);
+            this.lblAbandono18Meses.TabIndex = 5;
+            this.lblAbandono18Meses.Text = "Abandono";
+            // 
+            // lblTransfOutrUniSanit
+            // 
+            this.lblTransfOutrUniSanit.AutoSize = true;
+            this.lblTransfOutrUniSanit.Location = new System.Drawing.Point(22, 128);
+            this.lblTransfOutrUniSanit.Name = "lblTransfOutrUniSanit";
+            this.lblTransfOutrUniSanit.Size = new System.Drawing.Size(198, 13);
+            this.lblTransfOutrUniSanit.TabIndex = 4;
+            this.lblTransfOutrUniSanit.Text = "Transferida para outra Unidade Sanitária";
+            // 
+            // lblTransConsIntgrCI18Meses
+            // 
+            this.lblTransConsIntgrCI18Meses.AutoSize = true;
+            this.lblTransConsIntgrCI18Meses.Location = new System.Drawing.Point(22, 101);
+            this.lblTransConsIntgrCI18Meses.Name = "lblTransConsIntgrCI18Meses";
+            this.lblTransConsIntgrCI18Meses.Size = new System.Drawing.Size(205, 13);
+            this.lblTransConsIntgrCI18Meses.TabIndex = 3;
+            this.lblTransConsIntgrCI18Meses.Text = "Transferida para Consultas Integradas (CI)";
+            // 
+            // lblTransCCS18Meses
+            // 
+            this.lblTransCCS18Meses.AutoSize = true;
+            this.lblTransCCS18Meses.Location = new System.Drawing.Point(22, 74);
+            this.lblTransCCS18Meses.Name = "lblTransCCS18Meses";
+            this.lblTransCCS18Meses.Size = new System.Drawing.Size(108, 13);
+            this.lblTransCCS18Meses.TabIndex = 2;
+            this.lblTransCCS18Meses.Text = "Transferida para CCS";
+            // 
+            // lblResDef18Meses
+            // 
+            this.lblResDef18Meses.AutoSize = true;
+            this.lblResDef18Meses.Location = new System.Drawing.Point(22, 47);
+            this.lblResDef18Meses.Name = "lblResDef18Meses";
+            this.lblResDef18Meses.Size = new System.Drawing.Size(149, 13);
+            this.lblResDef18Meses.TabIndex = 1;
+            this.lblResDef18Meses.Text = "Resultado definitivo 18 Meses";
+            // 
+            // lblCE18Meses
+            // 
+            this.lblCE18Meses.AutoSize = true;
+            this.lblCE18Meses.Location = new System.Drawing.Point(22, 20);
+            this.lblCE18Meses.Name = "lblCE18Meses";
+            this.lblCE18Meses.Size = new System.Drawing.Size(70, 13);
+            this.lblCE18Meses.TabIndex = 0;
+            this.lblCE18Meses.Text = "CE 18 Meses";
             // 
             // groupBox10
             // 
@@ -1437,7 +1609,7 @@
             // lblNrConsultaMain
             // 
             this.lblNrConsultaMain.AutoSize = true;
-            this.lblNrConsultaMain.Location = new System.Drawing.Point(521, 23);
+            this.lblNrConsultaMain.Location = new System.Drawing.Point(512, 23);
             this.lblNrConsultaMain.Name = "lblNrConsultaMain";
             this.lblNrConsultaMain.Size = new System.Drawing.Size(157, 13);
             this.lblNrConsultaMain.TabIndex = 17;
@@ -1466,178 +1638,6 @@
             this.btnGravarMain.TabIndex = 19;
             this.btnGravarMain.Text = "Gravar";
             this.btnGravarMain.UseVisualStyleBackColor = true;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.cbxObito18Meses);
-            this.groupBox11.Controls.Add(this.cbxAbandono18Meses);
-            this.groupBox11.Controls.Add(this.cbxTransfOutrUniSanit);
-            this.groupBox11.Controls.Add(this.cbxTransConsIntgrCI18Meses);
-            this.groupBox11.Controls.Add(this.cbxTransCCS18Meses);
-            this.groupBox11.Controls.Add(this.cbxResDef18Meses);
-            this.groupBox11.Controls.Add(this.cbxCE18Meses);
-            this.groupBox11.Controls.Add(this.lblObito18Meses);
-            this.groupBox11.Controls.Add(this.lblAbandono18Meses);
-            this.groupBox11.Controls.Add(this.lblTransfOutrUniSanit);
-            this.groupBox11.Controls.Add(this.lblTransConsIntgrCI18Meses);
-            this.groupBox11.Controls.Add(this.lblTransCCS18Meses);
-            this.groupBox11.Controls.Add(this.lblResDef18Meses);
-            this.groupBox11.Controls.Add(this.lblCE18Meses);
-            this.groupBox11.Location = new System.Drawing.Point(7, 143);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(376, 227);
-            this.groupBox11.TabIndex = 2;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Coorte 18 meses de seguimento";
-            // 
-            // btnAnteriorPage
-            // 
-            this.btnAnteriorPage.Location = new System.Drawing.Point(6, 383);
-            this.btnAnteriorPage.Name = "btnAnteriorPage";
-            this.btnAnteriorPage.Size = new System.Drawing.Size(109, 23);
-            this.btnAnteriorPage.TabIndex = 83;
-            this.btnAnteriorPage.Text = "Página Anterior";
-            this.btnAnteriorPage.UseVisualStyleBackColor = true;
-            // 
-            // lblCE18Meses
-            // 
-            this.lblCE18Meses.AutoSize = true;
-            this.lblCE18Meses.Location = new System.Drawing.Point(22, 20);
-            this.lblCE18Meses.Name = "lblCE18Meses";
-            this.lblCE18Meses.Size = new System.Drawing.Size(70, 13);
-            this.lblCE18Meses.TabIndex = 0;
-            this.lblCE18Meses.Text = "CE 18 Meses";
-            // 
-            // lblResDef18Meses
-            // 
-            this.lblResDef18Meses.AutoSize = true;
-            this.lblResDef18Meses.Location = new System.Drawing.Point(22, 47);
-            this.lblResDef18Meses.Name = "lblResDef18Meses";
-            this.lblResDef18Meses.Size = new System.Drawing.Size(149, 13);
-            this.lblResDef18Meses.TabIndex = 1;
-            this.lblResDef18Meses.Text = "Resultado definitivo 18 Meses";
-            // 
-            // lblTransCCS18Meses
-            // 
-            this.lblTransCCS18Meses.AutoSize = true;
-            this.lblTransCCS18Meses.Location = new System.Drawing.Point(22, 74);
-            this.lblTransCCS18Meses.Name = "lblTransCCS18Meses";
-            this.lblTransCCS18Meses.Size = new System.Drawing.Size(108, 13);
-            this.lblTransCCS18Meses.TabIndex = 2;
-            this.lblTransCCS18Meses.Text = "Transferida para CCS";
-            // 
-            // lblTransConsIntgrCI18Meses
-            // 
-            this.lblTransConsIntgrCI18Meses.AutoSize = true;
-            this.lblTransConsIntgrCI18Meses.Location = new System.Drawing.Point(22, 101);
-            this.lblTransConsIntgrCI18Meses.Name = "lblTransConsIntgrCI18Meses";
-            this.lblTransConsIntgrCI18Meses.Size = new System.Drawing.Size(205, 13);
-            this.lblTransConsIntgrCI18Meses.TabIndex = 3;
-            this.lblTransConsIntgrCI18Meses.Text = "Transferida para Consultas Integradas (CI)";
-            // 
-            // lblTransfOutrUniSanit
-            // 
-            this.lblTransfOutrUniSanit.AutoSize = true;
-            this.lblTransfOutrUniSanit.Location = new System.Drawing.Point(22, 128);
-            this.lblTransfOutrUniSanit.Name = "lblTransfOutrUniSanit";
-            this.lblTransfOutrUniSanit.Size = new System.Drawing.Size(198, 13);
-            this.lblTransfOutrUniSanit.TabIndex = 4;
-            this.lblTransfOutrUniSanit.Text = "Transferida para outra Unidade Sanitária";
-            // 
-            // lblAbandono18Meses
-            // 
-            this.lblAbandono18Meses.AutoSize = true;
-            this.lblAbandono18Meses.Location = new System.Drawing.Point(22, 155);
-            this.lblAbandono18Meses.Name = "lblAbandono18Meses";
-            this.lblAbandono18Meses.Size = new System.Drawing.Size(56, 13);
-            this.lblAbandono18Meses.TabIndex = 5;
-            this.lblAbandono18Meses.Text = "Abandono";
-            // 
-            // lblObito18Meses
-            // 
-            this.lblObito18Meses.AutoSize = true;
-            this.lblObito18Meses.Location = new System.Drawing.Point(22, 182);
-            this.lblObito18Meses.Name = "lblObito18Meses";
-            this.lblObito18Meses.Size = new System.Drawing.Size(32, 13);
-            this.lblObito18Meses.TabIndex = 6;
-            this.lblObito18Meses.Text = "Obito";
-            // 
-            // cbxCE18Meses
-            // 
-            this.cbxCE18Meses.FormattingEnabled = true;
-            this.cbxCE18Meses.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxCE18Meses.Location = new System.Drawing.Point(260, 17);
-            this.cbxCE18Meses.Name = "cbxCE18Meses";
-            this.cbxCE18Meses.Size = new System.Drawing.Size(109, 21);
-            this.cbxCE18Meses.TabIndex = 35;
-            // 
-            // cbxResDef18Meses
-            // 
-            this.cbxResDef18Meses.FormattingEnabled = true;
-            this.cbxResDef18Meses.Items.AddRange(new object[] {
-            "Neg ",
-            "Pos"});
-            this.cbxResDef18Meses.Location = new System.Drawing.Point(260, 44);
-            this.cbxResDef18Meses.Name = "cbxResDef18Meses";
-            this.cbxResDef18Meses.Size = new System.Drawing.Size(109, 21);
-            this.cbxResDef18Meses.TabIndex = 36;
-            // 
-            // cbxTransCCS18Meses
-            // 
-            this.cbxTransCCS18Meses.FormattingEnabled = true;
-            this.cbxTransCCS18Meses.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxTransCCS18Meses.Location = new System.Drawing.Point(260, 71);
-            this.cbxTransCCS18Meses.Name = "cbxTransCCS18Meses";
-            this.cbxTransCCS18Meses.Size = new System.Drawing.Size(109, 21);
-            this.cbxTransCCS18Meses.TabIndex = 37;
-            // 
-            // cbxTransConsIntgrCI18Meses
-            // 
-            this.cbxTransConsIntgrCI18Meses.FormattingEnabled = true;
-            this.cbxTransConsIntgrCI18Meses.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxTransConsIntgrCI18Meses.Location = new System.Drawing.Point(260, 98);
-            this.cbxTransConsIntgrCI18Meses.Name = "cbxTransConsIntgrCI18Meses";
-            this.cbxTransConsIntgrCI18Meses.Size = new System.Drawing.Size(109, 21);
-            this.cbxTransConsIntgrCI18Meses.TabIndex = 38;
-            // 
-            // cbxTransfOutrUniSanit
-            // 
-            this.cbxTransfOutrUniSanit.FormattingEnabled = true;
-            this.cbxTransfOutrUniSanit.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxTransfOutrUniSanit.Location = new System.Drawing.Point(260, 125);
-            this.cbxTransfOutrUniSanit.Name = "cbxTransfOutrUniSanit";
-            this.cbxTransfOutrUniSanit.Size = new System.Drawing.Size(109, 21);
-            this.cbxTransfOutrUniSanit.TabIndex = 39;
-            // 
-            // cbxAbandono18Meses
-            // 
-            this.cbxAbandono18Meses.FormattingEnabled = true;
-            this.cbxAbandono18Meses.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxAbandono18Meses.Location = new System.Drawing.Point(260, 152);
-            this.cbxAbandono18Meses.Name = "cbxAbandono18Meses";
-            this.cbxAbandono18Meses.Size = new System.Drawing.Size(109, 21);
-            this.cbxAbandono18Meses.TabIndex = 40;
-            // 
-            // cbxObito18Meses
-            // 
-            this.cbxObito18Meses.FormattingEnabled = true;
-            this.cbxObito18Meses.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxObito18Meses.Location = new System.Drawing.Point(260, 179);
-            this.cbxObito18Meses.Name = "cbxObito18Meses";
-            this.cbxObito18Meses.Size = new System.Drawing.Size(109, 21);
-            this.cbxObito18Meses.TabIndex = 41;
             // 
             // FrmCCR
             // 
@@ -1672,12 +1672,12 @@
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
