@@ -213,7 +213,7 @@
             // 
             // btnProximaPagina
             // 
-            this.btnProximaPagina.Location = new System.Drawing.Point(870, 380);
+            this.btnProximaPagina.Location = new System.Drawing.Point(876, 380);
             this.btnProximaPagina.Name = "btnProximaPagina";
             this.btnProximaPagina.Size = new System.Drawing.Size(113, 23);
             this.btnProximaPagina.TabIndex = 40;
@@ -930,7 +930,7 @@
             // 
             // btnAnteriorPage
             // 
-            this.btnAnteriorPage.Location = new System.Drawing.Point(6, 383);
+            this.btnAnteriorPage.Location = new System.Drawing.Point(3, 383);
             this.btnAnteriorPage.Name = "btnAnteriorPage";
             this.btnAnteriorPage.Size = new System.Drawing.Size(109, 23);
             this.btnAnteriorPage.TabIndex = 83;
