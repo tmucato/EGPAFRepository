@@ -34,7 +34,7 @@
             this.btnBuscarMain = new System.Windows.Forms.Button();
             this.txtNidCCR = new System.Windows.Forms.TextBox();
             this.lblNidCrc = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabCPP = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnProximaPagina = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -134,7 +134,7 @@
             this.cbxSeroEntrCPP = new System.Windows.Forms.ComboBox();
             this.lblSeroEntrCPP = new System.Windows.Forms.Label();
             this.btnAnteriorPage = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.tabCPP.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -204,15 +204,15 @@
             this.lblNidCrc.TabIndex = 20;
             this.lblNidCrc.Text = "NID da Criança";
             // 
-            // tabControl1
+            // tabCPP
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 42);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1003, 435);
-            this.tabControl1.TabIndex = 26;
+            this.tabCPP.Controls.Add(this.tabPage1);
+            this.tabCPP.Controls.Add(this.tabPage2);
+            this.tabCPP.Location = new System.Drawing.Point(12, 42);
+            this.tabCPP.Name = "tabCPP";
+            this.tabCPP.SelectedIndex = 0;
+            this.tabCPP.Size = new System.Drawing.Size(1003, 435);
+            this.tabCPP.TabIndex = 26;
             // 
             // tabPage1
             // 
@@ -240,6 +240,7 @@
             this.btnProximaPagina.TabIndex = 41;
             this.btnProximaPagina.Text = "Página Seguinte";
             this.btnProximaPagina.UseVisualStyleBackColor = true;
+            this.btnProximaPagina.Click += new System.EventHandler(this.btnProximaPagina_Click);
             // 
             // groupBox6
             // 
@@ -1268,13 +1269,14 @@
             this.btnAnteriorPage.TabIndex = 84;
             this.btnAnteriorPage.Text = "Página Anterior";
             this.btnAnteriorPage.UseVisualStyleBackColor = true;
+            this.btnAnteriorPage.Click += new System.EventHandler(this.btnAnteriorPage_Click);
             // 
             // FrmCPP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 487);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabCPP);
             this.Controls.Add(this.btnGravarMain);
             this.Controls.Add(this.cbxNrConsultaMain);
             this.Controls.Add(this.lblNrConsultaMain);
@@ -1282,8 +1284,8 @@
             this.Controls.Add(this.txtNidCCR);
             this.Controls.Add(this.lblNidCrc);
             this.Name = "FrmCPP";
-            this.Text = "FrmPP - Formulário de Registo de Consultas Pós Parto";
-            this.tabControl1.ResumeLayout(false);
+            this.Text = "FrmCPP - Formulário de Registo de Consultas Pós Parto";
+            this.tabCPP.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
@@ -1317,7 +1319,7 @@
         private System.Windows.Forms.Button btnBuscarMain;
         private System.Windows.Forms.TextBox txtNidCCR;
         private System.Windows.Forms.Label lblNidCrc;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabCPP;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;

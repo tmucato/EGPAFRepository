@@ -16,5 +16,15 @@ namespace smi
         {
             InitializeComponent();
         }
+
+        private void btnProximaPagina_Click(object sender, EventArgs e)
+        {
+            this.tabCPP.SelectedIndex = 1;
+        }
+
+        private void btnAnteriorPage_Click(object sender, EventArgs e)
+        {
+            this.tabCPP.SelectedIndex = 0;
+        }
     }
 }
