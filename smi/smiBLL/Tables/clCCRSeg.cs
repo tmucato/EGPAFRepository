@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace smiBLL.Tables
+namespace smiBLL
 {
     public class clCCRSeg : clTableBase<clCCRSeg>
     {

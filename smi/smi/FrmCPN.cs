@@ -661,9 +661,7 @@ namespace smi
             cpn.obs = txtObs.Text;
             cpn.providername = txtNomeProf.Text;
             cpn.UpdateEntity();
-
-
-
+            
         }
     }
 }

@@ -97,7 +97,7 @@
             this.lblResidencia = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtNidTarv = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabCCR = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnAnteriorPage = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -176,7 +176,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabCCR.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -219,6 +219,7 @@
             this.btnProximaPagina.TabIndex = 40;
             this.btnProximaPagina.Text = "Página Seguinte";
             this.btnProximaPagina.UseVisualStyleBackColor = true;
+            this.btnProximaPagina.Click += new System.EventHandler(this.btnProximaPagina_Click);
             // 
             // groupBox8
             // 
@@ -904,15 +905,15 @@
             this.txtNidTarv.Size = new System.Drawing.Size(312, 20);
             this.txtNidTarv.TabIndex = 15;
             // 
-            // tabControl1
+            // tabCCR
             // 
-            this.tabControl1.Controls.Add(this.ccrPage1);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(12, 48);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1003, 435);
-            this.tabControl1.TabIndex = 0;
+            this.tabCCR.Controls.Add(this.ccrPage1);
+            this.tabCCR.Controls.Add(this.tabPage1);
+            this.tabCCR.Location = new System.Drawing.Point(12, 48);
+            this.tabCCR.Name = "tabCCR";
+            this.tabCCR.SelectedIndex = 0;
+            this.tabCCR.Size = new System.Drawing.Size(1003, 435);
+            this.tabCCR.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -936,6 +937,7 @@
             this.btnAnteriorPage.TabIndex = 83;
             this.btnAnteriorPage.Text = "Página Anterior";
             this.btnAnteriorPage.UseVisualStyleBackColor = true;
+            this.btnAnteriorPage.Click += new System.EventHandler(this.btnAnteriorPage_Click);
             // 
             // groupBox11
             // 
@@ -1605,6 +1607,7 @@
             this.btnBuscarMain.TabIndex = 16;
             this.btnBuscarMain.Text = "Buscar";
             this.btnBuscarMain.UseVisualStyleBackColor = true;
+            this.btnBuscarMain.Click += new System.EventHandler(this.btnBuscarMain_Click);
             // 
             // lblNrConsultaMain
             // 
@@ -1650,7 +1653,7 @@
             this.Controls.Add(this.btnBuscarMain);
             this.Controls.Add(this.txtNidCCR);
             this.Controls.Add(this.lblNidCrc);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabCCR);
             this.Name = "FrmCCR";
             this.Text = "FrmCCR - Formulário  de Registo de Consulta de Criança em Risco ";
             this.ccrPage1.ResumeLayout(false);
@@ -1670,7 +1673,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabCCR.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
@@ -1687,7 +1690,7 @@
 
         private System.Windows.Forms.TabPage ccrPage1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabCCR;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblNidTarv;
         private System.Windows.Forms.TextBox txtTelefone;

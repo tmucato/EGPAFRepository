@@ -1,4 +1,5 @@
-﻿using System;
+﻿using smiBLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,35 @@ namespace smi
             InitializeComponent();
         }
 
+        private void btnBuscarMain_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                clCCR ccr;
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+
+
+
+        private void btnProximaPagina_Click(object sender, EventArgs e)
+        {
+            this.tabCCR.SelectedIndex = 1;
+        }
+
+        private void btnAnteriorPage_Click(object sender, EventArgs e)
+        {
+            this.tabCCR.SelectedIndex = 0;
+        }
+
+        
     }
 }
