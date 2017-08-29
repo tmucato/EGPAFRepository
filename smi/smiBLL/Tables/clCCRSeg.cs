@@ -10,7 +10,7 @@ namespace smiBLL
     public class clCCRSeg : clTableBase<clCCRSeg>
     {
         public int id;
-        public int idccr;
+        public int idchild;
         public Nullable<bool> lostfollowup;
         public Nullable<bool> death;
         public Nullable<bool> ce2;
@@ -29,7 +29,7 @@ namespace smiBLL
         public clCCRSeg()
         {
             id = 0;
-            idccr = 0;
+            idchild = 0;
             lostfollowup = null;
             death = null;
             ce2 = null;

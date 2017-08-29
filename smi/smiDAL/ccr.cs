@@ -23,7 +23,7 @@ namespace smiDAL
         public int idchild { get; set; }
         public int nyear { get; set; }
         public string nlivro { get; set; }
-        public Nullable<bool> nr_consulta { get; set; }
+        public Nullable<int> nr_consulta { get; set; }
         public Nullable<System.DateTime> dataconsulta { get; set; }
         public Nullable<int> age { get; set; }
         public string ageunit { get; set; }

@@ -15,7 +15,7 @@ namespace smiDAL
     public partial class ccrseg
     {
         public int id { get; set; }
-        public int idccr { get; set; }
+        public int idchild { get; set; }
         public Nullable<bool> lostfollowup { get; set; }
         public Nullable<bool> death { get; set; }
         public Nullable<bool> ce2 { get; set; }

@@ -211,7 +211,7 @@
           <ScalarProperty Name="ce2" ColumnName="ce2" />
           <ScalarProperty Name="death" ColumnName="death" />
           <ScalarProperty Name="lostfollowup" ColumnName="lostfollowup" />
-          <ScalarProperty Name="idccr" ColumnName="idccr" />
+          <ScalarProperty Name="idchild" ColumnName="idchild" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

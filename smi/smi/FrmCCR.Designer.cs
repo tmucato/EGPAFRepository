@@ -89,14 +89,14 @@
             this.txtNidCpnMain = new System.Windows.Forms.TextBox();
             this.lblNidCpnMae = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNidTarv = new System.Windows.Forms.Label();
+            this.lblNidCCR = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtResidencia = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblResidencia = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtNidTarv = new System.Windows.Forms.TextBox();
+            this.txtNidCCRID = new System.Windows.Forms.TextBox();
             this.tabCCR = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnAnteriorPage = new System.Windows.Forms.Button();
@@ -822,14 +822,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblNidTarv);
+            this.groupBox1.Controls.Add(this.lblNidCCR);
             this.groupBox1.Controls.Add(this.txtTelefone);
             this.groupBox1.Controls.Add(this.txtResidencia);
             this.groupBox1.Controls.Add(this.lblTelefone);
             this.groupBox1.Controls.Add(this.lblName);
             this.groupBox1.Controls.Add(this.lblResidencia);
             this.groupBox1.Controls.Add(this.txtNome);
-            this.groupBox1.Controls.Add(this.txtNidTarv);
+            this.groupBox1.Controls.Add(this.txtNidCCRID);
             this.groupBox1.Location = new System.Drawing.Point(22, 23);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(423, 137);
@@ -837,14 +837,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificação";
             // 
-            // lblNidTarv
+            // lblNidCCR
             // 
-            this.lblNidTarv.AutoSize = true;
-            this.lblNidTarv.Location = new System.Drawing.Point(16, 31);
-            this.lblNidTarv.Name = "lblNidTarv";
-            this.lblNidTarv.Size = new System.Drawing.Size(58, 13);
-            this.lblNidTarv.TabIndex = 11;
-            this.lblNidTarv.Text = "NID TARV";
+            this.lblNidCCR.AutoSize = true;
+            this.lblNidCCR.Location = new System.Drawing.Point(16, 31);
+            this.lblNidCCR.Name = "lblNidCCR";
+            this.lblNidCCR.Size = new System.Drawing.Size(51, 13);
+            this.lblNidCCR.TabIndex = 11;
+            this.lblNidCCR.Text = "NID CCR";
             // 
             // txtTelefone
             // 
@@ -897,13 +897,13 @@
             this.txtNome.Size = new System.Drawing.Size(312, 20);
             this.txtNome.TabIndex = 16;
             // 
-            // txtNidTarv
+            // txtNidCCRID
             // 
-            this.txtNidTarv.Enabled = false;
-            this.txtNidTarv.Location = new System.Drawing.Point(90, 28);
-            this.txtNidTarv.Name = "txtNidTarv";
-            this.txtNidTarv.Size = new System.Drawing.Size(312, 20);
-            this.txtNidTarv.TabIndex = 15;
+            this.txtNidCCRID.Enabled = false;
+            this.txtNidCCRID.Location = new System.Drawing.Point(90, 28);
+            this.txtNidCCRID.Name = "txtNidCCRID";
+            this.txtNidCCRID.Size = new System.Drawing.Size(312, 20);
+            this.txtNidCCRID.TabIndex = 15;
             // 
             // tabCCR
             // 
@@ -1692,14 +1692,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabControl tabCCR;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lblNidTarv;
+        private System.Windows.Forms.Label lblNidCCR;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtResidencia;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblResidencia;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtNidTarv;
+        private System.Windows.Forms.TextBox txtNidCCRID;
         private System.Windows.Forms.TextBox txtNidTarvMae;
         private System.Windows.Forms.Label lblNidTarvMae;
         private System.Windows.Forms.TextBox txtNidCpnMain;

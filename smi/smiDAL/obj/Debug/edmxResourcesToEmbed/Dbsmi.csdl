@@ -159,7 +159,7 @@
     <Property Name="idchild" Type="Int32" Nullable="false" />
     <Property Name="nyear" Type="Int32" Nullable="false" />
     <Property Name="nlivro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="nr_consulta" Type="Boolean" />
+    <Property Name="nr_consulta" Type="Int32" />
     <Property Name="dataconsulta" Type="DateTime" />
     <Property Name="age" Type="Int32" />
     <Property Name="ageunit" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
@@ -225,7 +225,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="idccr" Type="Int32" Nullable="false" />
+    <Property Name="idchild" Type="Int32" Nullable="false" />
     <Property Name="lostfollowup" Type="Boolean" />
     <Property Name="death" Type="Boolean" />
     <Property Name="ce2" Type="Boolean" />
@@ -249,7 +249,7 @@
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="ccrseg">
-        <PropertyRef Name="idccr" />
+        <PropertyRef Name="idchild" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -8,7 +8,7 @@
     <Property Name="idchild" Type="int" Nullable="false" />
     <Property Name="nyear" Type="int" Nullable="false" />
     <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="nr_consulta" Type="bool" />
+    <Property Name="nr_consulta" Type="int" />
     <Property Name="dataconsulta" Type="date" />
     <Property Name="age" Type="int" />
     <Property Name="ageunit" Type="char" MaxLength="1" />
@@ -60,7 +60,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="idccr" Type="int" Nullable="false" />
+    <Property Name="idchild" Type="int" Nullable="false" />
     <Property Name="lostfollowup" Type="bool" />
     <Property Name="death" Type="bool" />
     <Property Name="ce2" Type="bool" />
@@ -216,7 +216,7 @@
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="ccrseg">
-        <PropertyRef Name="idccr" />
+        <PropertyRef Name="idchild" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

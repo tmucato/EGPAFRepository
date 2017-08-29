@@ -43,23 +43,23 @@ namespace smi
 
             try
             {
-                string nidcpn = txtNidCpnMain.Text;
-                int mother_id = moth.GetEntityList().Where(m => m.nid_cpn == nidcpn).FirstOrDefault().id;
-                cpn_final = cpn_final.GetEntityList().Where(cf => cf.idmother == mother_id).FirstOrDefault();
-                if (cbxNrConsultaMain.SelectedIndex >= 0)
+                if (!string.IsNullOrWhiteSpace(txtNidCpnMain.Text))
                 {
-                    cpn = cpn.GetEntityList().Where(c => c.idmother == mother_id && c.nr_consulta == Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()))).FirstOrDefault();
-                    SaveCPNDataToDataBase(cpn);
+                    string nidcpn = txtNidCpnMain.Text;
+                    int mother_id = moth.GetEntityList().Where(m => m.nid_cpn == nidcpn).FirstOrDefault().id;
+                    cpn_final = cpn_final.GetEntityList().Where(cf => cf.idmother == mother_id).FirstOrDefault();
+                    if (cbxNrConsultaMain.SelectedIndex >= 0)
+                    {
+                        cpn = cpn.GetEntityList().Where(c => c.idmother == mother_id && c.nr_consulta == Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()))).FirstOrDefault();
+                        SaveCPNDataToDataBase(cpn);
+                    }
+                    SaveCPNFinalDataToDataBase(cpn_final);
                 }
-                SaveCPNFinalDataToDataBase(cpn_final);
-
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
-
 
         }
 
@@ -92,7 +92,6 @@ namespace smi
 
                             if (cbxNrConsultaMain.SelectedIndex >= 0)
                             {
-                                cpn = new clCPN();
                                 cpn = list_cpn.Where(c => c.nr_consulta == Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()))).FirstOrDefault();
                                 BindCPNControls(cpn);
                             }
@@ -661,7 +660,7 @@ namespace smi
             cpn.obs = txtObs.Text;
             cpn.providername = txtNomeProf.Text;
             cpn.UpdateEntity();
-            
+
         }
     }
 }

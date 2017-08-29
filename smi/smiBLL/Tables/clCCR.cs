@@ -15,7 +15,7 @@ namespace smiBLL
         public int idchild;
         public int nyear;
         public string nlivro;
-        public Nullable<bool> nr_consulta;
+        public int nr_consulta;
         public Nullable<System.DateTime> dataconsulta;
         public Nullable<int> age;
         public string ageunit;
@@ -68,7 +68,7 @@ namespace smiBLL
             idchild = 0;
             nyear = 0;
             nlivro = string.Empty;
-            nr_consulta = null;
+            nr_consulta = 0;
             dataconsulta = null;
             age = 0;
             ageunit = string.Empty;
@@ -128,11 +128,11 @@ namespace smiBLL
                     foreach (ccr db_ccr in DbContext.ccrs)
                     {
                         clCCR obj_ccr = new clCCR();
-                        obj_ccr.id = Convert.ToInt32( db_ccr.id);
-                        obj_ccr.idchild = Convert.ToInt32( db_ccr.idchild);
-                        obj_ccr.nyear = Convert.ToInt32( db_ccr.nyear);
+                        obj_ccr.id = Convert.ToInt32(db_ccr.id);
+                        obj_ccr.idchild = Convert.ToInt32(db_ccr.idchild);
+                        obj_ccr.nyear = Convert.ToInt32(db_ccr.nyear);
                         obj_ccr.nlivro = db_ccr.nlivro;
-                        obj_ccr.nr_consulta = db_ccr.nr_consulta;
+                        obj_ccr.nr_consulta = Convert.ToInt32(db_ccr.nr_consulta);
                         obj_ccr.dataconsulta = db_ccr.dataconsulta;
                         obj_ccr.age = db_ccr.age;
                         obj_ccr.ageunit = db_ccr.ageunit;
@@ -180,7 +180,7 @@ namespace smiBLL
                         obj_ccr.pnctl = db_ccr.pnctl;
                         List_ccr.Add(obj_ccr);
                     }
-                    
+
                 }
             }
             catch (Exception ex)
