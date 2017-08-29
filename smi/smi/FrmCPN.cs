@@ -33,6 +33,36 @@ namespace smi
             this.tabCPN.SelectedIndex = 1;
         }
 
+
+        private void btnGravarMain_Click(object sender, EventArgs e)
+        {
+            clCPN cpn = new clCPN();
+            clMother moth = new clMother();
+            List<clCPN> list_cpn = new List<clCPN>();
+            clCPNFinal cpn_final = new clCPNFinal();
+
+            try
+            {
+                string nidcpn = txtNidCpnMain.Text;
+                int mother_id = moth.GetEntityList().Where(m => m.nid_cpn == nidcpn).FirstOrDefault().id;
+                cpn_final = cpn_final.GetEntityList().Where(cf => cf.idmother == mother_id).FirstOrDefault();
+                if (cbxNrConsultaMain.SelectedIndex >= 0)
+                {
+                    cpn = cpn.GetEntityList().Where(c => c.idmother == mother_id && c.nr_consulta == Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()))).FirstOrDefault();
+                    SaveCPNDataToDataBase(cpn);
+                }
+                SaveCPNFinalDataToDataBase(cpn_final);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+        }
+
         private void btnBuscarMain_Click(object sender, EventArgs e)
         {
             clCPN cpn;
@@ -294,7 +324,6 @@ namespace smi
 
                 ClearCPNFinalControls();
 
-
                 lblIdMother.Text = cpn_fin.idmother.ToString();
                 lblIdCpnFinal.Text = cpn_fin.id.ToString();
                 if (cpn_fin.cons_more4 != null)
@@ -405,10 +434,7 @@ namespace smi
 
         }
 
-        private void btnGravarMain_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnAnteriorPage3_Click(object sender, EventArgs e)
         {
@@ -468,63 +494,63 @@ namespace smi
                     cpnfin.idmother = Convert.ToInt32(lblIdMother.Text);
                 if (!string.IsNullOrWhiteSpace(lblNrLivro.Text))
                     cpnfin.nlivro = lblNrLivro.Text;
-                if (cbxFinalMaisConsult.SelectedIndex > 0)
+                if (cbxFinalMaisConsult.SelectedIndex >= 0)
                     cpnfin.cons_more4 = Functions.ConvertComboValueToBool(cbxFinalMaisConsult.SelectedItem.ToString());
-                if (cbxFinalParcePrese.SelectedIndex > 0)
+                if (cbxFinalParcePrese.SelectedIndex >= 0)
                     cpnfin.partnerpreence = Functions.ConvertComboValueToBool(cbxFinalParcePrese.SelectedItem.ToString()); ;
-                if (cbxFinalGanho15.SelectedIndex > 0)
+                if (cbxFinalGanho15.SelectedIndex >= 0)
                     cpnfin.weightgainyno = cbxFinalGanho15.SelectedItem.ToString();
-                if (cbxFinalDAG.SelectedIndex > 0)
+                if (cbxFinalDAG.SelectedIndex >= 0)
                     cpnfin.dag = Functions.ConvertComboValueToBool(cbxFinalDAG.SelectedItem.ToString());
-                if (cbxFinalDAM.SelectedIndex > 0)
+                if (cbxFinalDAM.SelectedIndex >= 0)
                     cpnfin.dam = Functions.ConvertComboValueToBool(cbxFinalDAM.SelectedItem.ToString());
-                if (cbxFinalRecSuplNutri.SelectedIndex > 0)
+                if (cbxFinalRecSuplNutri.SelectedIndex >= 0)
                     cpnfin.supnutr = cbxFinalRecSuplNutri.SelectedItem.ToString();
-                if (cbxFinalCuradoDesntr.SelectedIndex > 0)
+                if (cbxFinalCuradoDesntr.SelectedIndex >= 0)
                     cpnfin.resultcured = cbxFinalCuradoDesntr.SelectedItem.ToString();
-                if (cbxFinalAbandDesnutr.SelectedIndex > 0)
+                if (cbxFinalAbandDesnutr.SelectedIndex >= 0)
                     cpnfin.resultabandon = cbxFinalAbandDesnutr.SelectedItem.ToString();
-                if (cbxFinalRecDespara.SelectedIndex > 0)
+                if (cbxFinalRecDespara.SelectedIndex >= 0)
                     cpnfin.receiveddesparasitante = cbxFinalRecDespara.SelectedItem.ToString();
-                if (cbxFinalSalFerrMais3.SelectedIndex > 0)
+                if (cbxFinalSalFerrMais3.SelectedIndex >= 0)
                     cpnfin.salferr_more3 = Functions.ConvertComboValueToBool(cbxFinalSalFerrMais3.SelectedItem.ToString());
-                if (cbxFinalDiagITS.SelectedIndex > 0)
+                if (cbxFinalDiagITS.SelectedIndex >= 0)
                     cpnfin.its_diag = Functions.ConvertComboValueToBool(cbxFinalDiagITS.SelectedItem.ToString());
-                if (cbxFinalTratITS.SelectedIndex > 0)
+                if (cbxFinalTratITS.SelectedIndex >= 0)
                     cpnfin.its_treatment = cbxFinalTratITS.SelectedItem.ToString();
-                if (cbxFinalTestSiflis.SelectedIndex > 0)
+                if (cbxFinalTestSiflis.SelectedIndex >= 0)
                     cpnfin.its_syphilistesting = cbxFinalTestSiflis.SelectedItem.ToString();
-                if (cbxFinalTratSiflMulher.SelectedIndex > 0)
+                if (cbxFinalTratSiflMulher.SelectedIndex >= 0)
                     cpnfin.its_wsyphilistreat = Functions.ConvertComboValueToBool(cbxFinalTratSiflMulher.SelectedItem.ToString());
-                if (cbxFinalTratSiflParc.SelectedIndex > 0)
+                if (cbxFinalTratSiflParc.SelectedIndex >= 0)
                     cpnfin.its_psyphilistreat = cbxFinalTratSiflParc.SelectedItem.ToString();
-                if (cbxFinalEstadoHIVMulher.SelectedIndex > 0)
+                if (cbxFinalEstadoHIVMulher.SelectedIndex >= 0)
                     cpnfin.womanserostatus = cbxFinalEstadoHIVMulher.SelectedItem.ToString();
-                if (cbxFinalEstadoHIVPar.SelectedIndex > 0)
+                if (cbxFinalEstadoHIVPar.SelectedIndex >= 0)
                     cpnfin.partnerserostatus = cbxFinalEstadoHIVPar.SelectedItem.ToString();
-                if (cbxFinalCTZEntrada.SelectedIndex > 0)
+                if (cbxFinalCTZEntrada.SelectedIndex >= 0)
                     cpnfin.ctz_entr = Functions.ConvertComboValueToBool(cbxFinalCTZEntrada.SelectedItem.ToString());
-                if (cbxFinalIniCTZ.SelectedIndex > 0)
+                if (cbxFinalIniCTZ.SelectedIndex >= 0)
                     cpnfin.ctz_init = Functions.ConvertComboValueToBool(cbxFinalIniCTZ.SelectedItem.ToString());
-                if (cbxFinalResARV.SelectedIndex > 0)
+                if (cbxFinalResARV.SelectedIndex >= 0)
                     cpnfin.finalresult_arv = cbxFinalResARV.SelectedItem.ToString();
-                if (cbxFinalTIP.SelectedIndex > 0)
+                if (cbxFinalTIP.SelectedIndex >= 0)
                     cpnfin.tip = cbxFinalTIP.SelectedItem.ToString();
-                if (cbxFinalRecRedeMosq.SelectedIndex > 0)
+                if (cbxFinalRecRedeMosq.SelectedIndex >= 0)
                     cpnfin.bednet = cbxFinalRecRedeMosq.SelectedItem.ToString();
-                if (cbxFinalDigLabMal.SelectedIndex > 0)
+                if (cbxFinalDigLabMal.SelectedIndex >= 0)
                     cpnfin.mal_diag_lab = cbxFinalDigLabMal.SelectedItem.ToString();
-                if (cbxFinalTratMal.SelectedIndex > 0)
+                if (cbxFinalTratMal.SelectedIndex >= 0)
                     cpnfin.mal_treatment = cbxFinalTratMal.SelectedItem.ToString();
-                if (cbxFinalRecHPP.SelectedIndex > 0)
+                if (cbxFinalRecHPP.SelectedIndex >= 0)
                     cpnfin.mp = cbxFinalRecHPP.SelectedItem.ToString();
-                if (cbxFinalVat1Dose.SelectedIndex > 0)
+                if (cbxFinalVat1Dose.SelectedIndex >= 0)
                     cpnfin.vat_1_dose = Functions.ConvertComboValueToBool(cbxFinalVat1Dose.SelectedItem.ToString());
-                if (cbxFinalVat2_5Dose.SelectedIndex > 0)
+                if (cbxFinalVat2_5Dose.SelectedIndex >= 0)
                     cpnfin.vat_2_5_dose = Functions.ConvertComboValueToBool(cbxFinalVat2_5Dose.SelectedItem.ToString());
-                if (cbxFinalINH.SelectedIndex > 0)
+                if (cbxFinalINH.SelectedIndex >= 0)
                     cpnfin.tb_isoniazid = Functions.ConvertComboValueToBool(cbxFinalINH.SelectedItem.ToString());
-                if (cbxFinalTratTB.SelectedIndex > 0)
+                if (cbxFinalTratTB.SelectedIndex >= 0)
                     cpnfin.tb_treatment = Functions.ConvertComboValueToBool(cbxFinalTratTB.SelectedItem.ToString());
                 cpnfin.UpdateEntity();
             }
@@ -538,7 +564,7 @@ namespace smi
         {
 
             cpn.id = Convert.ToInt32(lblIdCpn.Text);
-            if (cbxNrConulta.SelectedIndex > 0)
+            if (cbxNrConulta.SelectedIndex >= 0)
                 cpn.nr_consulta = Functions.ConvertComboConsultToNumb(cbxNrConulta.SelectedItem.ToString());
             cpn.idmother = Convert.ToInt32(lblIdMother.Text);
 
@@ -546,91 +572,91 @@ namespace smi
             if (Functions.IsNumber(txtAnoLivro.Text))
                 cpn.nyear = Convert.ToInt32(txtAnoLivro.Text);
             cpn.visdate = dtpDataConsulta.Value;
-            if (cbxFaixaEtaria.SelectedIndex > 0)
+            if (cbxFaixaEtaria.SelectedIndex >= 0)
                 cpn.agegroup = cbxFaixaEtaria.SelectedItem.ToString();
             if (Functions.IsNumber(txtIdadeGest.Text))
                 cpn.gestationalage = Convert.ToInt32(txtIdadeGest.Text);
-            if (cbxIdaMen12Sem.SelectedIndex > 0)
+            if (cbxIdaMen12Sem.SelectedIndex >= 0)
                 cpn.gageless12 = Functions.ConvertComboValueToBool(cbxFaixaEtaria.SelectedItem.ToString());
-            if (cbxParPresent.SelectedIndex > 0)
+            if (cbxParPresent.SelectedIndex >= 0)
                 cpn.partnerpresence = Functions.ConvertComboValueToBool(cbxParPresent.SelectedItem.ToString());
             if (Functions.IsNumber(txtPeso.Text))
                 cpn.weight = Convert.ToInt32(txtPeso.Text);
-            if (cbxGanhoMaior15.SelectedIndex > 0)
+            if (cbxGanhoMaior15.SelectedIndex >= 0)
                 cpn.weightgainyno = cbxGanhoMaior15.SelectedItem.ToString();
-            if (cbxDAG.SelectedIndex > 0)
+            if (cbxDAG.SelectedIndex >= 0)
                 cpn.dag = Functions.ConvertComboValueToBool(cbxDAG.SelectedItem.ToString());
-            if (cbxDAM.SelectedIndex > 0)
+            if (cbxDAM.SelectedIndex >= 0)
                 cpn.dam = Functions.ConvertComboValueToBool(cbxDAM.SelectedItem.ToString());
             if (Functions.IsNumber(txtRecSuplNutrQty.Text))
                 cpn.supnutr = Convert.ToInt32(txtRecSuplNutrQty.Text);
-            if (cbxCurada.SelectedIndex > 0)
+            if (cbxCurada.SelectedIndex >= 0)
                 cpn.resultcured = cbxCurada.SelectedItem.ToString();
             //Campo indisponivel ni livro.
             cpn.resultabandon = string.Empty;
-            if (cbxRecDesparasitante.SelectedIndex > 0)
+            if (cbxRecDesparasitante.SelectedIndex >= 0)
                 cpn.receiveddesparasitante = string.Empty;
-            if (cbxSalFerrAcFol.SelectedIndex > 0)
+            if (cbxSalFerrAcFol.SelectedIndex >= 0)
                 cpn.salferr_acfolico = cbxSalFerrAcFol.SelectedItem.ToString();
-            if (cbxtensaoArte.SelectedIndex > 0)
+            if (cbxtensaoArte.SelectedIndex >= 0)
                 cpn.ta = cbxtensaoArte.SelectedItem.ToString();
-            if (cbxHemoglobina.SelectedIndex > 0)
+            if (cbxHemoglobina.SelectedIndex >= 0)
                 cpn.hgb = cbxHemoglobina.SelectedItem.ToString();
-            if (cbxProteinuria.SelectedIndex > 0)
+            if (cbxProteinuria.SelectedIndex >= 0)
                 cpn.proteinuria = cbxProteinuria.SelectedItem.ToString();
-            if (cbxGlicosuria.SelectedIndex > 0)
+            if (cbxGlicosuria.SelectedIndex >= 0)
                 cpn.glicosuria = cbxGlicosuria.SelectedItem.ToString();
-            if (cbxUlcera.SelectedIndex > 0)
+            if (cbxUlcera.SelectedIndex >= 0)
                 cpn.its_ulceragenital = Functions.ConvertComboValueToBool(cbxUlcera.SelectedItem.ToString());
-            if (cbxLeucorreia.SelectedIndex > 0)
+            if (cbxLeucorreia.SelectedIndex >= 0)
                 cpn.its_leucorreia = Functions.ConvertComboValueToBool(cbxLeucorreia.SelectedItem.ToString());
-            if (cbxSindromicoITS.SelectedIndex > 0)
+            if (cbxSindromicoITS.SelectedIndex >= 0)
                 cpn.its_syndromictreatment = cbxSindromicoITS.SelectedItem.ToString();
-            if (cbxTesteSiflis.SelectedIndex > 0)
+            if (cbxTesteSiflis.SelectedIndex >= 0)
                 cpn.its_syphilistesting = cbxTesteSiflis.SelectedItem.ToString();
-            if (cbxtratSiflMulher.SelectedIndex > 0)
+            if (cbxtratSiflMulher.SelectedIndex >= 0)
                 cpn.its_wsyphilistreat = cbxtratSiflMulher.SelectedItem.ToString();
-            if (cbxtratSiflParceiro.SelectedIndex > 0)
+            if (cbxtratSiflParceiro.SelectedIndex >= 0)
                 cpn.its_psyphilistreat = cbxtratSiflParceiro.SelectedItem.ToString();
-            if (cbxSerEstad1CPN.SelectedIndex > 0)
+            if (cbxSerEstad1CPN.SelectedIndex >= 0)
                 cpn.serostatusentcpn = cbxSerEstad1CPN.SelectedItem.ToString();
-            if (cbxtesteHivCpn.SelectedIndex > 0)
+            if (cbxtesteHivCpn.SelectedIndex >= 0)
                 cpn.cpnhivtest = cbxtesteHivCpn.SelectedItem.ToString();
-            if (cbxTesteParceiro.SelectedIndex > 0)
+            if (cbxTesteParceiro.SelectedIndex >= 0)
                 cpn.partnerhivtest = cbxTesteParceiro.SelectedItem.ToString();
-            if (cbxCTZEntrada.SelectedIndex > 0)
+            if (cbxCTZEntrada.SelectedIndex >= 0)
                 cpn.ctz = Functions.ConvertComboValueToBool(cbxCTZEntrada.SelectedItem.ToString());
-            if (cbxIniContCTZ.SelectedIndex > 0)
+            if (cbxIniContCTZ.SelectedIndex >= 0)
                 cpn.ctz_init_cont = cbxIniContCTZ.SelectedItem.ToString();
-            if (cbxEmTarvEntrada.SelectedIndex > 0)
+            if (cbxEmTarvEntrada.SelectedIndex >= 0)
                 cpn.em_tarv_entrada = Functions.ConvertComboValueToBool(cbxEmTarvEntrada.SelectedItem.ToString());
-            if (cbxNVPVisita.SelectedIndex > 0)
+            if (cbxNVPVisita.SelectedIndex >= 0)
                 cpn.nvp = Functions.ConvertComboValueToBool(cbxNVPVisita.SelectedItem.ToString());
-            if (cbxIniBiproAZTNVP.SelectedIndex > 0)
+            if (cbxIniBiproAZTNVP.SelectedIndex >= 0)
                 cpn.azt_nvp = Functions.ConvertComboValueToBool(cbxIniBiproAZTNVP.SelectedItem.ToString());
-            if (cbxIniTarvVis.SelectedIndex > 0)
+            if (cbxIniTarvVis.SelectedIndex >= 0)
                 cpn.tarv_init_visit = Functions.ConvertComboValueToBool(cbxIniTarvVis.SelectedItem.ToString());
-            if (cbxContARVVisita.SelectedIndex > 0)
+            if (cbxContARVVisita.SelectedIndex >= 0)
                 cpn.arv_cont = Functions.ConvertComboValueToBool(cbxContARVVisita.SelectedItem.ToString());
-            if (cbxRecebeiTip.SelectedIndex > 0)
+            if (cbxRecebeiTip.SelectedIndex >= 0)
                 cpn.tip = cbxRecebeiTip.SelectedItem.ToString();
-            if (cbxRecRedeMosqu.SelectedIndex > 0)
+            if (cbxRecRedeMosqu.SelectedIndex >= 0)
                 cpn.bednet = cbxRecRedeMosqu.SelectedItem.ToString();
-            if (cbxTDRHTZ.SelectedIndex > 0)
+            if (cbxTDRHTZ.SelectedIndex >= 0)
                 cpn.tdr_htz = cbxTDRHTZ.SelectedItem.ToString();
-            if (cbxResultadoTDRHTZ.SelectedIndex > 0)
+            if (cbxResultadoTDRHTZ.SelectedIndex >= 0)
                 cpn.result_tdr_htz = cbxResultadoTDRHTZ.SelectedItem.ToString();
-            if (cbxMulhTesteMalPosTrat.SelectedIndex > 0)
+            if (cbxMulhTesteMalPosTrat.SelectedIndex >= 0)
                 cpn.pos_malaria_treated = cbxMulhTesteMalPosTrat.SelectedItem.ToString();
-            if (cbxHPP.SelectedIndex > 0)
+            if (cbxHPP.SelectedIndex >= 0)
                 cpn.hpp = cbxHPP.SelectedItem.ToString();
-            if (cbxVat1Dose.SelectedIndex > 0)
+            if (cbxVat1Dose.SelectedIndex >= 0)
                 cpn.vat_1_dose = Functions.ConvertComboValueToBool(cbxVat1Dose.SelectedItem.ToString());
-            if (cbxVat2_5Dose.SelectedIndex > 0)
+            if (cbxVat2_5Dose.SelectedIndex >= 0)
                 cpn.vat_2_5_dose = Functions.ConvertComboValueToBool(cbxVat2_5Dose.SelectedItem.ToString());
-            if (cbxProfIson.SelectedIndex > 0)
+            if (cbxProfIson.SelectedIndex >= 0)
                 cpn.tb_isoniazid = cbxProfIson.SelectedItem.ToString();
-            if (cbxTratTB.SelectedIndex > 0)
+            if (cbxTratTB.SelectedIndex >= 0)
                 cpn.tb_treatment = cbxTratTB.SelectedItem.ToString();
             cpn.obs = txtObs.Text;
             cpn.providername = txtNomeProf.Text;

@@ -904,7 +904,7 @@
             this.groupBox9.Size = new System.Drawing.Size(983, 53);
             this.groupBox9.TabIndex = 87;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "groupBox9";
+            this.groupBox9.Text = "Observações";
             // 
             // textBox2
             // 
@@ -934,9 +934,9 @@
             this.lblObser.AutoSize = true;
             this.lblObser.Location = new System.Drawing.Point(18, 21);
             this.lblObser.Name = "lblObser";
-            this.lblObser.Size = new System.Drawing.Size(70, 13);
+            this.lblObser.Size = new System.Drawing.Size(65, 13);
             this.lblObser.TabIndex = 14;
-            this.lblObser.Text = "Observações";
+            this.lblObser.Text = "Observação";
             // 
             // groupBox8
             // 
