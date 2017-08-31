@@ -34,21 +34,8 @@ namespace smi
                         BindChildControls(child);
                         clCCR ccr = new clCCR();
                         List<clCCR> list_ccr = ccr.GetEntityList().Where(c => c.idchild == child.id).ToList();
-
-                        if (list_ccr.Count > 0)
-                        {
-                            clCCRSeg ccrseg = new clCCRSeg();
-                            ccrseg = ccrseg.GetEntityList().Where(c => c.idchild == child.id).FirstOrDefault();
-                            BindCCRSegControls(ccrseg);
-
-                            if (cbxNrConsultaMain.SelectedIndex >= 0)
-                            {
-                                ccr = list_ccr.Where(c => c.nr_consulta == Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()))).FirstOrDefault();
-                                BindCCRControls(ccr);
-                            }
-
-                        }
-                        else
+                        clCCRSeg ccrseg = new clCCRSeg();
+                        if (list_ccr.Count <= 0)
                         {
                             for (int i = 1; i < 7; i++)
                             {
@@ -58,12 +45,19 @@ namespace smi
                                 ccr.InsertEntity();
                                 if (i == 1)
                                 {
-                                    clCCRSeg ccrseg = new clCCRSeg();
                                     ccrseg.idchild = child.id;
                                     ccrseg.InsertEntity();
                                 }
                             }
+                        }
 
+                        ccrseg = ccrseg.GetEntityList().Where(c => c.idchild == child.id).FirstOrDefault();
+                        BindCCRSegControls(ccrseg);
+
+                        if (cbxNrConsultaMain.SelectedIndex >= 0)
+                        {
+                            ccr = list_ccr.Where(c => c.nr_consulta == Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()))).FirstOrDefault();
+                            BindCCRControls(ccr);
                         }
                     }
 
@@ -78,12 +72,62 @@ namespace smi
 
         private void BindCCRControls(clCCR ccr)
         {
-            throw new NotImplementedException();
+            try
+            {
+                txtNidCpnMain.Text = ccr.mot_nid_cpn;
+                txtNidTarvMae.Text = ccr.mot_nid_tarv;
+                cbxHIVLact.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.mot_hiv_lact));
+                cbxMaeLacTarv.SelectedItem = ccr.mot_hiv_tarv;
+                cbxContactTB.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.tb));
+                cbxDesbuAguda.SelectedItem = ccr.desnutricao_aguda;
+                cbxExpHIV.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.exposicaoHIV));
+                txtOutrCondRisc.Text = ccr.outracondicaorisco;
+                cbxNutIdademen6.SelectedItem = ccr.aleitmaternomenor6m;
+                cbxNutIdademaior6.SelectedItem = ccr.aleitmaternonaior6m;
+                txtATPU.Text = ccr.atpu.ToString();
+                cbxCBS.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.csb_nut_sup));
+                cbxRecuperada.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.recuperada));
+                cbxColhPCRMen2Mes.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.pcr_under2m));
+                cbxColhPCRMaior2Mes.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.pcr_above2m));
+                cbxResPCRMen2Mes.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.pcrpos_under2m));
+                cbxResPCRMai2Mes.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.pcrpos_above2m));
+                cbxRestesRapMaior9mes.SelectedItem = ccr.resultadotesterapido;
+                cbxResDefen.SelectedItem = ccr.resulttrapido_nexp;
+                dtpDataIniIson.Value = Convert.ToDateTime(ccr.pisoniazidainicio);
+                cbxContinuIson.SelectedItem = ccr.pisoniazida;
+                cbxConpletIson.SelectedItem = ccr.pnctl;
+                cbxCTZ.SelectedItem = ccr.ctz;
+                cbxProfARV.SelectedItem = ccr.profiaxia_arv;
+                cbxSaidaCri.SelectedItem = ccr.saidaccr;
+                txtNidCriTarv.Text = ccr.chd_nid_tarv;
+                txtObs.Text = ccr.obs;
+                txtNomeProfSaude.Text = ccr.providername;
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void BindCCRSegControls(clCCRSeg ccrseg)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         private void BindChildControls(clChild child)
