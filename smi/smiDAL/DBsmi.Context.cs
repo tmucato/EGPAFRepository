@@ -12,15 +12,13 @@ namespace smiDAL
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-
+    
     public partial class DBsmiEntities : DbContext
     {
-        public DBsmiEntities()
-            : base("name=DBsmiEntities")
+        public DBsmiEntities(): base("name=DBsmiEntities")
         {
         }
-
-        public DBsmiEntities(String conStr) : base(conStr)
+        public DBsmiEntities(string conStr) : base(conStr)
         {
         }
 
@@ -28,13 +26,13 @@ namespace smiDAL
         {
             throw new UnintentionalCodeFirstException();
         }
-
+    
         public DbSet<mother> mothers { get; set; }
         public DbSet<usuario> usuarios { get; set; }
         public DbSet<child> children { get; set; }
         public DbSet<cpn_final> cpn_final { get; set; }
         public DbSet<cpn> cpns { get; set; }
-        public DbSet<ccr> ccrs { get; set; }
         public DbSet<ccrseg> ccrsegs { get; set; }
+        public DbSet<ccr> ccrs { get; set; }
     }
 }

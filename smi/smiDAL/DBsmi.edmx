@@ -237,6 +237,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'nlivro' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="nlivro" />-->
         <EntityContainer Name="smiModelStoreContainer">
           <EntitySet Name="ccr" EntityType="Self.ccr" Schema="smi" store:Type="Tables" />
           <EntitySet Name="ccrseg" EntityType="Self.ccrseg" Schema="smi" store:Type="Tables" />
@@ -288,15 +291,15 @@
           <EntitySet Name="children" EntityType="smiModel.child" />
           <EntitySet Name="cpn_final" EntityType="smiModel.cpn_final" />
           <EntitySet Name="cpns" EntityType="smiModel.cpn" />
-          <EntitySet Name="ccrs" EntityType="smiModel.ccr" />
-          <AssociationSet Name="idchild" Association="smiModel.idchild">
-            <End Role="child" EntitySet="children" />
-            <End Role="ccr" EntitySet="ccrs" />
-          </AssociationSet>
           <EntitySet Name="ccrsegs" EntityType="smiModel.ccrseg" />
+          <EntitySet Name="ccrs" EntityType="smiModel.ccr" />
           <AssociationSet Name="idccr" Association="smiModel.idccr">
             <End Role="ccr" EntitySet="ccrs" />
             <End Role="ccrseg" EntitySet="ccrsegs" />
+          </AssociationSet>
+          <AssociationSet Name="idchild" Association="smiModel.idchild">
+            <End Role="child" EntitySet="children" />
+            <End Role="ccr" EntitySet="ccrs" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="child">
@@ -409,6 +412,27 @@
           <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="ccrseg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idchild" Type="Int32" Nullable="false" />
+          <Property Name="lostfollowup" Type="Boolean" />
+          <Property Name="death" Type="Boolean" />
+          <Property Name="ce2" Type="Boolean" />
+          <Property Name="defresult" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ccs" Type="Boolean" />
+          <Property Name="ci" Type="Boolean" />
+          <Property Name="ot_us" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="lostfollowup2" Type="Boolean" />
+          <Property Name="death_2" Type="Boolean" />
+          <Property Name="ce3" Type="Boolean" />
+          <Property Name="resultadofinal" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="saidaccr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="death_3" Type="Boolean" />
+          <NavigationProperty Name="ccr" Relationship="smiModel.idccr" FromRole="ccrseg" ToRole="ccr" />
+        </EntityType>
         <EntityType Name="ccr">
           <Key>
             <PropertyRef Name="id" />
@@ -463,41 +487,8 @@
           <Property Name="pcrpos_under2m" Type="Boolean" />
           <Property Name="pcrpos_above2m" Type="Boolean" />
           <Property Name="pnctl" Type="Boolean" />
-          <NavigationProperty Name="child" Relationship="smiModel.idchild" FromRole="ccr" ToRole="child" />
           <NavigationProperty Name="ccrsegs" Relationship="smiModel.idccr" FromRole="ccr" ToRole="ccrseg" />
-        </EntityType>
-        <Association Name="idchild">
-          <End Type="smiModel.child" Role="child" Multiplicity="1" />
-          <End Type="smiModel.ccr" Role="ccr" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="child">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="ccr">
-              <PropertyRef Name="idchild" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="ccrseg">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idchild" Type="Int32" Nullable="false" />
-          <Property Name="lostfollowup" Type="Boolean" />
-          <Property Name="death" Type="Boolean" />
-          <Property Name="ce2" Type="Boolean" />
-          <Property Name="defresult" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="ccs" Type="Boolean" />
-          <Property Name="ci" Type="Boolean" />
-          <Property Name="ot_us" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="lostfollowup2" Type="Boolean" />
-          <Property Name="death_2" Type="Boolean" />
-          <Property Name="ce3" Type="Boolean" />
-          <Property Name="resultadofinal" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="saidaccr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="death_3" Type="Boolean" />
-          <NavigationProperty Name="ccr" Relationship="smiModel.idccr" FromRole="ccrseg" ToRole="ccr" />
+          <NavigationProperty Name="child" Relationship="smiModel.idchild" FromRole="ccr" ToRole="child" />
         </EntityType>
         <Association Name="idccr">
           <End Type="smiModel.ccr" Role="ccr" Multiplicity="1" />
@@ -507,6 +498,18 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="ccrseg">
+              <PropertyRef Name="idchild" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="idchild">
+          <End Type="smiModel.child" Role="child" Multiplicity="1" />
+          <End Type="smiModel.ccr" Role="ccr" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ccr">
               <PropertyRef Name="idchild" />
             </Dependent>
           </ReferentialConstraint>
@@ -655,6 +658,27 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ccrsegs">
+            <EntityTypeMapping TypeName="smiModel.ccrseg">
+              <MappingFragment StoreEntitySet="ccrseg">
+                <ScalarProperty Name="death_3" ColumnName="death_3" />
+                <ScalarProperty Name="saidaccr" ColumnName="saidaccr" />
+                <ScalarProperty Name="resultadofinal" ColumnName="resultadofinal" />
+                <ScalarProperty Name="ce3" ColumnName="ce3" />
+                <ScalarProperty Name="death_2" ColumnName="death_2" />
+                <ScalarProperty Name="lostfollowup2" ColumnName="lostfollowup2" />
+                <ScalarProperty Name="ot_us" ColumnName="ot_us" />
+                <ScalarProperty Name="ci" ColumnName="ci" />
+                <ScalarProperty Name="ccs" ColumnName="ccs" />
+                <ScalarProperty Name="defresult" ColumnName="defresult" />
+                <ScalarProperty Name="ce2" ColumnName="ce2" />
+                <ScalarProperty Name="death" ColumnName="death" />
+                <ScalarProperty Name="lostfollowup" ColumnName="lostfollowup" />
+                <ScalarProperty Name="idchild" ColumnName="idchild" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ccrs">
             <EntityTypeMapping TypeName="smiModel.ccr">
               <MappingFragment StoreEntitySet="ccr">
@@ -706,27 +730,6 @@
                 <ScalarProperty Name="nr_consulta" ColumnName="nr_consulta" />
                 <ScalarProperty Name="nlivro" ColumnName="nlivro" />
                 <ScalarProperty Name="nyear" ColumnName="nyear" />
-                <ScalarProperty Name="idchild" ColumnName="idchild" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ccrsegs">
-            <EntityTypeMapping TypeName="smiModel.ccrseg">
-              <MappingFragment StoreEntitySet="ccrseg">
-                <ScalarProperty Name="death_3" ColumnName="death_3" />
-                <ScalarProperty Name="saidaccr" ColumnName="saidaccr" />
-                <ScalarProperty Name="resultadofinal" ColumnName="resultadofinal" />
-                <ScalarProperty Name="ce3" ColumnName="ce3" />
-                <ScalarProperty Name="death_2" ColumnName="death_2" />
-                <ScalarProperty Name="lostfollowup2" ColumnName="lostfollowup2" />
-                <ScalarProperty Name="ot_us" ColumnName="ot_us" />
-                <ScalarProperty Name="ci" ColumnName="ci" />
-                <ScalarProperty Name="ccs" ColumnName="ccs" />
-                <ScalarProperty Name="defresult" ColumnName="defresult" />
-                <ScalarProperty Name="ce2" ColumnName="ce2" />
-                <ScalarProperty Name="death" ColumnName="death" />
-                <ScalarProperty Name="lostfollowup" ColumnName="lostfollowup" />
                 <ScalarProperty Name="idchild" ColumnName="idchild" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>

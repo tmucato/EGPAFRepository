@@ -1,4 +1,5 @@
-﻿using System;
+﻿using smiDAL;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace smiBLL
         public string resultadofinal;
         public string saidaccr;
         public Nullable<bool> death_3;
-        
+
 
         public clCCRSeg()
         {
@@ -47,7 +48,46 @@ namespace smiBLL
 
         public override List<clCCRSeg> GetEntityList()
         {
-            throw new NotImplementedException();
+            List<clCCRSeg> List_ccrseg = new List<clCCRSeg>();
+
+            try
+            {
+                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                {
+                    foreach (ccrseg db_ccrseg in DbContext.ccrsegs)
+                    {
+                        clCCRSeg obj_ccrseg = new clCCRSeg();
+                        obj_ccrseg.id = db_ccrseg.id;
+                        obj_ccrseg.idchild = db_ccrseg.idchild;
+                        obj_ccrseg.lostfollowup = db_ccrseg.lostfollowup;
+                        obj_ccrseg.death = db_ccrseg.death;
+                        obj_ccrseg.ce2 = db_ccrseg.ce2;
+                        obj_ccrseg.defresult = db_ccrseg.defresult;
+                        obj_ccrseg.ccs = db_ccrseg.ccs;
+                        obj_ccrseg.ci = db_ccrseg.ci;
+                        obj_ccrseg.ot_us = db_ccrseg.ot_us;
+                        obj_ccrseg.lostfollowup2 = db_ccrseg.lostfollowup2;
+                        obj_ccrseg.death_2 = db_ccrseg.death_2;
+                        obj_ccrseg.ce3 = db_ccrseg.ce3;
+                        obj_ccrseg.resultadofinal = db_ccrseg.resultadofinal;
+                        obj_ccrseg.saidaccr = db_ccrseg.saidaccr;
+                        obj_ccrseg.death_3 = db_ccrseg.death_3;
+                        List_ccrseg.Add(obj_ccrseg);
+                    }
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return List_ccrseg;
+
+
         }
 
         public override DataTable GetEntityDatatable()
@@ -55,9 +95,43 @@ namespace smiBLL
             throw new NotImplementedException();
         }
 
+
+
         public override void InsertEntity()
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                {
+                    ccrseg db_ccrseg = new ccrseg();
+
+                    db_ccrseg.id = this.id;
+                    db_ccrseg.idchild = this.idchild;
+                    db_ccrseg.lostfollowup = this.lostfollowup;
+                    db_ccrseg.death = this.death;
+                    db_ccrseg.ce2 = this.ce2;
+                    db_ccrseg.defresult = this.defresult;
+                    db_ccrseg.ccs = this.ccs;
+                    db_ccrseg.ci = this.ci;
+                    db_ccrseg.ot_us = this.ot_us;
+                    db_ccrseg.lostfollowup2 = this.lostfollowup2;
+                    db_ccrseg.death_2 = this.death_2;
+                    db_ccrseg.ce3 = this.ce3;
+                    db_ccrseg.resultadofinal = this.resultadofinal;
+                    db_ccrseg.saidaccr = this.saidaccr;
+                    db_ccrseg.death_3 = this.death_3;
+                    DbContext.ccrsegs.Add(db_ccrseg);
+                    DbContext.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
         }
 
         public override void UpdateEntity()

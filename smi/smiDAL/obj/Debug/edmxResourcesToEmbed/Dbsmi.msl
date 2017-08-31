@@ -139,6 +139,27 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ccrsegs">
+      <EntityTypeMapping TypeName="smiModel.ccrseg">
+        <MappingFragment StoreEntitySet="ccrseg">
+          <ScalarProperty Name="death_3" ColumnName="death_3" />
+          <ScalarProperty Name="saidaccr" ColumnName="saidaccr" />
+          <ScalarProperty Name="resultadofinal" ColumnName="resultadofinal" />
+          <ScalarProperty Name="ce3" ColumnName="ce3" />
+          <ScalarProperty Name="death_2" ColumnName="death_2" />
+          <ScalarProperty Name="lostfollowup2" ColumnName="lostfollowup2" />
+          <ScalarProperty Name="ot_us" ColumnName="ot_us" />
+          <ScalarProperty Name="ci" ColumnName="ci" />
+          <ScalarProperty Name="ccs" ColumnName="ccs" />
+          <ScalarProperty Name="defresult" ColumnName="defresult" />
+          <ScalarProperty Name="ce2" ColumnName="ce2" />
+          <ScalarProperty Name="death" ColumnName="death" />
+          <ScalarProperty Name="lostfollowup" ColumnName="lostfollowup" />
+          <ScalarProperty Name="idchild" ColumnName="idchild" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ccrs">
       <EntityTypeMapping TypeName="smiModel.ccr">
         <MappingFragment StoreEntitySet="ccr">
@@ -190,27 +211,6 @@
           <ScalarProperty Name="nr_consulta" ColumnName="nr_consulta" />
           <ScalarProperty Name="nlivro" ColumnName="nlivro" />
           <ScalarProperty Name="nyear" ColumnName="nyear" />
-          <ScalarProperty Name="idchild" ColumnName="idchild" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ccrsegs">
-      <EntityTypeMapping TypeName="smiModel.ccrseg">
-        <MappingFragment StoreEntitySet="ccrseg">
-          <ScalarProperty Name="death_3" ColumnName="death_3" />
-          <ScalarProperty Name="saidaccr" ColumnName="saidaccr" />
-          <ScalarProperty Name="resultadofinal" ColumnName="resultadofinal" />
-          <ScalarProperty Name="ce3" ColumnName="ce3" />
-          <ScalarProperty Name="death_2" ColumnName="death_2" />
-          <ScalarProperty Name="lostfollowup2" ColumnName="lostfollowup2" />
-          <ScalarProperty Name="ot_us" ColumnName="ot_us" />
-          <ScalarProperty Name="ci" ColumnName="ci" />
-          <ScalarProperty Name="ccs" ColumnName="ccs" />
-          <ScalarProperty Name="defresult" ColumnName="defresult" />
-          <ScalarProperty Name="ce2" ColumnName="ce2" />
-          <ScalarProperty Name="death" ColumnName="death" />
-          <ScalarProperty Name="lostfollowup" ColumnName="lostfollowup" />
           <ScalarProperty Name="idchild" ColumnName="idchild" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>

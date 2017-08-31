@@ -198,7 +198,69 @@ namespace smiBLL
 
         public override void InsertEntity()
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                {
+                    ccr db_ccr = new ccr();
+                    db_ccr.id = this.id;
+                    db_ccr.idchild = this.idchild;
+                    db_ccr.nyear = this.nyear;
+                    db_ccr.nlivro = this.nlivro;
+                    db_ccr.nr_consulta = this.nr_consulta;
+                    db_ccr.dataconsulta = this.dataconsulta;
+                    db_ccr.age = this.age;
+                    db_ccr.ageunit = this.ageunit;
+                    db_ccr.mot_nid_cpn = this.mot_nid_cpn;
+                    db_ccr.mot_nid_tarv = this.mot_nid_tarv;
+                    db_ccr.mot_hiv_lact = this.mot_hiv_lact;
+                    db_ccr.mot_hiv_tarv = this.mot_hiv_tarv;
+                    db_ccr.contactotb = this.contactotb;
+                    db_ccr.desnutricao_aguda = this.desnutricao_aguda;
+                    db_ccr.exposicaoHIV = this.exposicaoHIV;
+                    db_ccr.outracondicaorisco = this.outracondicaorisco;
+                    db_ccr.pisoniazidainicio = this.pisoniazidainicio;
+                    db_ccr.pisoniazida = this.pisoniazida;
+                    db_ccr.aleitmaternomenor6m = this.aleitmaternomenor6m;
+                    db_ccr.aleitmaternonaior6m = this.aleitmaternonaior6m;
+                    db_ccr.atpu = this.atpu;
+                    db_ccr.csb_nut_sup = this.csb_nut_sup;
+                    db_ccr.recuperada = this.recuperada;
+                    db_ccr.internamento = this.internamento;
+                    db_ccr.ctz = this.ctz;
+                    db_ccr.profiaxia_arv = this.profiaxia_arv;
+                    db_ccr.colheitapcr = this.colheitapcr;
+                    db_ccr.resultadopcr = this.resultadopcr;
+                    db_ccr.resultadotesterapido = this.resultadotesterapido;
+                    db_ccr.resultadofinal = this.resultadofinal;
+                    db_ccr.resulttrapido_nexp = this.resulttrapido_nexp;
+                    db_ccr.saidaccr = this.saidaccr;
+                    db_ccr.chd_nid_tarv = this.chd_nid_tarv;
+                    db_ccr.obs = this.obs;
+                    db_ccr.providername = this.providername;
+                    db_ccr.motart_5m_chd = this.motart_5m_chd;
+                    db_ccr.tb = this.tb;
+                    db_ccr.dam_dag = this.dam_dag;
+                    db_ccr.ce = this.ce;
+                    db_ccr.tpicomp = this.tpicomp;
+                    db_ccr.ame_5m = this.ame_5m;
+                    db_ccr.mixed_5m = this.mixed_5m;
+                    db_ccr.rec = this.rec;
+                    db_ccr.trans_int = this.trans_int;
+                    db_ccr.arv_5m = this.arv_5m;
+                    db_ccr.pcr_under2m = this.pcr_under2m;
+                    db_ccr.pcr_above2m = this.pcr_above2m;
+                    db_ccr.pcrpos_under2m = this.pcrpos_under2m;
+                    db_ccr.pcrpos_above2m = this.pcrpos_above2m;
+                    db_ccr.pnctl = this.pnctl;
+                    DbContext.ccrs.Add(db_ccr);
+                    DbContext.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public override void UpdateEntity()

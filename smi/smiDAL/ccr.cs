@@ -70,7 +70,7 @@ namespace smiDAL
         public Nullable<bool> pcrpos_above2m { get; set; }
         public Nullable<bool> pnctl { get; set; }
     
-        public virtual child child { get; set; }
         public virtual ICollection<ccrseg> ccrsegs { get; set; }
+        public virtual child child { get; set; }
     }
 }
