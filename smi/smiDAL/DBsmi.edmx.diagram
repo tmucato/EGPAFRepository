@@ -10,10 +10,10 @@
         <EntityTypeShape EntityType="smiModel.child" Width="1.5" PointX="4.25" PointY="0.5" />
         <EntityTypeShape EntityType="smiModel.cpn_final" Width="1.5" PointX="9.75" PointY="0.5" />
         <EntityTypeShape EntityType="smiModel.cpn" Width="1.5" PointX="8" PointY="0.5" />
-        <EntityTypeShape EntityType="smiModel.ccrseg" Width="1.5" PointX="4.25" PointY="3.375" />
         <EntityTypeShape EntityType="smiModel.ccr" Width="1.5" PointX="6.125" PointY="0.5" />
-        <AssociationConnector Association="smiModel.idccr" />
         <AssociationConnector Association="smiModel.idchild" />
+        <EntityTypeShape EntityType="smiModel.ccrseg" Width="1.5" PointX="4.25" PointY="3.75" />
+        <AssociationConnector Association="smiModel.ccrseg_ibfk_1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

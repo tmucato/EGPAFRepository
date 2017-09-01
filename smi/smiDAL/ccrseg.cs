@@ -16,20 +16,32 @@ namespace smiDAL
     {
         public int id { get; set; }
         public int idchild { get; set; }
-        public Nullable<bool> lostfollowup { get; set; }
-        public Nullable<bool> death { get; set; }
-        public Nullable<bool> ce2 { get; set; }
-        public string defresult { get; set; }
-        public Nullable<bool> ccs { get; set; }
-        public Nullable<bool> ci { get; set; }
-        public string ot_us { get; set; }
-        public Nullable<bool> lostfollowup2 { get; set; }
-        public Nullable<bool> death_2 { get; set; }
-        public Nullable<bool> ce3 { get; set; }
-        public string resultadofinal { get; set; }
-        public string saidaccr { get; set; }
-        public Nullable<bool> death_3 { get; set; }
+        public string mothTarv5moth { get; set; }
+        public Nullable<bool> ame5m { get; set; }
+        public Nullable<bool> am5m { get; set; }
+        public Nullable<bool> recuperada { get; set; }
+        public Nullable<bool> transinter { get; set; }
+        public Nullable<bool> arv5m { get; set; }
+        public Nullable<bool> pcrmen2m { get; set; }
+        public Nullable<bool> pcrmai2m { get; set; }
+        public Nullable<bool> pcrposmen2m { get; set; }
+        public Nullable<bool> pcrposmai2m { get; set; }
+        public Nullable<bool> tb { get; set; }
+        public Nullable<bool> dam { get; set; }
+        public Nullable<bool> dag { get; set; }
+        public Nullable<bool> ce9m { get; set; }
+        public Nullable<bool> pnctl { get; set; }
+        public Nullable<bool> tpi { get; set; }
+        public Nullable<bool> abandono9 { get; set; }
+        public Nullable<bool> obito9 { get; set; }
+        public Nullable<bool> ce18m { get; set; }
+        public Nullable<bool> resultado18 { get; set; }
+        public Nullable<bool> transferidaCCS { get; set; }
+        public Nullable<bool> transferidaCI { get; set; }
+        public Nullable<bool> transferidaUS { get; set; }
+        public Nullable<bool> abandono18 { get; set; }
+        public Nullable<bool> obito18 { get; set; }
     
-        public virtual ccr ccr { get; set; }
+        public virtual child child { get; set; }
     }
 }

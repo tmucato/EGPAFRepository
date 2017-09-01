@@ -17,6 +17,7 @@ namespace smiDAL
         public child()
         {
             this.ccrs = new HashSet<ccr>();
+            this.ccrsegs = new HashSet<ccrseg>();
         }
     
         public int id { get; set; }
@@ -29,5 +30,6 @@ namespace smiDAL
         public Nullable<System.DateTime> dob { get; set; }
     
         public virtual ICollection<ccr> ccrs { get; set; }
+        public virtual ICollection<ccrseg> ccrsegs { get; set; }
     }
 }

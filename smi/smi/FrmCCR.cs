@@ -93,7 +93,7 @@ namespace smi
                 cbxResPCRMai2Mes.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.pcrpos_above2m));
                 cbxRestesRapMaior9mes.SelectedItem = ccr.resultadotesterapido;
                 cbxResDefen.SelectedItem = ccr.resulttrapido_nexp;
-                dtpDataIniIson.Value = Convert.ToDateTime(ccr.pisoniazidainicio);
+                if (ccr.pisoniazidainicio != null) dtpDataIniIson.Value = Convert.ToDateTime(ccr.pisoniazidainicio);
                 cbxContinuIson.SelectedItem = ccr.pisoniazida;
                 cbxConpletIson.SelectedItem = ccr.pnctl;
                 cbxCTZ.SelectedItem = ccr.ctz;
@@ -102,7 +102,7 @@ namespace smi
                 txtNidCriTarv.Text = ccr.chd_nid_tarv;
                 txtObs.Text = ccr.obs;
                 txtNomeProfSaude.Text = ccr.providername;
-                
+
             }
             catch (Exception ex)
             {

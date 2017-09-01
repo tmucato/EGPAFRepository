@@ -39,7 +39,7 @@
     <Property Name="chd_nid_tarv" Type="varchar" MaxLength="45" />
     <Property Name="obs" Type="varchar" MaxLength="60" />
     <Property Name="providername" Type="varchar" MaxLength="60" />
-    <Property Name="motart_5m_chd" Type="bool" Nullable="false" />
+    <Property Name="motart_5m_chd" Type="bool" />
     <Property Name="tb" Type="bool" />
     <Property Name="dam_dag" Type="varchar" MaxLength="3" />
     <Property Name="ce" Type="bool" />
@@ -61,19 +61,31 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idchild" Type="int" Nullable="false" />
-    <Property Name="lostfollowup" Type="bool" />
-    <Property Name="death" Type="bool" />
-    <Property Name="ce2" Type="bool" />
-    <Property Name="defresult" Type="varchar" MaxLength="5" />
-    <Property Name="ccs" Type="bool" />
-    <Property Name="ci" Type="bool" />
-    <Property Name="ot_us" Type="varchar" MaxLength="45" />
-    <Property Name="lostfollowup2" Type="bool" />
-    <Property Name="death_2" Type="bool" />
-    <Property Name="ce3" Type="bool" />
-    <Property Name="resultadofinal" Type="varchar" MaxLength="5" />
-    <Property Name="saidaccr" Type="varchar" MaxLength="20" />
-    <Property Name="death_3" Type="bool" />
+    <Property Name="mothTarv5moth" Type="varchar" MaxLength="45" />
+    <Property Name="ame5m" Type="bool" />
+    <Property Name="am5m" Type="bool" />
+    <Property Name="recuperada" Type="bool" />
+    <Property Name="transinter" Type="bool" />
+    <Property Name="arv5m" Type="bool" />
+    <Property Name="pcrmen2m" Type="bool" />
+    <Property Name="pcrmai2m" Type="bool" />
+    <Property Name="pcrposmen2m" Type="bool" />
+    <Property Name="pcrposmai2m" Type="bool" />
+    <Property Name="tb" Type="bool" />
+    <Property Name="dam" Type="bool" />
+    <Property Name="dag" Type="bool" />
+    <Property Name="ce9m" Type="bool" />
+    <Property Name="pnctl" Type="bool" />
+    <Property Name="tpi" Type="bool" />
+    <Property Name="abandono9" Type="bool" />
+    <Property Name="obito9" Type="bool" />
+    <Property Name="ce18m" Type="bool" />
+    <Property Name="resultado18" Type="bool" />
+    <Property Name="transferidaCCS" Type="bool" />
+    <Property Name="transferidaCI" Type="bool" />
+    <Property Name="transferidaUS" Type="bool" />
+    <Property Name="abandono18" Type="bool" />
+    <Property Name="obito18" Type="bool" />
   </EntityType>
   <EntityType Name="child">
     <Key>
@@ -208,11 +220,11 @@
     <Property Name="posicao" Type="varchar" MaxLength="45" />
     <Property Name="systemrole" Type="varchar" MaxLength="45" />
   </EntityType>
-  <Association Name="idccr">
-    <End Role="ccr" Type="Self.ccr" Multiplicity="1" />
+  <Association Name="ccrseg_ibfk_1">
+    <End Role="child" Type="Self.child" Multiplicity="1" />
     <End Role="ccrseg" Type="Self.ccrseg" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="ccr">
+      <Principal Role="child">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="ccrseg">
@@ -232,9 +244,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <!--Errors Found During Generation:
-warning 6035: The relationship 'nlivro' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="nlivro" />-->
   <EntityContainer Name="smiModelStoreContainer">
     <EntitySet Name="ccr" EntityType="Self.ccr" Schema="smi" store:Type="Tables" />
     <EntitySet Name="ccrseg" EntityType="Self.ccrseg" Schema="smi" store:Type="Tables" />
@@ -243,8 +252,8 @@ warning 6035: The relationship 'nlivro' has columns that are not part of the key
     <EntitySet Name="cpn_final" EntityType="Self.cpn_final" Schema="smi" store:Type="Tables" />
     <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
     <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
-    <AssociationSet Name="idccr" Association="Self.idccr">
-      <End Role="ccr" EntitySet="ccr" />
+    <AssociationSet Name="ccrseg_ibfk_1" Association="Self.ccrseg_ibfk_1">
+      <End Role="child" EntitySet="child" />
       <End Role="ccrseg" EntitySet="ccrseg" />
     </AssociationSet>
     <AssociationSet Name="idchild" Association="Self.idchild">
