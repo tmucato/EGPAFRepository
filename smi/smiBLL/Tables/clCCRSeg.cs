@@ -83,21 +83,36 @@ namespace smiBLL
                     foreach (ccrseg db_ccrseg in DbContext.ccrsegs)
                     {
                         clCCRSeg obj_ccrseg = new clCCRSeg();
-
-
-
-
-
-
-
-
+                        obj_ccrseg.id = db_ccrseg.id;
+                        obj_ccrseg.idchild = db_ccrseg.idchild;
+                        obj_ccrseg.mothTarv5moth = db_ccrseg.mothTarv5moth;
+                        obj_ccrseg.ame5m = db_ccrseg.ame5m;
+                        obj_ccrseg.am5m = db_ccrseg.am5m;
+                        obj_ccrseg.recuperada = db_ccrseg.recuperada;
+                        obj_ccrseg.transinter = db_ccrseg.transinter;
+                        obj_ccrseg.arv5m = db_ccrseg.arv5m;
+                        obj_ccrseg.pcrmen2m = db_ccrseg.pcrmen2m;
+                        obj_ccrseg.pcrmai2m = db_ccrseg.pcrmai2m;
+                        obj_ccrseg.pcrposmen2m = db_ccrseg.pcrposmen2m;
+                        obj_ccrseg.pcrposmai2m = db_ccrseg.pcrposmai2m;
+                        obj_ccrseg.tb = db_ccrseg.tb;
+                        obj_ccrseg.dam = db_ccrseg.dam;
+                        obj_ccrseg.dag = db_ccrseg.dag;
+                        obj_ccrseg.ce9m = db_ccrseg.ce9m;
+                        obj_ccrseg.pnctl = db_ccrseg.pnctl;
+                        obj_ccrseg.tpi = db_ccrseg.tpi;
+                        obj_ccrseg.abandono9 = db_ccrseg.abandono9;
+                        obj_ccrseg.obito9 = db_ccrseg.obito9;
+                        obj_ccrseg.ce18m = ce18m;
+                        obj_ccrseg.resultado18 = db_ccrseg.resultado18;
+                        obj_ccrseg.transferidaCCS = db_ccrseg.transferidaCCS;
+                        obj_ccrseg.transferidaCI = db_ccrseg.transferidaCI;
+                        obj_ccrseg.transferidaUS = db_ccrseg.transferidaUS;
+                        obj_ccrseg.abandono18 = db_ccrseg.abandono18;
+                        obj_ccrseg.obito18 = db_ccrseg.obito9;
                         List_ccrseg.Add(obj_ccrseg);
                     }
-
                 }
-
-
-
             }
             catch (Exception ex)
             {
@@ -106,15 +121,12 @@ namespace smiBLL
 
             return List_ccrseg;
 
-
         }
 
         public override DataTable GetEntityDatatable()
         {
             throw new NotImplementedException();
         }
-
-
 
         public override void InsertEntity()
         {
