@@ -49,13 +49,14 @@
             this.txtSearched = new System.Windows.Forms.TextBox();
             this.cbProcurar = new System.Windows.Forms.ComboBox();
             this.dgvMother = new System.Windows.Forms.DataGridView();
+            this.dtpBithDate = new System.Windows.Forms.DateTimePicker();
             this.nid_cpn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nid_tarv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpBithDate = new System.Windows.Forms.DateTimePicker();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMother)).BeginInit();
             this.SuspendLayout();
             // 
@@ -261,19 +262,29 @@
             this.dgvMother.AllowUserToDeleteRows = false;
             this.dgvMother.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMother.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-                    this.nid_cpn,
+            this.nid_cpn,
             this.nid_tarv,
             this.name,
             this.residence,
             this.phone,
-            this.dob});
+            this.dob,
+            this.Seleccionar});
             this.dgvMother.Location = new System.Drawing.Point(15, 211);
             this.dgvMother.Name = "dgvMother";
             this.dgvMother.ReadOnly = true;
-            this.dgvMother.Size = new System.Drawing.Size(1087, 176);
+            this.dgvMother.Size = new System.Drawing.Size(1120, 176);
             this.dgvMother.TabIndex = 107;
             this.dgvMother.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMother_CellContentClick);
-
+            // 
+            // dtpBithDate
+            // 
+            this.dtpBithDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpBithDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.dtpBithDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBithDate.Location = new System.Drawing.Point(726, 106);
+            this.dtpBithDate.Name = "dtpBithDate";
+            this.dtpBithDate.Size = new System.Drawing.Size(131, 22);
+            this.dtpBithDate.TabIndex = 108;
             // 
             // nid_cpn
             // 
@@ -323,21 +334,17 @@
             this.dob.ReadOnly = true;
             this.dob.Width = 170;
             // 
-            // dtpBithDate
+            // Seleccionar
             // 
-            this.dtpBithDate.CustomFormat = "dd/MM/yyyy";
-            this.dtpBithDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.dtpBithDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBithDate.Location = new System.Drawing.Point(726, 106);
-            this.dtpBithDate.Name = "dtpBithDate";
-            this.dtpBithDate.Size = new System.Drawing.Size(131, 22);
-            this.dtpBithDate.TabIndex = 108;
+            this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
             // 
             // FrmMother
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 499);
+            this.ClientSize = new System.Drawing.Size(1178, 499);
             this.Controls.Add(this.dtpBithDate);
             this.Controls.Add(this.dgvMother);
             this.Controls.Add(this.txtPhone);
@@ -394,12 +401,13 @@
         private System.Windows.Forms.TextBox txtSearched;
         private System.Windows.Forms.ComboBox cbProcurar;
         private System.Windows.Forms.DataGridView dgvMother;
+        private System.Windows.Forms.DateTimePicker dtpBithDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn nid_cpn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nid_tarv;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn residence;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn dob;
-        private System.Windows.Forms.DateTimePicker dtpBithDate;
+        private System.Windows.Forms.DataGridViewLinkColumn Seleccionar;
     }
 }
