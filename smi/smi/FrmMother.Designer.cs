@@ -50,7 +50,6 @@
             this.txtSearched = new System.Windows.Forms.TextBox();
             this.cbProcurar = new System.Windows.Forms.ComboBox();
             this.dgvMother = new System.Windows.Forms.DataGridView();
-            this.dtpBithDate = new System.Windows.Forms.DateTimePicker();
             this.nid_cpn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nid_tarv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +57,7 @@
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mother_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpBithDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMother)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,7 +228,7 @@
             // 
             // cmdProcurar
             // 
-            this.cmdProcurar.Location = new System.Drawing.Point(68, 435);
+            this.cmdProcurar.Location = new System.Drawing.Point(68, 419);
             this.cmdProcurar.Name = "cmdProcurar";
             this.cmdProcurar.Size = new System.Drawing.Size(114, 26);
             this.cmdProcurar.TabIndex = 102;
@@ -238,7 +238,7 @@
             // 
             // txtSearched
             // 
-            this.txtSearched.Location = new System.Drawing.Point(381, 435);
+            this.txtSearched.Location = new System.Drawing.Point(381, 419);
             this.txtSearched.Name = "txtSearched";
             this.txtSearched.Size = new System.Drawing.Size(268, 26);
             this.txtSearched.TabIndex = 104;
@@ -252,7 +252,7 @@
             "NID de TARV",
             "Nome",
             "Contacto"});
-            this.cbProcurar.Location = new System.Drawing.Point(200, 435);
+            this.cbProcurar.Location = new System.Drawing.Point(200, 419);
             this.cbProcurar.Name = "cbProcurar";
             this.cbProcurar.Size = new System.Drawing.Size(114, 28);
             this.cbProcurar.TabIndex = 106;
@@ -276,16 +276,6 @@
             this.dgvMother.Size = new System.Drawing.Size(1133, 176);
             this.dgvMother.TabIndex = 107;
             this.dgvMother.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMother_RowHeaderMouseClick);
-            // 
-            // dtpBithDate
-            // 
-            this.dtpBithDate.CustomFormat = "dd/MM/yyyy";
-            this.dtpBithDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.dtpBithDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBithDate.Location = new System.Drawing.Point(726, 106);
-            this.dtpBithDate.Name = "dtpBithDate";
-            this.dtpBithDate.Size = new System.Drawing.Size(131, 22);
-            this.dtpBithDate.TabIndex = 108;
             // 
             // nid_cpn
             // 
@@ -346,11 +336,21 @@
             this.Mother_ID.ReadOnly = true;
             this.Mother_ID.Visible = false;
             // 
+            // dtpBithDate
+            // 
+            this.dtpBithDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpBithDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.dtpBithDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBithDate.Location = new System.Drawing.Point(726, 106);
+            this.dtpBithDate.Name = "dtpBithDate";
+            this.dtpBithDate.Size = new System.Drawing.Size(131, 22);
+            this.dtpBithDate.TabIndex = 108;
+            // 
             // FrmMother
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 430);
+            this.ClientSize = new System.Drawing.Size(1196, 461);
             this.Controls.Add(this.dtpBithDate);
             this.Controls.Add(this.dgvMother);
             this.Controls.Add(this.txtPhone);

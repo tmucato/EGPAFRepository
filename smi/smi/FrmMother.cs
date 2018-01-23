@@ -258,6 +258,7 @@ namespace smi
 
             switch (selectIndex)
             {
+                /// Serch by ID Mother
                 case 0:
 
 
@@ -292,6 +293,7 @@ namespace smi
                         MessageBox.Show(exc.Message);
                     }
                     break;
+                /// Search NID CPN
                 case 1:
                     dgvMother.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     try
@@ -324,6 +326,7 @@ namespace smi
                         MessageBox.Show(exc.Message);
                     }
                     break;
+                ///Search by NID TARV
                 case 2:
                     dgvMother.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     try
@@ -356,6 +359,7 @@ namespace smi
                         MessageBox.Show(exc.Message);
                     }
                     break;
+                /// Sreach by Name
                 case 3:
                     dgvMother.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     try
@@ -389,6 +393,7 @@ namespace smi
                         MessageBox.Show(exc.Message);
                     }
                     break;
+                /// Search by Phone contact
                 case 4:
                     dgvMother.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     try
