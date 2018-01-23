@@ -53,31 +53,7 @@ namespace smi
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void dgvMother_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                var Grid = (DataGridView)sender;
-                clMother obj_mother = new clMother();
 
-                if (Grid.Columns[e.ColumnIndex] is DataGridViewLinkColumn && e.RowIndex >= 0)
-                {
-                    int motherID = (int)Grid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                    BindFormMotherControls(obj_mother.GetEntityList().Where(m => m.id == motherID).FirstOrDefault());
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError("Error loading mother data to form", ex);
-                MessageBox.Show("Error carregando informacao da mãe no sistema");
-            }
-
-        }
 
         /// <summary>
         /// 
@@ -449,5 +425,25 @@ namespace smi
 
         }
 
+
+        private void dgvMother_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                var Grid = (DataGridView)sender;
+                clMother obj_mother = new clMother();
+
+                if (e.RowIndex >= 0)
+                {
+                    int motherID = (int)Grid.Rows[e.RowIndex].Cells[6].Value;
+                    BindFormMotherControls(obj_mother.GetEntityList().Where(m => m.id == motherID).FirstOrDefault());
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error loading mother data to form", ex);
+                MessageBox.Show("Error carregando informacao da mãe no sistema");
+            }
+        }
     }
 }

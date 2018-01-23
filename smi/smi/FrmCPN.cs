@@ -450,12 +450,8 @@ namespace smi
                 clCPN cpn = new clCPN();
                 string nidcpn = txtNidCpnMain.Text;
 
-                int mother_id = moth.GetEntityList().Where(m => m.nid_cpn == nidcpn).FirstOrDefault().id;
-                cpn_final = cpn_final.GetEntityList().Where(cf => cf.idmother == mother_id).FirstOrDefault();
 
-                int rnConsl = Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()));
-                list_cpn = cpn.GetEntityList().Where(cp => cp.idmother == mother_id).ToList();
-                cpn = list_cpn.Where(c => c.nr_consulta == rnConsl).FirstOrDefault();
+
 
                 if (cbxNrConulta.SelectedIndex >= 0)
                 {
@@ -468,8 +464,12 @@ namespace smi
                 }
                 else
                 {
+                    int mother_id = moth.GetEntityList().Where(m => m.nid_cpn == nidcpn).FirstOrDefault().id;
+                    cpn_final = cpn_final.GetEntityList().Where(cf => cf.idmother == mother_id).FirstOrDefault();
+                    int rnConsl = Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()));
+                    list_cpn = cpn.GetEntityList().Where(cp => cp.idmother == mother_id).ToList();
+                    cpn = list_cpn.Where(c => c.nr_consulta == rnConsl).FirstOrDefault();
                     BindCPNFinalControls(cpn_final);
-
                     if (cbxNrConsultaMain.SelectedIndex >= 0)
                     {
                         BindCPNControls(cpn);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -56,7 +57,7 @@
             this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Mother_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMother)).BeginInit();
             this.SuspendLayout();
             // 
@@ -268,13 +269,13 @@
             this.residence,
             this.phone,
             this.dob,
-            this.Seleccionar});
+            this.Mother_ID});
             this.dgvMother.Location = new System.Drawing.Point(15, 211);
             this.dgvMother.Name = "dgvMother";
             this.dgvMother.ReadOnly = true;
-            this.dgvMother.Size = new System.Drawing.Size(1120, 176);
+            this.dgvMother.Size = new System.Drawing.Size(1133, 176);
             this.dgvMother.TabIndex = 107;
-            this.dgvMother.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMother_CellContentClick);
+            this.dgvMother.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMother_RowHeaderMouseClick);
             // 
             // dtpBithDate
             // 
@@ -329,22 +330,27 @@
             // dob
             // 
             this.dob.DataPropertyName = "dob";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dob.DefaultCellStyle = dataGridViewCellStyle1;
             this.dob.HeaderText = "Data Nascimento";
             this.dob.Name = "dob";
             this.dob.ReadOnly = true;
             this.dob.Width = 170;
             // 
-            // Seleccionar
+            // Mother_ID
             // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
+            this.Mother_ID.DataPropertyName = "id";
+            this.Mother_ID.HeaderText = "Mother_ID";
+            this.Mother_ID.Name = "Mother_ID";
+            this.Mother_ID.ReadOnly = true;
+            this.Mother_ID.Visible = false;
             // 
             // FrmMother
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 499);
+            this.ClientSize = new System.Drawing.Size(1197, 430);
             this.Controls.Add(this.dtpBithDate);
             this.Controls.Add(this.dgvMother);
             this.Controls.Add(this.txtPhone);
@@ -408,6 +414,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn residence;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn dob;
-        private System.Windows.Forms.DataGridViewLinkColumn Seleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mother_ID;
     }
 }

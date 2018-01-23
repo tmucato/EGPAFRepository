@@ -27,8 +27,6 @@ C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.Propertie
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
-C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
-C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
 C:\Users\tmucato\Source\EGPAFRepository\smi\bin\smi.exe
 C:\Users\tmucato\Source\EGPAFRepository\smi\bin\smi.pdb
 C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csprojResolveAssemblyReference.cache
@@ -43,3 +41,5 @@ C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmCPF.resourc
 C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmCPP.resources
 C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.Properties.Resources.resources
 C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
