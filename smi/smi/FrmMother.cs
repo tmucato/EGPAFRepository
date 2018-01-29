@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using smiDAL;
 using smiBLL;
-using Microsoft.VisualBasic;
 
 namespace smi
 {
@@ -270,7 +262,7 @@ namespace smi
                         int row = 0;
                         while (row < dgvMother.Rows.Count - 1)
                         {
-                            strgrdvalue = dgvMother.Rows[row].Cells[0].Value.ToString().Trim().ToUpper();
+                            strgrdvalue = dgvMother.Rows[row].Cells[6].Value.ToString().Trim().ToUpper();
                             if (strgrdvalue == searchValueTxt)
                             {
                                 rowIndex = row;
@@ -303,7 +295,7 @@ namespace smi
                         while (row < dgvMother.Rows.Count - 1)
                         {
                             // if (grdMother.Rows[grdMother.CurrentRow.Index].Cells["nid_cpn"].Value.ToString().Equals(searchValueTxt))
-                            strgrdvalue = dgvMother.Rows[row].Cells[1].Value.ToString().ToUpper();
+                            strgrdvalue = dgvMother.Rows[row].Cells[0].Value.ToString().ToUpper();
                             if (strgrdvalue == searchValueTxt)
                             {
                                 rowIndex = row;
@@ -317,7 +309,7 @@ namespace smi
                         }
                         if (valueResulet != false)
                         {
-                            MessageBox.Show("NID de PTV : " + txtSearched.Text, "Nao encontrado");
+                            MessageBox.Show("NID de CPN : " + txtSearched.Text, "Nao encontrado");
                             return;
                         }
                     }
@@ -336,12 +328,12 @@ namespace smi
                         while (row < dgvMother.Rows.Count - 1)
                         {
                             // if (grdMother.Rows[grdMother.CurrentRow.Index].Cells["nid_tarv"].Value.ToString().Equals(searchValueTxt))
-                            strgrdvalue = dgvMother.Rows[row].Cells[2].Value.ToString().ToUpper();
+                            strgrdvalue = dgvMother.Rows[row].Cells[1].Value.ToString().ToUpper();
                             if (strgrdvalue == searchValueTxt)
                             {
                                 rowIndex = row;
                                 dgvMother.Rows[rowIndex].Selected = true;
-                                dgvMother.CurrentCell = dgvMother.Rows[rowIndex].Cells[2];
+                                dgvMother.CurrentCell = dgvMother.Rows[rowIndex].Cells[1];
                                 rowIndex++;
                                 valueResulet = false;
                                 break;
@@ -369,12 +361,12 @@ namespace smi
                         while (row < dgvMother.Rows.Count - 1)
                         {
                             //if (grdMother.Rows[grdMother.CurrentRow.Index].Cells["name"].Value.ToString().Equals(searchValueTxt))
-                            strgrdvalue = dgvMother.Rows[row].Cells[3].Value.ToString().ToUpper();
-                            if (strgrdvalue == searchValueTxt)
+                            strgrdvalue = dgvMother.Rows[row].Cells[2].Value.ToString().ToUpper();
+                            if (strgrdvalue.Trim().ToLower() == searchValueTxt.Trim().ToLower())
                             {
                                 rowIndex = row;
                                 dgvMother.Rows[rowIndex].Selected = true;
-                                dgvMother.CurrentCell = dgvMother.Rows[rowIndex].Cells[3];
+                                dgvMother.CurrentCell = dgvMother.Rows[rowIndex].Cells[2];
                                 rowIndex++;
                                 valueResulet = false;
                                 break;
@@ -403,12 +395,12 @@ namespace smi
                         while (row < dgvMother.Rows.Count - 1)
                         {
                             //if (grdMother.Rows[grdMother.CurrentRow.Index].Cells["name"].Value.ToString().Equals(searchValueTxt))
-                            strgrdvalue = dgvMother.Rows[row].Cells[5].Value.ToString().ToUpper();
+                            strgrdvalue = dgvMother.Rows[row].Cells[4].Value.ToString().ToUpper();
                             if (strgrdvalue == searchValueTxt)
                             {
                                 rowIndex = row;
                                 dgvMother.Rows[rowIndex].Selected = true;
-                                dgvMother.CurrentCell = dgvMother.Rows[rowIndex].Cells[5];
+                                dgvMother.CurrentCell = dgvMother.Rows[rowIndex].Cells[4];
                                 rowIndex++;
                                 valueResulet = false;
                                 break;

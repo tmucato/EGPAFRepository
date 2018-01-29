@@ -451,8 +451,6 @@ namespace smi
                 string nidcpn = txtNidCpnMain.Text;
 
 
-
-
                 if (cbxNrConulta.SelectedIndex >= 0)
                 {
                     SaveCPNDataToDataBase(cpn);

@@ -28,14 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvChild = new System.Windows.Forms.DataGridView();
-            this.nid_ccr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mot_nid_cpn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtNidMaeCpn = new System.Windows.Forms.TextBox();
@@ -59,6 +54,13 @@
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.cbxGenero = new System.Windows.Forms.ComboBox();
             this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.nid_ccr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mot_nid_cpn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.residence = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChild)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,9 +68,17 @@
             // 
             this.dgvChild.AllowUserToAddRows = false;
             this.dgvChild.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChild.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvChild.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChild.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-                     this.nid_ccr,
+            this.nid_ccr,
             this.mot_nid_cpn,
             this.name,
             this.residence,
@@ -78,65 +88,9 @@
             this.dgvChild.Location = new System.Drawing.Point(15, 226);
             this.dgvChild.Name = "dgvChild";
             this.dgvChild.ReadOnly = true;
-            this.dgvChild.Size = new System.Drawing.Size(1087, 176);
+            this.dgvChild.Size = new System.Drawing.Size(1147, 176);
             this.dgvChild.TabIndex = 128;
             this.dgvChild.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChild_CellContentClick);
-
-            // 
-            // nid_ccr
-            // 
-            this.nid_ccr.DataPropertyName = "nid_ccr";
-            this.nid_ccr.HeaderText = "NID CCR";
-            this.nid_ccr.Name = "nid_ccr";
-            this.nid_ccr.ReadOnly = true;
-            this.nid_ccr.Width = 130;
-            // 
-            // mot_nid_cpn
-            // 
-            this.mot_nid_cpn.DataPropertyName = "mot_nid_cpn";
-            this.mot_nid_cpn.HeaderText = "Nid Mãe CPN";
-            this.mot_nid_cpn.Name = "mot_nid_cpn";
-            this.mot_nid_cpn.ReadOnly = true;
-            this.mot_nid_cpn.Width = 130;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.FillWeight = 200F;
-            this.name.HeaderText = "Nome";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 200;
-            // 
-            // residence
-            // 
-            this.residence.DataPropertyName = "residence";
-            this.residence.HeaderText = "Morada";
-            this.residence.Name = "residence";
-            this.residence.ReadOnly = true;
-            this.residence.Width = 240;
-            // 
-            // phone
-            // 
-            this.phone.DataPropertyName = "phone";
-            this.phone.HeaderText = "Telefone";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "Genero";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            // 
-            // dob
-            // 
-            this.dob.DataPropertyName = "dob";
-            this.dob.HeaderText = "Data Nascimento";
-            this.dob.Name = "dob";
-            this.dob.ReadOnly = true;
-            this.dob.Width = 170;
             // 
             // txtPhone
             // 
@@ -207,6 +161,7 @@
             // 
             // cbProcurar
             // 
+            this.cbProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.cbProcurar.FormattingEnabled = true;
             this.cbProcurar.Items.AddRange(new object[] {
             "ID",
@@ -216,7 +171,7 @@
             "Contacto"});
             this.cbProcurar.Location = new System.Drawing.Point(200, 450);
             this.cbProcurar.Name = "cbProcurar";
-            this.cbProcurar.Size = new System.Drawing.Size(114, 21);
+            this.cbProcurar.Size = new System.Drawing.Size(114, 28);
             this.cbProcurar.TabIndex = 127;
             // 
             // txtSearched
@@ -228,6 +183,7 @@
             // 
             // cmdProcurar
             // 
+            this.cmdProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.cmdProcurar.Location = new System.Drawing.Point(68, 450);
             this.cmdProcurar.Name = "cmdProcurar";
             this.cmdProcurar.Size = new System.Drawing.Size(114, 26);
@@ -368,11 +324,69 @@
             this.dtpBirthDate.Size = new System.Drawing.Size(139, 20);
             this.dtpBirthDate.TabIndex = 133;
             // 
+            // nid_ccr
+            // 
+            this.nid_ccr.DataPropertyName = "nid_ccr";
+            this.nid_ccr.HeaderText = "NID CCR";
+            this.nid_ccr.Name = "nid_ccr";
+            this.nid_ccr.ReadOnly = true;
+            this.nid_ccr.Width = 115;
+            // 
+            // mot_nid_cpn
+            // 
+            this.mot_nid_cpn.DataPropertyName = "mot_nid_cpn";
+            this.mot_nid_cpn.HeaderText = "Nid Mãe CPN";
+            this.mot_nid_cpn.Name = "mot_nid_cpn";
+            this.mot_nid_cpn.ReadOnly = true;
+            this.mot_nid_cpn.Width = 145;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.FillWeight = 200F;
+            this.name.HeaderText = "Nome";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 200;
+            // 
+            // residence
+            // 
+            this.residence.DataPropertyName = "residence";
+            this.residence.HeaderText = "Morada";
+            this.residence.Name = "residence";
+            this.residence.ReadOnly = true;
+            this.residence.Width = 240;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.HeaderText = "Telefone";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "Genero";
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            // 
+            // dob
+            // 
+            this.dob.DataPropertyName = "dob";
+            dataGridViewCellStyle6.Format = "d";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dob.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dob.HeaderText = "Data Nascimento";
+            this.dob.Name = "dob";
+            this.dob.ReadOnly = true;
+            this.dob.Width = 200;
+            // 
             // FrmChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 499);
+            this.ClientSize = new System.Drawing.Size(1230, 506);
             this.Controls.Add(this.dtpBirthDate);
             this.Controls.Add(this.cbxGenero);
             this.Controls.Add(this.lblDataNascimento);
@@ -431,6 +445,7 @@
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.Label lblDataNascimento;
         private System.Windows.Forms.ComboBox cbxGenero;
+        private System.Windows.Forms.DateTimePicker dtpBirthDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn nid_ccr;
         private System.Windows.Forms.DataGridViewTextBoxColumn mot_nid_cpn;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
@@ -438,6 +453,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dob;
-        private System.Windows.Forms.DateTimePicker dtpBirthDate;
     }
 }
