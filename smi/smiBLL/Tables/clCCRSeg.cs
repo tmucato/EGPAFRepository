@@ -116,6 +116,7 @@ namespace smiBLL
             }
             catch (Exception ex)
             {
+                Logger.LogError("Error getting list of ccr segments from database", ex);
                 throw ex;
             }
 
@@ -137,20 +138,40 @@ namespace smiBLL
                 {
                     ccrseg db_ccrseg = new ccrseg();
 
-
-
-
-
-
-
-
+                    db_ccrseg.id = this.id;
+                    db_ccrseg.idchild = this.idchild;
+                    db_ccrseg.mothTarv5moth = this.mothTarv5moth;
+                    db_ccrseg.ame5m = this.ame5m;
+                    db_ccrseg.am5m = this.am5m;
+                    db_ccrseg.recuperada = this.recuperada;
+                    db_ccrseg.transinter = this.transinter;
+                    db_ccrseg.arv5m = this.arv5m;
+                    db_ccrseg.pcrmen2m = this.pcrmen2m;
+                    db_ccrseg.pcrmai2m = this.pcrmai2m;
+                    db_ccrseg.pcrposmen2m = this.pcrposmen2m;
+                    db_ccrseg.pcrposmai2m = this.pcrposmai2m;
+                    db_ccrseg.tb = this.tb;
+                    db_ccrseg.dam = this.dam;
+                    db_ccrseg.dag = this.dag;
+                    db_ccrseg.ce9m = this.ce9m;
+                    db_ccrseg.pnctl = this.pnctl;
+                    db_ccrseg.tpi = this.tpi;
+                    db_ccrseg.abandono9 = this.abandono9;
+                    db_ccrseg.obito9 = this.obito9;
+                    db_ccrseg.ce18m = ce18m;
+                    db_ccrseg.resultado18 = this.resultado18;
+                    db_ccrseg.transferidaCCS = this.transferidaCCS;
+                    db_ccrseg.transferidaCI = this.transferidaCI;
+                    db_ccrseg.transferidaUS = this.transferidaUS;
+                    db_ccrseg.abandono18 = this.abandono18;
+                    db_ccrseg.obito18 = this.obito9;
                     DbContext.ccrsegs.Add(db_ccrseg);
                     DbContext.SaveChanges();
                 }
             }
             catch (Exception ex)
             {
-
+                Logger.LogError("Error inserting ccr segment on database", ex);
                 throw ex;
             }
 

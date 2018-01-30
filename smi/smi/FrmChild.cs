@@ -43,6 +43,7 @@ namespace smi
         {
             try
             {
+                ClearFormContrls();
                 txtID.Text = obj_child.id.ToString();
                 txtName.Text = obj_child.name;
                 txtNid_ccr.Text = obj_child.nid_ccr;
@@ -63,34 +64,7 @@ namespace smi
 
 
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void dgvChild_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                var Grid = (DataGridView)sender;
-                clChild obj_child = new clChild();
 
-                if (Grid.Columns[e.ColumnIndex] is DataGridViewLinkColumn && e.RowIndex >= 0)
-                {
-                    int childID = (int)Grid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                    BindFormChildControls(obj_child.GetEntityList().Where(c => c.id == childID).FirstOrDefault());
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError("Error loading child data to form", ex);
-                MessageBox.Show("Error carregando informacao da criança no sistema");
-
-            }
-
-        }
 
         private void ClearFormContrls()
         {
@@ -187,6 +161,13 @@ namespace smi
                     return result;
                 }
 
+                if (!Functions.IsValidMother(txtNidMaeCpn.Text))
+                {
+                    MessageBox.Show("O NID CPN da mãe não encontrado na Base de dados");
+                    return result;
+                }
+
+
                 if (string.IsNullOrWhiteSpace(txtNid_ccr.Text))
                 {
                     MessageBox.Show("O campo do Nid CCR encontra-se vazio");
@@ -256,5 +237,30 @@ namespace smi
                 MessageBox.Show("Error apagando registo do sistema");
             }
         }
+
+        private void dgvChild_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                var Grid = (DataGridView)sender;
+                clChild obj_child = new clChild();
+                if (e.RowIndex >= 0)
+                {
+                    int childID = (int)Grid.Rows[e.RowIndex].Cells[7].Value;
+                    BindFormChildControls(obj_child.GetEntityList().Where(c => c.id == childID).FirstOrDefault());
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error loading child data to form", ex);
+                MessageBox.Show("Error carregando informacao da criança no sistema");
+            }
+        }
+
+
+
     }
 }

@@ -155,5 +155,27 @@ namespace smiBLL
             return result;
 
         }
+
+        public static bool IsValidMother(string motherCPNID)
+        {
+            bool result = false;
+            clMother mother = new clMother();
+
+            try
+            {
+                List<clMother> List_mother = mother.GetEntityList().Where(m => m.nid_cpn.Trim() == motherCPNID.Trim()).ToList();
+                if (List_mother.Count > 0)
+                {
+                    result = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("Error Verifing Mother", ex);
+                throw ex;
+            }
+
+            return result;
+        }
     }
 }

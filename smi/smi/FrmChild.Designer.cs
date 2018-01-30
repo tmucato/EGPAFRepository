@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvChild = new System.Windows.Forms.DataGridView();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChild)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,14 +69,14 @@
             // 
             this.dgvChild.AllowUserToAddRows = false;
             this.dgvChild.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChild.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChild.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChild.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChild.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nid_ccr,
@@ -84,13 +85,14 @@
             this.residence,
             this.phone,
             this.gender,
-            this.dob});
+            this.dob,
+            this.ID});
             this.dgvChild.Location = new System.Drawing.Point(15, 226);
             this.dgvChild.Name = "dgvChild";
             this.dgvChild.ReadOnly = true;
-            this.dgvChild.Size = new System.Drawing.Size(1147, 176);
+            this.dgvChild.Size = new System.Drawing.Size(1143, 176);
             this.dgvChild.TabIndex = 128;
-            this.dgvChild.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChild_CellContentClick);
+            this.dgvChild.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvChild_RowHeaderMouseClick);
             // 
             // txtPhone
             // 
@@ -307,6 +309,7 @@
             this.cbxGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cbxGenero.FormattingEnabled = true;
             this.cbxGenero.Items.AddRange(new object[] {
+            "Selecionar",
             "Feminino",
             "Masculino"});
             this.cbxGenero.Location = new System.Drawing.Point(726, 121);
@@ -374,19 +377,27 @@
             // dob
             // 
             this.dob.DataPropertyName = "dob";
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dob.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dob.DefaultCellStyle = dataGridViewCellStyle4;
             this.dob.HeaderText = "Data Nascimento";
             this.dob.Name = "dob";
             this.dob.ReadOnly = true;
             this.dob.Width = 200;
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "id";
+            this.ID.HeaderText = "id";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
             // FrmChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1230, 506);
+            this.ClientSize = new System.Drawing.Size(1178, 488);
             this.Controls.Add(this.dtpBirthDate);
             this.Controls.Add(this.cbxGenero);
             this.Controls.Add(this.lblDataNascimento);
@@ -453,5 +464,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dob;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }
