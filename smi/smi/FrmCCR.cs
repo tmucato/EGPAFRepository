@@ -226,7 +226,7 @@ namespace smi
                     obj_ccr.ctz = cbxCTZ.SelectedText;
                 if (cbxProfARV.SelectedIndex >= 0)
                     obj_ccr.profiaxia_arv = Functions.ConvertComboValueToBool(cbxProfARV.SelectedText);
-                if 
+               
 
 
 

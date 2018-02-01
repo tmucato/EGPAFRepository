@@ -164,6 +164,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\DataSources\smiBLL.clMother.datasource" />
     <None Include="Properties\DataSources\smiBLL.clUsers.datasource" />
     <None Include="Properties\DataSources\smiBLL.Functions.datasource" />

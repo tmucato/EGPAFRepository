@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="smiModelStoreContainer" CdmEntityContainer="DBsmiEntities">
+    <EntitySetMapping Name="mothers">
+      <EntityTypeMapping TypeName="smiModel.mother">
+        <MappingFragment StoreEntitySet="mother">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nid_cpn" ColumnName="nid_cpn" />
+          <ScalarProperty Name="nid_tarv" ColumnName="nid_tarv" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="residence" ColumnName="residence" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="smiModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="apelido" ColumnName="apelido" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="posicao" ColumnName="posicao" />
+          <ScalarProperty Name="systemrole" ColumnName="systemrole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="children">
+      <EntityTypeMapping TypeName="smiModel.child">
+        <MappingFragment StoreEntitySet="child">
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="mot_nid_cpn" ColumnName="mot_nid_cpn" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="residence" ColumnName="residence" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="nid_ccr" ColumnName="nid_ccr" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cpn_final">
+      <EntityTypeMapping TypeName="smiModel.cpn_final">
+        <MappingFragment StoreEntitySet="cpn_final">
+          <ScalarProperty Name="tb_treatment" ColumnName="tb_treatment" />
+          <ScalarProperty Name="tb_isoniazid" ColumnName="tb_isoniazid" />
+          <ScalarProperty Name="vat_2_5_dose" ColumnName="vat_2_5_dose" />
+          <ScalarProperty Name="vat_1_dose" ColumnName="vat_1_dose" />
+          <ScalarProperty Name="mp" ColumnName="mp" />
+          <ScalarProperty Name="mal_treatment" ColumnName="mal_treatment" />
+          <ScalarProperty Name="mal_diag_lab" ColumnName="mal_diag_lab" />
+          <ScalarProperty Name="bednet" ColumnName="bednet" />
+          <ScalarProperty Name="tip" ColumnName="tip" />
+          <ScalarProperty Name="finalresult_arv" ColumnName="finalresult_arv" />
+          <ScalarProperty Name="ctz_init" ColumnName="ctz_init" />
+          <ScalarProperty Name="ctz_entr" ColumnName="ctz_entr" />
+          <ScalarProperty Name="partnerserostatus" ColumnName="partnerserostatus" />
+          <ScalarProperty Name="womanserostatus" ColumnName="womanserostatus" />
+          <ScalarProperty Name="its_psyphilistreat" ColumnName="its_psyphilistreat" />
+          <ScalarProperty Name="its_wsyphilistreat" ColumnName="its_wsyphilistreat" />
+          <ScalarProperty Name="its_syphilistesting" ColumnName="its_syphilistesting" />
+          <ScalarProperty Name="its_treatment" ColumnName="its_treatment" />
+          <ScalarProperty Name="its_diag" ColumnName="its_diag" />
+          <ScalarProperty Name="salferr_more3" ColumnName="salferr_more3" />
+          <ScalarProperty Name="receiveddesparasitante" ColumnName="receiveddesparasitante" />
+          <ScalarProperty Name="resultabandon" ColumnName="resultabandon" />
+          <ScalarProperty Name="resultcured" ColumnName="resultcured" />
+          <ScalarProperty Name="supnutr" ColumnName="supnutr" />
+          <ScalarProperty Name="dam" ColumnName="dam" />
+          <ScalarProperty Name="dag" ColumnName="dag" />
+          <ScalarProperty Name="weightgainyno" ColumnName="weightgainyno" />
+          <ScalarProperty Name="partnerpreence" ColumnName="partnerpreence" />
+          <ScalarProperty Name="cons_more4" ColumnName="cons_more4" />
+          <ScalarProperty Name="nlivro" ColumnName="nlivro" />
+          <ScalarProperty Name="idmother" ColumnName="idmother" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cpns">
+      <EntityTypeMapping TypeName="smiModel.cpn">
+        <MappingFragment StoreEntitySet="cpn">
+          <ScalarProperty Name="providername" ColumnName="providername" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="tb_treatment" ColumnName="tb_treatment" />
+          <ScalarProperty Name="tb_isoniazid" ColumnName="tb_isoniazid" />
+          <ScalarProperty Name="vat_2_5_dose" ColumnName="vat_2_5_dose" />
+          <ScalarProperty Name="vat_1_dose" ColumnName="vat_1_dose" />
+          <ScalarProperty Name="hpp" ColumnName="hpp" />
+          <ScalarProperty Name="pos_malaria_treated" ColumnName="pos_malaria_treated" />
+          <ScalarProperty Name="result_tdr_htz" ColumnName="result_tdr_htz" />
+          <ScalarProperty Name="tdr_htz" ColumnName="tdr_htz" />
+          <ScalarProperty Name="bednet" ColumnName="bednet" />
+          <ScalarProperty Name="tip" ColumnName="tip" />
+          <ScalarProperty Name="arv_cont" ColumnName="arv_cont" />
+          <ScalarProperty Name="tarv_init_visit" ColumnName="tarv_init_visit" />
+          <ScalarProperty Name="em_tarv_entrada" ColumnName="em_tarv_entrada" />
+          <ScalarProperty Name="azt_nvp" ColumnName="azt_nvp" />
+          <ScalarProperty Name="nvp" ColumnName="nvp" />
+          <ScalarProperty Name="tarv" ColumnName="tarv" />
+          <ScalarProperty Name="ctz_init_cont" ColumnName="ctz_init_cont" />
+          <ScalarProperty Name="ctz" ColumnName="ctz" />
+          <ScalarProperty Name="partnerhivtest" ColumnName="partnerhivtest" />
+          <ScalarProperty Name="cpnhivtest" ColumnName="cpnhivtest" />
+          <ScalarProperty Name="serostatusentcpn" ColumnName="serostatusentcpn" />
+          <ScalarProperty Name="its_syphilistratmentparceir" ColumnName="its_syphilistratmentparceir" />
+          <ScalarProperty Name="its_syphilistratmentmulhr" ColumnName="its_syphilistratmentmulhr" />
+          <ScalarProperty Name="its_psyphilistreat" ColumnName="its_psyphilistreat" />
+          <ScalarProperty Name="its_wsyphilistreat" ColumnName="its_wsyphilistreat" />
+          <ScalarProperty Name="its_syphilistesting" ColumnName="its_syphilistesting" />
+          <ScalarProperty Name="its_syndromictreatment" ColumnName="its_syndromictreatment" />
+          <ScalarProperty Name="its_leucorreia" ColumnName="its_leucorreia" />
+          <ScalarProperty Name="its_ulceragenital" ColumnName="its_ulceragenital" />
+          <ScalarProperty Name="glicosuria" ColumnName="glicosuria" />
+          <ScalarProperty Name="proteinuria" ColumnName="proteinuria" />
+          <ScalarProperty Name="hgb" ColumnName="hgb" />
+          <ScalarProperty Name="ta" ColumnName="ta" />
+          <ScalarProperty Name="salferr_acfolico" ColumnName="salferr_acfolico" />
+          <ScalarProperty Name="receiveddesparasitante" ColumnName="receiveddesparasitante" />
+          <ScalarProperty Name="resultabandon" ColumnName="resultabandon" />
+          <ScalarProperty Name="resultcured" ColumnName="resultcured" />
+          <ScalarProperty Name="supnutr" ColumnName="supnutr" />
+          <ScalarProperty Name="dam" ColumnName="dam" />
+          <ScalarProperty Name="dag" ColumnName="dag" />
+          <ScalarProperty Name="weightgainyno" ColumnName="weightgainyno" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="partnerpresence" ColumnName="partnerpresence" />
+          <ScalarProperty Name="gageless12" ColumnName="gageless12" />
+          <ScalarProperty Name="gestationalage" ColumnName="gestationalage" />
+          <ScalarProperty Name="agegroup" ColumnName="agegroup" />
+          <ScalarProperty Name="visdate" ColumnName="visdate" />
+          <ScalarProperty Name="nyear" ColumnName="nyear" />
+          <ScalarProperty Name="nlivro" ColumnName="nlivro" />
+          <ScalarProperty Name="idmother" ColumnName="idmother" />
+          <ScalarProperty Name="nr_consulta" ColumnName="nr_consulta" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ccrsegs">
+      <EntityTypeMapping TypeName="smiModel.ccrseg">
+        <MappingFragment StoreEntitySet="ccrseg">
+          <ScalarProperty Name="obito18" ColumnName="obito18" />
+          <ScalarProperty Name="abandono18" ColumnName="abandono18" />
+          <ScalarProperty Name="transferidaUS" ColumnName="transferidaUS" />
+          <ScalarProperty Name="transferidaCI" ColumnName="transferidaCI" />
+          <ScalarProperty Name="transferidaCCS" ColumnName="transferidaCCS" />
+          <ScalarProperty Name="resultado18" ColumnName="resultado18" />
+          <ScalarProperty Name="ce18m" ColumnName="ce18m" />
+          <ScalarProperty Name="obito9" ColumnName="obito9" />
+          <ScalarProperty Name="abandono9" ColumnName="abandono9" />
+          <ScalarProperty Name="tpi" ColumnName="tpi" />
+          <ScalarProperty Name="pnctl" ColumnName="pnctl" />
+          <ScalarProperty Name="ce9m" ColumnName="ce9m" />
+          <ScalarProperty Name="dag" ColumnName="dag" />
+          <ScalarProperty Name="dam" ColumnName="dam" />
+          <ScalarProperty Name="tb" ColumnName="tb" />
+          <ScalarProperty Name="pcrposmai2m" ColumnName="pcrposmai2m" />
+          <ScalarProperty Name="pcrposmen2m" ColumnName="pcrposmen2m" />
+          <ScalarProperty Name="pcrmai2m" ColumnName="pcrmai2m" />
+          <ScalarProperty Name="pcrmen2m" ColumnName="pcrmen2m" />
+          <ScalarProperty Name="arv5m" ColumnName="arv5m" />
+          <ScalarProperty Name="transinter" ColumnName="transinter" />
+          <ScalarProperty Name="recuperada" ColumnName="recuperada" />
+          <ScalarProperty Name="am5m" ColumnName="am5m" />
+          <ScalarProperty Name="ame5m" ColumnName="ame5m" />
+          <ScalarProperty Name="mothTarv5moth" ColumnName="mothTarv5moth" />
+          <ScalarProperty Name="idccr" ColumnName="idccr" />
+          <ScalarProperty Name="idchild" ColumnName="idchild" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -27,3 +27,16 @@ C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.Propertie
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.exe
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smi\obj\x86\Debug\smi.pdb
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csprojResolveAssemblyReference.cache
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmAdmin.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmCCR.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmChild.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmCPN.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.frmLogin.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmHome.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmMother.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmCPF.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.FrmCPP.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.Properties.Resources.resources
+C:\Users\tmucato\Source\EGPAFRepository\smi\smi\obj\x86\Debug\smi.csproj.GenerateResource.Cache
+C:\Users\tmucato\Source\EGPAFRepository\smi\bin\smi.exe.config

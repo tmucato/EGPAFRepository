@@ -29,3 +29,4 @@ C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiDAL\bin\Debug\MySql.Web.xml
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.csprojResolveAssemblyReference.cache
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.dll
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.pdb
+C:\Users\tmucato\Source\EGPAFRepository\smi\smiDAL\obj\Debug\smiDAL.csprojResolveAssemblyReference.cache
