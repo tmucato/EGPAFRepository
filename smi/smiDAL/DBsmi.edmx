@@ -44,7 +44,7 @@
           <Property Name="chd_nid_tarv" Type="varchar" MaxLength="45" />
           <Property Name="obs" Type="varchar" MaxLength="60" />
           <Property Name="providername" Type="varchar" MaxLength="60" />
-          <Property Name="motart_5m_chd" Type="bool" />
+          <Property Name="motart_5m_chd" Type="bool" Nullable="false" />
           <Property Name="tb" Type="bool" />
           <Property Name="dam_dag" Type="varchar" MaxLength="3" />
           <Property Name="ce" Type="bool" />
@@ -65,8 +65,9 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="idchild" Type="int" Nullable="false" />
-          <Property Name="mothTarv5moth" Type="varchar" MaxLength="45" />
+          <Property Name="idchild" Type="int" />
+          <Property Name="idccr" Type="int" Nullable="false" />
+          <Property Name="mothTarv5moth" Type="varchar" MaxLength="50" />
           <Property Name="ame5m" Type="bool" />
           <Property Name="am5m" Type="bool" />
           <Property Name="recuperada" Type="bool" />
@@ -138,8 +139,8 @@
           <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
           <Property Name="its_wsyphilistreat" Type="varchar" MaxLength="5" />
           <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
-          <Property Name="its_syphilistratmentmulhr" Type="varchar" MaxLength="45" />
-          <Property Name="its_syphilistratmentparceir" Type="varchar" MaxLength="45" />
+          <Property Name="its_syphilistratmentmulhr" Type="varchar" MaxLength="5" />
+          <Property Name="its_syphilistratmentparceir" Type="varchar" MaxLength="5" />
           <Property Name="serostatusentcpn" Type="varchar" MaxLength="5" />
           <Property Name="cpnhivtest" Type="varchar" MaxLength="5" />
           <Property Name="partnerhivtest" Type="varchar" MaxLength="5" />
@@ -225,15 +226,15 @@
           <Property Name="posicao" Type="varchar" MaxLength="45" />
           <Property Name="systemrole" Type="varchar" MaxLength="45" />
         </EntityType>
-        <Association Name="ccrseg_ibfk_1">
-          <End Role="child" Type="Self.child" Multiplicity="1" />
+        <Association Name="idccr">
+          <End Role="ccr" Type="Self.ccr" Multiplicity="1" />
           <End Role="ccrseg" Type="Self.ccrseg" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="child">
+            <Principal Role="ccr">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="ccrseg">
-              <PropertyRef Name="idchild" />
+              <PropertyRef Name="idccr" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -257,8 +258,8 @@
           <EntitySet Name="cpn_final" EntityType="Self.cpn_final" Schema="smi" store:Type="Tables" />
           <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
           <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
-          <AssociationSet Name="ccrseg_ibfk_1" Association="Self.ccrseg_ibfk_1">
-            <End Role="child" EntitySet="child" />
+          <AssociationSet Name="idccr" Association="Self.idccr">
+            <End Role="ccr" EntitySet="ccr" />
             <End Role="ccrseg" EntitySet="ccrseg" />
           </AssociationSet>
           <AssociationSet Name="idchild" Association="Self.idchild">
@@ -300,17 +301,17 @@
           <EntitySet Name="children" EntityType="smiModel.child" />
           <EntitySet Name="cpn_final" EntityType="smiModel.cpn_final" />
           <EntitySet Name="cpns" EntityType="smiModel.cpn" />
+          <EntitySet Name="ccrsegs" EntityType="smiModel.ccrseg" />
           <EntitySet Name="ccrs" EntityType="smiModel.ccr" />
+          <AssociationSet Name="idccr" Association="smiModel.idccr">
+            <End Role="ccr" EntitySet="ccrs" />
+            <End Role="ccrseg" EntitySet="ccrsegs" />
+          </AssociationSet>
           <AssociationSet Name="idchild" Association="smiModel.idchild">
             <End Role="child" EntitySet="children" />
             <End Role="ccr" EntitySet="ccrs" />
           </AssociationSet>
-          <EntitySet Name="ccrsegs" EntityType="smiModel.ccrseg" />
-          <AssociationSet Name="ccrseg_ibfk_1" Association="smiModel.ccrseg_ibfk_1">
-            <End Role="child" EntitySet="children" />
-            <End Role="ccrseg" EntitySet="ccrsegs" />
-          </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="child">
           <Key>
             <PropertyRef Name="id" />
@@ -324,7 +325,6 @@
           <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="dob" Type="DateTime" />
           <NavigationProperty Name="ccrs" Relationship="smiModel.idchild" FromRole="child" ToRole="ccr" />
-          <NavigationProperty Name="ccrsegs" Relationship="smiModel.ccrseg_ibfk_1" FromRole="child" ToRole="ccrseg" />
         </EntityType>
         <EntityType Name="cpn_final">
           <Key>
@@ -422,6 +422,40 @@
           <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="ccrseg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idchild" Type="Int32" />
+          <Property Name="idccr" Type="Int32" Nullable="false" />
+          <Property Name="mothTarv5moth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ame5m" Type="Boolean" />
+          <Property Name="am5m" Type="Boolean" />
+          <Property Name="recuperada" Type="Boolean" />
+          <Property Name="transinter" Type="Boolean" />
+          <Property Name="arv5m" Type="Boolean" />
+          <Property Name="pcrmen2m" Type="Boolean" />
+          <Property Name="pcrmai2m" Type="Boolean" />
+          <Property Name="pcrposmen2m" Type="Boolean" />
+          <Property Name="pcrposmai2m" Type="Boolean" />
+          <Property Name="tb" Type="Boolean" />
+          <Property Name="dam" Type="Boolean" />
+          <Property Name="dag" Type="Boolean" />
+          <Property Name="ce9m" Type="Boolean" />
+          <Property Name="pnctl" Type="Boolean" />
+          <Property Name="tpi" Type="Boolean" />
+          <Property Name="abandono9" Type="Boolean" />
+          <Property Name="obito9" Type="Boolean" />
+          <Property Name="ce18m" Type="Boolean" />
+          <Property Name="resultado18" Type="Boolean" />
+          <Property Name="transferidaCCS" Type="Boolean" />
+          <Property Name="transferidaCI" Type="Boolean" />
+          <Property Name="transferidaUS" Type="Boolean" />
+          <Property Name="abandono18" Type="Boolean" />
+          <Property Name="obito18" Type="Boolean" />
+          <NavigationProperty Name="ccr" Relationship="smiModel.idccr" FromRole="ccrseg" ToRole="ccr" />
+        </EntityType>
         <EntityType Name="ccr">
           <Key>
             <PropertyRef Name="id" />
@@ -476,8 +510,21 @@
           <Property Name="pcrpos_under2m" Type="Boolean" />
           <Property Name="pcrpos_above2m" Type="Boolean" />
           <Property Name="pnctl" Type="Boolean" />
+          <NavigationProperty Name="ccrsegs" Relationship="smiModel.idccr" FromRole="ccr" ToRole="ccrseg" />
           <NavigationProperty Name="child" Relationship="smiModel.idchild" FromRole="ccr" ToRole="child" />
         </EntityType>
+        <Association Name="idccr">
+          <End Type="smiModel.ccr" Role="ccr" Multiplicity="1" />
+          <End Type="smiModel.ccrseg" Role="ccrseg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ccr">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ccrseg">
+              <PropertyRef Name="idccr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="idchild">
           <End Type="smiModel.child" Role="child" Multiplicity="1" />
           <End Type="smiModel.ccr" Role="ccr" Multiplicity="*" />
@@ -490,52 +537,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="ccrseg">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idchild" Type="Int32" Nullable="false" />
-          <Property Name="mothTarv5moth" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="ame5m" Type="Boolean" />
-          <Property Name="am5m" Type="Boolean" />
-          <Property Name="recuperada" Type="Boolean" />
-          <Property Name="transinter" Type="Boolean" />
-          <Property Name="arv5m" Type="Boolean" />
-          <Property Name="pcrmen2m" Type="Boolean" />
-          <Property Name="pcrmai2m" Type="Boolean" />
-          <Property Name="pcrposmen2m" Type="Boolean" />
-          <Property Name="pcrposmai2m" Type="Boolean" />
-          <Property Name="tb" Type="Boolean" />
-          <Property Name="dam" Type="Boolean" />
-          <Property Name="dag" Type="Boolean" />
-          <Property Name="ce9m" Type="Boolean" />
-          <Property Name="pnctl" Type="Boolean" />
-          <Property Name="tpi" Type="Boolean" />
-          <Property Name="abandono9" Type="Boolean" />
-          <Property Name="obito9" Type="Boolean" />
-          <Property Name="ce18m" Type="Boolean" />
-          <Property Name="resultado18" Type="Boolean" />
-          <Property Name="transferidaCCS" Type="Boolean" />
-          <Property Name="transferidaCI" Type="Boolean" />
-          <Property Name="transferidaUS" Type="Boolean" />
-          <Property Name="abandono18" Type="Boolean" />
-          <Property Name="obito18" Type="Boolean" />
-          <NavigationProperty Name="child" Relationship="smiModel.ccrseg_ibfk_1" FromRole="ccrseg" ToRole="child" />
-        </EntityType>
-        <Association Name="ccrseg_ibfk_1">
-          <End Type="smiModel.child" Role="child" Multiplicity="1" />
-          <End Type="smiModel.ccrseg" Role="ccrseg" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="child">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="ccrseg">
-              <PropertyRef Name="idchild" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -679,6 +681,40 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ccrsegs">
+            <EntityTypeMapping TypeName="smiModel.ccrseg">
+              <MappingFragment StoreEntitySet="ccrseg">
+                <ScalarProperty Name="obito18" ColumnName="obito18" />
+                <ScalarProperty Name="abandono18" ColumnName="abandono18" />
+                <ScalarProperty Name="transferidaUS" ColumnName="transferidaUS" />
+                <ScalarProperty Name="transferidaCI" ColumnName="transferidaCI" />
+                <ScalarProperty Name="transferidaCCS" ColumnName="transferidaCCS" />
+                <ScalarProperty Name="resultado18" ColumnName="resultado18" />
+                <ScalarProperty Name="ce18m" ColumnName="ce18m" />
+                <ScalarProperty Name="obito9" ColumnName="obito9" />
+                <ScalarProperty Name="abandono9" ColumnName="abandono9" />
+                <ScalarProperty Name="tpi" ColumnName="tpi" />
+                <ScalarProperty Name="pnctl" ColumnName="pnctl" />
+                <ScalarProperty Name="ce9m" ColumnName="ce9m" />
+                <ScalarProperty Name="dag" ColumnName="dag" />
+                <ScalarProperty Name="dam" ColumnName="dam" />
+                <ScalarProperty Name="tb" ColumnName="tb" />
+                <ScalarProperty Name="pcrposmai2m" ColumnName="pcrposmai2m" />
+                <ScalarProperty Name="pcrposmen2m" ColumnName="pcrposmen2m" />
+                <ScalarProperty Name="pcrmai2m" ColumnName="pcrmai2m" />
+                <ScalarProperty Name="pcrmen2m" ColumnName="pcrmen2m" />
+                <ScalarProperty Name="arv5m" ColumnName="arv5m" />
+                <ScalarProperty Name="transinter" ColumnName="transinter" />
+                <ScalarProperty Name="recuperada" ColumnName="recuperada" />
+                <ScalarProperty Name="am5m" ColumnName="am5m" />
+                <ScalarProperty Name="ame5m" ColumnName="ame5m" />
+                <ScalarProperty Name="mothTarv5moth" ColumnName="mothTarv5moth" />
+                <ScalarProperty Name="idccr" ColumnName="idccr" />
+                <ScalarProperty Name="idchild" ColumnName="idchild" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ccrs">
             <EntityTypeMapping TypeName="smiModel.ccr">
               <MappingFragment StoreEntitySet="ccr">
@@ -730,39 +766,6 @@
                 <ScalarProperty Name="nr_consulta" ColumnName="nr_consulta" />
                 <ScalarProperty Name="nlivro" ColumnName="nlivro" />
                 <ScalarProperty Name="nyear" ColumnName="nyear" />
-                <ScalarProperty Name="idchild" ColumnName="idchild" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ccrsegs">
-            <EntityTypeMapping TypeName="smiModel.ccrseg">
-              <MappingFragment StoreEntitySet="ccrseg">
-                <ScalarProperty Name="obito18" ColumnName="obito18" />
-                <ScalarProperty Name="abandono18" ColumnName="abandono18" />
-                <ScalarProperty Name="transferidaUS" ColumnName="transferidaUS" />
-                <ScalarProperty Name="transferidaCI" ColumnName="transferidaCI" />
-                <ScalarProperty Name="transferidaCCS" ColumnName="transferidaCCS" />
-                <ScalarProperty Name="resultado18" ColumnName="resultado18" />
-                <ScalarProperty Name="ce18m" ColumnName="ce18m" />
-                <ScalarProperty Name="obito9" ColumnName="obito9" />
-                <ScalarProperty Name="abandono9" ColumnName="abandono9" />
-                <ScalarProperty Name="tpi" ColumnName="tpi" />
-                <ScalarProperty Name="pnctl" ColumnName="pnctl" />
-                <ScalarProperty Name="ce9m" ColumnName="ce9m" />
-                <ScalarProperty Name="dag" ColumnName="dag" />
-                <ScalarProperty Name="dam" ColumnName="dam" />
-                <ScalarProperty Name="tb" ColumnName="tb" />
-                <ScalarProperty Name="pcrposmai2m" ColumnName="pcrposmai2m" />
-                <ScalarProperty Name="pcrposmen2m" ColumnName="pcrposmen2m" />
-                <ScalarProperty Name="pcrmai2m" ColumnName="pcrmai2m" />
-                <ScalarProperty Name="pcrmen2m" ColumnName="pcrmen2m" />
-                <ScalarProperty Name="arv5m" ColumnName="arv5m" />
-                <ScalarProperty Name="transinter" ColumnName="transinter" />
-                <ScalarProperty Name="recuperada" ColumnName="recuperada" />
-                <ScalarProperty Name="am5m" ColumnName="am5m" />
-                <ScalarProperty Name="ame5m" ColumnName="ame5m" />
-                <ScalarProperty Name="mothTarv5moth" ColumnName="mothTarv5moth" />
                 <ScalarProperty Name="idchild" ColumnName="idchild" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>

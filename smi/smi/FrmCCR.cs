@@ -46,6 +46,7 @@ namespace smi
                                 if (i == 1)
                                 {
                                     ccrseg.idchild = child.id;
+                                    ccrseg.idccr = ccr.id;
                                     ccrseg.InsertEntity();
                                 }
                             }
@@ -65,7 +66,6 @@ namespace smi
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -153,6 +153,61 @@ namespace smi
         private void btnAnteriorPage_Click(object sender, EventArgs e)
         {
             this.tabCCR.SelectedIndex = 0;
+        }
+
+
+        private void cbxNrConsultaMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            clCCR cl_ccr = new clCCR();
+            clCCRSeg cl_ccr_seg = new clCCRSeg();
+
+
+            try
+            {
+
+                if (cbxNrConsultaMain.SelectedIndex <= 0)
+                {
+                    SaveCCRDataToDatabase(cl_ccr);
+                    SaveCCRSegDataToDatabase(cl_ccr_seg);
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SaveCCRDataToDatabase(clCCR obj_ccr)
+        {
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(txtNidCCRID.Text))
+                {
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SaveCCRSegDataToDatabase(clCCRSeg obj_ccr_seg)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
 

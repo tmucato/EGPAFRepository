@@ -14,6 +14,11 @@ namespace smiDAL
     
     public partial class ccr
     {
+        public ccr()
+        {
+            this.ccrsegs = new HashSet<ccrseg>();
+        }
+    
         public int id { get; set; }
         public int idchild { get; set; }
         public int nyear { get; set; }
@@ -65,6 +70,7 @@ namespace smiDAL
         public Nullable<bool> pcrpos_above2m { get; set; }
         public Nullable<bool> pnctl { get; set; }
     
+        public virtual ICollection<ccrseg> ccrsegs { get; set; }
         public virtual child child { get; set; }
     }
 }

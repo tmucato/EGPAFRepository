@@ -15,7 +15,8 @@ namespace smiDAL
     public partial class ccrseg
     {
         public int id { get; set; }
-        public int idchild { get; set; }
+        public Nullable<int> idchild { get; set; }
+        public int idccr { get; set; }
         public string mothTarv5moth { get; set; }
         public Nullable<bool> ame5m { get; set; }
         public Nullable<bool> am5m { get; set; }
@@ -42,6 +43,6 @@ namespace smiDAL
         public Nullable<bool> abandono18 { get; set; }
         public Nullable<bool> obito18 { get; set; }
     
-        public virtual child child { get; set; }
+        public virtual ccr ccr { get; set; }
     }
 }

@@ -12,6 +12,7 @@ namespace smiBLL
     {
         public int id;
         public int idchild;
+        public int idccr;
         public string mothTarv5moth;
         public Nullable<bool> ame5m;
         public Nullable<bool> am5m;
@@ -42,6 +43,7 @@ namespace smiBLL
         {
             id = 0;
             idchild = 0;
+            idccr = 0;
             mothTarv5moth = string.Empty;
             ame5m = null;
             am5m = null;
@@ -84,7 +86,8 @@ namespace smiBLL
                     {
                         clCCRSeg obj_ccrseg = new clCCRSeg();
                         obj_ccrseg.id = db_ccrseg.id;
-                        obj_ccrseg.idchild = db_ccrseg.idchild;
+                        obj_ccrseg.idchild = Convert.ToInt32(db_ccrseg.idchild);
+                        obj_ccrseg.idccr = db_ccrseg.idccr;
                         obj_ccrseg.mothTarv5moth = db_ccrseg.mothTarv5moth;
                         obj_ccrseg.ame5m = db_ccrseg.ame5m;
                         obj_ccrseg.am5m = db_ccrseg.am5m;
@@ -137,9 +140,8 @@ namespace smiBLL
                 using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
                 {
                     ccrseg db_ccrseg = new ccrseg();
-
-                    db_ccrseg.id = this.id;
                     db_ccrseg.idchild = this.idchild;
+                    db_ccrseg.idccr = this.idccr;
                     db_ccrseg.mothTarv5moth = this.mothTarv5moth;
                     db_ccrseg.ame5m = this.ame5m;
                     db_ccrseg.am5m = this.am5m;
@@ -167,6 +169,7 @@ namespace smiBLL
                     db_ccrseg.obito18 = this.obito9;
                     DbContext.ccrsegs.Add(db_ccrseg);
                     DbContext.SaveChanges();
+                    this.id = db_ccrseg.id;
                 }
             }
             catch (Exception ex)

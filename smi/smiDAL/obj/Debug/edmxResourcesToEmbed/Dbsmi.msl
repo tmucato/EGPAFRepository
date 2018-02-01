@@ -139,6 +139,40 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ccrsegs">
+      <EntityTypeMapping TypeName="smiModel.ccrseg">
+        <MappingFragment StoreEntitySet="ccrseg">
+          <ScalarProperty Name="obito18" ColumnName="obito18" />
+          <ScalarProperty Name="abandono18" ColumnName="abandono18" />
+          <ScalarProperty Name="transferidaUS" ColumnName="transferidaUS" />
+          <ScalarProperty Name="transferidaCI" ColumnName="transferidaCI" />
+          <ScalarProperty Name="transferidaCCS" ColumnName="transferidaCCS" />
+          <ScalarProperty Name="resultado18" ColumnName="resultado18" />
+          <ScalarProperty Name="ce18m" ColumnName="ce18m" />
+          <ScalarProperty Name="obito9" ColumnName="obito9" />
+          <ScalarProperty Name="abandono9" ColumnName="abandono9" />
+          <ScalarProperty Name="tpi" ColumnName="tpi" />
+          <ScalarProperty Name="pnctl" ColumnName="pnctl" />
+          <ScalarProperty Name="ce9m" ColumnName="ce9m" />
+          <ScalarProperty Name="dag" ColumnName="dag" />
+          <ScalarProperty Name="dam" ColumnName="dam" />
+          <ScalarProperty Name="tb" ColumnName="tb" />
+          <ScalarProperty Name="pcrposmai2m" ColumnName="pcrposmai2m" />
+          <ScalarProperty Name="pcrposmen2m" ColumnName="pcrposmen2m" />
+          <ScalarProperty Name="pcrmai2m" ColumnName="pcrmai2m" />
+          <ScalarProperty Name="pcrmen2m" ColumnName="pcrmen2m" />
+          <ScalarProperty Name="arv5m" ColumnName="arv5m" />
+          <ScalarProperty Name="transinter" ColumnName="transinter" />
+          <ScalarProperty Name="recuperada" ColumnName="recuperada" />
+          <ScalarProperty Name="am5m" ColumnName="am5m" />
+          <ScalarProperty Name="ame5m" ColumnName="ame5m" />
+          <ScalarProperty Name="mothTarv5moth" ColumnName="mothTarv5moth" />
+          <ScalarProperty Name="idccr" ColumnName="idccr" />
+          <ScalarProperty Name="idchild" ColumnName="idchild" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ccrs">
       <EntityTypeMapping TypeName="smiModel.ccr">
         <MappingFragment StoreEntitySet="ccr">
@@ -190,39 +224,6 @@
           <ScalarProperty Name="nr_consulta" ColumnName="nr_consulta" />
           <ScalarProperty Name="nlivro" ColumnName="nlivro" />
           <ScalarProperty Name="nyear" ColumnName="nyear" />
-          <ScalarProperty Name="idchild" ColumnName="idchild" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ccrsegs">
-      <EntityTypeMapping TypeName="smiModel.ccrseg">
-        <MappingFragment StoreEntitySet="ccrseg">
-          <ScalarProperty Name="obito18" ColumnName="obito18" />
-          <ScalarProperty Name="abandono18" ColumnName="abandono18" />
-          <ScalarProperty Name="transferidaUS" ColumnName="transferidaUS" />
-          <ScalarProperty Name="transferidaCI" ColumnName="transferidaCI" />
-          <ScalarProperty Name="transferidaCCS" ColumnName="transferidaCCS" />
-          <ScalarProperty Name="resultado18" ColumnName="resultado18" />
-          <ScalarProperty Name="ce18m" ColumnName="ce18m" />
-          <ScalarProperty Name="obito9" ColumnName="obito9" />
-          <ScalarProperty Name="abandono9" ColumnName="abandono9" />
-          <ScalarProperty Name="tpi" ColumnName="tpi" />
-          <ScalarProperty Name="pnctl" ColumnName="pnctl" />
-          <ScalarProperty Name="ce9m" ColumnName="ce9m" />
-          <ScalarProperty Name="dag" ColumnName="dag" />
-          <ScalarProperty Name="dam" ColumnName="dam" />
-          <ScalarProperty Name="tb" ColumnName="tb" />
-          <ScalarProperty Name="pcrposmai2m" ColumnName="pcrposmai2m" />
-          <ScalarProperty Name="pcrposmen2m" ColumnName="pcrposmen2m" />
-          <ScalarProperty Name="pcrmai2m" ColumnName="pcrmai2m" />
-          <ScalarProperty Name="pcrmen2m" ColumnName="pcrmen2m" />
-          <ScalarProperty Name="arv5m" ColumnName="arv5m" />
-          <ScalarProperty Name="transinter" ColumnName="transinter" />
-          <ScalarProperty Name="recuperada" ColumnName="recuperada" />
-          <ScalarProperty Name="am5m" ColumnName="am5m" />
-          <ScalarProperty Name="ame5m" ColumnName="ame5m" />
-          <ScalarProperty Name="mothTarv5moth" ColumnName="mothTarv5moth" />
           <ScalarProperty Name="idchild" ColumnName="idchild" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>

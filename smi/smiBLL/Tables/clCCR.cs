@@ -203,7 +203,6 @@ namespace smiBLL
                 using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
                 {
                     ccr db_ccr = new ccr();
-                    db_ccr.id = this.id;
                     db_ccr.idchild = this.idchild;
                     db_ccr.nyear = this.nyear;
                     db_ccr.nlivro = this.nlivro;
@@ -255,6 +254,7 @@ namespace smiBLL
                     db_ccr.pnctl = this.pnctl;
                     DbContext.ccrs.Add(db_ccr);
                     DbContext.SaveChanges();
+                    this.id = db_ccr.id;
                 }
             }
             catch (Exception ex)

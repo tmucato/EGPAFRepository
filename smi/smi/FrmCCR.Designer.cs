@@ -1632,6 +1632,7 @@
             this.cbxNrConsultaMain.Name = "cbxNrConsultaMain";
             this.cbxNrConsultaMain.Size = new System.Drawing.Size(174, 21);
             this.cbxNrConsultaMain.TabIndex = 18;
+            this.cbxNrConsultaMain.SelectedIndexChanged += new System.EventHandler(this.cbxNrConsultaMain_SelectedIndexChanged);
             // 
             // btnGravarMain
             // 

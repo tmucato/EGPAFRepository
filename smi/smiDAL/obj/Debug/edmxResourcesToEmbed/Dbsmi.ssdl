@@ -39,7 +39,7 @@
     <Property Name="chd_nid_tarv" Type="varchar" MaxLength="45" />
     <Property Name="obs" Type="varchar" MaxLength="60" />
     <Property Name="providername" Type="varchar" MaxLength="60" />
-    <Property Name="motart_5m_chd" Type="bool" />
+    <Property Name="motart_5m_chd" Type="bool" Nullable="false" />
     <Property Name="tb" Type="bool" />
     <Property Name="dam_dag" Type="varchar" MaxLength="3" />
     <Property Name="ce" Type="bool" />
@@ -60,8 +60,9 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="idchild" Type="int" Nullable="false" />
-    <Property Name="mothTarv5moth" Type="varchar" MaxLength="45" />
+    <Property Name="idchild" Type="int" />
+    <Property Name="idccr" Type="int" Nullable="false" />
+    <Property Name="mothTarv5moth" Type="varchar" MaxLength="50" />
     <Property Name="ame5m" Type="bool" />
     <Property Name="am5m" Type="bool" />
     <Property Name="recuperada" Type="bool" />
@@ -133,8 +134,8 @@
     <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
     <Property Name="its_wsyphilistreat" Type="varchar" MaxLength="5" />
     <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
-    <Property Name="its_syphilistratmentmulhr" Type="varchar" MaxLength="45" />
-    <Property Name="its_syphilistratmentparceir" Type="varchar" MaxLength="45" />
+    <Property Name="its_syphilistratmentmulhr" Type="varchar" MaxLength="5" />
+    <Property Name="its_syphilistratmentparceir" Type="varchar" MaxLength="5" />
     <Property Name="serostatusentcpn" Type="varchar" MaxLength="5" />
     <Property Name="cpnhivtest" Type="varchar" MaxLength="5" />
     <Property Name="partnerhivtest" Type="varchar" MaxLength="5" />
@@ -220,15 +221,15 @@
     <Property Name="posicao" Type="varchar" MaxLength="45" />
     <Property Name="systemrole" Type="varchar" MaxLength="45" />
   </EntityType>
-  <Association Name="ccrseg_ibfk_1">
-    <End Role="child" Type="Self.child" Multiplicity="1" />
+  <Association Name="idccr">
+    <End Role="ccr" Type="Self.ccr" Multiplicity="1" />
     <End Role="ccrseg" Type="Self.ccrseg" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="child">
+      <Principal Role="ccr">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="ccrseg">
-        <PropertyRef Name="idchild" />
+        <PropertyRef Name="idccr" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -252,8 +253,8 @@
     <EntitySet Name="cpn_final" EntityType="Self.cpn_final" Schema="smi" store:Type="Tables" />
     <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
     <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
-    <AssociationSet Name="ccrseg_ibfk_1" Association="Self.ccrseg_ibfk_1">
-      <End Role="child" EntitySet="child" />
+    <AssociationSet Name="idccr" Association="Self.idccr">
+      <End Role="ccr" EntitySet="ccr" />
       <End Role="ccrseg" EntitySet="ccrseg" />
     </AssociationSet>
     <AssociationSet Name="idchild" Association="Self.idchild">

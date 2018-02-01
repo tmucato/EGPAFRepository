@@ -4,17 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="799552ff40604a0b8137e36f85f873c3" Name="Diagram1" ZoomLevel="92">
+      <Diagram DiagramId="799552ff40604a0b8137e36f85f873c3" Name="Diagram1" ZoomLevel="66">
         <EntityTypeShape EntityType="smiModel.mother" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="smiModel.usuario" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="smiModel.child" Width="1.5" PointX="4.25" PointY="0.5" />
-        <EntityTypeShape EntityType="smiModel.cpn_final" Width="1.5" PointX="9.75" PointY="0.5" />
-        <EntityTypeShape EntityType="smiModel.cpn" Width="1.5" PointX="8" PointY="0.5" />
-        <EntityTypeShape EntityType="smiModel.ccr" Width="1.5" PointX="6.125" PointY="0.5" />
+        <EntityTypeShape EntityType="smiModel.cpn_final" Width="1.5" PointX="10.125" PointY="0.5" />
+        <EntityTypeShape EntityType="smiModel.cpn" Width="1.5" PointX="8.125" PointY="0.5" />
+        <EntityTypeShape EntityType="smiModel.ccrseg" Width="1.5" PointX="4.25" PointY="3.5" />
+        <EntityTypeShape EntityType="smiModel.ccr" Width="1.5" PointX="6.25" PointY="0.5" />
+        <AssociationConnector Association="smiModel.idccr" />
         <AssociationConnector Association="smiModel.idchild" />
-        <EntityTypeShape EntityType="smiModel.ccrseg" Width="1.5" PointX="4.25" PointY="3.75" />
-        <AssociationConnector Association="smiModel.ccrseg_ibfk_1" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
