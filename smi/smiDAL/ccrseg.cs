@@ -42,7 +42,5 @@ namespace smiDAL
         public Nullable<bool> transferidaUS { get; set; }
         public Nullable<bool> abandono18 { get; set; }
         public Nullable<bool> obito18 { get; set; }
-    
-        public virtual ccr ccr { get; set; }
     }
 }

@@ -74,16 +74,16 @@ namespace smi
         {
             try
             {
-                txtNidCpnMain.Text = ccr.mot_nid_cpn;
+                txtNidCpnMae.Text = ccr.mot_nid_cpn;
                 txtNidTarvMae.Text = ccr.mot_nid_tarv;
                 cbxHIVLact.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.mot_hiv_lact));
                 cbxMaeLacTarv.SelectedItem = ccr.mot_hiv_tarv;
                 cbxContactTB.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.tb));
-                cbxDesbuAguda.SelectedItem = ccr.desnutricao_aguda;
+                cbxDesnuAguda.SelectedItem = ccr.desnutricao_aguda;
                 cbxExpHIV.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.exposicaoHIV));
                 txtOutrCondRisc.Text = ccr.outracondicaorisco;
                 cbxNutIdademen6.SelectedItem = ccr.aleitmaternomenor6m;
-                cbxNutIdademaior6.SelectedItem = ccr.aleitmaternonaior6m;
+                cbxNutIdademaior6.SelectedItem = ccr.aleitmaternomaior6m;
                 txtATPU.Text = ccr.atpu.ToString();
                 cbxCBS.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.csb_nut_sup));
                 cbxRecuperada.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.recuperada));
@@ -94,7 +94,7 @@ namespace smi
                 cbxRestesRapMaior9mes.SelectedItem = ccr.resultadotesterapido;
                 cbxResDefen.SelectedItem = ccr.resulttrapido_nexp;
                 if (ccr.pisoniazidainicio != null) dtpDataIniIson.Value = Convert.ToDateTime(ccr.pisoniazidainicio);
-                cbxContinuIson.SelectedItem = ccr.pisoniazida;
+                cbxIsoniazStatus.SelectedItem = ccr.pisoniazida;
                 cbxConpletIson.SelectedItem = ccr.pnctl;
                 cbxCTZ.SelectedItem = ccr.ctz;
                 cbxProfARV.SelectedItem = ccr.profiaxia_arv;
@@ -186,10 +186,55 @@ namespace smi
         {
             try
             {
-                if (!string.IsNullOrWhiteSpace(txtNidCCRID.Text))
-                {
+                if (Functions.IsDate(dtpDataConsulta.Text))
+                    obj_ccr.dataconsulta = dtpDataConsulta.Value;
+                if (Functions.IsNumber(txtIdade.Text))
+                    obj_ccr.age = Convert.ToInt32(txtIdade.Text);
+                if (cbxUnidIdade.SelectedIndex >= 0)
+                    obj_ccr.ageunit = cbxUnidIdade.SelectedText;
+                if (!string.IsNullOrWhiteSpace(txtNidCpnMae.Text))
+                    obj_ccr.mot_nid_cpn = txtNidCpnMae.Text;
+                if (!string.IsNullOrWhiteSpace(txtNidTarvMae.Text))
+                    obj_ccr.mot_nid_cpn = txtNidTarvMae.Text;
+                if (cbxHIVLact.SelectedIndex >= 0)
+                    obj_ccr.mot_hiv_lact = Functions.ConvertComboValueToBool(cbxHIVLact.SelectedText);
+                if (cbxMaeLacTarv.SelectedIndex >= 0)
+                    obj_ccr.mot_hiv_tarv = Functions.ConvertComboValueToBool(cbxMaeLacTarv.SelectedText);
+                if (cbxContactTB.SelectedIndex >= 0)
+                    obj_ccr.contactotb = Functions.ConvertComboValueToBool(cbxContactTB.SelectedText);
+                if (cbxDesnuAguda.SelectedIndex >= 0)
+                    obj_ccr.desnutricao_aguda = cbxDesnuAguda.SelectedText;
+                if (cbxExpHIV.SelectedIndex >= 0)
+                    obj_ccr.exposicaoHIV = Functions.ConvertComboValueToBool(cbxExpHIV.SelectedText);
+                if (!string.IsNullOrWhiteSpace(txtOutrCondRisc.Text))
+                    obj_ccr.outracondicaorisco = txtOutrCondRisc.Text;
+                if (Functions.IsDate(dtpDataIniIson.Text))
+                    obj_ccr.pisoniazidainicio = dtpDataIniIson.Value;
+                if (cbxIsoniazStatus.SelectedIndex >= 0)
+                    obj_ccr.pisoniazida = cbxIsoniazStatus.SelectedText;
+                if (cbxNutIdademen6.SelectedIndex >= 0)
+                    obj_ccr.aleitmaternomenor6m = cbxNutIdademen6.SelectedText;
+                if (cbxNutIdademaior6.SelectedIndex >= 0)
+                    obj_ccr.aleitmaternomaior6m = Functions.ConvertComboValueToBool(cbxNutIdademaior6.SelectedText);
+                if (Functions.IsNumber(txtATPU.Text))
+                    obj_ccr.atpu = Convert.ToInt32( txtATPU.Text);
+                if (cbxCBS.SelectedIndex >= 0)
+                    obj_ccr.csb_nut_sup = Functions.ConvertComboValueToBool(cbxCBS.SelectedText);
+                if (cbxRecuperada.SelectedIndex >= 0)
+                    obj_ccr.recuperada = Functions.ConvertComboValueToBool(cbxRecuperada.SelectedText);
+                if (cbxCTZ.SelectedIndex >= 0)
+                    obj_ccr.ctz = cbxCTZ.SelectedText;
+                if (cbxProfARV.SelectedIndex >= 0)
+                    obj_ccr.profiaxia_arv = Functions.ConvertComboValueToBool(cbxProfARV.SelectedText);
+                if 
 
-                }
+
+
+                //if (cbxColhPCRMen2Mes.SelectedIndex >= 0)
+                //    obj_ccr.
+
+
+
 
             }
             catch (Exception ex)
@@ -210,6 +255,6 @@ namespace smi
             }
         }
 
-
     }
 }
+

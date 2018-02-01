@@ -14,11 +14,6 @@ namespace smiDAL
     
     public partial class child
     {
-        public child()
-        {
-            this.ccrs = new HashSet<ccr>();
-        }
-    
         public int id { get; set; }
         public string nid_ccr { get; set; }
         public string name { get; set; }
@@ -27,7 +22,5 @@ namespace smiDAL
         public string phone { get; set; }
         public string mot_nid_cpn { get; set; }
         public Nullable<System.DateTime> dob { get; set; }
-    
-        public virtual ICollection<ccr> ccrs { get; set; }
     }
 }

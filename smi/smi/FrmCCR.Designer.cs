@@ -30,6 +30,12 @@
         {
             System.Windows.Forms.Label lblPCRMaior2Meses;
             this.ccrPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.cbxUnidIdade = new System.Windows.Forms.ComboBox();
+            this.txtIdade = new System.Windows.Forms.TextBox();
+            this.lblIdade = new System.Windows.Forms.Label();
+            this.dtpDataConsulta = new System.Windows.Forms.DateTimePicker();
+            this.txtDataConsult = new System.Windows.Forms.Label();
             this.btnProximaPagina = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.lblRestesRapCrinExpHIV = new System.Windows.Forms.Label();
@@ -64,9 +70,7 @@
             this.cbxNutIdademen6 = new System.Windows.Forms.ComboBox();
             this.lblNutIdademen6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lblConpletIson = new System.Windows.Forms.Label();
-            this.cbxConpletIson = new System.Windows.Forms.ComboBox();
-            this.cbxContinuIson = new System.Windows.Forms.ComboBox();
+            this.cbxIsoniazStatus = new System.Windows.Forms.ComboBox();
             this.lblContinuIson = new System.Windows.Forms.Label();
             this.dtpDataIniIson = new System.Windows.Forms.DateTimePicker();
             this.lblDataIniIson = new System.Windows.Forms.Label();
@@ -75,7 +79,7 @@
             this.lblOutrCondRisc = new System.Windows.Forms.Label();
             this.cbxExpHIV = new System.Windows.Forms.ComboBox();
             this.lblExpHIV = new System.Windows.Forms.Label();
-            this.cbxDesbuAguda = new System.Windows.Forms.ComboBox();
+            this.cbxDesnuAguda = new System.Windows.Forms.ComboBox();
             this.lblDesbuAguda = new System.Windows.Forms.Label();
             this.cbxContactTB = new System.Windows.Forms.ComboBox();
             this.lblContactTB = new System.Windows.Forms.Label();
@@ -86,7 +90,7 @@
             this.lblHIVLact = new System.Windows.Forms.Label();
             this.txtNidTarvMae = new System.Windows.Forms.TextBox();
             this.lblNidTarvMae = new System.Windows.Forms.Label();
-            this.txtNidCpnMain = new System.Windows.Forms.TextBox();
+            this.txtNidCpnMae = new System.Windows.Forms.TextBox();
             this.lblNidCpnMae = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblNidCCR = new System.Windows.Forms.Label();
@@ -168,6 +172,7 @@
             this.btnGravarMain = new System.Windows.Forms.Button();
             lblPCRMaior2Meses = new System.Windows.Forms.Label();
             this.ccrPage1.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -195,6 +200,7 @@
             // ccrPage1
             // 
             this.ccrPage1.BackColor = System.Drawing.Color.Silver;
+            this.ccrPage1.Controls.Add(this.groupBox12);
             this.ccrPage1.Controls.Add(this.btnProximaPagina);
             this.ccrPage1.Controls.Add(this.groupBox8);
             this.ccrPage1.Controls.Add(this.groupBox7);
@@ -207,13 +213,72 @@
             this.ccrPage1.Location = new System.Drawing.Point(4, 22);
             this.ccrPage1.Name = "ccrPage1";
             this.ccrPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.ccrPage1.Size = new System.Drawing.Size(995, 409);
+            this.ccrPage1.Size = new System.Drawing.Size(1007, 430);
             this.ccrPage1.TabIndex = 1;
             this.ccrPage1.Text = "Página 1";
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.cbxUnidIdade);
+            this.groupBox12.Controls.Add(this.txtIdade);
+            this.groupBox12.Controls.Add(this.lblIdade);
+            this.groupBox12.Controls.Add(this.dtpDataConsulta);
+            this.groupBox12.Controls.Add(this.txtDataConsult);
+            this.groupBox12.Location = new System.Drawing.Point(22, 167);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(423, 88);
+            this.groupBox12.TabIndex = 41;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Dados Da Consulta";
+            // 
+            // cbxUnidIdade
+            // 
+            this.cbxUnidIdade.FormattingEnabled = true;
+            this.cbxUnidIdade.Items.AddRange(new object[] {
+            "Meses",
+            "Anos"});
+            this.cbxUnidIdade.Location = new System.Drawing.Point(256, 53);
+            this.cbxUnidIdade.Name = "cbxUnidIdade";
+            this.cbxUnidIdade.Size = new System.Drawing.Size(146, 21);
+            this.cbxUnidIdade.TabIndex = 27;
+            // 
+            // txtIdade
+            // 
+            this.txtIdade.Location = new System.Drawing.Point(121, 53);
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.Size = new System.Drawing.Size(129, 20);
+            this.txtIdade.TabIndex = 9;
+            // 
+            // lblIdade
+            // 
+            this.lblIdade.AutoSize = true;
+            this.lblIdade.Location = new System.Drawing.Point(19, 56);
+            this.lblIdade.Name = "lblIdade";
+            this.lblIdade.Size = new System.Drawing.Size(34, 13);
+            this.lblIdade.TabIndex = 8;
+            this.lblIdade.Text = "Idade";
+            // 
+            // dtpDataConsulta
+            // 
+            this.dtpDataConsulta.CustomFormat = "dd/MM/yyyy";
+            this.dtpDataConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataConsulta.Location = new System.Drawing.Point(121, 18);
+            this.dtpDataConsulta.Name = "dtpDataConsulta";
+            this.dtpDataConsulta.Size = new System.Drawing.Size(129, 20);
+            this.dtpDataConsulta.TabIndex = 7;
+            // 
+            // txtDataConsult
+            // 
+            this.txtDataConsult.AutoSize = true;
+            this.txtDataConsult.Location = new System.Drawing.Point(19, 25);
+            this.txtDataConsult.Name = "txtDataConsult";
+            this.txtDataConsult.Size = new System.Drawing.Size(89, 13);
+            this.txtDataConsult.TabIndex = 0;
+            this.txtDataConsult.Text = "Data da Consulta";
+            // 
             // btnProximaPagina
             // 
-            this.btnProximaPagina.Location = new System.Drawing.Point(876, 380);
+            this.btnProximaPagina.Location = new System.Drawing.Point(876, 385);
             this.btnProximaPagina.Name = "btnProximaPagina";
             this.btnProximaPagina.Size = new System.Drawing.Size(113, 23);
             this.btnProximaPagina.TabIndex = 40;
@@ -225,9 +290,9 @@
             // 
             this.groupBox8.Controls.Add(this.lblRestesRapCrinExpHIV);
             this.groupBox8.Controls.Add(this.cbxRestesRapCrinExpHIV);
-            this.groupBox8.Location = new System.Drawing.Point(22, 328);
+            this.groupBox8.Location = new System.Drawing.Point(452, 361);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(423, 58);
+            this.groupBox8.Size = new System.Drawing.Size(388, 58);
             this.groupBox8.TabIndex = 39;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Crianças expostas ao HIV";
@@ -249,7 +314,7 @@
             "Pos"});
             this.cbxRestesRapCrinExpHIV.Location = new System.Drawing.Point(194, 26);
             this.cbxRestesRapCrinExpHIV.Name = "cbxRestesRapCrinExpHIV";
-            this.cbxRestesRapCrinExpHIV.Size = new System.Drawing.Size(208, 21);
+            this.cbxRestesRapCrinExpHIV.Size = new System.Drawing.Size(165, 21);
             this.cbxRestesRapCrinExpHIV.TabIndex = 38;
             // 
             // groupBox7
@@ -401,9 +466,9 @@
             this.groupBox6.Controls.Add(this.lblProfARV);
             this.groupBox6.Controls.Add(this.cbxCTZ);
             this.groupBox6.Controls.Add(this.lblCTZ);
-            this.groupBox6.Location = new System.Drawing.Point(738, 281);
+            this.groupBox6.Location = new System.Drawing.Point(738, 247);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(251, 74);
+            this.groupBox6.Size = new System.Drawing.Size(251, 78);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Crianças expostas ao HIV";
@@ -461,7 +526,7 @@
             this.groupBox5.Controls.Add(this.lblNutIdademaior6);
             this.groupBox5.Controls.Add(this.cbxNutIdademen6);
             this.groupBox5.Controls.Add(this.lblNutIdademen6);
-            this.groupBox5.Location = new System.Drawing.Point(22, 166);
+            this.groupBox5.Location = new System.Drawing.Point(22, 263);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(423, 156);
             this.groupBox5.TabIndex = 4;
@@ -566,58 +631,36 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lblConpletIson);
-            this.groupBox4.Controls.Add(this.cbxConpletIson);
-            this.groupBox4.Controls.Add(this.cbxContinuIson);
+            this.groupBox4.Controls.Add(this.cbxIsoniazStatus);
             this.groupBox4.Controls.Add(this.lblContinuIson);
             this.groupBox4.Controls.Add(this.dtpDataIniIson);
             this.groupBox4.Controls.Add(this.lblDataIniIson);
             this.groupBox4.Location = new System.Drawing.Point(738, 166);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(251, 109);
+            this.groupBox4.Size = new System.Drawing.Size(251, 75);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tuberculose";
             // 
-            // lblConpletIson
+            // cbxIsoniazStatus
             // 
-            this.lblConpletIson.AutoSize = true;
-            this.lblConpletIson.Location = new System.Drawing.Point(6, 76);
-            this.lblConpletIson.Name = "lblConpletIson";
-            this.lblConpletIson.Size = new System.Drawing.Size(57, 13);
-            this.lblConpletIson.TabIndex = 29;
-            this.lblConpletIson.Text = "Completou";
-            // 
-            // cbxConpletIson
-            // 
-            this.cbxConpletIson.FormattingEnabled = true;
-            this.cbxConpletIson.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxConpletIson.Location = new System.Drawing.Point(112, 73);
-            this.cbxConpletIson.Name = "cbxConpletIson";
-            this.cbxConpletIson.Size = new System.Drawing.Size(133, 21);
-            this.cbxConpletIson.TabIndex = 28;
-            // 
-            // cbxContinuIson
-            // 
-            this.cbxContinuIson.FormattingEnabled = true;
-            this.cbxContinuIson.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.cbxContinuIson.Location = new System.Drawing.Point(112, 46);
-            this.cbxContinuIson.Name = "cbxContinuIson";
-            this.cbxContinuIson.Size = new System.Drawing.Size(133, 21);
-            this.cbxContinuIson.TabIndex = 27;
+            this.cbxIsoniazStatus.FormattingEnabled = true;
+            this.cbxIsoniazStatus.Items.AddRange(new object[] {
+            "Continuação",
+            "Completou"});
+            this.cbxIsoniazStatus.Location = new System.Drawing.Point(112, 46);
+            this.cbxIsoniazStatus.Name = "cbxIsoniazStatus";
+            this.cbxIsoniazStatus.Size = new System.Drawing.Size(133, 21);
+            this.cbxIsoniazStatus.TabIndex = 27;
             // 
             // lblContinuIson
             // 
             this.lblContinuIson.AutoSize = true;
             this.lblContinuIson.Location = new System.Drawing.Point(6, 49);
             this.lblContinuIson.Name = "lblContinuIson";
-            this.lblContinuIson.Size = new System.Drawing.Size(67, 13);
+            this.lblContinuIson.Size = new System.Drawing.Size(54, 13);
             this.lblContinuIson.TabIndex = 7;
-            this.lblContinuIson.Text = "Continuação";
+            this.lblContinuIson.Text = "Izoniazida";
             // 
             // dtpDataIniIson
             // 
@@ -643,7 +686,7 @@
             this.groupBox3.Controls.Add(this.lblOutrCondRisc);
             this.groupBox3.Controls.Add(this.cbxExpHIV);
             this.groupBox3.Controls.Add(this.lblExpHIV);
-            this.groupBox3.Controls.Add(this.cbxDesbuAguda);
+            this.groupBox3.Controls.Add(this.cbxDesnuAguda);
             this.groupBox3.Controls.Add(this.lblDesbuAguda);
             this.groupBox3.Controls.Add(this.cbxContactTB);
             this.groupBox3.Controls.Add(this.lblContactTB);
@@ -690,16 +733,16 @@
             this.lblExpHIV.TabIndex = 29;
             this.lblExpHIV.Text = "Exposição ao HIV";
             // 
-            // cbxDesbuAguda
+            // cbxDesnuAguda
             // 
-            this.cbxDesbuAguda.FormattingEnabled = true;
-            this.cbxDesbuAguda.Items.AddRange(new object[] {
+            this.cbxDesnuAguda.FormattingEnabled = true;
+            this.cbxDesnuAguda.Items.AddRange(new object[] {
             "Moderada",
             "Grave"});
-            this.cbxDesbuAguda.Location = new System.Drawing.Point(112, 55);
-            this.cbxDesbuAguda.Name = "cbxDesbuAguda";
-            this.cbxDesbuAguda.Size = new System.Drawing.Size(133, 21);
-            this.cbxDesbuAguda.TabIndex = 28;
+            this.cbxDesnuAguda.Location = new System.Drawing.Point(112, 55);
+            this.cbxDesnuAguda.Name = "cbxDesnuAguda";
+            this.cbxDesnuAguda.Size = new System.Drawing.Size(133, 21);
+            this.cbxDesnuAguda.TabIndex = 28;
             // 
             // lblDesbuAguda
             // 
@@ -738,7 +781,7 @@
             this.groupBox2.Controls.Add(this.lblHIVLact);
             this.groupBox2.Controls.Add(this.txtNidTarvMae);
             this.groupBox2.Controls.Add(this.lblNidTarvMae);
-            this.groupBox2.Controls.Add(this.txtNidCpnMain);
+            this.groupBox2.Controls.Add(this.txtNidCpnMae);
             this.groupBox2.Controls.Add(this.lblNidCpnMae);
             this.groupBox2.Location = new System.Drawing.Point(451, 23);
             this.groupBox2.Name = "groupBox2";
@@ -804,12 +847,12 @@
             this.lblNidTarvMae.TabIndex = 5;
             this.lblNidTarvMae.Text = "NID TARV da Mãe";
             // 
-            // txtNidCpnMain
+            // txtNidCpnMae
             // 
-            this.txtNidCpnMain.Location = new System.Drawing.Point(143, 29);
-            this.txtNidCpnMain.Name = "txtNidCpnMain";
-            this.txtNidCpnMain.Size = new System.Drawing.Size(109, 20);
-            this.txtNidCpnMain.TabIndex = 4;
+            this.txtNidCpnMae.Location = new System.Drawing.Point(143, 29);
+            this.txtNidCpnMae.Name = "txtNidCpnMae";
+            this.txtNidCpnMae.Size = new System.Drawing.Size(109, 20);
+            this.txtNidCpnMae.TabIndex = 4;
             // 
             // lblNidCpnMae
             // 
@@ -912,7 +955,7 @@
             this.tabCCR.Location = new System.Drawing.Point(12, 48);
             this.tabCCR.Name = "tabCCR";
             this.tabCCR.SelectedIndex = 0;
-            this.tabCCR.Size = new System.Drawing.Size(1003, 435);
+            this.tabCCR.Size = new System.Drawing.Size(1015, 456);
             this.tabCCR.TabIndex = 0;
             // 
             // tabPage1
@@ -925,7 +968,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(995, 409);
+            this.tabPage1.Size = new System.Drawing.Size(1007, 430);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Página 2";
             // 
@@ -1647,7 +1690,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 495);
+            this.ClientSize = new System.Drawing.Size(1025, 508);
             this.Controls.Add(this.btnGravarMain);
             this.Controls.Add(this.cbxNrConsultaMain);
             this.Controls.Add(this.lblNrConsultaMain);
@@ -1658,6 +1701,8 @@
             this.Name = "FrmCCR";
             this.Text = "FrmCCR - Formulário  de Registo de Consulta de Criança em Risco ";
             this.ccrPage1.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -1703,7 +1748,7 @@
         private System.Windows.Forms.TextBox txtNidCCRID;
         private System.Windows.Forms.TextBox txtNidTarvMae;
         private System.Windows.Forms.Label lblNidTarvMae;
-        private System.Windows.Forms.TextBox txtNidCpnMain;
+        private System.Windows.Forms.TextBox txtNidCpnMae;
         private System.Windows.Forms.Label lblNidCpnMae;
         private System.Windows.Forms.Label lblHIVLact;
         private System.Windows.Forms.ComboBox cbxHIVLact;
@@ -1712,16 +1757,14 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cbxExpHIV;
         private System.Windows.Forms.Label lblExpHIV;
-        private System.Windows.Forms.ComboBox cbxDesbuAguda;
+        private System.Windows.Forms.ComboBox cbxDesnuAguda;
         private System.Windows.Forms.Label lblDesbuAguda;
         private System.Windows.Forms.ComboBox cbxContactTB;
         private System.Windows.Forms.Label lblContactTB;
         private System.Windows.Forms.TextBox txtOutrCondRisc;
         private System.Windows.Forms.Label lblOutrCondRisc;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label lblConpletIson;
-        private System.Windows.Forms.ComboBox cbxConpletIson;
-        private System.Windows.Forms.ComboBox cbxContinuIson;
+        private System.Windows.Forms.ComboBox cbxIsoniazStatus;
         private System.Windows.Forms.Label lblContinuIson;
         private System.Windows.Forms.DateTimePicker dtpDataIniIson;
         private System.Windows.Forms.Label lblDataIniIson;
@@ -1826,5 +1869,11 @@
         private System.Windows.Forms.ComboBox cbxTransfOutrUniSanit;
         private System.Windows.Forms.ComboBox cbxObito18Meses;
         private System.Windows.Forms.ComboBox cbxAbandono18Meses;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.ComboBox cbxUnidIdade;
+        private System.Windows.Forms.TextBox txtIdade;
+        private System.Windows.Forms.Label lblIdade;
+        private System.Windows.Forms.DateTimePicker dtpDataConsulta;
+        private System.Windows.Forms.Label txtDataConsult;
     }
 }
