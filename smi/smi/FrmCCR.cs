@@ -95,7 +95,6 @@ namespace smi
                 cbxResDefen.SelectedItem = ccr.resulttrapido_nexp;
                 if (ccr.pisoniazidainicio != null) dtpDataIniIson.Value = Convert.ToDateTime(ccr.pisoniazidainicio);
                 cbxIsoniazStatus.SelectedItem = ccr.pisoniazida;
-                cbxConpletIson.SelectedItem = ccr.pnctl;
                 cbxCTZ.SelectedItem = ccr.ctz;
                 cbxProfARV.SelectedItem = ccr.profiaxia_arv;
                 cbxSaidaCri.SelectedItem = ccr.saidaccr;
@@ -217,7 +216,7 @@ namespace smi
                 if (cbxNutIdademaior6.SelectedIndex >= 0)
                     obj_ccr.aleitmaternomaior6m = Functions.ConvertComboValueToBool(cbxNutIdademaior6.SelectedText);
                 if (Functions.IsNumber(txtATPU.Text))
-                    obj_ccr.atpu = Convert.ToInt32( txtATPU.Text);
+                    obj_ccr.atpu = Convert.ToInt32(txtATPU.Text);
                 if (cbxCBS.SelectedIndex >= 0)
                     obj_ccr.csb_nut_sup = Functions.ConvertComboValueToBool(cbxCBS.SelectedText);
                 if (cbxRecuperada.SelectedIndex >= 0)
@@ -226,7 +225,7 @@ namespace smi
                     obj_ccr.ctz = cbxCTZ.SelectedText;
                 if (cbxProfARV.SelectedIndex >= 0)
                     obj_ccr.profiaxia_arv = Functions.ConvertComboValueToBool(cbxProfARV.SelectedText);
-               
+
 
 
 

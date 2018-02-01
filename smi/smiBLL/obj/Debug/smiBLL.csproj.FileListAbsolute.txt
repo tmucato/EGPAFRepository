@@ -25,3 +25,4 @@ C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\bin\Debug\MySql.Data.xml
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.csprojResolveAssemblyReference.cache
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.dll
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.pdb
+C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.csprojResolveAssemblyReference.cache

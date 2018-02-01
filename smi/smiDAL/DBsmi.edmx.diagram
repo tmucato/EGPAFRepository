@@ -11,7 +11,6 @@
         <EntityTypeShape EntityType="smiModel.cpn_final" Width="1.5" PointX="10.75" PointY="0.5" />
         <EntityTypeShape EntityType="smiModel.cpn" Width="1.5" PointX="8.875" PointY="0.5" />
         <EntityTypeShape EntityType="smiModel.ccrseg" Width="1.5" PointX="4.25" PointY="3.5" />
-        <EntityTypeShape EntityType="smiModel.ccr" Width="2" PointX="6.25" PointY="0.5" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

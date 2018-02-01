@@ -158,8 +158,10 @@ namespace smiBLL
                         obj_ccr.internamento = db_ccr.internamento;
                         obj_ccr.ctz = db_ccr.ctz;
                         obj_ccr.profiaxia_arv = db_ccr.profiaxia_arv;
-                        obj_ccr.colheitapcrmenor2mes = db_ccr.colheitapcr;
-                        obj_ccr.resultadopcrmenor2meses = db_ccr.resultadopcr;
+                        obj_ccr.colheitapcrmenor2mes = db_ccr.colheitapcrmenor2mes;
+                        obj_ccr.resultadopcrmenor2meses = db_ccr.resultadopcrmenor2meses;
+                        obj_ccr.colheitapcmaior2mes = db_ccr.colheitapcmaior2mes;
+                        obj_ccr.resultadopcrmaior2meses = db_ccr.resultadopcrmaior2meses;
                         obj_ccr.resultadotesterapido = db_ccr.resultadotesterapido;
                         obj_ccr.resultadofinal = db_ccr.resultadofinal;
                         obj_ccr.resulttrapido_nexp = db_ccr.resulttrapido_nexp;
@@ -232,8 +234,10 @@ namespace smiBLL
                     db_ccr.internamento = this.internamento;
                     db_ccr.ctz = this.ctz;
                     db_ccr.profiaxia_arv = this.profiaxia_arv;
-                    db_ccr.colheitapcr = this.colheitapcrmenor2mes;
-                    db_ccr.resultadopcr = this.resultadopcrmenor2meses;
+                    db_ccr.colheitapcrmenor2mes = this.colheitapcrmenor2mes;
+                    db_ccr.resultadopcrmenor2meses = this.resultadopcrmenor2meses;
+                    db_ccr.colheitapcmaior2mes = this.colheitapcmaior2mes;
+                    db_ccr.resultadopcrmaior2meses = this.resultadopcrmaior2meses;
                     db_ccr.resultadotesterapido = this.resultadotesterapido;
                     db_ccr.resultadofinal = this.resultadofinal;
                     db_ccr.resulttrapido_nexp = this.resulttrapido_nexp;
