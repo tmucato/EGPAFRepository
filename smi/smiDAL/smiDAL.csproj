@@ -41,8 +41,8 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="MySql.Web, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -62,7 +62,7 @@
     <Compile Include="child.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
-    <Compile Include="Connection.cs" />
+    <Compile Include="DBConnection.cs" />
     <Compile Include="cpn.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
@@ -70,19 +70,19 @@
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
     <Compile Include="DBsmi.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>DBsmi.Context.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="DBsmi.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>DBsmi.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="DBsmi.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>DBsmi.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="mother.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
@@ -96,33 +96,35 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <EntityDeploy Include="DBsmi.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBsmi.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DBsmi.edmx.diagram">
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-    </None>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DBsmi.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-      <LastGenOutput>DBsmi.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DBsmi.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-      <LastGenOutput>DBsmi.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Logging\Logging.csproj">
       <Project>{5b73265f-c910-41af-80ac-3dac98385df5}</Project>
       <Name>Logging</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DBsmi.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBsmi.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBsmi.Context.tt">
+      <DependentUpon>DBsmi.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DBsmi.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DBsmi.tt">
+      <DependentUpon>DBsmi.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DBsmi.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DBsmi.edmx.diagram">
+      <DependentUpon>DBsmi.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

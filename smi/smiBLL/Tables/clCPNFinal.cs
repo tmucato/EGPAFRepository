@@ -82,7 +82,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     cpn_final db_cpn_final = DbContext.cpn_final.Where(cf => cf.id == this.id).FirstOrDefault();
                     DbContext.cpn_final.Remove(db_cpn_final);
@@ -102,7 +102,7 @@ namespace smiBLL
 
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     foreach (cpn_final db_cpn_final in DbContext.cpn_final)
                     {
@@ -157,7 +157,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     cpn_final db_cpn_final = new cpn_final();
                     db_cpn_final.idmother = this.idmother;
@@ -207,7 +207,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     cpn_final db_cpn_final = DbContext.cpn_final.Where(cf => cf.id == this.id).FirstOrDefault();
                     db_cpn_final.idmother = this.idmother;

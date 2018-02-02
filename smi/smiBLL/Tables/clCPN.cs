@@ -123,7 +123,7 @@ namespace smiBLL
             List<clCPN> List_cpn = new List<clCPN>();
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     foreach (cpn db_cpn in DbContext.cpns)
                     {
@@ -197,7 +197,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     cpn db_cpn = new cpn();
                     db_cpn.nr_consulta = Convert.ToInt32(this.nr_consulta);
@@ -267,7 +267,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     cpn db_cpn = DbContext.cpns.Where(c => c.id == this.id).FirstOrDefault();
                     db_cpn.id = this.id;
@@ -337,7 +337,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     cpn db_cpn = DbContext.cpns.Where(c => c.id == this.id).FirstOrDefault();
                     DbContext.cpns.Remove(db_cpn);

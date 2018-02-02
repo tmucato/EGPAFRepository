@@ -4,8 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace smiBLL
 {
@@ -45,7 +43,7 @@ namespace smiBLL
 
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     foreach (child chil in DbContext.children)
                     {
@@ -79,7 +77,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     child db_child = new child();
                     db_child.id = this.id;
@@ -107,7 +105,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     child db_child = DbContext.children.Where(c => c.id == this.id).FirstOrDefault();
                     db_child.mot_nid_cpn = this.mot_nid_cpn;
@@ -133,7 +131,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     child db_child = DbContext.children.Where(m => m.id == this.id).FirstOrDefault();
                     DbContext.children.Remove(db_child);
@@ -152,7 +150,7 @@ namespace smiBLL
             DataTable rsdt = new DataTable();
             try
             {
-                using (MySqlConnection cn = Connection.GetSMIDataBaseConnection())
+                using (MySqlConnection cn = DBConnection.GetSMIDataBaseConnection())
                 {
                     cn.Open();
                     string Query = "select * from child;";

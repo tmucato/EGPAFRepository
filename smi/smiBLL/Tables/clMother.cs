@@ -42,7 +42,7 @@ namespace smiBLL
 
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     foreach (mother db_moth in DbContext.mothers)
                     {
@@ -75,7 +75,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     mother db_mother = new mother();
                     db_mother.id = this.id;
@@ -105,7 +105,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     mother db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
                     db_mother.nid_cpn = this.nid_cpn;
@@ -132,7 +132,7 @@ namespace smiBLL
         {
             try
             {
-                using (DBsmiEntities DbContext = new DBsmiEntities(Connection.GetEFSMIDataBaseConStr()))
+                using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     mother db_mother = DbContext.mothers.Where(m => m.id == this.id).FirstOrDefault();
                     DbContext.mothers.Remove(db_mother);
@@ -151,7 +151,7 @@ namespace smiBLL
             DataTable rsdt = new DataTable();
             try
             {
-                using (MySqlConnection cn = Connection.GetSMIDataBaseConnection())
+                using (MySqlConnection cn = smiDAL.DBConnection.GetSMIDataBaseConnection())
                 {
                     cn.Open();
                     string Query = "select * from mother;";

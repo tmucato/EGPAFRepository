@@ -15,8 +15,7 @@ namespace smiDAL
     
     public partial class DBsmiEntities : DbContext
     {
-        public DBsmiEntities()
-            : base("name=DBsmiEntities")
+        public DBsmiEntities(): base("name=DBsmiEntities")
         {
         }
 
