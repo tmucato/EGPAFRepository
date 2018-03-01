@@ -1,8 +1,8 @@
-﻿using MySql.Data.MySqlClient;
-using smiDAL;
+﻿using smiDAL;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 
 namespace smiBLL
@@ -150,12 +150,12 @@ namespace smiBLL
             DataTable rsdt = new DataTable();
             try
             {
-                using (MySqlConnection cn = DBConnection.GetSMIDataBaseConnection())
+                using (SqlConnection cn = DBConnection.GetSMIDataBaseConnection())
                 {
                     cn.Open();
                     string Query = "select * from child;";
-                    MySqlCommand myCmd = new MySqlCommand(Query, cn);
-                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                    SqlCommand myCmd = new SqlCommand(Query, cn);
+                    SqlDataAdapter MyAdapter = new SqlDataAdapter();
                     MyAdapter.SelectCommand = myCmd;
                     DataTable dTable = new DataTable();
                     MyAdapter.Fill(rsdt);

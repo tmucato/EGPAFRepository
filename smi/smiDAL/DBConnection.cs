@@ -1,6 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,11 +10,11 @@ namespace smiDAL
 {
     public class DBConnection
     {
-        public static MySqlConnection GetSMIDataBaseConnection()
+        public static SqlConnection GetSMIDataBaseConnection()
         {
             List<string> dbconfig = GetDBConfigFromFile();
             string conStr = "server = " + dbconfig[0] + "; User Id =" + dbconfig[1] + "; password = " + dbconfig[2] + "; database =" + dbconfig[3] + "; Persist Security Info = True";
-            MySqlConnection con = new MySqlConnection(conStr);
+            SqlConnection con = new SqlConnection(conStr);
 
             return con;
         }

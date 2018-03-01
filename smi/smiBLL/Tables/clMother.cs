@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using smiDAL;
 using System.Data;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace smiBLL
 {
@@ -151,12 +151,12 @@ namespace smiBLL
             DataTable rsdt = new DataTable();
             try
             {
-                using (MySqlConnection cn = smiDAL.DBConnection.GetSMIDataBaseConnection())
+                using (SqlConnection cn = smiDAL.DBConnection.GetSMIDataBaseConnection())
                 {
                     cn.Open();
                     string Query = "select * from mother;";
-                    MySqlCommand myCmd = new MySqlCommand(Query, cn);
-                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                    SqlCommand myCmd = new SqlCommand(Query, cn);
+                    SqlDataAdapter MyAdapter = new SqlDataAdapter();
                     MyAdapter.SelectCommand = myCmd;
                     DataTable dTable = new DataTable();
                     MyAdapter.Fill(rsdt);

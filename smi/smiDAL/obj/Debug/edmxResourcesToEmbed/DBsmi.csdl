@@ -1,145 +1,122 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="smiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="mother">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="residence" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="dob" Type="DateTime" />
-  </EntityType>
-  <EntityType Name="usuario">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int64" Nullable="false" />
-    <Property Name="username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="apelido" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="password" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="posicao" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="systemrole" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityContainer Name="DBsmiEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="mothers" EntityType="Self.mother" />
-    <EntitySet Name="usuarios" EntityType="Self.usuario" />
-    <EntitySet Name="children" EntityType="smiModel.child" />
-    <EntitySet Name="cpn_final" EntityType="smiModel.cpn_final" />
-    <EntitySet Name="cpns" EntityType="smiModel.cpn" />
-    <EntitySet Name="ccrsegs" EntityType="smiModel.ccrseg" />
-  </EntityContainer>
-  <EntityType Name="child">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nid_ccr" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="name" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="residence" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="gender" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="dob" Type="DateTime" />
-  </EntityType>
-  <EntityType Name="cpn_final">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int64" Nullable="false" />
-    <Property Name="idmother" Type="Int64" Nullable="false" />
-    <Property Name="nlivro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="cons_more4" Type="Boolean" />
-    <Property Name="partnerpreence" Type="Boolean" />
-    <Property Name="weightgainyno" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="dag" Type="Boolean" />
-    <Property Name="dam" Type="Boolean" />
-    <Property Name="supnutr" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="resultcured" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="resultabandon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="receiveddesparasitante" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="salferr_more3" Type="Boolean" />
-    <Property Name="its_diag" Type="Boolean" />
-    <Property Name="its_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="its_syphilistesting" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="its_wsyphilistreat" Type="Boolean" />
-    <Property Name="its_psyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="womanserostatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="partnerserostatus" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="ctz_entr" Type="Boolean" />
-    <Property Name="ctz_init" Type="Boolean" />
-    <Property Name="finalresult_arv" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="tip" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="bednet" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="mal_diag_lab" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="mal_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="mp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="vat_1_dose" Type="Boolean" />
-    <Property Name="vat_2_5_dose" Type="Boolean" />
-    <Property Name="tb_isoniazid" Type="Boolean" />
-    <Property Name="tb_treatment" Type="Boolean" />
-  </EntityType>
-  <EntityType Name="cpn">
+<Schema Namespace="DBsmi" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="amostrastb">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nr_consulta" Type="Int32" />
-    <Property Name="idmother" Type="Int64" Nullable="false" />
-    <Property Name="nlivro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="numordem" Type="Int64" Nullable="false" />
+    <Property Name="datarecepcao" Type="DateTime" Precision="0" />
+    <Property Name="nit_nid" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NIT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="nome" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="idade" Type="Int32" />
+    <Property Name="residencia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="proveniencia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tipoamostra" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="causarejeicao" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="tipodoente" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="motivoexame" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="mescontrolo" Type="Int32" />
+    <Property Name="usreferencia" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="dataenvio" Type="DateTime" Precision="0" />
+    <Property Name="examesolicitado" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="iniciaistecnicoenvio" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="bkresultado1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="bkdatarecepcao1" Type="DateTime" Precision="0" />
+    <Property Name="bkresultado2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="bkdatarecepcao2" Type="DateTime" Precision="0" />
+    <Property Name="xpertresultado" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="xpertdatarecepcao" Type="DateTime" Precision="0" />
+    <Property Name="rifresultado" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="rifdatarecepcao" Type="DateTime" Precision="0" />
+    <Property Name="lpa1h_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="lpa1r_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="lpa1datarecepcao" Type="DateTime" Precision="0" />
+    <Property Name="lpa2fq_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="lpa2ag_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="lpa2datarecepcao" Type="DateTime" Precision="0" />
+    <Property Name="cultura" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="culturadatarecepcao" Type="DateTime" Precision="0" />
+    <Property Name="idetinficacao" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="identificacaodata" Type="DateTime" Precision="0" />
+    <Property Name="tsa1h_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa1s_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa1r_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa1e_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa1z_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa1datarecepcao" Type="DateTime" Precision="0" />
+    <Property Name="tsa2ofl_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa2mox_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa2kan_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa2amk_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa2cap_resultado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="tsa2datarecepcao" Type="DateTime" Precision="0" />
+    <Property Name="dataenvioresultado" Type="DateTime" Precision="0" />
+    <Property Name="iniciaistecnicodevolve" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ccr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idchild" Type="Int32" Nullable="false" />
     <Property Name="nyear" Type="Int32" Nullable="false" />
-    <Property Name="visdate" Type="DateTime" Nullable="false" />
-    <Property Name="agegroup" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="gestationalage" Type="Int32" />
-    <Property Name="gageless12" Type="Boolean" />
-    <Property Name="partnerpresence" Type="Boolean" />
-    <Property Name="weight" Type="Int32" />
-    <Property Name="weightgainyno" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="dag" Type="Boolean" />
-    <Property Name="dam" Type="Boolean" />
-    <Property Name="supnutr" Type="Int32" />
-    <Property Name="resultcured" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="resultabandon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="receiveddesparasitante" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="salferr_acfolico" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="ta" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="hgb" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="proteinuria" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="glicosuria" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="its_ulceragenital" Type="Boolean" />
-    <Property Name="its_leucorreia" Type="Boolean" />
-    <Property Name="its_syndromictreatment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="its_syphilistesting" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="its_wsyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="its_psyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="its_syphilistratmentmulhr" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="its_syphilistratmentparceir" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="serostatusentcpn" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="cpnhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="partnerhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="ctz" Type="Boolean" />
-    <Property Name="ctz_init_cont" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="tarv" Type="Boolean" />
-    <Property Name="nvp" Type="Boolean" />
-    <Property Name="azt_nvp" Type="Boolean" />
-    <Property Name="em_tarv_entrada" Type="Boolean" />
-    <Property Name="tarv_init_visit" Type="Boolean" />
-    <Property Name="arv_cont" Type="Boolean" />
-    <Property Name="tip" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="bednet" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="tdr_htz" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="result_tdr_htz" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="pos_malaria_treated" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="hpp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="vat_1_dose" Type="Boolean" />
-    <Property Name="vat_2_5_dose" Type="Boolean" />
-    <Property Name="tb_isoniazid" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="tb_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="nlivro" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nr_consulta" Type="Int32" />
+    <Property Name="dataconsulta" Type="DateTime" Precision="0" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="ageunit" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="mot_nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="mot_hiv_lact" Type="Boolean" />
+    <Property Name="mot_hiv_tarv" Type="Boolean" />
+    <Property Name="contactotb" Type="Boolean" />
+    <Property Name="desnutricao_aguda" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="exposicaoHIV" Type="Boolean" />
+    <Property Name="outracondicaorisco" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="pisoniazidainicio" Type="DateTime" Precision="0" />
+    <Property Name="pisoniazida" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="aleitmaternomenor6m" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="aleitmaternonaior6m" Type="Boolean" />
+    <Property Name="atpu" Type="Int32" />
+    <Property Name="csb_nut_sup" Type="Boolean" />
+    <Property Name="recuperada" Type="Boolean" />
+    <Property Name="internamento" Type="Boolean" />
+    <Property Name="ctz" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="profiaxia_arv" Type="Boolean" />
+    <Property Name="colheitapcmaior2mes" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="colheitapcrmenor2mes" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="resultadopcrmaior2meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultadopcrmenor2meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultadotesterapido" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultadofinal" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resulttrapido_nexp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="saidaccr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="chd_nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="motart_5m_chd" Type="Boolean" Nullable="false" />
+    <Property Name="tb" Type="Boolean" />
+    <Property Name="dam_dag" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ce" Type="Boolean" />
+    <Property Name="tpicomp" Type="Boolean" />
+    <Property Name="ame_5m" Type="Boolean" />
+    <Property Name="mixed_5m" Type="Boolean" />
+    <Property Name="rec" Type="Boolean" />
+    <Property Name="trans_int" Type="Boolean" />
+    <Property Name="arv_5m" Type="Boolean" />
+    <Property Name="pcr_under2m" Type="Boolean" />
+    <Property Name="pcr_above2m" Type="Boolean" />
+    <Property Name="pcrpos_under2m" Type="Boolean" />
+    <Property Name="pcrpos_above2m" Type="Boolean" />
+    <Property Name="pnctl" Type="Boolean" />
+    <NavigationProperty Name="child" Relationship="Self.ccr_idchild" FromRole="ccr" ToRole="child" />
+    <NavigationProperty Name="ccrsegs" Relationship="Self.ccrseg_idccr" FromRole="ccr" ToRole="ccrseg" />
   </EntityType>
   <EntityType Name="ccrseg">
     <Key>
@@ -148,7 +125,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idchild" Type="Int32" />
     <Property Name="idccr" Type="Int32" Nullable="false" />
-    <Property Name="mothTarv5moth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mothTarv5moth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ame5m" Type="Boolean" />
     <Property Name="am5m" Type="Boolean" />
     <Property Name="recuperada" Type="Boolean" />
@@ -173,5 +150,907 @@
     <Property Name="transferidaUS" Type="Boolean" />
     <Property Name="abandono18" Type="Boolean" />
     <Property Name="obito18" Type="Boolean" />
+    <NavigationProperty Name="ccr" Relationship="Self.ccrseg_idccr" FromRole="ccrseg" ToRole="ccr" />
   </EntityType>
+  <EntityType Name="child">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nid_ccr" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="residence" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="ccrs" Relationship="Self.ccr_idchild" FromRole="child" ToRole="ccr" />
+  </EntityType>
+  <EntityType Name="cpn">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nr_consulta" Type="Int32" />
+    <Property Name="idmother" Type="Int64" Nullable="false" />
+    <Property Name="nlivro" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nyear" Type="Int32" Nullable="false" />
+    <Property Name="visdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="agegroup" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="gestationalage" Type="Int32" />
+    <Property Name="gageless12" Type="Boolean" />
+    <Property Name="partnerpresence" Type="Boolean" />
+    <Property Name="weight" Type="Int32" />
+    <Property Name="weightgainyno" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="dag" Type="Boolean" />
+    <Property Name="dam" Type="Boolean" />
+    <Property Name="supnutr" Type="Int32" />
+    <Property Name="resultcured" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultabandon" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiveddesparasitante" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="salferr_acfolico" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ta" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hgb" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="proteinuria" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="glicosuria" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_ulceragenital" Type="Boolean" />
+    <Property Name="its_leucorreia" Type="Boolean" />
+    <Property Name="its_syndromictreatment" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistesting" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_wsyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_psyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistratmentmulhr" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistratmentparceir" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="serostatusentcpn" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="cpnhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="partnerhivtest" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ctz" Type="Boolean" />
+    <Property Name="ctz_init_cont" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tarv" Type="Boolean" />
+    <Property Name="nvp" Type="Boolean" />
+    <Property Name="azt_nvp" Type="Boolean" />
+    <Property Name="em_tarv_entrada" Type="Boolean" />
+    <Property Name="tarv_init_visit" Type="Boolean" />
+    <Property Name="arv_cont" Type="Boolean" />
+    <Property Name="tip" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bednet" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tdr_htz" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="result_tdr_htz" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="pos_malaria_treated" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hpp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="vat_1_dose" Type="Boolean" />
+    <Property Name="vat_2_5_dose" Type="Boolean" />
+    <Property Name="tb_isoniazid" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cpn_final">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idmother" Type="Int64" Nullable="false" />
+    <Property Name="nlivro" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cons_more4" Type="Boolean" />
+    <Property Name="partnerpreence" Type="Boolean" />
+    <Property Name="weightgainyno" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="dag" Type="Boolean" />
+    <Property Name="dam" Type="Boolean" />
+    <Property Name="supnutr" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultcured" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultabandon" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiveddesparasitante" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="salferr_more3" Type="Boolean" />
+    <Property Name="its_diag" Type="Boolean" />
+    <Property Name="its_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistesting" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_wsyphilistreat" Type="Boolean" />
+    <Property Name="its_psyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="womanserostatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="partnerserostatus" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ctz_entr" Type="Boolean" />
+    <Property Name="ctz_init" Type="Boolean" />
+    <Property Name="finalresult_arv" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tip" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bednet" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="mal_diag_lab" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="mal_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="mp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="vat_1_dose" Type="Boolean" />
+    <Property Name="vat_2_5_dose" Type="Boolean" />
+    <Property Name="tb_isoniazid" Type="Boolean" />
+    <Property Name="tb_treatment" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="cpn_old">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="nyear" Type="Int32" Nullable="false" />
+    <Property Name="visdate1" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="visdate2" Type="DateTime" Precision="0" />
+    <Property Name="visdate3" Type="DateTime" Precision="0" />
+    <Property Name="visdate4" Type="DateTime" Precision="0" />
+    <Property Name="visdate5" Type="DateTime" Precision="0" />
+    <Property Name="visdate6" Type="DateTime" Precision="0" />
+    <Property Name="nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="residence" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="agegroup1" Type="Boolean" />
+    <Property Name="agegroup2" Type="Boolean" />
+    <Property Name="agegroup3" Type="Boolean" />
+    <Property Name="agegroup4" Type="Boolean" />
+    <Property Name="gestationalage1" Type="Boolean" />
+    <Property Name="gestationalage2" Type="Boolean" />
+    <Property Name="gestationalage3" Type="Boolean" />
+    <Property Name="gestationalage4" Type="Boolean" />
+    <Property Name="gestationalage5" Type="Boolean" />
+    <Property Name="gestationalage6" Type="Boolean" />
+    <Property Name="gageless12" Type="Boolean" />
+    <Property Name="partnerpresence1" Type="Boolean" />
+    <Property Name="partnerpresence2" Type="Boolean" />
+    <Property Name="partnerpresence3" Type="Boolean" />
+    <Property Name="partnerpresence4" Type="Boolean" />
+    <Property Name="partnerpresence5" Type="Boolean" />
+    <Property Name="partnerpresence6" Type="Boolean" />
+    <Property Name="weight1" Type="Int32" />
+    <Property Name="weight2" Type="Int32" />
+    <Property Name="weight3" Type="Int32" />
+    <Property Name="weight4" Type="Int32" />
+    <Property Name="weight5" Type="Int32" />
+    <Property Name="weight6" Type="Int32" />
+    <Property Name="weightgainyno2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="weightgainyno3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="weightgainyno4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="weightgainyno5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="weightgainyno6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="dag1" Type="Boolean" />
+    <Property Name="dag2" Type="Boolean" />
+    <Property Name="dag3" Type="Boolean" />
+    <Property Name="dag4" Type="Boolean" />
+    <Property Name="dag5" Type="Boolean" />
+    <Property Name="dag6" Type="Boolean" />
+    <Property Name="dam1" Type="Boolean" />
+    <Property Name="dam2" Type="Boolean" />
+    <Property Name="dam3" Type="Boolean" />
+    <Property Name="dam4" Type="Boolean" />
+    <Property Name="dam5" Type="Boolean" />
+    <Property Name="dam6" Type="Boolean" />
+    <Property Name="supnutr1" Type="Int32" />
+    <Property Name="supnutr2" Type="Int32" />
+    <Property Name="supnutr3" Type="Int32" />
+    <Property Name="supnutr4" Type="Int32" />
+    <Property Name="supnutr5" Type="Int32" />
+    <Property Name="supnutr6" Type="Int32" />
+    <Property Name="resultcured2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultcured3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultcured4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultcured5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultcured6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultabandon2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultabandon3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultabandon4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultabandon5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultabandon6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiveddesparasitante1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiveddesparasitante2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiveddesparasitante3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiveddesparasitante4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiveddesparasitante5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiveddesparasitante6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="salferr_acfolico1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="salferr_acfolico2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="salferr_acfolico3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="salferr_acfolico4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="salferr_acfolico5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="salferr_acfolico6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ta1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ta2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ta3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ta4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ta5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ta6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hgb1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hgb2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hgb3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hgb4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hgb5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hgb6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="proteinuria1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="proteinuria2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="proteinuria3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="proteinuria4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="proteinuria5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="proteinuria6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="glicosuria1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="glicosuria2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="glicosuria3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="glicosuria4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="glicosuria5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="glicosuria6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_ulceragenital1" Type="Boolean" />
+    <Property Name="its_ulceragenital2" Type="Boolean" />
+    <Property Name="its_ulceragenital3" Type="Boolean" />
+    <Property Name="its_ulceragenital4" Type="Boolean" />
+    <Property Name="its_ulceragenital5" Type="Boolean" />
+    <Property Name="its_ulceragenital6" Type="Boolean" />
+    <Property Name="its_leucorreia1" Type="Boolean" />
+    <Property Name="its_leucorreia2" Type="Boolean" />
+    <Property Name="its_leucorreia3" Type="Boolean" />
+    <Property Name="its_leucorreia4" Type="Boolean" />
+    <Property Name="its_leucorreia5" Type="Boolean" />
+    <Property Name="its_leucorreia6" Type="Boolean" />
+    <Property Name="its_syndromictreatment1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syndromictreatment2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syndromictreatment3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syndromictreatment4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syndromictreatment5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syndromictreatment6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistesting1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistesting2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistesting3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistesting4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistesting5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistesting6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_wsyphilistreat1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_wsyphilistreat2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_wsyphilistreat3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_wsyphilistreat4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_wsyphilistreat5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_wsyphilistreat6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_psyphilistreat1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_psyphilistreat2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_psyphilistreat3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_psyphilistreat4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_psyphilistreat5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_psyphilistreat6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="serostatusdesc" Type="Boolean" />
+    <Property Name="serostatusneg" Type="Boolean" />
+    <Property Name="serostatuspos" Type="Boolean" />
+    <Property Name="cpnhivtest1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="cpnhivtest2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="cpnhivtest3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="cpnhivtest4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="cpnhivtest5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="cpnhivtest6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="partnerhivtest1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="partnerhivtest2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="partnerhivtest3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="partnerhivtest4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="partnerhivtest5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="partnerhivtest6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ctz" Type="Boolean" />
+    <Property Name="ctz_init_cont1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ctz_init_cont2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ctz_init_cont3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ctz_init_cont4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ctz_init_cont5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ctz_init_cont6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tarv" Type="Boolean" />
+    <Property Name="nvp1" Type="Boolean" />
+    <Property Name="nvp2" Type="Boolean" />
+    <Property Name="nvp3" Type="Boolean" />
+    <Property Name="nvp4" Type="Boolean" />
+    <Property Name="nvp5" Type="Boolean" />
+    <Property Name="nvp6" Type="Boolean" />
+    <Property Name="azt_nvp1" Type="Boolean" />
+    <Property Name="azt_nvp2" Type="Boolean" />
+    <Property Name="azt_nvp3" Type="Boolean" />
+    <Property Name="azt_nvp4" Type="Boolean" />
+    <Property Name="azt_nvp5" Type="Boolean" />
+    <Property Name="azt_nvp6" Type="Boolean" />
+    <Property Name="tarv_init_visit1" Type="Boolean" />
+    <Property Name="tarv_init_visit2" Type="Boolean" />
+    <Property Name="tarv_init_visit3" Type="Boolean" />
+    <Property Name="tarv_init_visit4" Type="Boolean" />
+    <Property Name="tarv_init_visit5" Type="Boolean" />
+    <Property Name="tarv_init_visit6" Type="Boolean" />
+    <Property Name="arv_cont2" Type="Boolean" />
+    <Property Name="arv_cont3" Type="Boolean" />
+    <Property Name="arv_cont4" Type="Boolean" />
+    <Property Name="arv_cont5" Type="Boolean" />
+    <Property Name="arv_cont6" Type="Boolean" />
+    <Property Name="tip1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tip2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tip3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tip4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tip5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tip6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bednet1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bednet2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bednet3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bednet4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bednet5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bednet6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tdr_htz1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tdr_htz2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tdr_htz3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tdr_htz4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tdr_htz5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tdr_htz6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="result_tdr_htz1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="result_tdr_htz2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="result_tdr_htz3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="result_tdr_htz4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="result_tdr_htz5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="result_tdr_htz6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="pos_malaria_treated1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="pos_malaria_treated2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="pos_malaria_treated3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="pos_malaria_treated4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="pos_malaria_treated5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="pos_malaria_treated6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hpp1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hpp2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hpp3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hpp4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hpp5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="hpp6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="vat_1_dose1" Type="Boolean" />
+    <Property Name="vat_1_dose2" Type="Boolean" />
+    <Property Name="vat_1_dose3" Type="Boolean" />
+    <Property Name="vat_1_dose4" Type="Boolean" />
+    <Property Name="vat_1_dose5" Type="Boolean" />
+    <Property Name="vat_1_dose6" Type="Boolean" />
+    <Property Name="vat_2_5_dose1" Type="Boolean" />
+    <Property Name="vat_2_5_dose2" Type="Boolean" />
+    <Property Name="vat_2_5_dose3" Type="Boolean" />
+    <Property Name="vat_2_5_dose4" Type="Boolean" />
+    <Property Name="vat_2_5_dose5" Type="Boolean" />
+    <Property Name="vat_2_5_dose6" Type="Boolean" />
+    <Property Name="tb_isoniazid1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_isoniazid2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_isoniazid3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_isoniazid4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_isoniazid5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_isoniazid6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_treatment1" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_treatment2" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_treatment3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_treatment4" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_treatment5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_treatment6" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="obs1" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="obs2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="obs3" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="obs4" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="obs5" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="obs6" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername1" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername3" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername4" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername5" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername6" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="cons_more4" Type="Boolean" />
+    <Property Name="partnerpreence" Type="Boolean" />
+    <Property Name="weightgainyno" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="dag" Type="Boolean" />
+    <Property Name="dam" Type="Boolean" />
+    <Property Name="supnutr" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultcured" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultabandon" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiveddesparasitante" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="salferr_more3" Type="Boolean" />
+    <Property Name="its_diag" Type="Boolean" />
+    <Property Name="its_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_syphilistesting" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="its_wsyphilistreat" Type="Boolean" />
+    <Property Name="its_psyphilistreat" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="womanserostatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="partnerserostatus" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ctz_entr" Type="Boolean" />
+    <Property Name="ctz_init" Type="Boolean" />
+    <Property Name="finalresult_arv" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tip" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bednet" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="mal_diag_lab" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="mal_treatment" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="mp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="vat_1_dose" Type="Boolean" />
+    <Property Name="vat_2_5_dose" Type="Boolean" />
+    <Property Name="inh" Type="Boolean" />
+    <Property Name="tb_initto" Type="Boolean" />
+    <Property Name="nlivro" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idmother" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cpp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nr_consulta" Type="Int32" Nullable="false" />
+    <Property Name="idmother" Type="Int64" Nullable="false" />
+    <Property Name="nlivro" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="visdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="localparto" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="diasapoisparto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="parceiropresente" Type="Int32" />
+    <Property Name="estadorecemnascido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="anemia" Type="Boolean" />
+    <Property Name="e_clinicogenecologico" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="outrapatologia" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="dag_dam" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="suplementonutricional" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="transferida" Type="Boolean" />
+    <Property Name="almaternoexclusivo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="testemalaria" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="resultado_TDR_HTZ" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="puerperamalariatratada" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="estadoentradacpp" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocpp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="dosepuerpera" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="iniciottosifiliscpp" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="parceirottocpp" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="seroestadoentradacpp" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="testehivconsultacpp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="emtarv" Type="Boolean" />
+    <Property Name="iniciatarv" Type="Boolean" />
+    <Property Name="continuatarv" Type="Boolean" />
+    <Property Name="rn_tarv" Type="Boolean" />
+    <Property Name="testehivparceiro" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ttopuerpera" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rntto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vitAcpp" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="salferroso_acfolico" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="transfistula" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="rnccr" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="transcsr_pf" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="csr_pf">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nr_consulta" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="laboratoriotb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ano" Type="Int32" Nullable="false" />
+    <Property Name="mes" Type="Int32" Nullable="false" />
+    <Property Name="numlab" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nit_nid" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NIT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="nome" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="idade" Type="Int32" />
+    <Property Name="residencia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ocupacao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="usreferencia" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="proveniencia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="HIV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ot_imunodepressao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tipodoente" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="motivoexame" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="mescontrolo" Type="Int32" />
+    <Property Name="examesolicitado" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="datacolheita1" Type="DateTime" Precision="0" />
+    <Property Name="datacolheita2" Type="DateTime" Precision="0" />
+    <Property Name="datarecepcao1" Type="DateTime" Precision="0" />
+    <Property Name="datarecepcao2" Type="DateTime" Precision="0" />
+    <Property Name="tipoamostra" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="aspectomicro1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="aspectomicro2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="resultadobk1" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultadobk1" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk2" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultadobk2" Type="DateTime" Precision="0" />
+    <Property Name="resultadomtb" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultadomtb" Type="DateTime" Precision="0" />
+    <Property Name="resultadorif" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultadorif" Type="DateTime" Precision="0" />
+    <Property Name="repetirxpert" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="iniciaistecinico" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="livro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="nlivro" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="provincia" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="distrito" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="uscode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="usname" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="initdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="tipolivro" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="maternidade">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="admissiondate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="admissionhr" Type="Time" Precision="7" />
+    <Property Name="nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="transfer" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="gestbirth" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="gestage" Type="Int32" />
+    <Property Name="serostatus_unk" Type="Boolean" />
+    <Property Name="serostatus_neg3m" Type="Boolean" />
+    <Property Name="serostatus_pos" Type="Boolean" />
+    <Property Name="cpn_arv_init" Type="Boolean" />
+    <Property Name="mat_hiv_testing" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="triprofilafia" Type="Boolean" />
+    <Property Name="tarv_init_entr" Type="Boolean" />
+    <Property Name="tarv_init_matern" Type="Boolean" />
+    <Property Name="delivdate" Type="DateTime" Precision="0" />
+    <Property Name="delivhr" Type="Time" Precision="7" />
+    <Property Name="freq_fpos" Type="Boolean" />
+    <Property Name="fneg" Type="Boolean" />
+    <Property Name="eutocic" Type="Boolean" />
+    <Property Name="ventosa" Type="Boolean" />
+    <Property Name="caesarean" Type="Boolean" />
+    <Property Name="oth_dystocia" Type="Boolean" />
+    <Property Name="activeman3stag" Type="Boolean" />
+    <Property Name="manual_plac_remove" Type="Boolean" />
+    <Property Name="ceasarean_plac_remove" Type="Boolean" />
+    <Property Name="delivcomp" Type="Boolean" />
+    <Property Name="vertical_deliv" Type="Boolean" />
+    <Property Name="partogr_filled" Type="Boolean" />
+    <Property Name="plac_previa" Type="Boolean" />
+    <Property Name="detach_plac" Type="Boolean" />
+    <Property Name="uterineatony" Type="Boolean" />
+    <Property Name="placreten" Type="Boolean" />
+    <Property Name="laceration" Type="Boolean" />
+    <Property Name="out_rupt_uter" Type="Boolean" />
+    <Property Name="maternity_rupt_uter" Type="Boolean" />
+    <Property Name="tp_matern_local" Type="Boolean" />
+    <Property Name="tp_arrastado" Type="Boolean" />
+    <Property Name="pre_enclapsiasevera" Type="Boolean" />
+    <Property Name="C_eclampsia" Type="Boolean" />
+    <Property Name="sepsis" Type="Boolean" />
+    <Property Name="ot_complications" Type="Boolean" />
+    <Property Name="malaria" Type="Boolean" />
+    <Property Name="anemia" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="hiv_sida" Type="Boolean" />
+    <Property Name="tb" Type="Boolean" />
+    <Property Name="poisontrademed" Type="Boolean" />
+    <Property Name="ot_complications2" Type="Boolean" />
+    <Property Name="maternaldeath" Type="Boolean" />
+    <Property Name="maternaldeathcause" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="pi_antibiotics" Type="Boolean" />
+    <Property Name="ev_im_pphemor" Type="Boolean" />
+    <Property Name="antihypertensive" Type="Boolean" />
+    <Property Name="magn_sulphate" Type="Boolean" />
+    <Property Name="intrauterine_asp" Type="Boolean" />
+    <Property Name="bloodtransf" Type="Boolean" />
+    <Property Name="hyster_obstetric" Type="Boolean" />
+    <Property Name="tip_malaria_4dose" Type="Boolean" />
+    <Property Name="diu_ppimediate" Type="Boolean" />
+    <Property Name="ot_pp" Type="Boolean" />
+    <Property Name="nadovivo" Type="Boolean" />
+    <Property Name="nadomorto" Type="Boolean" />
+    <Property Name="nadomorto_focoentrada" Type="Boolean" />
+    <Property Name="nadomorto_macerado" Type="Boolean" />
+    <Property Name="mot_skintoskin" Type="Boolean" />
+    <Property Name="breastfeeding_1hr" Type="Boolean" />
+    <Property Name="premature" Type="Boolean" />
+    <Property Name="neonatalsepsis" Type="Boolean" />
+    <Property Name="neonatalasphyxia" Type="Boolean" />
+    <Property Name="malformation" Type="Boolean" />
+    <Property Name="success_reanimation" Type="Boolean" />
+    <Property Name="unsuccess_reanimation" Type="Boolean" />
+    <Property Name="complicat_spec" Type="Boolean" />
+    <Property Name="twin" Type="Boolean" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="weight" Type="Int32" />
+    <Property Name="weight_under2500gr" Type="Boolean" />
+    <Property Name="newborn_arv" Type="Boolean" />
+    <Property Name="nb_syphilistreat" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="mot_vitamin_a" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="mot_saltferrous" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="mot_home_arv" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="chd_home_arv" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="discharge_date" Type="DateTime" Precision="0" />
+    <Property Name="transfer_out_us" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="hospitaldays" Type="Int32" />
+    <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="providername" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="mother">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="residence" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="paciente_resistente_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="distrito" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="us" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="dataregisto" Type="DateTime" Precision="0" />
+    <Property Name="NIT2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="grupoetario" Type="Boolean" />
+    <Property Name="endereco" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ocupacao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NIT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="dataregistotb" Type="DateTime" Precision="0" />
+    <Property Name="localizacaolesao" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="categoriadoete" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ttoprevio2l" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="diagconfirmadopor" Type="Boolean" />
+    <Property Name="datacolheitatsa" Type="DateTime" Precision="0" />
+    <Property Name="dataresultadotsa" Type="DateTime" Precision="0" />
+    <Property Name="sensibilidade_s" Type="Boolean" />
+    <Property Name="sensibilidade_h" Type="Boolean" />
+    <Property Name="sensibilidade_r" Type="Boolean" />
+    <Property Name="sensibilidade_e" Type="Boolean" />
+    <Property Name="sensibilidade_z" Type="Boolean" />
+    <Property Name="sensibilidade_Amk_Km" Type="Boolean" />
+    <Property Name="sensibilidade_cm" Type="Boolean" />
+    <Property Name="sensibilidade_FQ" Type="Boolean" />
+    <Property Name="sensibilidade_Pto_Eto" Type="Boolean" />
+    <Property Name="sensibilidade_Outro1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sensibilidade_Outro2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sensibilidade_Outro3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="perfilresistencia" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="contactosrastreadostbr" Type="Int32" />
+    <Property Name="contactoscomtbr" Type="Int32" />
+    <Property Name="tastehiv" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultadohiv" Type="DateTime" Precision="0" />
+    <Property Name="tpc" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="datainiciotpc" Type="DateTime" Precision="0" />
+    <Property Name="emtarv" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="NID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="datainiciotarv" Type="DateTime" Precision="0" />
+    <Property Name="regimetratamento" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ustratamento" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="usdatainiciotto" Type="DateTime" Precision="0" />
+    <Property Name="comtratamento" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="comdatainiciotto" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_0m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultadobk_0m" Type="DateTime" Precision="0" />
+    <Property Name="resultadocultura_0m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultadocultura_0m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_1m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_1m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_1m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_2m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_2m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_2m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_3m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_3m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_3m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_4m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_4m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_4m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_5m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_5m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_5m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_6m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_6m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_6m" Type="DateTime" Precision="0" />
+    <Property Name="estadopaciente6meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultadobk_7m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_7m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_7m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_8m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_8m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_8m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_9m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_9m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_9m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_10m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_10m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_10m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_11m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_11m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_11m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_12m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_12m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_12m" Type="DateTime" Precision="0" />
+    <Property Name="estadopaciente12meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultadobk_14m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_14m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_14m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_16m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_16m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_16m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_18m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_18m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_18m" Type="DateTime" Precision="0" />
+    <Property Name="estadopaciente18meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultadobk_20m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_20m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_20m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_22m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_22m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_22m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_24m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_24m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_24m" Type="DateTime" Precision="0" />
+    <Property Name="estadopaciente24meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultadobk_26m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_26m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_26m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_28m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_28m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_28m" Type="DateTime" Precision="0" />
+    <Property Name="resultadobk_30m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="resultadocultura_30m" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="dataresultado_30m" Type="DateTime" Precision="0" />
+    <Property Name="estadopaciente30meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resultadofinaltto" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="datafimtto" Type="DateTime" Precision="0" />
+    <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="nometecnico" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="pacientetb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ano" Type="Int32" Nullable="false" />
+    <Property Name="dataregisto" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NIT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="grupoetario" Type="Boolean" Nullable="false" />
+    <Property Name="residencia" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ocupacao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="proveniencia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="localizacaolesao" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="categoriadoente" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="datainiciotto" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="casonovoadulto" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="casonovocrianca" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="retratamento" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="tbresistente" Type="Boolean" />
+    <Property Name="nit_tbresistente" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fintensivalocal" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fintensivanomelocal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fmanutencaolocal" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="fmanutencaonomelocal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="testado" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="hivresultado" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="tpc" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="emtarv" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="NID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="datainiciotarv" Type="DateTime" Precision="0" />
+    <Property Name="contactosrastreados" Type="Int32" />
+    <Property Name="contactoscomtb" Type="Int32" />
+    <Property Name="criancasrastreadas" Type="Int32" />
+    <Property Name="criancasquimioproflaxia" Type="Int32" />
+    <Property Name="bkdata" Type="DateTime" Precision="0" />
+    <Property Name="bkresultado" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bknumlab" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="gxrifdata" Type="DateTime" Precision="0" />
+    <Property Name="gxresultado" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="rifresultado" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="gxrifnumlab" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="culturadata" Type="DateTime" Precision="0" />
+    <Property Name="culturaresultado" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="culturanumlab" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="rx" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="outrosexames" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bact_bkdata_2_3" Type="DateTime" Precision="0" />
+    <Property Name="bact_bkresultado_2_3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_bknumlab_2_3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_culturadata_2_3" Type="DateTime" Precision="0" />
+    <Property Name="bact_culturaresultado_2_3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_culturanumlab_2_3" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_bkdata_5" Type="DateTime" Precision="0" />
+    <Property Name="bact_bkresultado_5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_bknumlab_5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_culturadata_5" Type="DateTime" Precision="0" />
+    <Property Name="bact_culturaresultado_5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_culturanumlab_5" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_bkdata_fimtrat" Type="DateTime" Precision="0" />
+    <Property Name="bact_bkresultado_fimtrat" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_bknumlab_fimtrat" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_culturadata_fimtrat" Type="DateTime" Precision="0" />
+    <Property Name="bact_culturaresultado_fimtrat" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="bact_culturanumlab_fimtrat" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="datafimtratamento" Type="DateTime" Precision="0" />
+    <Property Name="resultadotratamento" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tb_resistente" Type="Int32" />
+    <Property Name="obs" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="patient">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="person_type" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nid_ccr" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nit" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nficha_gbv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="residence" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apelido" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="posicao" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="systemrole" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="ccr_idchild">
+    <End Role="child" Type="Self.child" Multiplicity="1" />
+    <End Role="ccr" Type="Self.ccr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ccr">
+        <PropertyRef Name="idchild" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ccrseg_idccr">
+    <End Role="ccr" Type="Self.ccr" Multiplicity="1" />
+    <End Role="ccrseg" Type="Self.ccrseg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ccr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ccrseg">
+        <PropertyRef Name="idccr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBsmiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="amostrastbs" EntityType="Self.amostrastb" />
+    <EntitySet Name="ccrs" EntityType="Self.ccr" />
+    <EntitySet Name="ccrsegs" EntityType="Self.ccrseg" />
+    <EntitySet Name="children" EntityType="Self.child" />
+    <EntitySet Name="cpns" EntityType="Self.cpn" />
+    <EntitySet Name="cpn_final" EntityType="Self.cpn_final" />
+    <EntitySet Name="cpn_old" EntityType="Self.cpn_old" />
+    <EntitySet Name="cpps" EntityType="Self.cpp" />
+    <EntitySet Name="csr_pf" EntityType="Self.csr_pf" />
+    <EntitySet Name="laboratoriotbs" EntityType="Self.laboratoriotb" />
+    <EntitySet Name="livroes" EntityType="Self.livro" />
+    <EntitySet Name="maternidades" EntityType="Self.maternidade" />
+    <EntitySet Name="mothers" EntityType="Self.mother" />
+    <EntitySet Name="paciente_resistente_tb" EntityType="Self.paciente_resistente_tb" />
+    <EntitySet Name="pacientetbs" EntityType="Self.pacientetb" />
+    <EntitySet Name="patients" EntityType="Self.patient" />
+    <EntitySet Name="usuarios" EntityType="Self.usuario" />
+    <AssociationSet Name="ccr_idchild" Association="Self.ccr_idchild">
+      <End Role="child" EntitySet="children" />
+      <End Role="ccr" EntitySet="ccrs" />
+    </AssociationSet>
+    <AssociationSet Name="ccrseg_idccr" Association="Self.ccrseg_idccr">
+      <End Role="ccr" EntitySet="ccrs" />
+      <End Role="ccrseg" EntitySet="ccrsegs" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

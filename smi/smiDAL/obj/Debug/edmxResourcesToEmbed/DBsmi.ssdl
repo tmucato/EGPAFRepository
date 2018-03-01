@@ -1,5 +1,121 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="smiModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="DBsmi.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="amostrastb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numordem" Type="bigint" Nullable="false" />
+    <Property Name="datarecepcao" Type="date" />
+    <Property Name="nit_nid" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="NIT" Type="nvarchar" MaxLength="10" />
+    <Property Name="NID" Type="nvarchar" MaxLength="20" />
+    <Property Name="nome" Type="nvarchar" MaxLength="60" />
+    <Property Name="sexo" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="idade" Type="int" />
+    <Property Name="residencia" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefone" Type="nvarchar" MaxLength="15" />
+    <Property Name="proveniencia" Type="nvarchar" MaxLength="20" />
+    <Property Name="tipoamostra" Type="nvarchar" MaxLength="30" />
+    <Property Name="causarejeicao" Type="nvarchar" MaxLength="40" />
+    <Property Name="tipodoente" Type="nvarchar" MaxLength="40" />
+    <Property Name="motivoexame" Type="nvarchar" MaxLength="40" />
+    <Property Name="mescontrolo" Type="int" />
+    <Property Name="usreferencia" Type="nvarchar" MaxLength="25" />
+    <Property Name="dataenvio" Type="date" />
+    <Property Name="examesolicitado" Type="nvarchar" MaxLength="40" />
+    <Property Name="iniciaistecnicoenvio" Type="nvarchar" MaxLength="10" />
+    <Property Name="bkresultado1" Type="nvarchar" MaxLength="10" />
+    <Property Name="bkdatarecepcao1" Type="date" />
+    <Property Name="bkresultado2" Type="nvarchar" MaxLength="10" />
+    <Property Name="bkdatarecepcao2" Type="date" />
+    <Property Name="xpertresultado" Type="nvarchar" MaxLength="2" />
+    <Property Name="xpertdatarecepcao" Type="date" />
+    <Property Name="rifresultado" Type="nvarchar" MaxLength="2" />
+    <Property Name="rifdatarecepcao" Type="date" />
+    <Property Name="lpa1h_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="lpa1r_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="lpa1datarecepcao" Type="date" />
+    <Property Name="lpa2fq_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="lpa2ag_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="lpa2datarecepcao" Type="date" />
+    <Property Name="cultura" Type="nvarchar" MaxLength="5" />
+    <Property Name="culturadatarecepcao" Type="date" />
+    <Property Name="idetinficacao" Type="nvarchar" MaxLength="5" />
+    <Property Name="identificacaodata" Type="date" />
+    <Property Name="tsa1h_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa1s_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa1r_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa1e_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa1z_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa1datarecepcao" Type="date" />
+    <Property Name="tsa2ofl_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa2mox_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa2kan_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa2amk_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa2cap_resultado" Type="nchar" MaxLength="1" />
+    <Property Name="tsa2datarecepcao" Type="date" />
+    <Property Name="dataenvioresultado" Type="date" />
+    <Property Name="iniciaistecnicodevolve" Type="nvarchar" MaxLength="10" />
+    <Property Name="obs" Type="nvarchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="ccr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idchild" Type="int" Nullable="false" />
+    <Property Name="nyear" Type="int" Nullable="false" />
+    <Property Name="nlivro" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="nr_consulta" Type="int" />
+    <Property Name="dataconsulta" Type="date" />
+    <Property Name="age" Type="int" />
+    <Property Name="ageunit" Type="nchar" MaxLength="1" />
+    <Property Name="mot_nid_cpn" Type="nvarchar" MaxLength="45" />
+    <Property Name="mot_nid_tarv" Type="nvarchar" MaxLength="45" />
+    <Property Name="mot_hiv_lact" Type="bit" />
+    <Property Name="mot_hiv_tarv" Type="bit" />
+    <Property Name="contactotb" Type="bit" />
+    <Property Name="desnutricao_aguda" Type="nvarchar" MaxLength="12" />
+    <Property Name="exposicaoHIV" Type="bit" />
+    <Property Name="outracondicaorisco" Type="nvarchar" MaxLength="60" />
+    <Property Name="pisoniazidainicio" Type="date" />
+    <Property Name="pisoniazida" Type="nvarchar" MaxLength="15" />
+    <Property Name="aleitmaternomenor6m" Type="nvarchar" MaxLength="10" />
+    <Property Name="aleitmaternonaior6m" Type="bit" />
+    <Property Name="atpu" Type="int" />
+    <Property Name="csb_nut_sup" Type="bit" />
+    <Property Name="recuperada" Type="bit" />
+    <Property Name="internamento" Type="bit" />
+    <Property Name="ctz" Type="nvarchar" MaxLength="15" />
+    <Property Name="profiaxia_arv" Type="bit" />
+    <Property Name="colheitapcmaior2mes" Type="nvarchar" MaxLength="20" />
+    <Property Name="colheitapcrmenor2mes" Type="nvarchar" MaxLength="20" />
+    <Property Name="resultadopcrmaior2meses" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultadopcrmenor2meses" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultadotesterapido" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultadofinal" Type="nvarchar" MaxLength="5" />
+    <Property Name="resulttrapido_nexp" Type="nvarchar" MaxLength="5" />
+    <Property Name="saidaccr" Type="nvarchar" MaxLength="20" />
+    <Property Name="chd_nid_tarv" Type="nvarchar" MaxLength="45" />
+    <Property Name="obs" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername" Type="nvarchar" MaxLength="60" />
+    <Property Name="motart_5m_chd" Type="bit" Nullable="false" />
+    <Property Name="tb" Type="bit" />
+    <Property Name="dam_dag" Type="nvarchar" MaxLength="3" />
+    <Property Name="ce" Type="bit" />
+    <Property Name="tpicomp" Type="bit" />
+    <Property Name="ame_5m" Type="bit" />
+    <Property Name="mixed_5m" Type="bit" />
+    <Property Name="rec" Type="bit" />
+    <Property Name="trans_int" Type="bit" />
+    <Property Name="arv_5m" Type="bit" />
+    <Property Name="pcr_under2m" Type="bit" />
+    <Property Name="pcr_above2m" Type="bit" />
+    <Property Name="pcrpos_under2m" Type="bit" />
+    <Property Name="pcrpos_above2m" Type="bit" />
+    <Property Name="pnctl" Type="bit" />
+  </EntityType>
   <EntityType Name="ccrseg">
     <Key>
       <PropertyRef Name="id" />
@@ -7,44 +123,44 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idchild" Type="int" />
     <Property Name="idccr" Type="int" Nullable="false" />
-    <Property Name="mothTarv5moth" Type="varchar" MaxLength="50" />
-    <Property Name="ame5m" Type="bool" />
-    <Property Name="am5m" Type="bool" />
-    <Property Name="recuperada" Type="bool" />
-    <Property Name="transinter" Type="bool" />
-    <Property Name="arv5m" Type="bool" />
-    <Property Name="pcrmen2m" Type="bool" />
-    <Property Name="pcrmai2m" Type="bool" />
-    <Property Name="pcrposmen2m" Type="bool" />
-    <Property Name="pcrposmai2m" Type="bool" />
-    <Property Name="tb" Type="bool" />
-    <Property Name="dam" Type="bool" />
-    <Property Name="dag" Type="bool" />
-    <Property Name="ce9m" Type="bool" />
-    <Property Name="pnctl" Type="bool" />
-    <Property Name="tpi" Type="bool" />
-    <Property Name="abandono9" Type="bool" />
-    <Property Name="obito9" Type="bool" />
-    <Property Name="ce18m" Type="bool" />
-    <Property Name="resultado18" Type="bool" />
-    <Property Name="transferidaCCS" Type="bool" />
-    <Property Name="transferidaCI" Type="bool" />
-    <Property Name="transferidaUS" Type="bool" />
-    <Property Name="abandono18" Type="bool" />
-    <Property Name="obito18" Type="bool" />
+    <Property Name="mothTarv5moth" Type="nvarchar" MaxLength="50" />
+    <Property Name="ame5m" Type="bit" />
+    <Property Name="am5m" Type="bit" />
+    <Property Name="recuperada" Type="bit" />
+    <Property Name="transinter" Type="bit" />
+    <Property Name="arv5m" Type="bit" />
+    <Property Name="pcrmen2m" Type="bit" />
+    <Property Name="pcrmai2m" Type="bit" />
+    <Property Name="pcrposmen2m" Type="bit" />
+    <Property Name="pcrposmai2m" Type="bit" />
+    <Property Name="tb" Type="bit" />
+    <Property Name="dam" Type="bit" />
+    <Property Name="dag" Type="bit" />
+    <Property Name="ce9m" Type="bit" />
+    <Property Name="pnctl" Type="bit" />
+    <Property Name="tpi" Type="bit" />
+    <Property Name="abandono9" Type="bit" />
+    <Property Name="obito9" Type="bit" />
+    <Property Name="ce18m" Type="bit" />
+    <Property Name="resultado18" Type="bit" />
+    <Property Name="transferidaCCS" Type="bit" />
+    <Property Name="transferidaCI" Type="bit" />
+    <Property Name="transferidaUS" Type="bit" />
+    <Property Name="abandono18" Type="bit" />
+    <Property Name="obito18" Type="bit" />
   </EntityType>
   <EntityType Name="child">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nid_ccr" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="residence" Type="varchar" MaxLength="60" Nullable="false" />
-    <Property Name="gender" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="phone" Type="varchar" MaxLength="45" />
-    <Property Name="mot_nid_cpn" Type="varchar" MaxLength="45" />
-    <Property Name="dob" Type="datetime" Precision="0" />
+    <Property Name="nid_ccr" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="residence" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="45" />
+    <Property Name="mot_nid_cpn" Type="nvarchar" MaxLength="45" />
+    <Property Name="dob" Type="datetime2" Precision="0" />
   </EntityType>
   <EntityType Name="cpn">
     <Key>
@@ -53,57 +169,57 @@
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nr_consulta" Type="int" />
     <Property Name="idmother" Type="bigint" Nullable="false" />
-    <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nlivro" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="nyear" Type="int" Nullable="false" />
-    <Property Name="visdate" Type="datetime" Precision="0" Nullable="false" />
-    <Property Name="agegroup" Type="varchar" MaxLength="25" />
+    <Property Name="visdate" Type="datetime2" Precision="0" Nullable="false" />
+    <Property Name="agegroup" Type="nvarchar" MaxLength="25" />
     <Property Name="gestationalage" Type="int" />
-    <Property Name="gageless12" Type="bool" />
-    <Property Name="partnerpresence" Type="bool" />
+    <Property Name="gageless12" Type="bit" />
+    <Property Name="partnerpresence" Type="bit" />
     <Property Name="weight" Type="int" />
-    <Property Name="weightgainyno" Type="varchar" MaxLength="5" />
-    <Property Name="dag" Type="bool" />
-    <Property Name="dam" Type="bool" />
+    <Property Name="weightgainyno" Type="nvarchar" MaxLength="5" />
+    <Property Name="dag" Type="bit" />
+    <Property Name="dam" Type="bit" />
     <Property Name="supnutr" Type="int" />
-    <Property Name="resultcured" Type="varchar" MaxLength="5" />
-    <Property Name="resultabandon" Type="varchar" MaxLength="5" />
-    <Property Name="receiveddesparasitante" Type="varchar" MaxLength="5" />
-    <Property Name="salferr_acfolico" Type="varchar" MaxLength="5" />
-    <Property Name="ta" Type="varchar" MaxLength="5" />
-    <Property Name="hgb" Type="varchar" MaxLength="5" />
-    <Property Name="proteinuria" Type="varchar" MaxLength="5" />
-    <Property Name="glicosuria" Type="varchar" MaxLength="5" />
-    <Property Name="its_ulceragenital" Type="bool" />
-    <Property Name="its_leucorreia" Type="bool" />
-    <Property Name="its_syndromictreatment" Type="varchar" MaxLength="5" />
-    <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
-    <Property Name="its_wsyphilistreat" Type="varchar" MaxLength="5" />
-    <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
-    <Property Name="its_syphilistratmentmulhr" Type="varchar" MaxLength="5" />
-    <Property Name="its_syphilistratmentparceir" Type="varchar" MaxLength="5" />
-    <Property Name="serostatusentcpn" Type="varchar" MaxLength="5" />
-    <Property Name="cpnhivtest" Type="varchar" MaxLength="5" />
-    <Property Name="partnerhivtest" Type="varchar" MaxLength="5" />
-    <Property Name="ctz" Type="bool" />
-    <Property Name="ctz_init_cont" Type="varchar" MaxLength="5" />
-    <Property Name="tarv" Type="bool" />
-    <Property Name="nvp" Type="bool" />
-    <Property Name="azt_nvp" Type="bool" />
-    <Property Name="em_tarv_entrada" Type="bool" />
-    <Property Name="tarv_init_visit" Type="bool" />
-    <Property Name="arv_cont" Type="bool" />
-    <Property Name="tip" Type="varchar" MaxLength="5" />
-    <Property Name="bednet" Type="varchar" MaxLength="5" />
-    <Property Name="tdr_htz" Type="varchar" MaxLength="5" />
-    <Property Name="result_tdr_htz" Type="varchar" MaxLength="5" />
-    <Property Name="pos_malaria_treated" Type="varchar" MaxLength="5" />
-    <Property Name="hpp" Type="varchar" MaxLength="5" />
-    <Property Name="vat_1_dose" Type="bool" />
-    <Property Name="vat_2_5_dose" Type="bool" />
-    <Property Name="tb_isoniazid" Type="varchar" MaxLength="5" />
-    <Property Name="tb_treatment" Type="varchar" MaxLength="5" />
-    <Property Name="obs" Type="varchar" MaxLength="60" />
-    <Property Name="providername" Type="varchar" MaxLength="60" />
+    <Property Name="resultcured" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultabandon" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante" Type="nvarchar" MaxLength="5" />
+    <Property Name="salferr_acfolico" Type="nvarchar" MaxLength="5" />
+    <Property Name="ta" Type="nvarchar" MaxLength="5" />
+    <Property Name="hgb" Type="nvarchar" MaxLength="5" />
+    <Property Name="proteinuria" Type="nvarchar" MaxLength="5" />
+    <Property Name="glicosuria" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_ulceragenital" Type="bit" />
+    <Property Name="its_leucorreia" Type="bit" />
+    <Property Name="its_syndromictreatment" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistesting" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_psyphilistreat" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistratmentmulhr" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistratmentparceir" Type="nvarchar" MaxLength="5" />
+    <Property Name="serostatusentcpn" Type="nvarchar" MaxLength="5" />
+    <Property Name="cpnhivtest" Type="nvarchar" MaxLength="5" />
+    <Property Name="partnerhivtest" Type="nvarchar" MaxLength="5" />
+    <Property Name="ctz" Type="bit" />
+    <Property Name="ctz_init_cont" Type="nvarchar" MaxLength="5" />
+    <Property Name="tarv" Type="bit" />
+    <Property Name="nvp" Type="bit" />
+    <Property Name="azt_nvp" Type="bit" />
+    <Property Name="em_tarv_entrada" Type="bit" />
+    <Property Name="tarv_init_visit" Type="bit" />
+    <Property Name="arv_cont" Type="bit" />
+    <Property Name="tip" Type="nvarchar" MaxLength="5" />
+    <Property Name="bednet" Type="nvarchar" MaxLength="5" />
+    <Property Name="tdr_htz" Type="nvarchar" MaxLength="5" />
+    <Property Name="result_tdr_htz" Type="nvarchar" MaxLength="5" />
+    <Property Name="pos_malaria_treated" Type="nvarchar" MaxLength="5" />
+    <Property Name="hpp" Type="nvarchar" MaxLength="5" />
+    <Property Name="vat_1_dose" Type="bit" />
+    <Property Name="vat_2_5_dose" Type="bit" />
+    <Property Name="tb_isoniazid" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_treatment" Type="nvarchar" MaxLength="5" />
+    <Property Name="obs" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername" Type="nvarchar" MaxLength="60" />
   </EntityType>
   <EntityType Name="cpn_final">
     <Key>
@@ -111,67 +227,826 @@
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idmother" Type="bigint" Nullable="false" />
-    <Property Name="nlivro" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="cons_more4" Type="bool" />
-    <Property Name="partnerpreence" Type="bool" />
-    <Property Name="weightgainyno" Type="varchar" MaxLength="5" />
-    <Property Name="dag" Type="bool" />
-    <Property Name="dam" Type="bool" />
-    <Property Name="supnutr" Type="varchar" MaxLength="5" />
-    <Property Name="resultcured" Type="varchar" MaxLength="5" />
-    <Property Name="resultabandon" Type="varchar" MaxLength="5" />
-    <Property Name="receiveddesparasitante" Type="varchar" MaxLength="5" />
-    <Property Name="salferr_more3" Type="bool" />
-    <Property Name="its_diag" Type="bool" />
-    <Property Name="its_treatment" Type="varchar" MaxLength="5" />
-    <Property Name="its_syphilistesting" Type="varchar" MaxLength="5" />
-    <Property Name="its_wsyphilistreat" Type="bool" />
-    <Property Name="its_psyphilistreat" Type="varchar" MaxLength="5" />
-    <Property Name="womanserostatus" Type="varchar" MaxLength="10" />
-    <Property Name="partnerserostatus" Type="varchar" MaxLength="5" />
-    <Property Name="ctz_entr" Type="bool" />
-    <Property Name="ctz_init" Type="bool" />
-    <Property Name="finalresult_arv" Type="varchar" MaxLength="10" />
-    <Property Name="tip" Type="varchar" MaxLength="5" />
-    <Property Name="bednet" Type="varchar" MaxLength="5" />
-    <Property Name="mal_diag_lab" Type="varchar" MaxLength="5" />
-    <Property Name="mal_treatment" Type="varchar" MaxLength="5" />
-    <Property Name="mp" Type="varchar" MaxLength="5" />
-    <Property Name="vat_1_dose" Type="bool" />
-    <Property Name="vat_2_5_dose" Type="bool" />
-    <Property Name="tb_isoniazid" Type="bool" />
-    <Property Name="tb_treatment" Type="bool" />
+    <Property Name="nlivro" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="cons_more4" Type="bit" />
+    <Property Name="partnerpreence" Type="bit" />
+    <Property Name="weightgainyno" Type="nvarchar" MaxLength="5" />
+    <Property Name="dag" Type="bit" />
+    <Property Name="dam" Type="bit" />
+    <Property Name="supnutr" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultcured" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultabandon" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante" Type="nvarchar" MaxLength="5" />
+    <Property Name="salferr_more3" Type="bit" />
+    <Property Name="its_diag" Type="bit" />
+    <Property Name="its_treatment" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistesting" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat" Type="bit" />
+    <Property Name="its_psyphilistreat" Type="nvarchar" MaxLength="5" />
+    <Property Name="womanserostatus" Type="nvarchar" MaxLength="10" />
+    <Property Name="partnerserostatus" Type="nvarchar" MaxLength="5" />
+    <Property Name="ctz_entr" Type="bit" />
+    <Property Name="ctz_init" Type="bit" />
+    <Property Name="finalresult_arv" Type="nvarchar" MaxLength="10" />
+    <Property Name="tip" Type="nvarchar" MaxLength="5" />
+    <Property Name="bednet" Type="nvarchar" MaxLength="5" />
+    <Property Name="mal_diag_lab" Type="nvarchar" MaxLength="5" />
+    <Property Name="mal_treatment" Type="nvarchar" MaxLength="5" />
+    <Property Name="mp" Type="nvarchar" MaxLength="5" />
+    <Property Name="vat_1_dose" Type="bit" />
+    <Property Name="vat_2_5_dose" Type="bit" />
+    <Property Name="tb_isoniazid" Type="bit" />
+    <Property Name="tb_treatment" Type="bit" />
+  </EntityType>
+  <EntityType Name="cpn_old">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="nyear" Type="int" Nullable="false" />
+    <Property Name="visdate1" Type="datetime2" Precision="0" Nullable="false" />
+    <Property Name="visdate2" Type="datetime2" Precision="0" />
+    <Property Name="visdate3" Type="datetime2" Precision="0" />
+    <Property Name="visdate4" Type="datetime2" Precision="0" />
+    <Property Name="visdate5" Type="datetime2" Precision="0" />
+    <Property Name="visdate6" Type="datetime2" Precision="0" />
+    <Property Name="nid_cpn" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="nid_tarv" Type="nvarchar" MaxLength="45" />
+    <Property Name="name" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="residence" Type="nvarchar" MaxLength="60" />
+    <Property Name="phone" Type="nvarchar" MaxLength="45" />
+    <Property Name="agegroup1" Type="bit" />
+    <Property Name="agegroup2" Type="bit" />
+    <Property Name="agegroup3" Type="bit" />
+    <Property Name="agegroup4" Type="bit" />
+    <Property Name="gestationalage1" Type="bit" />
+    <Property Name="gestationalage2" Type="bit" />
+    <Property Name="gestationalage3" Type="bit" />
+    <Property Name="gestationalage4" Type="bit" />
+    <Property Name="gestationalage5" Type="bit" />
+    <Property Name="gestationalage6" Type="bit" />
+    <Property Name="gageless12" Type="bit" />
+    <Property Name="partnerpresence1" Type="bit" />
+    <Property Name="partnerpresence2" Type="bit" />
+    <Property Name="partnerpresence3" Type="bit" />
+    <Property Name="partnerpresence4" Type="bit" />
+    <Property Name="partnerpresence5" Type="bit" />
+    <Property Name="partnerpresence6" Type="bit" />
+    <Property Name="weight1" Type="int" />
+    <Property Name="weight2" Type="int" />
+    <Property Name="weight3" Type="int" />
+    <Property Name="weight4" Type="int" />
+    <Property Name="weight5" Type="int" />
+    <Property Name="weight6" Type="int" />
+    <Property Name="weightgainyno2" Type="nvarchar" MaxLength="5" />
+    <Property Name="weightgainyno3" Type="nvarchar" MaxLength="5" />
+    <Property Name="weightgainyno4" Type="nvarchar" MaxLength="5" />
+    <Property Name="weightgainyno5" Type="nvarchar" MaxLength="5" />
+    <Property Name="weightgainyno6" Type="nvarchar" MaxLength="5" />
+    <Property Name="dag1" Type="bit" />
+    <Property Name="dag2" Type="bit" />
+    <Property Name="dag3" Type="bit" />
+    <Property Name="dag4" Type="bit" />
+    <Property Name="dag5" Type="bit" />
+    <Property Name="dag6" Type="bit" />
+    <Property Name="dam1" Type="bit" />
+    <Property Name="dam2" Type="bit" />
+    <Property Name="dam3" Type="bit" />
+    <Property Name="dam4" Type="bit" />
+    <Property Name="dam5" Type="bit" />
+    <Property Name="dam6" Type="bit" />
+    <Property Name="supnutr1" Type="int" />
+    <Property Name="supnutr2" Type="int" />
+    <Property Name="supnutr3" Type="int" />
+    <Property Name="supnutr4" Type="int" />
+    <Property Name="supnutr5" Type="int" />
+    <Property Name="supnutr6" Type="int" />
+    <Property Name="resultcured2" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultcured3" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultcured4" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultcured5" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultcured6" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultabandon2" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultabandon3" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultabandon4" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultabandon5" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultabandon6" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante1" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante2" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante3" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante4" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante5" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante6" Type="nvarchar" MaxLength="5" />
+    <Property Name="salferr_acfolico1" Type="nvarchar" MaxLength="5" />
+    <Property Name="salferr_acfolico2" Type="nvarchar" MaxLength="5" />
+    <Property Name="salferr_acfolico3" Type="nvarchar" MaxLength="5" />
+    <Property Name="salferr_acfolico4" Type="nvarchar" MaxLength="5" />
+    <Property Name="salferr_acfolico5" Type="nvarchar" MaxLength="5" />
+    <Property Name="salferr_acfolico6" Type="nvarchar" MaxLength="5" />
+    <Property Name="ta1" Type="nvarchar" MaxLength="5" />
+    <Property Name="ta2" Type="nvarchar" MaxLength="5" />
+    <Property Name="ta3" Type="nvarchar" MaxLength="5" />
+    <Property Name="ta4" Type="nvarchar" MaxLength="5" />
+    <Property Name="ta5" Type="nvarchar" MaxLength="5" />
+    <Property Name="ta6" Type="nvarchar" MaxLength="5" />
+    <Property Name="hgb1" Type="nvarchar" MaxLength="5" />
+    <Property Name="hgb2" Type="nvarchar" MaxLength="5" />
+    <Property Name="hgb3" Type="nvarchar" MaxLength="5" />
+    <Property Name="hgb4" Type="nvarchar" MaxLength="5" />
+    <Property Name="hgb5" Type="nvarchar" MaxLength="5" />
+    <Property Name="hgb6" Type="nvarchar" MaxLength="5" />
+    <Property Name="proteinuria1" Type="nvarchar" MaxLength="5" />
+    <Property Name="proteinuria2" Type="nvarchar" MaxLength="5" />
+    <Property Name="proteinuria3" Type="nvarchar" MaxLength="5" />
+    <Property Name="proteinuria4" Type="nvarchar" MaxLength="5" />
+    <Property Name="proteinuria5" Type="nvarchar" MaxLength="5" />
+    <Property Name="proteinuria6" Type="nvarchar" MaxLength="5" />
+    <Property Name="glicosuria1" Type="nvarchar" MaxLength="5" />
+    <Property Name="glicosuria2" Type="nvarchar" MaxLength="5" />
+    <Property Name="glicosuria3" Type="nvarchar" MaxLength="5" />
+    <Property Name="glicosuria4" Type="nvarchar" MaxLength="5" />
+    <Property Name="glicosuria5" Type="nvarchar" MaxLength="5" />
+    <Property Name="glicosuria6" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_ulceragenital1" Type="bit" />
+    <Property Name="its_ulceragenital2" Type="bit" />
+    <Property Name="its_ulceragenital3" Type="bit" />
+    <Property Name="its_ulceragenital4" Type="bit" />
+    <Property Name="its_ulceragenital5" Type="bit" />
+    <Property Name="its_ulceragenital6" Type="bit" />
+    <Property Name="its_leucorreia1" Type="bit" />
+    <Property Name="its_leucorreia2" Type="bit" />
+    <Property Name="its_leucorreia3" Type="bit" />
+    <Property Name="its_leucorreia4" Type="bit" />
+    <Property Name="its_leucorreia5" Type="bit" />
+    <Property Name="its_leucorreia6" Type="bit" />
+    <Property Name="its_syndromictreatment1" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syndromictreatment2" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syndromictreatment3" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syndromictreatment4" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syndromictreatment5" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syndromictreatment6" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistesting1" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistesting2" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistesting3" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistesting4" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistesting5" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistesting6" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat1" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat2" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat3" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat4" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat5" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat6" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_psyphilistreat1" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_psyphilistreat2" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_psyphilistreat3" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_psyphilistreat4" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_psyphilistreat5" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_psyphilistreat6" Type="nvarchar" MaxLength="5" />
+    <Property Name="serostatusdesc" Type="bit" />
+    <Property Name="serostatusneg" Type="bit" />
+    <Property Name="serostatuspos" Type="bit" />
+    <Property Name="cpnhivtest1" Type="nvarchar" MaxLength="5" />
+    <Property Name="cpnhivtest2" Type="nvarchar" MaxLength="5" />
+    <Property Name="cpnhivtest3" Type="nvarchar" MaxLength="5" />
+    <Property Name="cpnhivtest4" Type="nvarchar" MaxLength="5" />
+    <Property Name="cpnhivtest5" Type="nvarchar" MaxLength="5" />
+    <Property Name="cpnhivtest6" Type="nvarchar" MaxLength="5" />
+    <Property Name="partnerhivtest1" Type="nvarchar" MaxLength="5" />
+    <Property Name="partnerhivtest2" Type="nvarchar" MaxLength="5" />
+    <Property Name="partnerhivtest3" Type="nvarchar" MaxLength="5" />
+    <Property Name="partnerhivtest4" Type="nvarchar" MaxLength="5" />
+    <Property Name="partnerhivtest5" Type="nvarchar" MaxLength="5" />
+    <Property Name="partnerhivtest6" Type="nvarchar" MaxLength="5" />
+    <Property Name="ctz" Type="bit" />
+    <Property Name="ctz_init_cont1" Type="nvarchar" MaxLength="5" />
+    <Property Name="ctz_init_cont2" Type="nvarchar" MaxLength="5" />
+    <Property Name="ctz_init_cont3" Type="nvarchar" MaxLength="5" />
+    <Property Name="ctz_init_cont4" Type="nvarchar" MaxLength="5" />
+    <Property Name="ctz_init_cont5" Type="nvarchar" MaxLength="5" />
+    <Property Name="ctz_init_cont6" Type="nvarchar" MaxLength="5" />
+    <Property Name="tarv" Type="bit" />
+    <Property Name="nvp1" Type="bit" />
+    <Property Name="nvp2" Type="bit" />
+    <Property Name="nvp3" Type="bit" />
+    <Property Name="nvp4" Type="bit" />
+    <Property Name="nvp5" Type="bit" />
+    <Property Name="nvp6" Type="bit" />
+    <Property Name="azt_nvp1" Type="bit" />
+    <Property Name="azt_nvp2" Type="bit" />
+    <Property Name="azt_nvp3" Type="bit" />
+    <Property Name="azt_nvp4" Type="bit" />
+    <Property Name="azt_nvp5" Type="bit" />
+    <Property Name="azt_nvp6" Type="bit" />
+    <Property Name="tarv_init_visit1" Type="bit" />
+    <Property Name="tarv_init_visit2" Type="bit" />
+    <Property Name="tarv_init_visit3" Type="bit" />
+    <Property Name="tarv_init_visit4" Type="bit" />
+    <Property Name="tarv_init_visit5" Type="bit" />
+    <Property Name="tarv_init_visit6" Type="bit" />
+    <Property Name="arv_cont2" Type="bit" />
+    <Property Name="arv_cont3" Type="bit" />
+    <Property Name="arv_cont4" Type="bit" />
+    <Property Name="arv_cont5" Type="bit" />
+    <Property Name="arv_cont6" Type="bit" />
+    <Property Name="tip1" Type="nvarchar" MaxLength="5" />
+    <Property Name="tip2" Type="nvarchar" MaxLength="5" />
+    <Property Name="tip3" Type="nvarchar" MaxLength="5" />
+    <Property Name="tip4" Type="nvarchar" MaxLength="5" />
+    <Property Name="tip5" Type="nvarchar" MaxLength="5" />
+    <Property Name="tip6" Type="nvarchar" MaxLength="5" />
+    <Property Name="bednet1" Type="nvarchar" MaxLength="5" />
+    <Property Name="bednet2" Type="nvarchar" MaxLength="5" />
+    <Property Name="bednet3" Type="nvarchar" MaxLength="5" />
+    <Property Name="bednet4" Type="nvarchar" MaxLength="5" />
+    <Property Name="bednet5" Type="nvarchar" MaxLength="5" />
+    <Property Name="bednet6" Type="nvarchar" MaxLength="5" />
+    <Property Name="tdr_htz1" Type="nvarchar" MaxLength="5" />
+    <Property Name="tdr_htz2" Type="nvarchar" MaxLength="5" />
+    <Property Name="tdr_htz3" Type="nvarchar" MaxLength="5" />
+    <Property Name="tdr_htz4" Type="nvarchar" MaxLength="5" />
+    <Property Name="tdr_htz5" Type="nvarchar" MaxLength="5" />
+    <Property Name="tdr_htz6" Type="nvarchar" MaxLength="5" />
+    <Property Name="result_tdr_htz1" Type="nvarchar" MaxLength="5" />
+    <Property Name="result_tdr_htz2" Type="nvarchar" MaxLength="5" />
+    <Property Name="result_tdr_htz3" Type="nvarchar" MaxLength="5" />
+    <Property Name="result_tdr_htz4" Type="nvarchar" MaxLength="5" />
+    <Property Name="result_tdr_htz5" Type="nvarchar" MaxLength="5" />
+    <Property Name="result_tdr_htz6" Type="nvarchar" MaxLength="5" />
+    <Property Name="pos_malaria_treated1" Type="nvarchar" MaxLength="5" />
+    <Property Name="pos_malaria_treated2" Type="nvarchar" MaxLength="5" />
+    <Property Name="pos_malaria_treated3" Type="nvarchar" MaxLength="5" />
+    <Property Name="pos_malaria_treated4" Type="nvarchar" MaxLength="5" />
+    <Property Name="pos_malaria_treated5" Type="nvarchar" MaxLength="5" />
+    <Property Name="pos_malaria_treated6" Type="nvarchar" MaxLength="5" />
+    <Property Name="hpp1" Type="nvarchar" MaxLength="5" />
+    <Property Name="hpp2" Type="nvarchar" MaxLength="5" />
+    <Property Name="hpp3" Type="nvarchar" MaxLength="5" />
+    <Property Name="hpp4" Type="nvarchar" MaxLength="5" />
+    <Property Name="hpp5" Type="nvarchar" MaxLength="5" />
+    <Property Name="hpp6" Type="nvarchar" MaxLength="5" />
+    <Property Name="vat_1_dose1" Type="bit" />
+    <Property Name="vat_1_dose2" Type="bit" />
+    <Property Name="vat_1_dose3" Type="bit" />
+    <Property Name="vat_1_dose4" Type="bit" />
+    <Property Name="vat_1_dose5" Type="bit" />
+    <Property Name="vat_1_dose6" Type="bit" />
+    <Property Name="vat_2_5_dose1" Type="bit" />
+    <Property Name="vat_2_5_dose2" Type="bit" />
+    <Property Name="vat_2_5_dose3" Type="bit" />
+    <Property Name="vat_2_5_dose4" Type="bit" />
+    <Property Name="vat_2_5_dose5" Type="bit" />
+    <Property Name="vat_2_5_dose6" Type="bit" />
+    <Property Name="tb_isoniazid1" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_isoniazid2" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_isoniazid3" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_isoniazid4" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_isoniazid5" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_isoniazid6" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_treatment1" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_treatment2" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_treatment3" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_treatment4" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_treatment5" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_treatment6" Type="nvarchar" MaxLength="5" />
+    <Property Name="obs1" Type="nvarchar" MaxLength="60" />
+    <Property Name="obs2" Type="nvarchar" MaxLength="60" />
+    <Property Name="obs3" Type="nvarchar" MaxLength="60" />
+    <Property Name="obs4" Type="nvarchar" MaxLength="60" />
+    <Property Name="obs5" Type="nvarchar" MaxLength="60" />
+    <Property Name="obs6" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername1" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername2" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername3" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername4" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername5" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername6" Type="nvarchar" MaxLength="60" />
+    <Property Name="cons_more4" Type="bit" />
+    <Property Name="partnerpreence" Type="bit" />
+    <Property Name="weightgainyno" Type="nvarchar" MaxLength="5" />
+    <Property Name="dag" Type="bit" />
+    <Property Name="dam" Type="bit" />
+    <Property Name="supnutr" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultcured" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultabandon" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiveddesparasitante" Type="nvarchar" MaxLength="5" />
+    <Property Name="salferr_more3" Type="bit" />
+    <Property Name="its_diag" Type="bit" />
+    <Property Name="its_treatment" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_syphilistesting" Type="nvarchar" MaxLength="5" />
+    <Property Name="its_wsyphilistreat" Type="bit" />
+    <Property Name="its_psyphilistreat" Type="nvarchar" MaxLength="5" />
+    <Property Name="womanserostatus" Type="nvarchar" MaxLength="10" />
+    <Property Name="partnerserostatus" Type="nvarchar" MaxLength="5" />
+    <Property Name="ctz_entr" Type="bit" />
+    <Property Name="ctz_init" Type="bit" />
+    <Property Name="finalresult_arv" Type="nvarchar" MaxLength="10" />
+    <Property Name="tip" Type="nvarchar" MaxLength="5" />
+    <Property Name="bednet" Type="nvarchar" MaxLength="5" />
+    <Property Name="mal_diag_lab" Type="nvarchar" MaxLength="5" />
+    <Property Name="mal_treatment" Type="nvarchar" MaxLength="5" />
+    <Property Name="mp" Type="nvarchar" MaxLength="5" />
+    <Property Name="vat_1_dose" Type="bit" />
+    <Property Name="vat_2_5_dose" Type="bit" />
+    <Property Name="inh" Type="bit" />
+    <Property Name="tb_initto" Type="bit" />
+    <Property Name="nlivro" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="idmother" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cpp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nr_consulta" Type="int" Nullable="false" />
+    <Property Name="idmother" Type="bigint" Nullable="false" />
+    <Property Name="nlivro" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="visdate" Type="date" Nullable="false" />
+    <Property Name="age" Type="int" />
+    <Property Name="localparto" Type="nvarchar" MaxLength="3" />
+    <Property Name="diasapoisparto" Type="nvarchar" MaxLength="30" />
+    <Property Name="parceiropresente" Type="int" />
+    <Property Name="estadorecemnascido" Type="nvarchar" MaxLength="20" />
+    <Property Name="anemia" Type="bit" />
+    <Property Name="e_clinicogenecologico" Type="nvarchar" MaxLength="30" />
+    <Property Name="outrapatologia" Type="nvarchar" MaxLength="30" />
+    <Property Name="dag_dam" Type="nvarchar" MaxLength="3" />
+    <Property Name="suplementonutricional" Type="nchar" MaxLength="1" />
+    <Property Name="transferida" Type="bit" />
+    <Property Name="almaternoexclusivo" Type="nchar" MaxLength="1" />
+    <Property Name="testemalaria" Type="nvarchar" MaxLength="3" />
+    <Property Name="resultado_TDR_HTZ" Type="nvarchar" MaxLength="3" />
+    <Property Name="puerperamalariatratada" Type="nchar" MaxLength="1" />
+    <Property Name="estadoentradacpp" Type="nvarchar" MaxLength="30" />
+    <Property Name="resultadocpp" Type="nvarchar" MaxLength="3" />
+    <Property Name="dosepuerpera" Type="nvarchar" MaxLength="10" />
+    <Property Name="iniciottosifiliscpp" Type="nchar" MaxLength="1" />
+    <Property Name="parceirottocpp" Type="nchar" MaxLength="1" />
+    <Property Name="seroestadoentradacpp" Type="nvarchar" MaxLength="25" />
+    <Property Name="testehivconsultacpp" Type="nvarchar" MaxLength="3" />
+    <Property Name="emtarv" Type="bit" />
+    <Property Name="iniciatarv" Type="bit" />
+    <Property Name="continuatarv" Type="bit" />
+    <Property Name="rn_tarv" Type="bit" />
+    <Property Name="testehivparceiro" Type="nvarchar" MaxLength="3" />
+    <Property Name="ttopuerpera" Type="nvarchar" MaxLength="50" />
+    <Property Name="rntto" Type="nvarchar" MaxLength="50" />
+    <Property Name="vitAcpp" Type="nchar" MaxLength="1" />
+    <Property Name="salferroso_acfolico" Type="nchar" MaxLength="1" />
+    <Property Name="transfistula" Type="nchar" MaxLength="1" />
+    <Property Name="rnccr" Type="nchar" MaxLength="1" />
+    <Property Name="transcsr_pf" Type="nchar" MaxLength="1" />
+    <Property Name="obs" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="csr_pf">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nr_consulta" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="laboratoriotb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ano" Type="int" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="numlab" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="nit_nid" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="NIT" Type="nvarchar" MaxLength="10" />
+    <Property Name="NID" Type="nvarchar" MaxLength="20" />
+    <Property Name="nome" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="sexo" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="idade" Type="int" />
+    <Property Name="residencia" Type="nvarchar" MaxLength="50" />
+    <Property Name="ocupacao" Type="nvarchar" MaxLength="20" />
+    <Property Name="telefone" Type="nvarchar" MaxLength="15" />
+    <Property Name="usreferencia" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="proveniencia" Type="nvarchar" MaxLength="20" />
+    <Property Name="HIV" Type="nvarchar" MaxLength="3" />
+    <Property Name="ot_imunodepressao" Type="nvarchar" MaxLength="20" />
+    <Property Name="tipodoente" Type="nvarchar" MaxLength="40" />
+    <Property Name="motivoexame" Type="nvarchar" MaxLength="40" />
+    <Property Name="mescontrolo" Type="int" />
+    <Property Name="examesolicitado" Type="nvarchar" MaxLength="40" />
+    <Property Name="datacolheita1" Type="datetime2" Precision="0" />
+    <Property Name="datacolheita2" Type="datetime2" Precision="0" />
+    <Property Name="datarecepcao1" Type="datetime2" Precision="0" />
+    <Property Name="datarecepcao2" Type="datetime2" Precision="0" />
+    <Property Name="tipoamostra" Type="nvarchar" MaxLength="30" />
+    <Property Name="aspectomicro1" Type="nvarchar" MaxLength="25" />
+    <Property Name="aspectomicro2" Type="nvarchar" MaxLength="25" />
+    <Property Name="resultadobk1" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultadobk1" Type="date" />
+    <Property Name="resultadobk2" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultadobk2" Type="date" />
+    <Property Name="resultadomtb" Type="nvarchar" MaxLength="2" />
+    <Property Name="dataresultadomtb" Type="date" />
+    <Property Name="resultadorif" Type="nvarchar" MaxLength="2" />
+    <Property Name="dataresultadorif" Type="date" />
+    <Property Name="repetirxpert" Type="nvarchar" MaxLength="2" />
+    <Property Name="iniciaistecinico" Type="nvarchar" MaxLength="10" />
+    <Property Name="obs" Type="nvarchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="livro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="nlivro" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="provincia" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="distrito" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="uscode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="usname" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="initdate" Type="date" Nullable="false" />
+    <Property Name="tipolivro" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="maternidade">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="admissiondate" Type="date" Nullable="false" />
+    <Property Name="admissionhr" Type="time" Precision="7" />
+    <Property Name="nid_cpn" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="nid_tarv" Type="nvarchar" MaxLength="45" />
+    <Property Name="name" Type="nvarchar" MaxLength="45" />
+    <Property Name="transfer" Type="nvarchar" MaxLength="5" />
+    <Property Name="age" Type="int" />
+    <Property Name="gestbirth" Type="nvarchar" MaxLength="5" />
+    <Property Name="gestage" Type="int" />
+    <Property Name="serostatus_unk" Type="bit" />
+    <Property Name="serostatus_neg3m" Type="bit" />
+    <Property Name="serostatus_pos" Type="bit" />
+    <Property Name="cpn_arv_init" Type="bit" />
+    <Property Name="mat_hiv_testing" Type="nvarchar" MaxLength="5" />
+    <Property Name="triprofilafia" Type="bit" />
+    <Property Name="tarv_init_entr" Type="bit" />
+    <Property Name="tarv_init_matern" Type="bit" />
+    <Property Name="delivdate" Type="date" />
+    <Property Name="delivhr" Type="time" Precision="7" />
+    <Property Name="freq_fpos" Type="bit" />
+    <Property Name="fneg" Type="bit" />
+    <Property Name="eutocic" Type="bit" />
+    <Property Name="ventosa" Type="bit" />
+    <Property Name="caesarean" Type="bit" />
+    <Property Name="oth_dystocia" Type="bit" />
+    <Property Name="activeman3stag" Type="bit" />
+    <Property Name="manual_plac_remove" Type="bit" />
+    <Property Name="ceasarean_plac_remove" Type="bit" />
+    <Property Name="delivcomp" Type="bit" />
+    <Property Name="vertical_deliv" Type="bit" />
+    <Property Name="partogr_filled" Type="bit" />
+    <Property Name="plac_previa" Type="bit" />
+    <Property Name="detach_plac" Type="bit" />
+    <Property Name="uterineatony" Type="bit" />
+    <Property Name="placreten" Type="bit" />
+    <Property Name="laceration" Type="bit" />
+    <Property Name="out_rupt_uter" Type="bit" />
+    <Property Name="maternity_rupt_uter" Type="bit" />
+    <Property Name="tp_matern_local" Type="bit" />
+    <Property Name="tp_arrastado" Type="bit" />
+    <Property Name="pre_enclapsiasevera" Type="bit" />
+    <Property Name=" eclampsia" Type="bit" />
+    <Property Name="sepsis" Type="bit" />
+    <Property Name="ot_complications" Type="bit" />
+    <Property Name="malaria" Type="bit" />
+    <Property Name="anemia" Type="nvarchar" MaxLength="45" />
+    <Property Name="hiv_sida" Type="bit" />
+    <Property Name="tb" Type="bit" />
+    <Property Name="poisontrademed" Type="bit" />
+    <Property Name="ot_complications2" Type="bit" />
+    <Property Name="maternaldeath" Type="bit" />
+    <Property Name="maternaldeathcause" Type="nvarchar" MaxLength="45" />
+    <Property Name="pi_antibiotics" Type="bit" />
+    <Property Name="ev_im_pphemor" Type="bit" />
+    <Property Name="antihypertensive" Type="bit" />
+    <Property Name="magn_sulphate" Type="bit" />
+    <Property Name="intrauterine_asp" Type="bit" />
+    <Property Name="bloodtransf" Type="bit" />
+    <Property Name="hyster_obstetric" Type="bit" />
+    <Property Name="tip_malaria_4dose" Type="bit" />
+    <Property Name="diu_ppimediate" Type="bit" />
+    <Property Name="ot_pp" Type="bit" />
+    <Property Name="nadovivo" Type="bit" />
+    <Property Name="nadomorto" Type="bit" />
+    <Property Name="nadomorto_focoentrada" Type="bit" />
+    <Property Name="nadomorto_macerado" Type="bit" />
+    <Property Name="mot_skintoskin" Type="bit" />
+    <Property Name="breastfeeding_1hr" Type="bit" />
+    <Property Name="premature" Type="bit" />
+    <Property Name="neonatalsepsis" Type="bit" />
+    <Property Name="neonatalasphyxia" Type="bit" />
+    <Property Name="malformation" Type="bit" />
+    <Property Name="success_reanimation" Type="bit" />
+    <Property Name="unsuccess_reanimation" Type="bit" />
+    <Property Name="complicat_spec" Type="bit" />
+    <Property Name="twin" Type="bit" />
+    <Property Name="gender" Type="nchar" MaxLength="1" />
+    <Property Name="weight" Type="int" />
+    <Property Name="weight_under2500gr" Type="bit" />
+    <Property Name="newborn_arv" Type="bit" />
+    <Property Name="nb_syphilistreat" Type="nchar" MaxLength="1" />
+    <Property Name="mot_vitamin_a" Type="nchar" MaxLength="1" />
+    <Property Name="mot_saltferrous" Type="nchar" MaxLength="1" />
+    <Property Name="mot_home_arv" Type="nchar" MaxLength="1" />
+    <Property Name="chd_home_arv" Type="nchar" MaxLength="1" />
+    <Property Name="discharge_date" Type="date" />
+    <Property Name="transfer_out_us" Type="nvarchar" MaxLength="45" />
+    <Property Name="hospitaldays" Type="int" />
+    <Property Name="obs" Type="nvarchar" MaxLength="60" />
+    <Property Name="providername" Type="nvarchar" MaxLength="45" />
   </EntityType>
   <EntityType Name="mother">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nid_cpn" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="nid_tarv" Type="varchar" MaxLength="45" />
-    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="residence" Type="varchar" MaxLength="60" />
-    <Property Name="phone" Type="varchar" MaxLength="45" />
-    <Property Name="dob" Type="datetime" Precision="0" />
+    <Property Name="nid_cpn" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="nid_tarv" Type="nvarchar" MaxLength="45" />
+    <Property Name="name" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="residence" Type="nvarchar" MaxLength="60" />
+    <Property Name="phone" Type="nvarchar" MaxLength="45" />
+    <Property Name="dob" Type="datetime2" Precision="0" />
+  </EntityType>
+  <EntityType Name="paciente_resistente_tb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="distrito" Type="nvarchar" MaxLength="20" />
+    <Property Name="us" Type="nvarchar" MaxLength="25" />
+    <Property Name="dataregisto" Type="date" />
+    <Property Name="NIT2" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="nome" Type="nvarchar" MaxLength="50" />
+    <Property Name="sexo" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="grupoetario" Type="bit" />
+    <Property Name="endereco" Type="nvarchar" MaxLength="30" />
+    <Property Name="telefone" Type="nvarchar" MaxLength="15" />
+    <Property Name="ocupacao" Type="nvarchar" MaxLength="20" />
+    <Property Name="NIT" Type="nvarchar" MaxLength="10" />
+    <Property Name="dataregistotb" Type="date" />
+    <Property Name="localizacaolesao" Type="nvarchar" MaxLength="5" />
+    <Property Name="categoriadoete" Type="nvarchar" MaxLength="5" />
+    <Property Name="ttoprevio2l" Type="nvarchar" MaxLength="3" />
+    <Property Name="diagconfirmadopor" Type="bit" />
+    <Property Name="datacolheitatsa" Type="date" />
+    <Property Name="dataresultadotsa" Type="date" />
+    <Property Name="sensibilidade_s" Type="bit" />
+    <Property Name="sensibilidade_h" Type="bit" />
+    <Property Name="sensibilidade_r" Type="bit" />
+    <Property Name="sensibilidade_e" Type="bit" />
+    <Property Name="sensibilidade_z" Type="bit" />
+    <Property Name="sensibilidade_Amk_Km" Type="bit" />
+    <Property Name="sensibilidade_cm" Type="bit" />
+    <Property Name="sensibilidade_FQ" Type="bit" />
+    <Property Name="sensibilidade_Pto_Eto" Type="bit" />
+    <Property Name="sensibilidade_Outro1" Type="nvarchar" MaxLength="20" />
+    <Property Name="sensibilidade_Outro2" Type="nvarchar" MaxLength="20" />
+    <Property Name="sensibilidade_Outro3" Type="nvarchar" MaxLength="20" />
+    <Property Name="perfilresistencia" Type="nvarchar" MaxLength="10" />
+    <Property Name="contactosrastreadostbr" Type="int" />
+    <Property Name="contactoscomtbr" Type="int" />
+    <Property Name="tastehiv" Type="nvarchar" MaxLength="2" />
+    <Property Name="dataresultadohiv" Type="date" />
+    <Property Name="tpc" Type="nvarchar" MaxLength="2" />
+    <Property Name="datainiciotpc" Type="date" />
+    <Property Name="emtarv" Type="nchar" MaxLength="1" />
+    <Property Name="NID" Type="nvarchar" MaxLength="20" />
+    <Property Name="datainiciotarv" Type="date" />
+    <Property Name="regimetratamento" Type="nvarchar" MaxLength="15" />
+    <Property Name="ustratamento" Type="nvarchar" MaxLength="25" />
+    <Property Name="usdatainiciotto" Type="date" />
+    <Property Name="comtratamento" Type="nvarchar" MaxLength="25" />
+    <Property Name="comdatainiciotto" Type="date" />
+    <Property Name="resultadobk_0m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultadobk_0m" Type="date" />
+    <Property Name="resultadocultura_0m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultadocultura_0m" Type="date" />
+    <Property Name="resultadobk_1m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_1m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_1m" Type="date" />
+    <Property Name="resultadobk_2m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_2m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_2m" Type="date" />
+    <Property Name="resultadobk_3m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_3m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_3m" Type="date" />
+    <Property Name="resultadobk_4m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_4m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_4m" Type="date" />
+    <Property Name="resultadobk_5m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_5m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_5m" Type="date" />
+    <Property Name="resultadobk_6m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_6m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_6m" Type="date" />
+    <Property Name="estadopaciente6meses" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultadobk_7m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_7m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_7m" Type="date" />
+    <Property Name="resultadobk_8m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_8m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_8m" Type="date" />
+    <Property Name="resultadobk_9m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_9m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_9m" Type="date" />
+    <Property Name="resultadobk_10m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_10m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_10m" Type="date" />
+    <Property Name="resultadobk_11m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_11m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_11m" Type="date" />
+    <Property Name="resultadobk_12m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_12m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_12m" Type="date" />
+    <Property Name="estadopaciente12meses" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultadobk_14m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_14m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_14m" Type="date" />
+    <Property Name="resultadobk_16m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_16m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_16m" Type="date" />
+    <Property Name="resultadobk_18m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_18m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_18m" Type="date" />
+    <Property Name="estadopaciente18meses" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultadobk_20m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_20m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_20m" Type="date" />
+    <Property Name="resultadobk_22m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_22m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_22m" Type="date" />
+    <Property Name="resultadobk_24m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_24m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_24m" Type="date" />
+    <Property Name="estadopaciente24meses" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultadobk_26m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_26m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_26m" Type="date" />
+    <Property Name="resultadobk_28m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_28m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_28m" Type="date" />
+    <Property Name="resultadobk_30m" Type="nvarchar" MaxLength="15" />
+    <Property Name="resultadocultura_30m" Type="nvarchar" MaxLength="15" />
+    <Property Name="dataresultado_30m" Type="date" />
+    <Property Name="estadopaciente30meses" Type="nvarchar" MaxLength="5" />
+    <Property Name="resultadofinaltto" Type="nvarchar" MaxLength="3" />
+    <Property Name="datafimtto" Type="date" />
+    <Property Name="obs" Type="nvarchar" MaxLength="60" />
+    <Property Name="nometecnico" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="pacientetb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ano" Type="int" Nullable="false" />
+    <Property Name="dataregisto" Type="date" Nullable="false" />
+    <Property Name="NIT" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="nome" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="sexo" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="grupoetario" Type="bit" Nullable="false" />
+    <Property Name="residencia" Type="nvarchar" MaxLength="30" />
+    <Property Name="telefone" Type="nvarchar" MaxLength="15" />
+    <Property Name="ocupacao" Type="nvarchar" MaxLength="20" />
+    <Property Name="proveniencia" Type="nvarchar" MaxLength="20" />
+    <Property Name="localizacaolesao" Type="nvarchar" MaxLength="5" />
+    <Property Name="categoriadoente" Type="nvarchar" MaxLength="5" />
+    <Property Name="datainiciotto" Type="date" Nullable="false" />
+    <Property Name="casonovoadulto" Type="nvarchar" MaxLength="15" />
+    <Property Name="casonovocrianca" Type="nvarchar" MaxLength="15" />
+    <Property Name="retratamento" Type="nvarchar" MaxLength="15" />
+    <Property Name="tbresistente" Type="bit" />
+    <Property Name="nit_tbresistente" Type="nvarchar" MaxLength="10" />
+    <Property Name="fintensivalocal" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="fintensivanomelocal" Type="nvarchar" MaxLength="20" />
+    <Property Name="fmanutencaolocal" Type="nvarchar" MaxLength="5" />
+    <Property Name="fmanutencaonomelocal" Type="nvarchar" MaxLength="20" />
+    <Property Name="testado" Type="nchar" MaxLength="1" />
+    <Property Name="hivresultado" Type="nvarchar" MaxLength="3" />
+    <Property Name="tpc" Type="nvarchar" MaxLength="3" />
+    <Property Name="emtarv" Type="nvarchar" MaxLength="1" />
+    <Property Name="NID" Type="nvarchar" MaxLength="20" />
+    <Property Name="datainiciotarv" Type="date" />
+    <Property Name="contactosrastreados" Type="int" />
+    <Property Name="contactoscomtb" Type="int" />
+    <Property Name="criancasrastreadas" Type="int" />
+    <Property Name="criancasquimioproflaxia" Type="int" />
+    <Property Name="bkdata" Type="date" />
+    <Property Name="bkresultado" Type="nvarchar" MaxLength="5" />
+    <Property Name="bknumlab" Type="nvarchar" MaxLength="5" />
+    <Property Name="gxrifdata" Type="date" />
+    <Property Name="gxresultado" Type="nvarchar" MaxLength="5" />
+    <Property Name="rifresultado" Type="nvarchar" MaxLength="5" />
+    <Property Name="gxrifnumlab" Type="nvarchar" MaxLength="5" />
+    <Property Name="culturadata" Type="date" />
+    <Property Name="culturaresultado" Type="nvarchar" MaxLength="5" />
+    <Property Name="culturanumlab" Type="nvarchar" MaxLength="5" />
+    <Property Name="rx" Type="nvarchar" MaxLength="50" />
+    <Property Name="outrosexames" Type="nvarchar" MaxLength="50" />
+    <Property Name="bact_bkdata_2_3" Type="date" />
+    <Property Name="bact_bkresultado_2_3" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_bknumlab_2_3" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_culturadata_2_3" Type="date" />
+    <Property Name="bact_culturaresultado_2_3" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_culturanumlab_2_3" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_bkdata_5" Type="date" />
+    <Property Name="bact_bkresultado_5" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_bknumlab_5" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_culturadata_5" Type="date" />
+    <Property Name="bact_culturaresultado_5" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_culturanumlab_5" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_bkdata_fimtrat" Type="date" />
+    <Property Name="bact_bkresultado_fimtrat" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_bknumlab_fimtrat" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_culturadata_fimtrat" Type="date" />
+    <Property Name="bact_culturaresultado_fimtrat" Type="nvarchar" MaxLength="5" />
+    <Property Name="bact_culturanumlab_fimtrat" Type="nvarchar" MaxLength="5" />
+    <Property Name="datafimtratamento" Type="date" />
+    <Property Name="resultadotratamento" Type="nvarchar" MaxLength="5" />
+    <Property Name="tb_resistente" Type="int" />
+    <Property Name="obs" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="patient">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="person_type" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="nid_cpn" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="nid_ccr" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="nit" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="nficha_gbv" Type="nvarchar" MaxLength="45" />
+    <Property Name="nid_tarv" Type="nvarchar" MaxLength="45" />
+    <Property Name="name" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="residence" Type="nvarchar" MaxLength="60" />
+    <Property Name="phone" Type="nvarchar" MaxLength="45" />
+    <Property Name="dob" Type="datetime2" Precision="0" />
   </EntityType>
   <EntityType Name="usuario">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="username" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="apelido" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="password" Type="varchar" MaxLength="45" />
-    <Property Name="posicao" Type="varchar" MaxLength="45" />
-    <Property Name="systemrole" Type="varchar" MaxLength="45" />
+    <Property Name="username" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="apelido" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="45" />
+    <Property Name="posicao" Type="nvarchar" MaxLength="45" />
+    <Property Name="systemrole" Type="nvarchar" MaxLength="45" />
   </EntityType>
-  <EntityContainer Name="smiModelStoreContainer">
-    <EntitySet Name="ccrseg" EntityType="Self.ccrseg" Schema="smi" store:Type="Tables" />
-    <EntitySet Name="child" EntityType="Self.child" Schema="smi" store:Type="Tables" />
-    <EntitySet Name="cpn" EntityType="Self.cpn" Schema="smi" store:Type="Tables" />
-    <EntitySet Name="cpn_final" EntityType="Self.cpn_final" Schema="smi" store:Type="Tables" />
-    <EntitySet Name="mother" EntityType="Self.mother" Schema="smi" store:Type="Tables" />
-    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="smi" store:Type="Tables" />
+  <Association Name="ccr$idchild">
+    <End Role="child" Type="Self.child" Multiplicity="1" />
+    <End Role="ccr" Type="Self.ccr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ccr">
+        <PropertyRef Name="idchild" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ccrseg$idccr">
+    <End Role="ccr" Type="Self.ccr" Multiplicity="1" />
+    <End Role="ccrseg" Type="Self.ccrseg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ccr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ccrseg">
+        <PropertyRef Name="idccr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBsmiStoreContainer">
+    <EntitySet Name="amostrastb" EntityType="Self.amostrastb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ccr" EntityType="Self.ccr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ccrseg" EntityType="Self.ccrseg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="child" EntityType="Self.child" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cpn" EntityType="Self.cpn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cpn_final" EntityType="Self.cpn_final" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cpn_old" EntityType="Self.cpn_old" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cpp" EntityType="Self.cpp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="csr_pf" EntityType="Self.csr_pf" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="laboratoriotb" EntityType="Self.laboratoriotb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="livro" EntityType="Self.livro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="maternidade" EntityType="Self.maternidade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mother" EntityType="Self.mother" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="paciente_resistente_tb" EntityType="Self.paciente_resistente_tb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pacientetb" EntityType="Self.pacientetb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="patient" EntityType="Self.patient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="ccr$idchild" Association="Self.ccr$idchild">
+      <End Role="child" EntitySet="child" />
+      <End Role="ccr" EntitySet="ccr" />
+    </AssociationSet>
+    <AssociationSet Name="ccrseg$idccr" Association="Self.ccrseg$idccr">
+      <End Role="ccr" EntitySet="ccr" />
+      <End Role="ccrseg" EntitySet="ccrseg" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

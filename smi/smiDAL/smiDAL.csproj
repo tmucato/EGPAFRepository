@@ -34,15 +34,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -56,35 +54,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="amostrastb.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ccr.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
     <Compile Include="ccrseg.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
     <Compile Include="child.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBConnection.cs" />
     <Compile Include="cpn.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
     <Compile Include="cpn_final.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
+    <Compile Include="cpn_old.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cpp.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="csr_pf.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="DBsmi.Context.cs">
-      <DependentUpon>DBsmi.Context.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBsmi.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="DBsmi.cs">
-      <DependentUpon>DBsmi.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
     <Compile Include="DBsmi.Designer.cs">
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBsmi.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="laboratoriotb.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="livro.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="maternidade.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
     <Compile Include="mother.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pacientetb.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paciente_resistente_tb.cs">
+      <DependentUpon>DBsmi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="patient.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,29 +133,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="DBsmi.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DBsmi.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DBsmi.Context.tt">
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DBsmi.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DBsmi.tt">
-      <DependentUpon>DBsmi.edmx</DependentUpon>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DBsmi.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
     <None Include="DBsmi.edmx.diagram">
       <DependentUpon>DBsmi.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBsmi.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBsmi.edmx</DependentUpon>
+      <LastGenOutput>DBsmi.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DBsmi.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBsmi.edmx</DependentUpon>
+      <LastGenOutput>DBsmi.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
