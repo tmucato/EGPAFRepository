@@ -7,3 +7,4 @@ C:\Users\tmucato\Source\EGPAFRepository\smi\smiGlobal\bin\Debug\smiGlobal.dll
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiGlobal\bin\Debug\smiGlobal.pdb
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiGlobal\obj\Debug\smiGlobal.dll
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiGlobal\obj\Debug\smiGlobal.pdb
+C:\Users\tmucato\Source\EGPAFRepository\smi\smiGlobal\obj\Debug\smiGlobal.csprojResolveAssemblyReference.cache

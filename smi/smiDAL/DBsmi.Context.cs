@@ -12,14 +12,13 @@ namespace smiDAL
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class DBsmiEntities : DbContext
     {
         public DBsmiEntities()
             : base("name=DBsmiEntities")
         {
         }
-
         public DBsmiEntities(string conStr) : base(conStr)
         {
         }
@@ -28,7 +27,7 @@ namespace smiDAL
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<amostrastb> amostrastbs { get; set; }
         public virtual DbSet<ccr> ccrs { get; set; }
         public virtual DbSet<ccrseg> ccrsegs { get; set; }
