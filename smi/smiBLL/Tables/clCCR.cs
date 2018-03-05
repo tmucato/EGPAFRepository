@@ -271,6 +271,12 @@ namespace smiBLL
         public override void UpdateEntity()
         {
             throw new NotImplementedException();
+
+
+
+
+
+
         }
 
         public override void DeleteEntity()

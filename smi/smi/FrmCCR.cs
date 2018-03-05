@@ -208,7 +208,7 @@ namespace smi
                 }
                 else
                 {
-               
+
                     ccrseg = ccrseg.GetEntityList().Where(c => c.idchild == child.id).FirstOrDefault();
                     BindCCRSegControls(ccrseg);
 
@@ -241,7 +241,7 @@ namespace smi
                 if (!string.IsNullOrWhiteSpace(txtNidCpnMae.Text))
                     obj_ccr.mot_nid_cpn = txtNidCpnMae.Text;
                 if (!string.IsNullOrWhiteSpace(txtNidTarvMae.Text))
-                    obj_ccr.mot_nid_cpn = txtNidTarvMae.Text;
+                    obj_ccr.mot_nid_tarv = txtNidTarvMae.Text;
                 if (cbxHIVLact.SelectedIndex >= 0)
                     obj_ccr.mot_hiv_lact = Functions.ConvertComboValueToBool(cbxHIVLact.SelectedText);
                 if (cbxMaeLacTarv.SelectedIndex >= 0)
@@ -272,19 +272,32 @@ namespace smi
                     obj_ccr.ctz = cbxCTZ.SelectedText;
                 if (cbxProfARV.SelectedIndex >= 0)
                     obj_ccr.profiaxia_arv = Functions.ConvertComboValueToBool(cbxProfARV.SelectedText);
+                if (cbxColhPCRMen2Mes.SelectedIndex >= 0)
+                    obj_ccr.colheitapcrmenor2mes = cbxColhPCRMen2Mes.SelectedText;
+                if (cbxColhPCRMaior2Mes.SelectedIndex >= 0)
+                    obj_ccr.colheitapcmaior2mes = cbxColhPCRMaior2Mes.SelectedText;
+                if (cbxResPCRMen2Mes.SelectedIndex >= 0)
+                    obj_ccr.resultadopcrmenor2meses = cbxResPCRMen2Mes.SelectedText;
+                if (cbxResPCRMai2Mes.SelectedIndex >= 0)
+                    obj_ccr.resultadopcrmaior2meses = cbxResPCRMai2Mes.SelectedText;
+                if (cbxRestesRapMaior9mes.SelectedIndex >= 0)
+                    obj_ccr.resultadotesterapido = cbxRestesRapMaior9mes.SelectedText;
+                if (cbxResDefen.SelectedIndex >= 0)
+                    obj_ccr.resultadofinal = cbxResDefen.SelectedText;
+                if (cbxRestesRapCrinExpHIV.SelectedIndex >= 0)
+                    obj_ccr.resulttrapido_nexp = cbxRestesRapCrinExpHIV.SelectedText;
+                if (cbxSaidaCri.SelectedIndex >= 0)
+                    obj_ccr.saidaccr = cbxSaidaCri.SelectedText;
+                if (string.IsNullOrWhiteSpace(txtNidCriTarv.Text))
+                    obj_ccr.chd_nid_tarv = txtNidCriTarv.Text;
+                if (string.IsNullOrWhiteSpace(txtObs.Text))
+                    obj_ccr.obs = txtObs.Text;
+                if (string.IsNullOrWhiteSpace(txtNomeProfSaude.Text))
+                    obj_ccr.providername = txtNomeProfSaude.Text;
+                obj_ccr.UpdateEntity();
 
 
-
-
-
-
-
-
-
-
-             
-
-
+                
             }
             catch (Exception ex)
             {
