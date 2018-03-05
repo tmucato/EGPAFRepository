@@ -297,7 +297,7 @@ namespace smi
                 obj_ccr.UpdateEntity();
 
 
-                
+
             }
             catch (Exception ex)
             {
@@ -310,12 +310,58 @@ namespace smi
             try
             {
 
+                if (cbxCE18Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.ce18m = Functions.ConvertComboValueToBool(cbxCE18Meses.SelectedText);
+                if (cbxResDef18Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.resultado18 = Functions.ConvertComboValueToBool(cbxResDef18Meses.SelectedText);
+                if (cbxTransCCS18Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.transferidaCCS = Functions.ConvertComboValueToBool(cbxTransCCS18Meses.SelectedText);
+                if (cbxTransConsIntgrCI18Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.transferidaCI = Functions.ConvertComboValueToBool(cbxTransConsIntgrCI18Meses.SelectedText);
+                if (cbxTransfOutrUniSanit.SelectedIndex >= 0)
+                    obj_ccr_seg.transferidaUS = Functions.ConvertComboValueToBool(cbxTransfOutrUniSanit.SelectedText);
+                if (cbxAbandono18Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.abandono18 = Functions.ConvertComboValueToBool(cbxAbandono18Meses.SelectedText);
+                if (cbxObito18Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.obito18 = Functions.ConvertComboValueToBool(cbxObito18Meses.SelectedText);
+                if (string.IsNullOrWhiteSpace(txtMaeTarv5mesesCri.Text))
+                    obj_ccr_seg.mothTarv5moth = txtMaeTarv5mesesCri.Text;
+                if (cbxAME5Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.ame5m = Functions.ConvertComboValueToBool(cbxAME5Meses.SelectedText);
+                if (cbxAleitMist5Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.am5m = Functions.ConvertComboValueToBool(cbxAleitMist5Meses.SelectedText);
+                if (cbxRecuperada.SelectedIndex >= 0)
+                    obj_ccr_seg.recuperada = Functions.ConvertComboValueToBool(cbxRecuperada.SelectedText);
+                if (cbxTransfInternam.SelectedIndex >= 0)
+                    obj_ccr_seg.transinter = Functions.ConvertComboValueToBool(cbxTransfInternam.SelectedText);
+                if (cbxARV5Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.arv5m = Functions.ConvertComboValueToBool(cbxARV5Meses.SelectedText);
+                if (cbxPCRMen2Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.pcrmen2m = Functions.ConvertComboValueToBool(cbxPCRMen2Meses.SelectedText);
+                if (cbxPCRMaior2Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.pcrmai2m = Functions.ConvertComboValueToBool(cbxPCRMaior2Meses.SelectedText);
+                if (cbxPCRposMenor2Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.pcrposmen2m = Functions.ConvertComboValueToBool(cbxPCRposMenor2Meses.SelectedText);
+                if (cbxPCRposMaior2Meses.SelectedIndex >= 0)
+                    obj_ccr_seg.pcrposmai2m = Functions.ConvertComboValueToBool(cbxPCRposMaior2Meses.SelectedText);
+                if (cbxTB.SelectedIndex >= 0)
+                    obj_ccr_seg.tb = Functions.ConvertComboValueToBool(cbxTB.SelectedText);
+                if (cbxDAM.SelectedIndex >= 0)
+                    obj_ccr_seg.dam = Functions.ConvertComboValueToBool(cbxDAM.SelectedText);
+                if (cbxDAG.SelectedIndex >= 0)
+                    obj_ccr_seg.dag = Functions.ConvertComboValueToBool(cbxDAG.SelectedText);
+                if (cbxCE.SelectedIndex >= 0)
+                    obj_ccr_seg.ce9m = Functions.ConvertComboValueToBool(cbxCE.SelectedText);
+                if (cbxPNCTL.SelectedIndex >= 0)
+                    obj_ccr_seg.pnctl = Functions.ConvertComboValueToBool(cbxPNCTL.SelectedText);
+                if (cbxTPIComp.SelectedIndex >= 0)
+                    obj_ccr_seg.tpi = Functions.ConvertComboValueToBool( cbxTPIComp.SelectedText);
+                if (cbxAbandono.SelectedIndex >= 0)
+                    obj_ccr_seg.abandono9 = Functions.ConvertComboValueToBool( cbxAbandono.SelectedText);
+                if (cbxObito.SelectedIndex >= 0)
+                    obj_ccr_seg.obito9 = Functions.ConvertComboValueToBool(cbxObito.SelectedText);
 
-
-
-
-
-
+                obj_ccr_seg.UpdateEntity();
 
 
 
