@@ -131,6 +131,7 @@ namespace smi
                     }
 
                     BinddgvChild();
+                    ClearFormContrls();
 
                 }
             }

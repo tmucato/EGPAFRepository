@@ -615,7 +615,7 @@
             this.cbxNutIdademen6.Items.AddRange(new object[] {
             "Aleitamento materno exclusivo",
             "Aleitamento misto"});
-            this.cbxNutIdademen6.Location = new System.Drawing.Point(172, 18);
+            this.cbxNutIdademen6.Location = new System.Drawing.Point(172, 20);
             this.cbxNutIdademen6.Name = "cbxNutIdademen6";
             this.cbxNutIdademen6.Size = new System.Drawing.Size(230, 21);
             this.cbxNutIdademen6.TabIndex = 26;

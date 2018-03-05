@@ -21,12 +21,13 @@ namespace smi
         private void btnBuscarMain_Click(object sender, EventArgs e)
         {
 
-            clChild child = new clChild();
             try
             {
                 if (!string.IsNullOrWhiteSpace(txtNidCCR.Text))
                 {
                     string nidcpn = txtNidCCR.Text;
+                    clChild child = new clChild();
+
                     List<clChild> List_Child = child.GetEntityList().Where(c => c.nid_ccr == nidcpn).ToList();
                     if (List_Child.Count > 0)
                     {
@@ -61,7 +62,15 @@ namespace smi
                             BindCCRControls(ccr);
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("Não encontrado paciente com o NID da CCR inserido");
+                    }
 
+                }
+                else
+                {
+                    MessageBox.Show("Por Favor Insira o NID da CCR");
                 }
             }
             catch (Exception ex)
@@ -74,6 +83,9 @@ namespace smi
         {
             try
             {
+                dtpDataConsulta.Value = Convert.ToDateTime(ccr.dataconsulta);
+                txtIdade.Text = ccr.age.ToString();
+                cbxUnidIdade.SelectedValue = ccr.ageunit;
                 txtNidCpnMae.Text = ccr.mot_nid_cpn;
                 txtNidTarvMae.Text = ccr.mot_nid_tarv;
                 cbxHIVLact.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccr.mot_hiv_lact));
@@ -97,6 +109,7 @@ namespace smi
                 cbxIsoniazStatus.SelectedItem = ccr.pisoniazida;
                 cbxCTZ.SelectedItem = ccr.ctz;
                 cbxProfARV.SelectedItem = ccr.profiaxia_arv;
+                cbxRestesRapCrinExpHIV.SelectedItem = ccr.resulttrapido_nexp;
                 cbxSaidaCri.SelectedItem = ccr.saidaccr;
                 txtNidCriTarv.Text = ccr.chd_nid_tarv;
                 txtObs.Text = ccr.obs;
@@ -113,13 +126,31 @@ namespace smi
         {
             try
             {
-
-
-
-
-
-
-
+                txtMaeTarv5mesesCri.Text = ccrseg.mothTarv5moth;
+                cbxAME5Meses.SelectedItem = ccrseg.ame5m;
+                cbxAleitMist5Meses.SelectedItem = ccrseg.am5m;
+                cbxRecuperada.SelectedItem = ccrseg.recuperada;
+                cbxTransfInternam.SelectedItem = ccrseg.transinter;
+                cbxARV5Meses.SelectedItem = ccrseg.arv5m;
+                cbxPCRMen2Meses.SelectedItem = ccrseg.pcrmen2m;
+                cbxPCRMaior2Meses.SelectedItem = ccrseg.pcrmai2m;
+                cbxPCRposMenor2Meses.SelectedItem = ccrseg.pcrposmen2m;
+                cbxPCRposMaior2Meses.SelectedItem = ccrseg.pcrposmai2m;
+                cbxTB.SelectedItem = ccrseg.tb;
+                cbxDAG.SelectedItem = ccrseg.dag;
+                cbxDAM.SelectedItem = ccrseg.dam;
+                cbxCE.SelectedItem = ccrseg.ce9m;
+                cbxPNCTL.SelectedItem = ccrseg.pnctl;
+                cbxTPIComp.SelectedItem = ccrseg.tpi;
+                cbxAbandono.SelectedItem = ccrseg.abandono9;
+                cbxObito.SelectedItem = ccrseg.obito9;
+                cbxCE18Meses.SelectedItem = ccrseg.ce18m;
+                cbxResDef18Meses.SelectedItem = ccrseg.resultado18;
+                cbxTransCCS18Meses.SelectedItem = ccrseg.transferidaCCS;
+                cbxTransConsIntgrCI18Meses.SelectedItem = ccrseg.transferidaCI;
+                cbxTransfOutrUniSanit.SelectedItem = ccrseg.transferidaUS;
+                cbxAbandono18Meses.SelectedItem = ccrseg.abandono18;
+                cbxObito18Meses.SelectedItem = ccrseg.obito18;
 
             }
             catch (Exception ex)
@@ -158,18 +189,34 @@ namespace smi
         private void cbxNrConsultaMain_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            clCCR cl_ccr = new clCCR();
-            clCCRSeg cl_ccr_seg = new clCCRSeg();
-
-
             try
             {
+                clChild child = new clChild();
+                clCCR cl_ccr = new clCCR();
+                clCCR ccr = new clCCR();
+                clCCRSeg ccrseg = new clCCRSeg();
 
-                if (cbxNrConsultaMain.SelectedIndex <= 0)
+                if (cbxNrConsultaMain.SelectedIndex >= 0)
                 {
                     SaveCCRDataToDatabase(cl_ccr);
-                    SaveCCRSegDataToDatabase(cl_ccr_seg);
+                    SaveCCRSegDataToDatabase(ccrseg);
 
+                }
+                if (string.IsNullOrWhiteSpace(txtNidCCR.Text))
+                {
+                    MessageBox.Show("O Compo NID CPN não esta preenchido. deve Preencher o campo primeiro");
+                }
+                else
+                {
+               
+                    ccrseg = ccrseg.GetEntityList().Where(c => c.idchild == child.id).FirstOrDefault();
+                    BindCCRSegControls(ccrseg);
+
+                    if (cbxNrConsultaMain.SelectedIndex >= 0)
+                    {
+                        ccr = ccr.GetEntityList().Where(c => c.idchild == child.id).ToList().Where(c => c.nr_consulta == Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()))).FirstOrDefault();
+                        BindCCRControls(ccr);
+                    }
                 }
 
 
@@ -229,10 +276,13 @@ namespace smi
 
 
 
-                //if (cbxColhPCRMen2Mes.SelectedIndex >= 0)
-                //    obj_ccr.
 
 
+
+
+
+
+             
 
 
             }
@@ -246,6 +296,17 @@ namespace smi
         {
             try
             {
+
+
+
+
+
+
+
+
+
+
+
 
             }
             catch (Exception ex)
