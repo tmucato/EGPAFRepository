@@ -30,7 +30,10 @@
         {
             System.Windows.Forms.Label lblPCRMaior2Meses;
             this.ccrPage1 = new System.Windows.Forms.TabPage();
+            this.lblIdCCR = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.cbxNrConsulta = new System.Windows.Forms.ComboBox();
+            this.lblNrConsulta = new System.Windows.Forms.Label();
             this.cbxUnidIdade = new System.Windows.Forms.ComboBox();
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.lblIdade = new System.Windows.Forms.Label();
@@ -200,6 +203,7 @@
             // ccrPage1
             // 
             this.ccrPage1.BackColor = System.Drawing.Color.Silver;
+            this.ccrPage1.Controls.Add(this.lblIdCCR);
             this.ccrPage1.Controls.Add(this.groupBox12);
             this.ccrPage1.Controls.Add(this.btnProximaPagina);
             this.ccrPage1.Controls.Add(this.groupBox8);
@@ -217,8 +221,19 @@
             this.ccrPage1.TabIndex = 1;
             this.ccrPage1.Text = "Página 1";
             // 
+            // lblIdCCR
+            // 
+            this.lblIdCCR.AutoSize = true;
+            this.lblIdCCR.Location = new System.Drawing.Point(895, 341);
+            this.lblIdCCR.Name = "lblIdCCR";
+            this.lblIdCCR.Size = new System.Drawing.Size(0, 13);
+            this.lblIdCCR.TabIndex = 42;
+            this.lblIdCCR.Visible = false;
+            // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.cbxNrConsulta);
+            this.groupBox12.Controls.Add(this.lblNrConsulta);
             this.groupBox12.Controls.Add(this.cbxUnidIdade);
             this.groupBox12.Controls.Add(this.txtIdade);
             this.groupBox12.Controls.Add(this.lblIdade);
@@ -231,22 +246,46 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Dados Da Consulta";
             // 
+            // cbxNrConsulta
+            // 
+            this.cbxNrConsulta.FormattingEnabled = true;
+            this.cbxNrConsulta.Items.AddRange(new object[] {
+            "1ª",
+            "2ª",
+            "3ª",
+            "4ª",
+            "5ª",
+            "6ª"});
+            this.cbxNrConsulta.Location = new System.Drawing.Point(90, 21);
+            this.cbxNrConsulta.Name = "cbxNrConsulta";
+            this.cbxNrConsulta.Size = new System.Drawing.Size(111, 21);
+            this.cbxNrConsulta.TabIndex = 29;
+            // 
+            // lblNrConsulta
+            // 
+            this.lblNrConsulta.AutoSize = true;
+            this.lblNrConsulta.Location = new System.Drawing.Point(21, 24);
+            this.lblNrConsulta.Name = "lblNrConsulta";
+            this.lblNrConsulta.Size = new System.Drawing.Size(62, 13);
+            this.lblNrConsulta.TabIndex = 28;
+            this.lblNrConsulta.Text = "Nr Consulta";
+            // 
             // cbxUnidIdade
             // 
             this.cbxUnidIdade.FormattingEnabled = true;
             this.cbxUnidIdade.Items.AddRange(new object[] {
             "Meses",
             "Anos"});
-            this.cbxUnidIdade.Location = new System.Drawing.Point(256, 53);
+            this.cbxUnidIdade.Location = new System.Drawing.Point(215, 53);
             this.cbxUnidIdade.Name = "cbxUnidIdade";
-            this.cbxUnidIdade.Size = new System.Drawing.Size(146, 21);
+            this.cbxUnidIdade.Size = new System.Drawing.Size(187, 21);
             this.cbxUnidIdade.TabIndex = 27;
             // 
             // txtIdade
             // 
-            this.txtIdade.Location = new System.Drawing.Point(121, 53);
+            this.txtIdade.Location = new System.Drawing.Point(90, 54);
             this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(129, 20);
+            this.txtIdade.Size = new System.Drawing.Size(111, 20);
             this.txtIdade.TabIndex = 9;
             // 
             // lblIdade
@@ -262,15 +301,15 @@
             // 
             this.dtpDataConsulta.CustomFormat = "dd/MM/yyyy";
             this.dtpDataConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataConsulta.Location = new System.Drawing.Point(121, 18);
+            this.dtpDataConsulta.Location = new System.Drawing.Point(307, 24);
             this.dtpDataConsulta.Name = "dtpDataConsulta";
-            this.dtpDataConsulta.Size = new System.Drawing.Size(129, 20);
+            this.dtpDataConsulta.Size = new System.Drawing.Size(95, 20);
             this.dtpDataConsulta.TabIndex = 7;
             // 
             // txtDataConsult
             // 
             this.txtDataConsult.AutoSize = true;
-            this.txtDataConsult.Location = new System.Drawing.Point(19, 25);
+            this.txtDataConsult.Location = new System.Drawing.Point(212, 24);
             this.txtDataConsult.Name = "txtDataConsult";
             this.txtDataConsult.Size = new System.Drawing.Size(89, 13);
             this.txtDataConsult.TabIndex = 0;
@@ -1637,6 +1676,7 @@
             // 
             // txtNidCCR
             // 
+            this.txtNidCCR.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtNidCCR.Location = new System.Drawing.Point(128, 20);
             this.txtNidCCR.Name = "txtNidCCR";
             this.txtNidCCR.Size = new System.Drawing.Size(235, 20);
@@ -1685,6 +1725,7 @@
             this.btnGravarMain.TabIndex = 19;
             this.btnGravarMain.Text = "Gravar";
             this.btnGravarMain.UseVisualStyleBackColor = true;
+            this.btnGravarMain.Click += new System.EventHandler(this.btnGravarMain_Click);
             // 
             // FrmCCR
             // 
@@ -1701,6 +1742,7 @@
             this.Name = "FrmCCR";
             this.Text = "FrmCCR - Formulário  de Registo de Consulta de Criança em Risco ";
             this.ccrPage1.ResumeLayout(false);
+            this.ccrPage1.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -1875,5 +1917,8 @@
         private System.Windows.Forms.Label lblIdade;
         private System.Windows.Forms.DateTimePicker dtpDataConsulta;
         private System.Windows.Forms.Label txtDataConsult;
+        private System.Windows.Forms.Label lblIdCCR;
+        private System.Windows.Forms.ComboBox cbxNrConsulta;
+        private System.Windows.Forms.Label lblNrConsulta;
     }
 }

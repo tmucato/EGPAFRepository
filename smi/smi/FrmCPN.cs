@@ -36,13 +36,14 @@ namespace smi
 
         private void btnGravarMain_Click(object sender, EventArgs e)
         {
-            clCPN cpn = new clCPN();
-            clMother moth = new clMother();
-            List<clCPN> list_cpn = new List<clCPN>();
-            clCPNFinal cpn_final = new clCPNFinal();
-
+            
             try
             {
+                clCPN cpn = new clCPN();
+                clMother moth = new clMother();
+                List<clCPN> list_cpn = new List<clCPN>();
+                clCPNFinal cpn_final = new clCPNFinal();
+
                 if (!string.IsNullOrWhiteSpace(txtNidCpnMain.Text))
                 {
                     string nidcpn = txtNidCpnMain.Text;

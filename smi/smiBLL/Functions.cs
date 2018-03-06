@@ -15,7 +15,22 @@ namespace smiBLL
         /// <returns></returns>
         public static Boolean IsNumber(String value)
         {
-            return value.All(Char.IsDigit);
+            bool result = false;
+
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                    result = value.All(Char.IsDigit);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            
+            return result;
+
         }
 
         /// <summary>
