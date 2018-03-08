@@ -156,6 +156,7 @@
             this.btnGravarMain.TabIndex = 25;
             this.btnGravarMain.Text = "Gravar";
             this.btnGravarMain.UseVisualStyleBackColor = true;
+            this.btnGravarMain.Click += new System.EventHandler(this.btnGravarMain_Click);
             // 
             // cbxNrConsultaMain
             // 
@@ -169,6 +170,7 @@
             this.cbxNrConsultaMain.Name = "cbxNrConsultaMain";
             this.cbxNrConsultaMain.Size = new System.Drawing.Size(174, 21);
             this.cbxNrConsultaMain.TabIndex = 24;
+            this.cbxNrConsultaMain.SelectedIndexChanged += new System.EventHandler(this.cbxNrConsultaMain_SelectedIndexChanged);
             // 
             // lblNrConsultaMain
             // 
@@ -187,6 +189,7 @@
             this.btnBuscarMain.TabIndex = 22;
             this.btnBuscarMain.Text = "Buscar";
             this.btnBuscarMain.UseVisualStyleBackColor = true;
+            this.btnBuscarMain.Click += new System.EventHandler(this.btnBuscarMain_Click);
             // 
             // txtNidCCR
             // 

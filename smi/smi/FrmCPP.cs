@@ -26,5 +26,70 @@ namespace smi
         {
             this.tabCPP.SelectedIndex = 0;
         }
+
+        private void btnBuscarMain_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(txtNidCCR.Text))
+                {
+
+
+                }
+
+
+
+
+
+
+
+
+                }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void cbxNrConsultaMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void btnGravarMain_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
