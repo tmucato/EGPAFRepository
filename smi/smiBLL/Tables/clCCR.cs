@@ -20,7 +20,7 @@ namespace smiBLL
         public string mot_nid_cpn;
         public string mot_nid_tarv;
         public Nullable<bool> mot_hiv_lact;
-        public Nullable<bool> mot_hiv_tarv;
+        public string mot_hiv_tarv;
         public Nullable<bool> contactotb;
         public string desnutricao_aguda;
         public Nullable<bool> exposicaoHIV;
@@ -28,7 +28,7 @@ namespace smiBLL
         public Nullable<System.DateTime> pisoniazidainicio;
         public string pisoniazida;
         public string aleitmaternomenor6m;
-        public Nullable<bool> aleitmaternomaior6m;
+        public string aleitmaternomaior6m;
         public Nullable<int> atpu;
         public Nullable<bool> csb_nut_sup;
         public Nullable<bool> recuperada;
@@ -83,7 +83,7 @@ namespace smiBLL
             pisoniazidainicio = null;
             pisoniazida = string.Empty;
             aleitmaternomenor6m = string.Empty;
-            aleitmaternomaior6m = null;
+            aleitmaternomaior6m = string.Empty;
             atpu = 0;
             csb_nut_sup = null;
             recuperada = null;
@@ -122,14 +122,14 @@ namespace smiBLL
         public override List<clCCR> GetEntityList()
         {
             List<clCCR> List_ccr = new List<clCCR>();
-
+            clCCR obj_ccr;
             try
             {
                 using (DBsmiEntities DbContext = new DBsmiEntities(DBConnection.GetEFSMIDataBaseConStr()))
                 {
                     foreach (ccr db_ccr in DbContext.ccrs)
                     {
-                        clCCR obj_ccr = new clCCR();
+                         obj_ccr = new clCCR();
                         obj_ccr.id = Convert.ToInt32(db_ccr.id);
                         obj_ccr.idchild = Convert.ToInt32(db_ccr.idchild);
                         obj_ccr.nyear = Convert.ToInt32(db_ccr.nyear);

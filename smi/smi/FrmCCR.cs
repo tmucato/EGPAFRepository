@@ -66,7 +66,6 @@ namespace smi
                     {
                         MessageBox.Show("Não encontrado paciente com o NID da CCR inserido");
                     }
-
                 }
                 else
                 {
@@ -79,12 +78,59 @@ namespace smi
             }
         }
 
+        private void ClearCCRControls()
+        {
+            try
+            {
+                lblIdCCR.Text = String.Empty;
+                lblChildID.Text = String.Empty;
+                cbxNrConsulta.SelectedIndex = -1;
+                dtpDataConsulta.Value = DateTime.Now;
+                txtIdade.Text = String.Empty; ;
+                cbxUnidIdade.SelectedIndex = -1;
+                txtNidCpnMae.Text = String.Empty;
+                txtNidTarvMae.Text = String.Empty;
+                cbxHIVLact.SelectedIndex = -1;
+                cbxMaeLacTarv.SelectedIndex = -1;
+                cbxContactTB.SelectedIndex = -1;
+                cbxDesnuAguda.SelectedIndex = -1;
+                cbxExpHIV.SelectedIndex = -1;
+                txtOutrCondRisc.Text = String.Empty;
+                cbxNutIdademen6.SelectedIndex = -1;
+                cbxNutIdademaior6.SelectedIndex = -1;
+                txtATPU.Text = String.Empty;
+                cbxCBS.SelectedIndex = -1;
+                cbxRecuperada.SelectedIndex = -1;
+                cbxColhPCRMen2Mes.SelectedIndex = -1;
+                cbxColhPCRMaior2Mes.SelectedIndex = -1;
+                cbxResPCRMen2Mes.SelectedIndex = -1;
+                cbxResPCRMai2Mes.SelectedIndex = -1;
+                cbxRestesRapMaior9mes.SelectedIndex = -1;
+                cbxResDefen.SelectedIndex = -1;
+                dtpDataIniIson.Value = DateTime.Now;
+                cbxIsoniazStatus.SelectedIndex = -1;
+                cbxCTZ.SelectedIndex = -1;
+                cbxProfARV.SelectedIndex = -1;
+                cbxRestesRapCrinExpHIV.SelectedIndex = -1;
+                cbxSaidaCri.SelectedIndex = -1;
+                txtNidCriTarv.Text = String.Empty;
+                txtObs.Text = String.Empty;
+                txtNomeProfSaude.Text = String.Empty;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
         private void BindCCRControls(clCCR ccr)
         {
             try
             {
-
+                ClearCCRControls();
                 lblIdCCR.Text = ccr.id.ToString();
+                lblChildID.Text = ccr.idchild.ToString();
                 cbxNrConsulta.SelectedItem = Functions.ConvertNumbComboConsult(ccr.nr_consulta);
                 if (ccr.dataconsulta != null)
                     dtpDataConsulta.Value = Convert.ToDateTime(ccr.dataconsulta);
@@ -155,60 +201,106 @@ namespace smi
             }
         }
 
+        private void ClearCCRSegControls()
+        {
+            try
+            {
+                lblCCRSegID.Text = string.Empty;
+                lblIdCCR.Text = string.Empty;
+                lblChildID.Text = string.Empty;
+                txtMaeTarv5mesesCri.Text = string.Empty;
+                cbxAME5Meses.SelectedIndex = -1;
+                cbxAleitMist5Meses.SelectedIndex = -1;
+                cbxRecuperada.SelectedIndex = -1;
+                cbxTransfInternam.SelectedIndex = -1;
+                cbxARV5Meses.SelectedIndex = -1;
+                cbxPCRMen2Meses.SelectedIndex = -1;
+                cbxPCRMaior2Meses.SelectedIndex = -1;
+                cbxPCRposMenor2Meses.SelectedIndex = -1;
+                cbxPCRposMaior2Meses.SelectedIndex = -1;
+                cbxTB.SelectedIndex = -1;
+                cbxDAG.SelectedIndex = -1;
+                cbxDAM.SelectedIndex = -1;
+                cbxCE.SelectedIndex = -1;
+                cbxPNCTL.SelectedIndex = -1;
+                cbxTPIComp.SelectedIndex = -1;
+                cbxAbandono.SelectedIndex = -1;
+                cbxObito.SelectedIndex = -1;
+                cbxCE18Meses.SelectedIndex = -1;
+                cbxResDef18Meses.SelectedIndex = -1;
+                cbxTransCCS18Meses.SelectedIndex = -1;
+                cbxTransConsIntgrCI18Meses.SelectedIndex = -1;
+                cbxTransfOutrUniSanit.SelectedIndex = -1;
+                cbxAbandono18Meses.SelectedIndex = -1;
+                cbxObito18Meses.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+
         private void BindCCRSegControls(clCCRSeg ccrseg)
         {
             try
             {
+                ClearCCRSegControls();
+                lblCCRSegID.Text = ccrseg.id.ToString();
+                lblIdCCR.Text = ccrseg.idccr.ToString();
+                lblChildID.Text = ccrseg.idchild.ToString();
                 if (!string.IsNullOrWhiteSpace(ccrseg.mothTarv5moth))
                     txtMaeTarv5mesesCri.Text = ccrseg.mothTarv5moth;
                 if (ccrseg.ame5m != null)
-                    cbxAME5Meses.SelectedItem = ccrseg.ame5m;
+                    cbxAME5Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.ame5m));
                 if (ccrseg.am5m != null)
-                    cbxAleitMist5Meses.SelectedItem = ccrseg.am5m;
+                    cbxAleitMist5Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.am5m));
                 if (ccrseg.recuperada != null)
-                    cbxRecuperada.SelectedItem = ccrseg.recuperada;
+                    cbxRecuperada.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.recuperada));
                 if (ccrseg.transinter != null)
-                    cbxTransfInternam.SelectedItem = ccrseg.transinter;
+                    cbxTransfInternam.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.transinter));
                 if (ccrseg.arv5m != null)
-                    cbxARV5Meses.SelectedItem = ccrseg.arv5m;
+                    cbxARV5Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.arv5m));
                 if (ccrseg.pcrmen2m != null)
-                    cbxPCRMen2Meses.SelectedItem = ccrseg.pcrmen2m;
+                    cbxPCRMen2Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.pcrmen2m));
                 if (ccrseg.pcrmai2m != null)
-                    cbxPCRMaior2Meses.SelectedItem = ccrseg.pcrmai2m;
+                    cbxPCRMaior2Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.pcrmai2m));
                 if (ccrseg.pcrposmen2m != null)
-                    cbxPCRposMenor2Meses.SelectedItem = ccrseg.pcrposmen2m;
+                    cbxPCRposMenor2Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.pcrposmen2m));
                 if (ccrseg.pcrposmai2m != null)
-                    cbxPCRposMaior2Meses.SelectedItem = ccrseg.pcrposmai2m;
+                    cbxPCRposMaior2Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.pcrposmai2m));
                 if (ccrseg.tb != null)
-                    cbxTB.SelectedItem = ccrseg.tb;
+                    cbxTB.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.tb));
                 if (ccrseg.dag != null)
-                    cbxDAG.SelectedItem = ccrseg.dag;
+                    cbxDAG.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.dag));
                 if (ccrseg.dam != null)
-                    cbxDAM.SelectedItem = ccrseg.dam;
+                    cbxDAM.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.dam));
                 if (ccrseg.ce9m != null)
-                    cbxCE.SelectedItem = ccrseg.ce9m;
+                    cbxCE.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.ce9m));
                 if (ccrseg.pnctl != null)
-                    cbxPNCTL.SelectedItem = ccrseg.pnctl;
+                    cbxPNCTL.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.pnctl));
                 if (ccrseg.tpi != null)
-                    cbxTPIComp.SelectedItem = ccrseg.tpi;
+                    cbxTPIComp.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.tpi));
                 if (ccrseg.abandono9 != null)
-                    cbxAbandono.SelectedItem = ccrseg.abandono9;
+                    cbxAbandono.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.abandono9));
                 if (ccrseg.obito9 != null)
-                    cbxObito.SelectedItem = ccrseg.obito9;
+                    cbxObito.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.obito9));
                 if (ccrseg.ce18m != null)
-                    cbxCE18Meses.SelectedItem = ccrseg.ce18m;
+                    cbxCE18Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.ce18m));
                 if (ccrseg.resultado18 != null)
-                    cbxResDef18Meses.SelectedItem = ccrseg.resultado18;
+                    cbxResDef18Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.resultado18));
                 if (ccrseg.transferidaCCS != null)
-                    cbxTransCCS18Meses.SelectedItem = ccrseg.transferidaCCS;
+                    cbxTransCCS18Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.transferidaCCS));
                 if (ccrseg.transferidaCI != null)
-                    cbxTransConsIntgrCI18Meses.SelectedItem = ccrseg.transferidaCI;
+                    cbxTransConsIntgrCI18Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.transferidaCI));
                 if (ccrseg.transferidaUS != null)
-                    cbxTransfOutrUniSanit.SelectedItem = ccrseg.transferidaUS;
+                    cbxTransfOutrUniSanit.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.transferidaUS));
                 if (ccrseg.abandono18 != null)
-                    cbxAbandono18Meses.SelectedItem = ccrseg.abandono18;
+                    cbxAbandono18Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.abandono18));
                 if (ccrseg.obito18 != null)
-                    cbxObito18Meses.SelectedItem = ccrseg.obito18;
+                    cbxObito18Meses.SelectedItem = Functions.ConvertBoolToComboValue(Convert.ToBoolean(ccrseg.obito18));
 
             }
             catch (Exception ex)
@@ -272,11 +364,11 @@ namespace smi
                     list_ccr = ccr.GetEntityList().Where(cp => cp.idchild == child_id).ToList();
                     BindCCRSegControls(ccrseg);
 
-
                     if (cbxNrConsultaMain.SelectedIndex >= 0)
                     {
                         int rnConsl = Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()));
-                        ccr = list_ccr.Where(c => c.nr_consulta == rnConsl && c.idchild == child_id).FirstOrDefault();
+                        list_ccr = list_ccr.Where(c => c.nr_consulta == rnConsl).ToList();
+                        ccr = list_ccr.FirstOrDefault();
                         BindCCRControls(ccr);
                     }
                 }
@@ -292,13 +384,18 @@ namespace smi
         {
             try
             {
-                obj_ccr.id = Convert.ToInt32(lblIdCCR.Text);
+                if (cbxNrConsulta.SelectedIndex >= 0)
+                    obj_ccr.nr_consulta = Functions.ConvertComboConsultToNumb(cbxNrConsulta.SelectedItem.ToString());
+                if (!string.IsNullOrWhiteSpace(lblIdCCR.Text))
+                    obj_ccr.id = Convert.ToInt32(lblIdCCR.Text);
+                if (!string.IsNullOrWhiteSpace(lblChildID.Text))
+                    obj_ccr.idchild = Convert.ToInt32(lblChildID.Text);
                 if (Functions.IsDate(dtpDataConsulta.Text))
                     obj_ccr.dataconsulta = dtpDataConsulta.Value;
                 if (Functions.IsNumber(txtIdade.Text))
                     obj_ccr.age = Convert.ToInt32(txtIdade.Text);
                 if (cbxUnidIdade.SelectedIndex >= 0)
-                    obj_ccr.ageunit = cbxUnidIdade.SelectedText;
+                    obj_ccr.ageunit = cbxUnidIdade.SelectedItem.ToString();
                 if (!string.IsNullOrWhiteSpace(txtNidCpnMae.Text))
                     obj_ccr.mot_nid_cpn = txtNidCpnMae.Text;
                 if (!string.IsNullOrWhiteSpace(txtNidTarvMae.Text))
@@ -306,7 +403,7 @@ namespace smi
                 if (cbxHIVLact.SelectedIndex >= 0)
                     obj_ccr.mot_hiv_lact = Functions.ConvertComboValueToBool(cbxHIVLact.SelectedItem.ToString());
                 if (cbxMaeLacTarv.SelectedIndex >= 0)
-                    obj_ccr.mot_hiv_tarv = Functions.ConvertComboValueToBool(cbxMaeLacTarv.SelectedItem.ToString());
+                    obj_ccr.mot_hiv_tarv = cbxMaeLacTarv.SelectedItem.ToString();
                 if (cbxContactTB.SelectedIndex >= 0)
                     obj_ccr.contactotb = Functions.ConvertComboValueToBool(cbxContactTB.SelectedItem.ToString());
                 if (cbxDesnuAguda.SelectedIndex >= 0)
@@ -318,11 +415,11 @@ namespace smi
                 if (Functions.IsDate(dtpDataIniIson.Text))
                     obj_ccr.pisoniazidainicio = dtpDataIniIson.Value;
                 if (cbxIsoniazStatus.SelectedIndex >= 0)
-                    obj_ccr.pisoniazida = cbxIsoniazStatus.SelectedText;
+                    obj_ccr.pisoniazida = cbxIsoniazStatus.SelectedItem.ToString();
                 if (cbxNutIdademen6.SelectedIndex >= 0)
-                    obj_ccr.aleitmaternomenor6m = cbxNutIdademen6.SelectedText;
+                    obj_ccr.aleitmaternomenor6m = cbxNutIdademen6.SelectedItem.ToString();
                 if (cbxNutIdademaior6.SelectedIndex >= 0)
-                    obj_ccr.aleitmaternomaior6m = Functions.ConvertComboValueToBool(cbxNutIdademaior6.SelectedItem.ToString());
+                    obj_ccr.aleitmaternomaior6m = cbxNutIdademaior6.SelectedItem.ToString();
                 if (Functions.IsNumber(txtATPU.Text))
                     obj_ccr.atpu = Convert.ToInt32(txtATPU.Text);
                 if (cbxCBS.SelectedIndex >= 0)
@@ -330,7 +427,7 @@ namespace smi
                 if (cbxRecuperada.SelectedIndex >= 0)
                     obj_ccr.recuperada = Functions.ConvertComboValueToBool(cbxRecuperada.SelectedItem.ToString());
                 if (cbxCTZ.SelectedIndex >= 0)
-                    obj_ccr.ctz = cbxCTZ.SelectedText;
+                    obj_ccr.ctz = cbxCTZ.SelectedItem.ToString();
                 if (cbxProfARV.SelectedIndex >= 0)
                     obj_ccr.profiaxia_arv = Functions.ConvertComboValueToBool(cbxProfARV.SelectedItem.ToString());
                 if (cbxColhPCRMen2Mes.SelectedIndex >= 0)
@@ -357,8 +454,6 @@ namespace smi
                     obj_ccr.providername = txtNomeProfSaude.Text;
                 obj_ccr.UpdateEntity();
 
-
-
             }
             catch (Exception ex)
             {
@@ -370,6 +465,13 @@ namespace smi
         {
             try
             {
+                if (!string.IsNullOrWhiteSpace(lblCCRSegID.Text))
+                    obj_ccr_seg.id = Convert.ToInt32(lblCCRSegID.Text);
+                if ((!string.IsNullOrWhiteSpace(lblIdCCR.Text)))
+                    obj_ccr_seg.idccr = Convert.ToInt32(lblIdCCR.Text);
+
+                if (!string.IsNullOrWhiteSpace(lblChildID.Text))
+                    obj_ccr_seg.idchild = Convert.ToInt32(lblChildID.Text);
 
                 if (cbxCE18Meses.SelectedIndex >= 0)
                     obj_ccr_seg.ce18m = Functions.ConvertComboValueToBool(cbxCE18Meses.SelectedItem.ToString());
@@ -385,7 +487,7 @@ namespace smi
                     obj_ccr_seg.abandono18 = Functions.ConvertComboValueToBool(cbxAbandono18Meses.SelectedItem.ToString());
                 if (cbxObito18Meses.SelectedIndex >= 0)
                     obj_ccr_seg.obito18 = Functions.ConvertComboValueToBool(cbxObito18Meses.SelectedItem.ToString());
-                if (string.IsNullOrWhiteSpace(txtMaeTarv5mesesCri.Text))
+                if (!string.IsNullOrWhiteSpace(txtMaeTarv5mesesCri.Text))
                     obj_ccr_seg.mothTarv5moth = txtMaeTarv5mesesCri.Text;
                 if (cbxAME5Meses.SelectedIndex >= 0)
                     obj_ccr_seg.ame5m = Functions.ConvertComboValueToBool(cbxAME5Meses.SelectedItem.ToString());
@@ -431,10 +533,11 @@ namespace smi
             }
         }
 
+
+
+
         private void btnGravarMain_Click(object sender, EventArgs e)
         {
-
-
 
             try
             {
@@ -449,13 +552,11 @@ namespace smi
                     int child_id = child.GetEntityList().Where(c => c.nid_ccr == nid_ccr).FirstOrDefault().id;
                     ccrseg = ccrseg.GetEntityList().Where(c => c.idchild == child_id).FirstOrDefault();
                     SaveCCRSegDataToDatabase(ccrseg);
-                    if (cbxNrConsultaMain.SelectedIndex >= 0)
+                    if (cbxNrConsulta.SelectedIndex >= 0)
                     {
-                        int rnConsl = Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString()));
-                        ccr = list_ccr.Where(c => c.nr_consulta == rnConsl && c.idchild == child_id).FirstOrDefault();
+                        ccr = ccr.GetEntityList().Where(c => c.nr_consulta == Convert.ToInt32(Functions.ConvertComboConsultToNumb(cbxNrConsultaMain.SelectedItem.ToString())) && c.idchild == child_id).FirstOrDefault();
                         SaveCCRDataToDatabase(ccr);
                     }
-
                 }
             }
             catch (Exception ex)
@@ -463,11 +564,10 @@ namespace smi
 
                 throw ex;
 
+
             }
 
         }
-
-
 
     }
 }

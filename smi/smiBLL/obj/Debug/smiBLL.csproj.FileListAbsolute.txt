@@ -25,7 +25,6 @@ C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\bin\Debug\MySql.Data.xml
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.csprojResolveAssemblyReference.cache
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.dll
 C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.pdb
-C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.csprojResolveAssemblyReference.cache
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.dll.config
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.dll
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\bin\Debug\smiBLL.pdb
@@ -38,5 +37,6 @@ C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\bin\Debug\Logging.pdb
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\bin\Debug\smiDAL.pdb
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\bin\Debug\EntityFramework.xml
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.csprojResolveAssemblyReference.cache
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.dll
 C:\Users\tmucato\Source\EGPAFRepository\smi\smiBLL\obj\Debug\smiBLL.pdb

@@ -31,7 +31,7 @@ namespace smiDAL
         public string mot_nid_cpn { get; set; }
         public string mot_nid_tarv { get; set; }
         public Nullable<bool> mot_hiv_lact { get; set; }
-        public Nullable<bool> mot_hiv_tarv { get; set; }
+        public string mot_hiv_tarv { get; set; }
         public Nullable<bool> contactotb { get; set; }
         public string desnutricao_aguda { get; set; }
         public Nullable<bool> exposicaoHIV { get; set; }
@@ -39,7 +39,7 @@ namespace smiDAL
         public Nullable<System.DateTime> pisoniazidainicio { get; set; }
         public string pisoniazida { get; set; }
         public string aleitmaternomenor6m { get; set; }
-        public Nullable<bool> aleitmaternonaior6m { get; set; }
+        public string aleitmaternonaior6m { get; set; }
         public Nullable<int> atpu { get; set; }
         public Nullable<bool> csb_nut_sup { get; set; }
         public Nullable<bool> recuperada { get; set; }

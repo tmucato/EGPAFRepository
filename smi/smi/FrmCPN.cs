@@ -36,7 +36,7 @@ namespace smi
 
         private void btnGravarMain_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 clCPN cpn = new clCPN();
@@ -560,12 +560,11 @@ namespace smi
 
         private void SaveCPNDataToDataBase(clCPN cpn)
         {
-
-            cpn.id = Convert.ToInt32(lblIdCpn.Text);
+            if (!string.IsNullOrWhiteSpace(lblIdCpn.Text))
+                cpn.id = Convert.ToInt32(lblIdCpn.Text);
             if (cbxNrConulta.SelectedIndex >= 0)
                 cpn.nr_consulta = Functions.ConvertComboConsultToNumb(cbxNrConulta.SelectedItem.ToString());
             cpn.idmother = Convert.ToInt32(lblIdMother.Text);
-
             cpn.nlivro = txtNrLivro.Text;
             if (Functions.IsNumber(txtAnoLivro.Text))
                 cpn.nyear = Convert.ToInt32(txtAnoLivro.Text);

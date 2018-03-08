@@ -13,6 +13,6 @@ C:\Users\Mucato\Source\Repos\EGPAFRepository\smi\Logging\obj\Debug\Logging.pdb
 C:\Users\tmucato\Source\EGPAFRepository\smi\Logging\bin\Debug\Logging.dll
 C:\Users\tmucato\Source\EGPAFRepository\smi\Logging\bin\Debug\Logging.pdb
 C:\Users\tmucato\Source\EGPAFRepository\smi\Logging\bin\Debug\log4net.dll
+C:\Users\tmucato\Source\EGPAFRepository\smi\Logging\obj\Debug\Logging.csprojResolveAssemblyReference.cache
 C:\Users\tmucato\Source\EGPAFRepository\smi\Logging\obj\Debug\Logging.dll
 C:\Users\tmucato\Source\EGPAFRepository\smi\Logging\obj\Debug\Logging.pdb
-C:\Users\tmucato\Source\EGPAFRepository\smi\Logging\obj\Debug\Logging.csprojResolveAssemblyReference.cache

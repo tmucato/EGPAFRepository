@@ -70,24 +70,24 @@
     <Property Name="nr_consulta" Type="int" />
     <Property Name="dataconsulta" Type="date" />
     <Property Name="age" Type="int" />
-    <Property Name="ageunit" Type="nchar" MaxLength="1" />
+    <Property Name="ageunit" Type="nvarchar" MaxLength="8" />
     <Property Name="mot_nid_cpn" Type="nvarchar" MaxLength="45" />
     <Property Name="mot_nid_tarv" Type="nvarchar" MaxLength="45" />
     <Property Name="mot_hiv_lact" Type="bit" />
-    <Property Name="mot_hiv_tarv" Type="bit" />
+    <Property Name="mot_hiv_tarv" Type="nvarchar" MaxLength="45" />
     <Property Name="contactotb" Type="bit" />
     <Property Name="desnutricao_aguda" Type="nvarchar" MaxLength="12" />
     <Property Name="exposicaoHIV" Type="bit" />
     <Property Name="outracondicaorisco" Type="nvarchar" MaxLength="60" />
     <Property Name="pisoniazidainicio" Type="date" />
     <Property Name="pisoniazida" Type="nvarchar" MaxLength="15" />
-    <Property Name="aleitmaternomenor6m" Type="nvarchar" MaxLength="10" />
-    <Property Name="aleitmaternonaior6m" Type="bit" />
+    <Property Name="aleitmaternomenor6m" Type="nvarchar" MaxLength="45" />
+    <Property Name="aleitmaternonaior6m" Type="nvarchar" MaxLength="45" />
     <Property Name="atpu" Type="int" />
     <Property Name="csb_nut_sup" Type="bit" />
     <Property Name="recuperada" Type="bit" />
     <Property Name="internamento" Type="bit" />
-    <Property Name="ctz" Type="nvarchar" MaxLength="15" />
+    <Property Name="ctz" Type="nvarchar" MaxLength="40" />
     <Property Name="profiaxia_arv" Type="bit" />
     <Property Name="colheitapcmaior2mes" Type="nvarchar" MaxLength="20" />
     <Property Name="colheitapcrmenor2mes" Type="nvarchar" MaxLength="20" />

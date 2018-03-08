@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.Label lblPCRMaior2Meses;
             this.ccrPage1 = new System.Windows.Forms.TabPage();
+            this.lblChildID = new System.Windows.Forms.Label();
             this.lblIdCCR = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.cbxNrConsulta = new System.Windows.Forms.ComboBox();
@@ -173,6 +174,7 @@
             this.lblNrConsultaMain = new System.Windows.Forms.Label();
             this.cbxNrConsultaMain = new System.Windows.Forms.ComboBox();
             this.btnGravarMain = new System.Windows.Forms.Button();
+            this.lblCCRSegID = new System.Windows.Forms.Label();
             lblPCRMaior2Meses = new System.Windows.Forms.Label();
             this.ccrPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -203,6 +205,7 @@
             // ccrPage1
             // 
             this.ccrPage1.BackColor = System.Drawing.Color.Silver;
+            this.ccrPage1.Controls.Add(this.lblChildID);
             this.ccrPage1.Controls.Add(this.lblIdCCR);
             this.ccrPage1.Controls.Add(this.groupBox12);
             this.ccrPage1.Controls.Add(this.btnProximaPagina);
@@ -220,6 +223,15 @@
             this.ccrPage1.Size = new System.Drawing.Size(1007, 430);
             this.ccrPage1.TabIndex = 1;
             this.ccrPage1.Text = "Página 1";
+            // 
+            // lblChildID
+            // 
+            this.lblChildID.AutoSize = true;
+            this.lblChildID.Location = new System.Drawing.Point(760, 341);
+            this.lblChildID.Name = "lblChildID";
+            this.lblChildID.Size = new System.Drawing.Size(0, 13);
+            this.lblChildID.TabIndex = 43;
+            this.lblChildID.Visible = false;
             // 
             // lblIdCCR
             // 
@@ -1000,6 +1012,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.lblCCRSegID);
             this.tabPage1.Controls.Add(this.btnAnteriorPage);
             this.tabPage1.Controls.Add(this.groupBox11);
             this.tabPage1.Controls.Add(this.groupBox10);
@@ -1727,6 +1740,15 @@
             this.btnGravarMain.UseVisualStyleBackColor = true;
             this.btnGravarMain.Click += new System.EventHandler(this.btnGravarMain_Click);
             // 
+            // lblCCRSegID
+            // 
+            this.lblCCRSegID.AutoSize = true;
+            this.lblCCRSegID.Location = new System.Drawing.Point(486, 339);
+            this.lblCCRSegID.Name = "lblCCRSegID";
+            this.lblCCRSegID.Size = new System.Drawing.Size(0, 13);
+            this.lblCCRSegID.TabIndex = 84;
+            this.lblCCRSegID.Visible = false;
+            // 
             // FrmCCR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1763,6 +1785,7 @@
             this.groupBox1.PerformLayout();
             this.tabCCR.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -1920,5 +1943,7 @@
         private System.Windows.Forms.Label lblIdCCR;
         private System.Windows.Forms.ComboBox cbxNrConsulta;
         private System.Windows.Forms.Label lblNrConsulta;
+        private System.Windows.Forms.Label lblChildID;
+        private System.Windows.Forms.Label lblCCRSegID;
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBsmi.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBsmi.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="amostrastb">
           <Key>
             <PropertyRef Name="id" />
@@ -75,24 +75,24 @@
           <Property Name="nr_consulta" Type="int" />
           <Property Name="dataconsulta" Type="date" />
           <Property Name="age" Type="int" />
-          <Property Name="ageunit" Type="nchar" MaxLength="1" />
+          <Property Name="ageunit" Type="nvarchar" MaxLength="8" />
           <Property Name="mot_nid_cpn" Type="nvarchar" MaxLength="45" />
           <Property Name="mot_nid_tarv" Type="nvarchar" MaxLength="45" />
           <Property Name="mot_hiv_lact" Type="bit" />
-          <Property Name="mot_hiv_tarv" Type="bit" />
+          <Property Name="mot_hiv_tarv" Type="nvarchar" MaxLength="45" />
           <Property Name="contactotb" Type="bit" />
           <Property Name="desnutricao_aguda" Type="nvarchar" MaxLength="12" />
           <Property Name="exposicaoHIV" Type="bit" />
           <Property Name="outracondicaorisco" Type="nvarchar" MaxLength="60" />
           <Property Name="pisoniazidainicio" Type="date" />
           <Property Name="pisoniazida" Type="nvarchar" MaxLength="15" />
-          <Property Name="aleitmaternomenor6m" Type="nvarchar" MaxLength="10" />
-          <Property Name="aleitmaternonaior6m" Type="bit" />
+          <Property Name="aleitmaternomenor6m" Type="nvarchar" MaxLength="45" />
+          <Property Name="aleitmaternonaior6m" Type="nvarchar" MaxLength="45" />
           <Property Name="atpu" Type="int" />
           <Property Name="csb_nut_sup" Type="bit" />
           <Property Name="recuperada" Type="bit" />
           <Property Name="internamento" Type="bit" />
-          <Property Name="ctz" Type="nvarchar" MaxLength="15" />
+          <Property Name="ctz" Type="nvarchar" MaxLength="40" />
           <Property Name="profiaxia_arv" Type="bit" />
           <Property Name="colheitapcmaior2mes" Type="nvarchar" MaxLength="20" />
           <Property Name="colheitapcrmenor2mes" Type="nvarchar" MaxLength="20" />
@@ -1054,8 +1054,7 @@
             <End Role="ccrseg" EntitySet="ccrseg" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBsmi" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1118,65 +1117,6 @@
           <Property Name="iniciaistecnicodevolve" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="ccr">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idchild" Type="Int32" Nullable="false" />
-          <Property Name="nyear" Type="Int32" Nullable="false" />
-          <Property Name="nlivro" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="nr_consulta" Type="Int32" />
-          <Property Name="dataconsulta" Type="DateTime" Precision="0" />
-          <Property Name="age" Type="Int32" />
-          <Property Name="ageunit" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
-          <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
-          <Property Name="mot_nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
-          <Property Name="mot_hiv_lact" Type="Boolean" />
-          <Property Name="mot_hiv_tarv" Type="Boolean" />
-          <Property Name="contactotb" Type="Boolean" />
-          <Property Name="desnutricao_aguda" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-          <Property Name="exposicaoHIV" Type="Boolean" />
-          <Property Name="outracondicaorisco" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <Property Name="pisoniazidainicio" Type="DateTime" Precision="0" />
-          <Property Name="pisoniazida" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Name="aleitmaternomenor6m" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="aleitmaternonaior6m" Type="Boolean" />
-          <Property Name="atpu" Type="Int32" />
-          <Property Name="csb_nut_sup" Type="Boolean" />
-          <Property Name="recuperada" Type="Boolean" />
-          <Property Name="internamento" Type="Boolean" />
-          <Property Name="ctz" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Name="profiaxia_arv" Type="Boolean" />
-          <Property Name="colheitapcmaior2mes" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="colheitapcrmenor2mes" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="resultadopcrmaior2meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="resultadopcrmenor2meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="resultadotesterapido" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="resultadofinal" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="resulttrapido_nexp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="saidaccr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="chd_nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
-          <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <Property Name="motart_5m_chd" Type="Boolean" Nullable="false" />
-          <Property Name="tb" Type="Boolean" />
-          <Property Name="dam_dag" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
-          <Property Name="ce" Type="Boolean" />
-          <Property Name="tpicomp" Type="Boolean" />
-          <Property Name="ame_5m" Type="Boolean" />
-          <Property Name="mixed_5m" Type="Boolean" />
-          <Property Name="rec" Type="Boolean" />
-          <Property Name="trans_int" Type="Boolean" />
-          <Property Name="arv_5m" Type="Boolean" />
-          <Property Name="pcr_under2m" Type="Boolean" />
-          <Property Name="pcr_above2m" Type="Boolean" />
-          <Property Name="pcrpos_under2m" Type="Boolean" />
-          <Property Name="pcrpos_above2m" Type="Boolean" />
-          <Property Name="pnctl" Type="Boolean" />
-          <NavigationProperty Name="child" Relationship="Self.ccr_idchild" FromRole="ccr" ToRole="child" />
-          <NavigationProperty Name="ccrsegs" Relationship="Self.ccrseg_idccr" FromRole="ccr" ToRole="ccrseg" />
-        </EntityType>
         <EntityType Name="ccrseg">
           <Key>
             <PropertyRef Name="id" />
@@ -1209,7 +1149,7 @@
           <Property Name="transferidaUS" Type="Boolean" />
           <Property Name="abandono18" Type="Boolean" />
           <Property Name="obito18" Type="Boolean" />
-          <NavigationProperty Name="ccr" Relationship="Self.ccrseg_idccr" FromRole="ccrseg" ToRole="ccr" />
+          <NavigationProperty Name="ccr" Relationship="DBsmi.ccrseg_idccr" FromRole="ccrseg" ToRole="ccr" />
         </EntityType>
         <EntityType Name="child">
           <Key>
@@ -1223,7 +1163,7 @@
           <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
           <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
           <Property Name="dob" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="ccrs" Relationship="Self.ccr_idchild" FromRole="child" ToRole="ccr" />
+          <NavigationProperty Name="ccrs" Relationship="DBsmi.ccr_idchild" FromRole="child" ToRole="ccr" />
         </EntityType>
         <EntityType Name="cpn">
           <Key>
@@ -2061,33 +2001,8 @@
           <Property Name="posicao" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
           <Property Name="systemrole" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
         </EntityType>
-        <Association Name="ccr_idchild">
-          <End Role="child" Type="Self.child" Multiplicity="1" />
-          <End Role="ccr" Type="Self.ccr" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="child">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="ccr">
-              <PropertyRef Name="idchild" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="ccrseg_idccr">
-          <End Role="ccr" Type="Self.ccr" Multiplicity="1" />
-          <End Role="ccrseg" Type="Self.ccrseg" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ccr">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="ccrseg">
-              <PropertyRef Name="idccr" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="DBsmiEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="amostrastbs" EntityType="Self.amostrastb" />
-          <EntitySet Name="ccrs" EntityType="Self.ccr" />
           <EntitySet Name="ccrsegs" EntityType="Self.ccrseg" />
           <EntitySet Name="children" EntityType="Self.child" />
           <EntitySet Name="cpns" EntityType="Self.cpn" />
@@ -2103,15 +2018,99 @@
           <EntitySet Name="pacientetbs" EntityType="Self.pacientetb" />
           <EntitySet Name="patients" EntityType="Self.patient" />
           <EntitySet Name="usuarios" EntityType="Self.usuario" />
-          <AssociationSet Name="ccr_idchild" Association="Self.ccr_idchild">
+          <EntitySet Name="ccrs" EntityType="DBsmi.ccr" />
+          <AssociationSet Name="ccr_idchild" Association="DBsmi.ccr_idchild">
             <End Role="child" EntitySet="children" />
             <End Role="ccr" EntitySet="ccrs" />
           </AssociationSet>
-          <AssociationSet Name="ccrseg_idccr" Association="Self.ccrseg_idccr">
+          <AssociationSet Name="ccrseg_idccr" Association="DBsmi.ccrseg_idccr">
             <End Role="ccr" EntitySet="ccrs" />
             <End Role="ccrseg" EntitySet="ccrsegs" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="ccr">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idchild" Type="Int32" Nullable="false" />
+          <Property Name="nyear" Type="Int32" Nullable="false" />
+          <Property Name="nlivro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="nr_consulta" Type="Int32" />
+          <Property Name="dataconsulta" Type="DateTime" Precision="0" />
+          <Property Name="age" Type="Int32" />
+          <Property Name="ageunit" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="mot_nid_cpn" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="mot_nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="mot_hiv_lact" Type="Boolean" />
+          <Property Name="mot_hiv_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="contactotb" Type="Boolean" />
+          <Property Name="desnutricao_aguda" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="exposicaoHIV" Type="Boolean" />
+          <Property Name="outracondicaorisco" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="pisoniazidainicio" Type="DateTime" Precision="0" />
+          <Property Name="pisoniazida" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="aleitmaternomenor6m" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="aleitmaternonaior6m" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="atpu" Type="Int32" />
+          <Property Name="csb_nut_sup" Type="Boolean" />
+          <Property Name="recuperada" Type="Boolean" />
+          <Property Name="internamento" Type="Boolean" />
+          <Property Name="ctz" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="profiaxia_arv" Type="Boolean" />
+          <Property Name="colheitapcmaior2mes" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="colheitapcrmenor2mes" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="resultadopcrmaior2meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="resultadopcrmenor2meses" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="resultadotesterapido" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="resultadofinal" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="resulttrapido_nexp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="saidaccr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="chd_nid_tarv" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="obs" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="providername" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="motart_5m_chd" Type="Boolean" Nullable="false" />
+          <Property Name="tb" Type="Boolean" />
+          <Property Name="dam_dag" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ce" Type="Boolean" />
+          <Property Name="tpicomp" Type="Boolean" />
+          <Property Name="ame_5m" Type="Boolean" />
+          <Property Name="mixed_5m" Type="Boolean" />
+          <Property Name="rec" Type="Boolean" />
+          <Property Name="trans_int" Type="Boolean" />
+          <Property Name="arv_5m" Type="Boolean" />
+          <Property Name="pcr_under2m" Type="Boolean" />
+          <Property Name="pcr_above2m" Type="Boolean" />
+          <Property Name="pcrpos_under2m" Type="Boolean" />
+          <Property Name="pcrpos_above2m" Type="Boolean" />
+          <Property Name="pnctl" Type="Boolean" />
+          <NavigationProperty Name="child" Relationship="DBsmi.ccr_idchild" FromRole="ccr" ToRole="child" />
+          <NavigationProperty Name="ccrsegs" Relationship="DBsmi.ccrseg_idccr" FromRole="ccr" ToRole="ccrseg" />
+        </EntityType>
+        <Association Name="ccr_idchild">
+          <End Type="DBsmi.child" Role="child" Multiplicity="1" />
+          <End Type="DBsmi.ccr" Role="ccr" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ccr">
+              <PropertyRef Name="idchild" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ccrseg_idccr">
+          <End Type="DBsmi.ccr" Role="ccr" Multiplicity="1" />
+          <End Type="DBsmi.ccrseg" Role="ccrseg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ccr">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ccrseg">
+              <PropertyRef Name="idccr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2175,64 +2174,6 @@
                 <ScalarProperty Name="dataenvioresultado" ColumnName="dataenvioresultado" />
                 <ScalarProperty Name="iniciaistecnicodevolve" ColumnName="iniciaistecnicodevolve" />
                 <ScalarProperty Name="obs" ColumnName="obs" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ccrs">
-            <EntityTypeMapping TypeName="DBsmi.ccr">
-              <MappingFragment StoreEntitySet="ccr">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="idchild" ColumnName="idchild" />
-                <ScalarProperty Name="nyear" ColumnName="nyear" />
-                <ScalarProperty Name="nlivro" ColumnName="nlivro" />
-                <ScalarProperty Name="nr_consulta" ColumnName="nr_consulta" />
-                <ScalarProperty Name="dataconsulta" ColumnName="dataconsulta" />
-                <ScalarProperty Name="age" ColumnName="age" />
-                <ScalarProperty Name="ageunit" ColumnName="ageunit" />
-                <ScalarProperty Name="mot_nid_cpn" ColumnName="mot_nid_cpn" />
-                <ScalarProperty Name="mot_nid_tarv" ColumnName="mot_nid_tarv" />
-                <ScalarProperty Name="mot_hiv_lact" ColumnName="mot_hiv_lact" />
-                <ScalarProperty Name="mot_hiv_tarv" ColumnName="mot_hiv_tarv" />
-                <ScalarProperty Name="contactotb" ColumnName="contactotb" />
-                <ScalarProperty Name="desnutricao_aguda" ColumnName="desnutricao_aguda" />
-                <ScalarProperty Name="exposicaoHIV" ColumnName="exposicaoHIV" />
-                <ScalarProperty Name="outracondicaorisco" ColumnName="outracondicaorisco" />
-                <ScalarProperty Name="pisoniazidainicio" ColumnName="pisoniazidainicio" />
-                <ScalarProperty Name="pisoniazida" ColumnName="pisoniazida" />
-                <ScalarProperty Name="aleitmaternomenor6m" ColumnName="aleitmaternomenor6m" />
-                <ScalarProperty Name="aleitmaternonaior6m" ColumnName="aleitmaternonaior6m" />
-                <ScalarProperty Name="atpu" ColumnName="atpu" />
-                <ScalarProperty Name="csb_nut_sup" ColumnName="csb_nut_sup" />
-                <ScalarProperty Name="recuperada" ColumnName="recuperada" />
-                <ScalarProperty Name="internamento" ColumnName="internamento" />
-                <ScalarProperty Name="ctz" ColumnName="ctz" />
-                <ScalarProperty Name="profiaxia_arv" ColumnName="profiaxia_arv" />
-                <ScalarProperty Name="colheitapcmaior2mes" ColumnName="colheitapcmaior2mes" />
-                <ScalarProperty Name="colheitapcrmenor2mes" ColumnName="colheitapcrmenor2mes" />
-                <ScalarProperty Name="resultadopcrmaior2meses" ColumnName="resultadopcrmaior2meses" />
-                <ScalarProperty Name="resultadopcrmenor2meses" ColumnName="resultadopcrmenor2meses" />
-                <ScalarProperty Name="resultadotesterapido" ColumnName="resultadotesterapido" />
-                <ScalarProperty Name="resultadofinal" ColumnName="resultadofinal" />
-                <ScalarProperty Name="resulttrapido_nexp" ColumnName="resulttrapido_nexp" />
-                <ScalarProperty Name="saidaccr" ColumnName="saidaccr" />
-                <ScalarProperty Name="chd_nid_tarv" ColumnName="chd_nid_tarv" />
-                <ScalarProperty Name="obs" ColumnName="obs" />
-                <ScalarProperty Name="providername" ColumnName="providername" />
-                <ScalarProperty Name="motart_5m_chd" ColumnName="motart_5m_chd" />
-                <ScalarProperty Name="tb" ColumnName="tb" />
-                <ScalarProperty Name="dam_dag" ColumnName="dam_dag" />
-                <ScalarProperty Name="ce" ColumnName="ce" />
-                <ScalarProperty Name="tpicomp" ColumnName="tpicomp" />
-                <ScalarProperty Name="ame_5m" ColumnName="ame_5m" />
-                <ScalarProperty Name="mixed_5m" ColumnName="mixed_5m" />
-                <ScalarProperty Name="rec" ColumnName="rec" />
-                <ScalarProperty Name="trans_int" ColumnName="trans_int" />
-                <ScalarProperty Name="arv_5m" ColumnName="arv_5m" />
-                <ScalarProperty Name="pcr_under2m" ColumnName="pcr_under2m" />
-                <ScalarProperty Name="pcr_above2m" ColumnName="pcr_above2m" />
-                <ScalarProperty Name="pcrpos_under2m" ColumnName="pcrpos_under2m" />
-                <ScalarProperty Name="pcrpos_above2m" ColumnName="pcrpos_above2m" />
-                <ScalarProperty Name="pnctl" ColumnName="pnctl" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3130,6 +3071,64 @@
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="posicao" ColumnName="posicao" />
                 <ScalarProperty Name="systemrole" ColumnName="systemrole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ccrs">
+            <EntityTypeMapping TypeName="DBsmi.ccr">
+              <MappingFragment StoreEntitySet="ccr">
+                <ScalarProperty Name="pnctl" ColumnName="pnctl" />
+                <ScalarProperty Name="pcrpos_above2m" ColumnName="pcrpos_above2m" />
+                <ScalarProperty Name="pcrpos_under2m" ColumnName="pcrpos_under2m" />
+                <ScalarProperty Name="pcr_above2m" ColumnName="pcr_above2m" />
+                <ScalarProperty Name="pcr_under2m" ColumnName="pcr_under2m" />
+                <ScalarProperty Name="arv_5m" ColumnName="arv_5m" />
+                <ScalarProperty Name="trans_int" ColumnName="trans_int" />
+                <ScalarProperty Name="rec" ColumnName="rec" />
+                <ScalarProperty Name="mixed_5m" ColumnName="mixed_5m" />
+                <ScalarProperty Name="ame_5m" ColumnName="ame_5m" />
+                <ScalarProperty Name="tpicomp" ColumnName="tpicomp" />
+                <ScalarProperty Name="ce" ColumnName="ce" />
+                <ScalarProperty Name="dam_dag" ColumnName="dam_dag" />
+                <ScalarProperty Name="tb" ColumnName="tb" />
+                <ScalarProperty Name="motart_5m_chd" ColumnName="motart_5m_chd" />
+                <ScalarProperty Name="providername" ColumnName="providername" />
+                <ScalarProperty Name="obs" ColumnName="obs" />
+                <ScalarProperty Name="chd_nid_tarv" ColumnName="chd_nid_tarv" />
+                <ScalarProperty Name="saidaccr" ColumnName="saidaccr" />
+                <ScalarProperty Name="resulttrapido_nexp" ColumnName="resulttrapido_nexp" />
+                <ScalarProperty Name="resultadofinal" ColumnName="resultadofinal" />
+                <ScalarProperty Name="resultadotesterapido" ColumnName="resultadotesterapido" />
+                <ScalarProperty Name="resultadopcrmenor2meses" ColumnName="resultadopcrmenor2meses" />
+                <ScalarProperty Name="resultadopcrmaior2meses" ColumnName="resultadopcrmaior2meses" />
+                <ScalarProperty Name="colheitapcrmenor2mes" ColumnName="colheitapcrmenor2mes" />
+                <ScalarProperty Name="colheitapcmaior2mes" ColumnName="colheitapcmaior2mes" />
+                <ScalarProperty Name="profiaxia_arv" ColumnName="profiaxia_arv" />
+                <ScalarProperty Name="ctz" ColumnName="ctz" />
+                <ScalarProperty Name="internamento" ColumnName="internamento" />
+                <ScalarProperty Name="recuperada" ColumnName="recuperada" />
+                <ScalarProperty Name="csb_nut_sup" ColumnName="csb_nut_sup" />
+                <ScalarProperty Name="atpu" ColumnName="atpu" />
+                <ScalarProperty Name="aleitmaternonaior6m" ColumnName="aleitmaternonaior6m" />
+                <ScalarProperty Name="aleitmaternomenor6m" ColumnName="aleitmaternomenor6m" />
+                <ScalarProperty Name="pisoniazida" ColumnName="pisoniazida" />
+                <ScalarProperty Name="pisoniazidainicio" ColumnName="pisoniazidainicio" />
+                <ScalarProperty Name="outracondicaorisco" ColumnName="outracondicaorisco" />
+                <ScalarProperty Name="exposicaoHIV" ColumnName="exposicaoHIV" />
+                <ScalarProperty Name="desnutricao_aguda" ColumnName="desnutricao_aguda" />
+                <ScalarProperty Name="contactotb" ColumnName="contactotb" />
+                <ScalarProperty Name="mot_hiv_tarv" ColumnName="mot_hiv_tarv" />
+                <ScalarProperty Name="mot_hiv_lact" ColumnName="mot_hiv_lact" />
+                <ScalarProperty Name="mot_nid_tarv" ColumnName="mot_nid_tarv" />
+                <ScalarProperty Name="mot_nid_cpn" ColumnName="mot_nid_cpn" />
+                <ScalarProperty Name="ageunit" ColumnName="ageunit" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="dataconsulta" ColumnName="dataconsulta" />
+                <ScalarProperty Name="nr_consulta" ColumnName="nr_consulta" />
+                <ScalarProperty Name="nlivro" ColumnName="nlivro" />
+                <ScalarProperty Name="nyear" ColumnName="nyear" />
+                <ScalarProperty Name="idchild" ColumnName="idchild" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
