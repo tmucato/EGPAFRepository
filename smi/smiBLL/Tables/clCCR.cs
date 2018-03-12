@@ -62,7 +62,7 @@ namespace smiBLL
         public Nullable<bool> pcrpos_above2m;
         public Nullable<bool> pnctl;
 
-        public clCCR()
+        public  clCCR()
         {
             id = 0;
             idchild = 0;
@@ -129,7 +129,7 @@ namespace smiBLL
                 {
                     foreach (ccr db_ccr in DbContext.ccrs)
                     {
-                         obj_ccr = new clCCR();
+                        obj_ccr = new clCCR();
                         obj_ccr.id = Convert.ToInt32(db_ccr.id);
                         obj_ccr.idchild = Convert.ToInt32(db_ccr.idchild);
                         obj_ccr.nyear = Convert.ToInt32(db_ccr.nyear);

@@ -72,9 +72,6 @@
     <Compile Include="cpn_final.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>
-    <Compile Include="cpn_old.cs">
-      <DependentUpon>DBsmi.tt</DependentUpon>
-    </Compile>
     <Compile Include="cpp.cs">
       <DependentUpon>DBsmi.tt</DependentUpon>
     </Compile>

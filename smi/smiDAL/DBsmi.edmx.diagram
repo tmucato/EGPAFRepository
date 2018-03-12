@@ -4,14 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fa90fe1cadb54dac978726c6a8d5b7a4" Name="Diagram1" ZoomLevel="56">
+      <Diagram DiagramId="fa90fe1cadb54dac978726c6a8d5b7a4" Name="Diagram1" ZoomLevel="83">
         <EntityTypeShape EntityType="DBsmi.amostrastb" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBsmi.ccrseg" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBsmi.child" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBsmi.ccrseg" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBsmi.child" Width="1.5" PointX="5.75" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DBsmi.cpn" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBsmi.cpn_final" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBsmi.cpn_old" Width="1.5" PointX="11.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBsmi.cpp" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBsmi.csr_pf" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBsmi.laboratoriotb" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBsmi.livro" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="true" />
@@ -21,9 +19,10 @@
         <EntityTypeShape EntityType="DBsmi.pacientetb" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBsmi.patient" Width="1.5" PointX="15.75" PointY="15.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBsmi.usuario" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBsmi.ccr" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="DBsmi.ccr" Width="1.5" PointX="3.125" PointY="0.75" />
         <AssociationConnector Association="DBsmi.ccr_idchild" />
         <AssociationConnector Association="DBsmi.ccrseg_idccr" />
+        <EntityTypeShape EntityType="DBsmi.cpp" Width="1.5" PointX="13.75" PointY="0.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

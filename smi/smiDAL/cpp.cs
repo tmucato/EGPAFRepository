@@ -22,7 +22,7 @@ namespace smiDAL
         public Nullable<int> age { get; set; }
         public string localparto { get; set; }
         public string diasapoisparto { get; set; }
-        public Nullable<int> parceiropresente { get; set; }
+        public Nullable<bool> parceiropresente { get; set; }
         public string estadorecemnascido { get; set; }
         public Nullable<bool> anemia { get; set; }
         public string e_clinicogenecologico { get; set; }

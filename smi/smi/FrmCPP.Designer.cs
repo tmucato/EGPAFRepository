@@ -311,9 +311,9 @@
             "1ª dose",
             "2ª dose",
             "3ª dose"});
-            this.cbxTratPuer.Location = new System.Drawing.Point(168, 76);
+            this.cbxTratPuer.Location = new System.Drawing.Point(142, 76);
             this.cbxTratPuer.Name = "cbxTratPuer";
-            this.cbxTratPuer.Size = new System.Drawing.Size(108, 21);
+            this.cbxTratPuer.Size = new System.Drawing.Size(134, 21);
             this.cbxTratPuer.TabIndex = 39;
             // 
             // lblTratPuer
@@ -353,9 +353,9 @@
             "Desconhecido",
             "Negativo há menos de 3 Meses",
             "Positivo"});
-            this.cbxEstEntrCPP.Location = new System.Drawing.Point(168, 22);
+            this.cbxEstEntrCPP.Location = new System.Drawing.Point(142, 22);
             this.cbxEstEntrCPP.Name = "cbxEstEntrCPP";
-            this.cbxEstEntrCPP.Size = new System.Drawing.Size(108, 21);
+            this.cbxEstEntrCPP.Size = new System.Drawing.Size(134, 21);
             this.cbxEstEntrCPP.TabIndex = 35;
             // 
             // lblEstEntrCPP
