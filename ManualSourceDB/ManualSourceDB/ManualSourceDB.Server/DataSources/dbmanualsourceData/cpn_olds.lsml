@@ -1,0 +1,4156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="cpn_old">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="id"
+        PropertyType=":Int64">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="nyear"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="visdate1"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="visdate2"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="visdate3"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="visdate4"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="visdate5"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="visdate6"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="nid_cpn"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="45" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="nid_tarv"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="45" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="45" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="residence"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="phone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="45" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="agegroup1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="agegroup2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="agegroup3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="agegroup4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="gestationalage1"
+        PropertyType=":SByte?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="gestationalage2"
+        PropertyType=":SByte?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="gestationalage3"
+        PropertyType=":SByte?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="gestationalage4"
+        PropertyType=":SByte?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="gestationalage5"
+        PropertyType=":SByte?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="gestationalage6"
+        PropertyType=":SByte?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="gageless12"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerpresence1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerpresence2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerpresence3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerpresence4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerpresence5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerpresence6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weight1"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weight2"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weight3"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weight4"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weight5"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weight6"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weightgainyno2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weightgainyno3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weightgainyno4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weightgainyno5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weightgainyno6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dag1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dag2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dag3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dag4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dag5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dag6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dam1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dam2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dam3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dam4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dam5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dam6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="supnutr1"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="supnutr2"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="supnutr3"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="supnutr4"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="supnutr5"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="supnutr6"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultcured2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultcured3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultcured4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultcured5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultcured6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultabandon2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultabandon3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultabandon4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultabandon5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultabandon6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="receiveddesparasitante1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="receiveddesparasitante2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="receiveddesparasitante3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="receiveddesparasitante4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="receiveddesparasitante5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="receiveddesparasitante6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="salferr_acfolico1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="salferr_acfolico2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="salferr_acfolico3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="salferr_acfolico4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="salferr_acfolico5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="salferr_acfolico6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ta1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ta2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ta3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ta4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ta5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ta6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hgb1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hgb2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hgb3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hgb4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hgb5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hgb6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="proteinuria1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="proteinuria2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="proteinuria3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="proteinuria4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="proteinuria5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="proteinuria6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="glicosuria1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="glicosuria2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="glicosuria3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="glicosuria4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="glicosuria5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="glicosuria6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_ulceragenital1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_ulceragenital2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_ulceragenital3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_ulceragenital4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_ulceragenital5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_ulceragenital6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_leucorreia1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_leucorreia2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_leucorreia3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_leucorreia4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_leucorreia5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_leucorreia6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syndromictreatment1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syndromictreatment2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syndromictreatment3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syndromictreatment4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syndromictreatment5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syndromictreatment6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syphilistesting1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syphilistesting2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syphilistesting3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syphilistesting4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syphilistesting5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syphilistesting6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_wsyphilistreat1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_wsyphilistreat2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_wsyphilistreat3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_wsyphilistreat4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_wsyphilistreat5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_wsyphilistreat6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_psyphilistreat1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_psyphilistreat2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_psyphilistreat3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_psyphilistreat4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_psyphilistreat5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_psyphilistreat6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="serostatusdesc"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="serostatusneg"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="serostatuspos"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="cpnhivtest1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="cpnhivtest2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="cpnhivtest3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="cpnhivtest4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="cpnhivtest5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="cpnhivtest6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerhivtest1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerhivtest2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerhivtest3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerhivtest4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerhivtest5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerhivtest6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ctz"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ctz_init_cont1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ctz_init_cont2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ctz_init_cont3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ctz_init_cont4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ctz_init_cont5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ctz_init_cont6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tarv"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="nvp1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="nvp2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="nvp3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="nvp4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="nvp5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="nvp6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="azt_nvp1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="azt_nvp2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="azt_nvp3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="azt_nvp4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="azt_nvp5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="azt_nvp6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tarv_init_visit1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tarv_init_visit2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tarv_init_visit3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tarv_init_visit4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tarv_init_visit5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tarv_init_visit6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="arv_cont2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="arv_cont3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="arv_cont4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="arv_cont5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="arv_cont6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tip1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tip2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tip3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tip4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tip5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tip6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="bednet1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="bednet2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="bednet3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="bednet4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="bednet5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="bednet6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tdr_htz1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tdr_htz2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tdr_htz3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tdr_htz4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tdr_htz5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tdr_htz6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="result_tdr_htz1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="result_tdr_htz2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="result_tdr_htz3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="result_tdr_htz4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="result_tdr_htz5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="result_tdr_htz6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="pos_malaria_treated1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="pos_malaria_treated2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="pos_malaria_treated3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="pos_malaria_treated4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="pos_malaria_treated5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="pos_malaria_treated6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hpp1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hpp2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hpp3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hpp4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hpp5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="hpp6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_1_dose1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_1_dose2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_1_dose3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_1_dose4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_1_dose5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_1_dose6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_2_5_dose1"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_2_5_dose2"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_2_5_dose3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_2_5_dose4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_2_5_dose5"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_2_5_dose6"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_isoniazid1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_isoniazid2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_isoniazid3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_isoniazid4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_isoniazid5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_isoniazid6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_treatment1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_treatment2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_treatment3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_treatment4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_treatment5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_treatment6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="obs1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="obs2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="obs3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="obs4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="obs5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="obs6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="providername1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="providername2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="providername3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="providername4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="providername5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="providername6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="cons_more4"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerpreence"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="weightgainyno"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dag"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="dam"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="supnutr"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultcured"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="resultabandon"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="receiveddesparasitante"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="salferr_more3"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_diag"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_treatment"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_syphilistesting"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_wsyphilistreat"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="its_psyphilistreat"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="womanserostatus"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="partnerserostatus"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ctz_entr"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ctz_init"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="finalresult_arv"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tip"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="bednet"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="mal_diag_lab"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="mal_treatment"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="mp"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_1_dose"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="vat_2_5_dose"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="inh"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="tb_initto"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="nlivro"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="idmother"
+        PropertyType=":Int64">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="dbmanualsourceData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="cpn_olds"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="cpn_old" />
+    <QueryOperation
+      Name="cpn_olds_Single"
+      ReturnType="cpn_old">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="cpn_olds" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int64?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="cpn_olds_SingleOrDefault"
+      ReturnType="cpn_old">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="cpn_olds" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int64?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="dbmanualsourceDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="cpn_olds">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbmanualsource"
+          Table="cpn_old" />
+        <SsdlProperty
+          Name="id"
+          Nullable="False"
+          Type="bigint"
+          Property="cpn_old/Properties[id]" />
+        <SsdlProperty
+          Name="nyear"
+          Nullable="False"
+          Type="int"
+          Property="cpn_old/Properties[nyear]" />
+        <SsdlProperty
+          Name="visdate1"
+          Nullable="False"
+          Type="datetime"
+          Property="cpn_old/Properties[visdate1]" />
+        <SsdlProperty
+          Name="visdate2"
+          Nullable="True"
+          Type="datetime"
+          Property="cpn_old/Properties[visdate2]" />
+        <SsdlProperty
+          Name="visdate3"
+          Nullable="True"
+          Type="datetime"
+          Property="cpn_old/Properties[visdate3]" />
+        <SsdlProperty
+          Name="visdate4"
+          Nullable="True"
+          Type="datetime"
+          Property="cpn_old/Properties[visdate4]" />
+        <SsdlProperty
+          Name="visdate5"
+          Nullable="True"
+          Type="datetime"
+          Property="cpn_old/Properties[visdate5]" />
+        <SsdlProperty
+          Name="visdate6"
+          Nullable="True"
+          Type="datetime"
+          Property="cpn_old/Properties[visdate6]" />
+        <SsdlProperty
+          MaxLength="45"
+          Name="nid_cpn"
+          Nullable="False"
+          Type="varchar"
+          Property="cpn_old/Properties[nid_cpn]" />
+        <SsdlProperty
+          MaxLength="45"
+          Name="nid_tarv"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[nid_tarv]" />
+        <SsdlProperty
+          MaxLength="45"
+          Name="name"
+          Nullable="False"
+          Type="varchar"
+          Property="cpn_old/Properties[name]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="residence"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[residence]" />
+        <SsdlProperty
+          MaxLength="45"
+          Name="phone"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[phone]" />
+        <SsdlProperty
+          Name="agegroup1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[agegroup1]" />
+        <SsdlProperty
+          Name="agegroup2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[agegroup2]" />
+        <SsdlProperty
+          Name="agegroup3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[agegroup3]" />
+        <SsdlProperty
+          Name="agegroup4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[agegroup4]" />
+        <SsdlProperty
+          Name="gestationalage1"
+          Nullable="True"
+          Type="tinyint"
+          Property="cpn_old/Properties[gestationalage1]" />
+        <SsdlProperty
+          Name="gestationalage2"
+          Nullable="True"
+          Type="tinyint"
+          Property="cpn_old/Properties[gestationalage2]" />
+        <SsdlProperty
+          Name="gestationalage3"
+          Nullable="True"
+          Type="tinyint"
+          Property="cpn_old/Properties[gestationalage3]" />
+        <SsdlProperty
+          Name="gestationalage4"
+          Nullable="True"
+          Type="tinyint"
+          Property="cpn_old/Properties[gestationalage4]" />
+        <SsdlProperty
+          Name="gestationalage5"
+          Nullable="True"
+          Type="tinyint"
+          Property="cpn_old/Properties[gestationalage5]" />
+        <SsdlProperty
+          Name="gestationalage6"
+          Nullable="True"
+          Type="tinyint"
+          Property="cpn_old/Properties[gestationalage6]" />
+        <SsdlProperty
+          Name="gageless12"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[gageless12]" />
+        <SsdlProperty
+          Name="partnerpresence1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[partnerpresence1]" />
+        <SsdlProperty
+          Name="partnerpresence2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[partnerpresence2]" />
+        <SsdlProperty
+          Name="partnerpresence3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[partnerpresence3]" />
+        <SsdlProperty
+          Name="partnerpresence4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[partnerpresence4]" />
+        <SsdlProperty
+          Name="partnerpresence5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[partnerpresence5]" />
+        <SsdlProperty
+          Name="partnerpresence6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[partnerpresence6]" />
+        <SsdlProperty
+          Name="weight1"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[weight1]" />
+        <SsdlProperty
+          Name="weight2"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[weight2]" />
+        <SsdlProperty
+          Name="weight3"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[weight3]" />
+        <SsdlProperty
+          Name="weight4"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[weight4]" />
+        <SsdlProperty
+          Name="weight5"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[weight5]" />
+        <SsdlProperty
+          Name="weight6"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[weight6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="weightgainyno2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[weightgainyno2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="weightgainyno3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[weightgainyno3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="weightgainyno4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[weightgainyno4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="weightgainyno5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[weightgainyno5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="weightgainyno6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[weightgainyno6]" />
+        <SsdlProperty
+          Name="dag1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dag1]" />
+        <SsdlProperty
+          Name="dag2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dag2]" />
+        <SsdlProperty
+          Name="dag3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dag3]" />
+        <SsdlProperty
+          Name="dag4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dag4]" />
+        <SsdlProperty
+          Name="dag5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dag5]" />
+        <SsdlProperty
+          Name="dag6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dag6]" />
+        <SsdlProperty
+          Name="dam1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dam1]" />
+        <SsdlProperty
+          Name="dam2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dam2]" />
+        <SsdlProperty
+          Name="dam3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dam3]" />
+        <SsdlProperty
+          Name="dam4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dam4]" />
+        <SsdlProperty
+          Name="dam5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dam5]" />
+        <SsdlProperty
+          Name="dam6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dam6]" />
+        <SsdlProperty
+          Name="supnutr1"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[supnutr1]" />
+        <SsdlProperty
+          Name="supnutr2"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[supnutr2]" />
+        <SsdlProperty
+          Name="supnutr3"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[supnutr3]" />
+        <SsdlProperty
+          Name="supnutr4"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[supnutr4]" />
+        <SsdlProperty
+          Name="supnutr5"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[supnutr5]" />
+        <SsdlProperty
+          Name="supnutr6"
+          Nullable="True"
+          Type="int"
+          Property="cpn_old/Properties[supnutr6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultcured2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultcured2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultcured3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultcured3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultcured4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultcured4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultcured5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultcured5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultcured6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultcured6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultabandon2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultabandon2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultabandon3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultabandon3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultabandon4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultabandon4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultabandon5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultabandon5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultabandon6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultabandon6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="receiveddesparasitante1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[receiveddesparasitante1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="receiveddesparasitante2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[receiveddesparasitante2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="receiveddesparasitante3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[receiveddesparasitante3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="receiveddesparasitante4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[receiveddesparasitante4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="receiveddesparasitante5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[receiveddesparasitante5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="receiveddesparasitante6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[receiveddesparasitante6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="salferr_acfolico1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[salferr_acfolico1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="salferr_acfolico2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[salferr_acfolico2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="salferr_acfolico3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[salferr_acfolico3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="salferr_acfolico4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[salferr_acfolico4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="salferr_acfolico5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[salferr_acfolico5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="salferr_acfolico6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[salferr_acfolico6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ta1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ta1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ta2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ta2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ta3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ta3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ta4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ta4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ta5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ta5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ta6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ta6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hgb1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hgb1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hgb2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hgb2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hgb3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hgb3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hgb4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hgb4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hgb5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hgb5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hgb6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hgb6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="proteinuria1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[proteinuria1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="proteinuria2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[proteinuria2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="proteinuria3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[proteinuria3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="proteinuria4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[proteinuria4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="proteinuria5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[proteinuria5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="proteinuria6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[proteinuria6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="glicosuria1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[glicosuria1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="glicosuria2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[glicosuria2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="glicosuria3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[glicosuria3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="glicosuria4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[glicosuria4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="glicosuria5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[glicosuria5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="glicosuria6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[glicosuria6]" />
+        <SsdlProperty
+          Name="its_ulceragenital1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_ulceragenital1]" />
+        <SsdlProperty
+          Name="its_ulceragenital2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_ulceragenital2]" />
+        <SsdlProperty
+          Name="its_ulceragenital3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_ulceragenital3]" />
+        <SsdlProperty
+          Name="its_ulceragenital4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_ulceragenital4]" />
+        <SsdlProperty
+          Name="its_ulceragenital5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_ulceragenital5]" />
+        <SsdlProperty
+          Name="its_ulceragenital6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_ulceragenital6]" />
+        <SsdlProperty
+          Name="its_leucorreia1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_leucorreia1]" />
+        <SsdlProperty
+          Name="its_leucorreia2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_leucorreia2]" />
+        <SsdlProperty
+          Name="its_leucorreia3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_leucorreia3]" />
+        <SsdlProperty
+          Name="its_leucorreia4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_leucorreia4]" />
+        <SsdlProperty
+          Name="its_leucorreia5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_leucorreia5]" />
+        <SsdlProperty
+          Name="its_leucorreia6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_leucorreia6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syndromictreatment1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syndromictreatment1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syndromictreatment2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syndromictreatment2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syndromictreatment3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syndromictreatment3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syndromictreatment4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syndromictreatment4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syndromictreatment5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syndromictreatment5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syndromictreatment6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syndromictreatment6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syphilistesting1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syphilistesting1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syphilistesting2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syphilistesting2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syphilistesting3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syphilistesting3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syphilistesting4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syphilistesting4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syphilistesting5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syphilistesting5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syphilistesting6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syphilistesting6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_wsyphilistreat1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_wsyphilistreat1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_wsyphilistreat2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_wsyphilistreat2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_wsyphilistreat3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_wsyphilistreat3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_wsyphilistreat4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_wsyphilistreat4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_wsyphilistreat5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_wsyphilistreat5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_wsyphilistreat6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_wsyphilistreat6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_psyphilistreat1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_psyphilistreat1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_psyphilistreat2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_psyphilistreat2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_psyphilistreat3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_psyphilistreat3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_psyphilistreat4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_psyphilistreat4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_psyphilistreat5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_psyphilistreat5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_psyphilistreat6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_psyphilistreat6]" />
+        <SsdlProperty
+          Name="serostatusdesc"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[serostatusdesc]" />
+        <SsdlProperty
+          Name="serostatusneg"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[serostatusneg]" />
+        <SsdlProperty
+          Name="serostatuspos"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[serostatuspos]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="cpnhivtest1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[cpnhivtest1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="cpnhivtest2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[cpnhivtest2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="cpnhivtest3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[cpnhivtest3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="cpnhivtest4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[cpnhivtest4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="cpnhivtest5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[cpnhivtest5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="cpnhivtest6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[cpnhivtest6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="partnerhivtest1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[partnerhivtest1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="partnerhivtest2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[partnerhivtest2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="partnerhivtest3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[partnerhivtest3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="partnerhivtest4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[partnerhivtest4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="partnerhivtest5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[partnerhivtest5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="partnerhivtest6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[partnerhivtest6]" />
+        <SsdlProperty
+          Name="ctz"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[ctz]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ctz_init_cont1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ctz_init_cont1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ctz_init_cont2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ctz_init_cont2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ctz_init_cont3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ctz_init_cont3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ctz_init_cont4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ctz_init_cont4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ctz_init_cont5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ctz_init_cont5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="ctz_init_cont6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[ctz_init_cont6]" />
+        <SsdlProperty
+          Name="tarv"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[tarv]" />
+        <SsdlProperty
+          Name="nvp1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[nvp1]" />
+        <SsdlProperty
+          Name="nvp2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[nvp2]" />
+        <SsdlProperty
+          Name="nvp3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[nvp3]" />
+        <SsdlProperty
+          Name="nvp4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[nvp4]" />
+        <SsdlProperty
+          Name="nvp5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[nvp5]" />
+        <SsdlProperty
+          Name="nvp6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[nvp6]" />
+        <SsdlProperty
+          Name="azt_nvp1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[azt_nvp1]" />
+        <SsdlProperty
+          Name="azt_nvp2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[azt_nvp2]" />
+        <SsdlProperty
+          Name="azt_nvp3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[azt_nvp3]" />
+        <SsdlProperty
+          Name="azt_nvp4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[azt_nvp4]" />
+        <SsdlProperty
+          Name="azt_nvp5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[azt_nvp5]" />
+        <SsdlProperty
+          Name="azt_nvp6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[azt_nvp6]" />
+        <SsdlProperty
+          Name="tarv_init_visit1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[tarv_init_visit1]" />
+        <SsdlProperty
+          Name="tarv_init_visit2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[tarv_init_visit2]" />
+        <SsdlProperty
+          Name="tarv_init_visit3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[tarv_init_visit3]" />
+        <SsdlProperty
+          Name="tarv_init_visit4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[tarv_init_visit4]" />
+        <SsdlProperty
+          Name="tarv_init_visit5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[tarv_init_visit5]" />
+        <SsdlProperty
+          Name="tarv_init_visit6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[tarv_init_visit6]" />
+        <SsdlProperty
+          Name="arv_cont2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[arv_cont2]" />
+        <SsdlProperty
+          Name="arv_cont3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[arv_cont3]" />
+        <SsdlProperty
+          Name="arv_cont4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[arv_cont4]" />
+        <SsdlProperty
+          Name="arv_cont5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[arv_cont5]" />
+        <SsdlProperty
+          Name="arv_cont6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[arv_cont6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tip1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tip1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tip2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tip2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tip3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tip3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tip4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tip4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tip5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tip5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tip6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tip6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="bednet1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[bednet1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="bednet2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[bednet2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="bednet3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[bednet3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="bednet4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[bednet4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="bednet5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[bednet5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="bednet6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[bednet6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tdr_htz1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tdr_htz1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tdr_htz2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tdr_htz2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tdr_htz3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tdr_htz3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tdr_htz4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tdr_htz4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tdr_htz5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tdr_htz5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tdr_htz6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tdr_htz6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="result_tdr_htz1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[result_tdr_htz1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="result_tdr_htz2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[result_tdr_htz2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="result_tdr_htz3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[result_tdr_htz3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="result_tdr_htz4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[result_tdr_htz4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="result_tdr_htz5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[result_tdr_htz5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="result_tdr_htz6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[result_tdr_htz6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="pos_malaria_treated1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[pos_malaria_treated1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="pos_malaria_treated2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[pos_malaria_treated2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="pos_malaria_treated3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[pos_malaria_treated3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="pos_malaria_treated4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[pos_malaria_treated4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="pos_malaria_treated5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[pos_malaria_treated5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="pos_malaria_treated6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[pos_malaria_treated6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hpp1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hpp1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hpp2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hpp2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hpp3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hpp3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hpp4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hpp4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hpp5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hpp5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="hpp6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[hpp6]" />
+        <SsdlProperty
+          Name="vat_1_dose1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_1_dose1]" />
+        <SsdlProperty
+          Name="vat_1_dose2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_1_dose2]" />
+        <SsdlProperty
+          Name="vat_1_dose3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_1_dose3]" />
+        <SsdlProperty
+          Name="vat_1_dose4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_1_dose4]" />
+        <SsdlProperty
+          Name="vat_1_dose5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_1_dose5]" />
+        <SsdlProperty
+          Name="vat_1_dose6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_1_dose6]" />
+        <SsdlProperty
+          Name="vat_2_5_dose1"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_2_5_dose1]" />
+        <SsdlProperty
+          Name="vat_2_5_dose2"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_2_5_dose2]" />
+        <SsdlProperty
+          Name="vat_2_5_dose3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_2_5_dose3]" />
+        <SsdlProperty
+          Name="vat_2_5_dose4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_2_5_dose4]" />
+        <SsdlProperty
+          Name="vat_2_5_dose5"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_2_5_dose5]" />
+        <SsdlProperty
+          Name="vat_2_5_dose6"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_2_5_dose6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_isoniazid1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_isoniazid1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_isoniazid2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_isoniazid2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_isoniazid3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_isoniazid3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_isoniazid4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_isoniazid4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_isoniazid5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_isoniazid5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_isoniazid6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_isoniazid6]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_treatment1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_treatment1]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_treatment2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_treatment2]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_treatment3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_treatment3]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_treatment4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_treatment4]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_treatment5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_treatment5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tb_treatment6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tb_treatment6]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="obs1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[obs1]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="obs2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[obs2]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="obs3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[obs3]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="obs4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[obs4]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="obs5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[obs5]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="obs6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[obs6]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="providername1"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[providername1]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="providername2"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[providername2]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="providername3"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[providername3]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="providername4"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[providername4]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="providername5"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[providername5]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="providername6"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[providername6]" />
+        <SsdlProperty
+          Name="cons_more4"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[cons_more4]" />
+        <SsdlProperty
+          Name="partnerpreence"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[partnerpreence]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="weightgainyno"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[weightgainyno]" />
+        <SsdlProperty
+          Name="dag"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dag]" />
+        <SsdlProperty
+          Name="dam"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[dam]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="supnutr"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[supnutr]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultcured"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultcured]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="resultabandon"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[resultabandon]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="receiveddesparasitante"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[receiveddesparasitante]" />
+        <SsdlProperty
+          Name="salferr_more3"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[salferr_more3]" />
+        <SsdlProperty
+          Name="its_diag"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_diag]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_treatment"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_treatment]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_syphilistesting"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_syphilistesting]" />
+        <SsdlProperty
+          Name="its_wsyphilistreat"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[its_wsyphilistreat]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="its_psyphilistreat"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[its_psyphilistreat]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="womanserostatus"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[womanserostatus]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="partnerserostatus"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[partnerserostatus]" />
+        <SsdlProperty
+          Name="ctz_entr"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[ctz_entr]" />
+        <SsdlProperty
+          Name="ctz_init"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[ctz_init]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="finalresult_arv"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[finalresult_arv]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="tip"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[tip]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="bednet"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[bednet]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="mal_diag_lab"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[mal_diag_lab]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="mal_treatment"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[mal_treatment]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="mp"
+          Nullable="True"
+          Type="varchar"
+          Property="cpn_old/Properties[mp]" />
+        <SsdlProperty
+          Name="vat_1_dose"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_1_dose]" />
+        <SsdlProperty
+          Name="vat_2_5_dose"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[vat_2_5_dose]" />
+        <SsdlProperty
+          Name="inh"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[inh]" />
+        <SsdlProperty
+          Name="tb_initto"
+          Nullable="True"
+          Type="bool"
+          Property="cpn_old/Properties[tb_initto]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="nlivro"
+          Nullable="False"
+          Type="varchar"
+          Property="cpn_old/Properties[nlivro]" />
+        <SsdlProperty
+          Name="idmother"
+          Nullable="False"
+          Type="bigint"
+          Property="cpn_old/Properties[idmother]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>
