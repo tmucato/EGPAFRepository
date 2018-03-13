@@ -1116,15 +1116,6 @@
           <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="nometecnico"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="50" />
-          <AnsiConstraint />
-        </EntityProperty.Attributes>
-      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -1910,12 +1901,6 @@
           Nullable="True"
           Type="varchar"
           Property="paciente_resistente_tb/Properties[obs]" />
-        <SsdlProperty
-          MaxLength="50"
-          Name="nometecnico"
-          Nullable="True"
-          Type="varchar"
-          Property="paciente_resistente_tb/Properties[nometecnico]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>
