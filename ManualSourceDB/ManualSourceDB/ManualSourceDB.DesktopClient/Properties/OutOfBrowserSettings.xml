@@ -1,8 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<OutOfBrowserSettings ShortName="ManualSourceDB.DesktopClient" EnableGPUAcceleration="False" ShowInstallMenuItem="False">
-  <OutOfBrowserSettings.Blurb>ManualSourceDB.DesktopClient</OutOfBrowserSettings.Blurb>
+﻿<OutOfBrowserSettings ShortName="ManualSourceDB" EnableGPUAcceleration="False" ShowInstallMenuItem="False">
+  <OutOfBrowserSettings.Blurb>ManualSourceDB</OutOfBrowserSettings.Blurb>
   <OutOfBrowserSettings.WindowSettings>
-    <WindowSettings Title="ManualSourceDB.DesktopClient" WindowStartupLocation="Manual" Top="0" Left="0"/>
+    <WindowSettings Title="ManualSourceDB" Top="0" Left="0" WindowStartupLocation="Manual" />
   </OutOfBrowserSettings.WindowSettings>
   <OutOfBrowserSettings.SecuritySettings>
     <SecuritySettings ElevatedPermissions="Required" />

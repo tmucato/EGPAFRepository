@@ -292,7 +292,8 @@
               <ContentItem
                 Name="phone1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+                DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?"
+                View="Microsoft.LightSwitch.RichClient:ValueCustomContentControl">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
