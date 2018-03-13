@@ -245,8 +245,16 @@
     <LightSwitchModel Include="Screens\ccrsListDetail.lsml" />
     <LightSwitchModel Include="Screens\cpnsListDetail.lsml" />
     <LightSwitchModel Include="Screens\cppsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\t_registodiariovgbsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\t_registodiarioppesListDetail.lsml" />
+    <LightSwitchModel Include="Screens\laboratoriotbsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\paciente_resistente_tbsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\pacientetbsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\csr_pfsListDetail.lsml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\dbmanualsourceData\" />
+  </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="default.htm">
       <SubFolder>

@@ -55,6 +55,7 @@
     <SharePointServerToServerCertificatePath />
     <SharePointServerToServerCertificateIssuerId />
     <RequireSecureConnection>True</RequireSecureConnection>
+    <AllowAllWindowsUsers>true</AllowAllWindowsUsers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug</OutputPath>

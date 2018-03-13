@@ -67,12 +67,6 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:laboratoriotb" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:livro" />
     </EntityType.Attributes>
   </EntityType>
@@ -92,12 +86,6 @@
     <EntityType.Attributes>
       <Proxy
         Target="ServiceInterface:paciente_resistente_tb" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:pacientetb" />
     </EntityType.Attributes>
   </EntityType>
   <EntityType>
@@ -242,6 +230,24 @@
     <EntityType.Attributes>
       <Proxy
         Target="ServiceInterface:t_usItem" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:laboratoriotb" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:pacientetb" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:tratamentotb" />
     </EntityType.Attributes>
   </EntityType>
 </Application>

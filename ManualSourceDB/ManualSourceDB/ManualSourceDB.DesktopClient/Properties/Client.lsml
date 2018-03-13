@@ -60,6 +60,24 @@
     <ApplicationCommand
       Name="ScreenCommandShowcppsListDetail"
       Target="!module/Methods[ShowcppsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowt_registodiariovgbsListDetail"
+      Target="!module/Methods[Showt_registodiariovgbsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowt_registodiarioppesListDetail"
+      Target="!module/Methods[Showt_registodiarioppesListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowlaboratoriotbsListDetail"
+      Target="!module/Methods[ShowlaboratoriotbsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowpaciente_resistente_tbsListDetail"
+      Target="!module/Methods[Showpaciente_resistente_tbsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowpacientetbsListDetail"
+      Target="!module/Methods[ShowpacientetbsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowcsr_pfsListDetail"
+      Target="!module/Methods[Showcsr_pfsListDetail]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
@@ -84,6 +102,9 @@
       <ApplicationNavigationLink
         Name="cppsListDetail"
         Command="!module/Commands[ScreenCommandShowcppsListDetail]" />
+      <ApplicationNavigationLink
+        Name="csr_pfsListDetail"
+        Command="!module/Commands[ScreenCommandShowcsr_pfsListDetail]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group">
@@ -91,6 +112,12 @@
         <DisplayName
           Value="VGB" />
       </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link"
+        Command="!module/Commands[ScreenCommandShowt_registodiariovgbsListDetail]" />
+      <ApplicationNavigationLink
+        Name="link1"
+        Command="!module/Commands[ScreenCommandShowt_registodiarioppesListDetail]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group1">
@@ -98,6 +125,15 @@
         <DisplayName
           Value="TB" />
       </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link2"
+        Command="!module/Commands[ScreenCommandShowpaciente_resistente_tbsListDetail]" />
+      <ApplicationNavigationLink
+        Name="link3"
+        Command="!module/Commands[ScreenCommandShowpacientetbsListDetail]" />
+      <ApplicationNavigationLink
+        Name="link4"
+        Command="!module/Commands[ScreenCommandShowlaboratoriotbsListDetail]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group2">
