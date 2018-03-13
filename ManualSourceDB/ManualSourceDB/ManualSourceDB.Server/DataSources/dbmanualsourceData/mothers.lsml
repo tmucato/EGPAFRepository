@@ -65,7 +65,7 @@
       </EntityProperty>
       <EntityProperty
         Name="phone"
-        PropertyType=":String?">
+        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="45" />
