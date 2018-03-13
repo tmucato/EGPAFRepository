@@ -199,6 +199,8 @@
     </LightSwitchModel>
   </ItemGroup>
   <ItemGroup>
+    <_ServerFile Include="LogIn.aspx" />
+    <_ServerFile Include="LogOut.aspx" />
     <Content Include="Web.config" />
     <LightSwitchModel Include="Properties\DataSources\ApplicationData.lsml" />
     <LightSwitchModel Include="DataSources\dbmanualsourceData\amostrastbs.lsml" />
@@ -237,6 +239,7 @@
     <LightSwitchModel Include="DataSources\dbmanualsourceData\t_users.lsml" />
     <LightSwitchModel Include="DataSources\dbmanualsourceData\usuarios.lsml" />
     <LightSwitchModel Include="Properties\DataSources\dbmanualsourceData.lsml" />
+    <LightSwitchModel Include="DataSources\dbmanualsourceData\t_us.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

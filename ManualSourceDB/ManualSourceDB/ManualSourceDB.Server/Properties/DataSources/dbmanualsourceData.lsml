@@ -27,13 +27,13 @@
         Value="c6882346-e592-4da5-80ba-d2eadcda0359" />
       <ConnectionProperty
         Name="DataSourceName"
-        Value="98fbe4d8-5583-4233-b219-70ff8c7fbbbd" />
+        Value="bf8bef57-3ef1-4ec4-beeb-6581498003a6" />
       <ConnectionProperty
         Name="ProviderInvariantName"
         Value="MySql.Data.MySqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="22944743-1ed7-45d0-8e13-157c855ec867" />
+        Value="9ff7dd0f-f39b-4cec-951a-4b9208b7741f" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="5.6" />

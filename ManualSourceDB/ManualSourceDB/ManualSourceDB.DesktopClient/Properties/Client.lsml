@@ -5,7 +5,7 @@
   Version="1.0.0.0"
   DefaultNavigationItem="!module/NavigationItems[Tasks]"
   Shell="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
-  Theme="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  Theme="Microsoft.LightSwitch.RichClient:Blue" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
   <Application.Attributes>
     <ModuleNamespace
       Namespace="LightSwitchApplication" />
@@ -38,12 +38,39 @@
         Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:DATA_CLERK" />
+    </Permission.Attributes>
+  </Permission>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
       Name="Tasks">
       <ApplicationNavigationGroup.Attributes>
         <DisplayName
-          Value="Tasks" />
+          Value="SMI" />
+      </ApplicationNavigationGroup.Attributes>
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="VGB" />
+      </ApplicationNavigationGroup.Attributes>
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group1">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="TB" />
+      </ApplicationNavigationGroup.Attributes>
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group2">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="ATS" />
       </ApplicationNavigationGroup.Attributes>
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup

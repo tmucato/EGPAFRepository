@@ -238,4 +238,10 @@
         Target="ServiceInterface:dbmanualsourceData" />
     </EntityContainer.Attributes>
   </EntityContainer>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:t_usItem" />
+    </EntityType.Attributes>
+  </EntityType>
 </Application>

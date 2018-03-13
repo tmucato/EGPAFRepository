@@ -36,4 +36,13 @@
         Replacement="$1 $2" />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
+  <Permission
+    Name="DATA_CLERK">
+    <Permission.Attributes>
+      <DisplayName
+        Value="Digitador" />
+      <Description
+        Value="Data entery" />
+    </Permission.Attributes>
+  </Permission>
 </ServiceApplication>
