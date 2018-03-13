@@ -44,13 +44,46 @@
         Target="ServiceInterface:DATA_CLERK" />
     </Permission.Attributes>
   </Permission>
+  <Application.Commands>
+    <ApplicationCommand
+      Name="ScreenCommandShowmothersListDetail"
+      Target="!module/Methods[ShowmothersListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowchildrenListDetail"
+      Target="!module/Methods[ShowchildrenListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowccrsListDetail"
+      Target="!module/Methods[ShowccrsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowcpnsListDetail"
+      Target="!module/Methods[ShowcpnsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowcppsListDetail"
+      Target="!module/Methods[ShowcppsListDetail]" />
+  </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
-      Name="Tasks">
+      Name="Tasks"
+      DefaultItem="!module/NavigationItems[Tasks]/Children[mothersListDetail]">
       <ApplicationNavigationGroup.Attributes>
         <DisplayName
           Value="SMI" />
       </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="mothersListDetail"
+        Command="!module/Commands[ScreenCommandShowmothersListDetail]" />
+      <ApplicationNavigationLink
+        Name="childrenListDetail"
+        Command="!module/Commands[ScreenCommandShowchildrenListDetail]" />
+      <ApplicationNavigationLink
+        Name="ccrsListDetail"
+        Command="!module/Commands[ScreenCommandShowccrsListDetail]" />
+      <ApplicationNavigationLink
+        Name="cpnsListDetail"
+        Command="!module/Commands[ScreenCommandShowcpnsListDetail]" />
+      <ApplicationNavigationLink
+        Name="cppsListDetail"
+        Command="!module/Commands[ScreenCommandShowcppsListDetail]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group">
