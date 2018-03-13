@@ -250,6 +250,7 @@
     <LightSwitchModel Include="Screens\laboratoriotbsListDetail.lsml" />
     <LightSwitchModel Include="Screens\paciente_resistente_tbsListDetail.lsml" />
     <LightSwitchModel Include="Screens\pacientetbsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\amostrastbsListDetail.lsml" />
     <LightSwitchModel Include="Screens\csr_pfsListDetail.lsml" />
   </ItemGroup>
   <ItemGroup>

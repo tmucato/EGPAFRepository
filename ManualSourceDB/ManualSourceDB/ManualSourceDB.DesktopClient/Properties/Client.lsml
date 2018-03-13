@@ -76,6 +76,9 @@
       Name="ScreenCommandShowpacientetbsListDetail"
       Target="!module/Methods[ShowpacientetbsListDetail]" />
     <ApplicationCommand
+      Name="ScreenCommandShowamostrastbsListDetail"
+      Target="!module/Methods[ShowamostrastbsListDetail]" />
+    <ApplicationCommand
       Name="ScreenCommandShowcsr_pfsListDetail"
       Target="!module/Methods[Showcsr_pfsListDetail]" />
   </Application.Commands>
@@ -134,6 +137,9 @@
       <ApplicationNavigationLink
         Name="link4"
         Command="!module/Commands[ScreenCommandShowlaboratoriotbsListDetail]" />
+      <ApplicationNavigationLink
+        Name="link5"
+        Command="!module/Commands[ScreenCommandShowamostrastbsListDetail]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group2">
