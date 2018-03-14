@@ -230,6 +230,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\amostrastbsListDetail.lsml.cs">
+      <DependentUpon>amostrastbsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ccrsListDetail.lsml.cs">
+      <DependentUpon>ccrsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\childrenListDetail.lsml.cs">
+      <DependentUpon>childrenListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\cpnsListDetail.lsml.cs">
+      <DependentUpon>cpnsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\cppsListDetail.lsml.cs">
+      <DependentUpon>cppsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\csr_pfsListDetail.lsml.cs">
+      <DependentUpon>csr_pfsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\laboratoriotbsListDetail.lsml.cs">
+      <DependentUpon>laboratoriotbsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\mothersListDetail.lsml.cs">
+      <DependentUpon>mothersListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\pacientetbsListDetail.lsml.cs">
+      <DependentUpon>pacientetbsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\paciente_resistente_tbsListDetail.lsml.cs">
+      <DependentUpon>paciente_resistente_tbsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\t_registodiarioppesListDetail.lsml.cs">
+      <DependentUpon>t_registodiarioppesListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\t_registodiariovgbsListDetail.lsml.cs">
+      <DependentUpon>t_registodiariovgbsListDetail.lsml</DependentUpon>
+    </Compile>
     <Compile Include="UserCode\Application.cs" />
   </ItemGroup>
   <ItemGroup>

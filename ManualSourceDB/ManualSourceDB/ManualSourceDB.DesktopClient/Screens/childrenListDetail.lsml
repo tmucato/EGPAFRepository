@@ -50,6 +50,10 @@
                   Name="name"
                   Kind="Value"
                   DataType=":String">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Nome" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -63,6 +67,10 @@
                   Name="nid_ccr"
                   Kind="Value"
                   DataType=":String">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="NID CCR" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -76,6 +84,10 @@
                   Name="mot_nid_cpn"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="NID da Mae na CPN" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -89,6 +101,10 @@
                   Name="residence"
                   Kind="Value"
                   DataType=":String">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Residência" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -103,6 +119,10 @@
                   Kind="Value"
                   DataType=":String"
                   View="Microsoft.LightSwitch.RichClient:TextBox">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Sexo" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -127,8 +147,12 @@
                 <ContentItem
                   Name="phone"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?"
+                  DataType=":Decimal?"
                   View="Microsoft.LightSwitch.RichClient:TextBox">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Telefone" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -142,6 +166,10 @@
                   Name="dob"
                   Kind="Value"
                   DataType=":DateTime?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Data de Nascimento" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -257,6 +285,10 @@
                 Name="nid_ccr1"
                 Kind="Value"
                 DataType=":String">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="NID CCR" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -270,6 +302,10 @@
                 Name="name1"
                 Kind="Value"
                 DataType=":String">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Nome" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -283,6 +319,10 @@
                 Name="residence1"
                 Kind="Value"
                 DataType=":String">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Residência" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -296,6 +336,10 @@
                 Name="gender1"
                 Kind="Value"
                 DataType=":String">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Sexo" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -308,8 +352,12 @@
               <ContentItem
                 Name="phone1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?"
+                DataType=":Decimal?"
                 View="Microsoft.LightSwitch.RichClient:TextBox">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Telefone" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -323,6 +371,10 @@
                 Name="mot_nid_cpn1"
                 Kind="Value"
                 DataType=":String?">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="NID da Mae na CPN" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -336,6 +388,10 @@
                 Name="dob1"
                 Kind="Value"
                 DataType=":DateTime?">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Data de Nascimento" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

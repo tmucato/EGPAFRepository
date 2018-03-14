@@ -209,7 +209,6 @@
     <LightSwitchModel Include="DataSources\dbmanualsourceData\children.lsml" />
     <LightSwitchModel Include="DataSources\dbmanualsourceData\cpns.lsml" />
     <LightSwitchModel Include="DataSources\dbmanualsourceData\cpn_finals.lsml" />
-    <LightSwitchModel Include="DataSources\dbmanualsourceData\cpn_olds.lsml" />
     <LightSwitchModel Include="DataSources\dbmanualsourceData\cpps.lsml" />
     <LightSwitchModel Include="DataSources\dbmanualsourceData\csr_pfs.lsml" />
     <LightSwitchModel Include="DataSources\dbmanualsourceData\laboratoriotbs.lsml" />

@@ -50,6 +50,10 @@
                   Name="name"
                   Kind="Value"
                   DataType=":String">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Nome" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -63,6 +67,10 @@
                   Name="nid_tarv"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="NID TARV" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -76,6 +84,10 @@
                   Name="nid_cpn"
                   Kind="Value"
                   DataType=":String">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="NID CPN" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -89,6 +101,10 @@
                   Name="residence"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Residência" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -101,7 +117,11 @@
                 <ContentItem
                   Name="phone"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+                  DataType=":Decimal?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Telefone" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -115,6 +135,10 @@
                   Name="dob"
                   Kind="Value"
                   DataType=":DateTime?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Data De Nascimento" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -230,6 +254,10 @@
                 Name="nid_cpn1"
                 Kind="Value"
                 DataType=":String">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Nid CPN" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -243,6 +271,10 @@
                 Name="nid_tarv1"
                 Kind="Value"
                 DataType=":String?">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="NID TRAV" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -256,6 +288,10 @@
                 Name="name1"
                 Kind="Value"
                 DataType=":String">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Nome" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -269,6 +305,10 @@
                 Name="residence1"
                 Kind="Value"
                 DataType=":String?">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Residência" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -281,7 +321,11 @@
               <ContentItem
                 Name="phone1"
                 Kind="Value"
-                DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+                DataType=":Decimal?">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Telefone" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -295,6 +339,10 @@
                 Name="dob1"
                 Kind="Value"
                 DataType=":DateTime?">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Data de Nascimento" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

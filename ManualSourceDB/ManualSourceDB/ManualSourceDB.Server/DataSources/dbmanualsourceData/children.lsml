@@ -67,11 +67,11 @@
       </EntityProperty>
       <EntityProperty
         Name="phone"
-        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
-          <MaxLength
-            Value="45" />
-          <AnsiConstraint />
+          <DecimalConstraint
+            Precision="15"
+            Scale="0" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -259,10 +259,10 @@
           Type="varchar"
           Property="child/Properties[gender]" />
         <SsdlProperty
-          MaxLength="45"
           Name="phone"
           Nullable="True"
-          Type="varchar"
+          Precision="15"
+          Type="decimal"
           Property="child/Properties[phone]" />
         <SsdlProperty
           MaxLength="45"
