@@ -9,6 +9,8 @@
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="dbmanualsourceData" />
+      <DisplayName
+        Value="Laboratório TB" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem

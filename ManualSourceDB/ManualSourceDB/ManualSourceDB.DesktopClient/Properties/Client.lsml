@@ -84,14 +84,13 @@
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
-      Name="Tasks"
-      DefaultItem="!module/NavigationItems[Tasks]/Children[mothersListDetail]">
+      Name="Tasks">
       <ApplicationNavigationGroup.Attributes>
         <DisplayName
           Value="SMI" />
       </ApplicationNavigationGroup.Attributes>
       <ApplicationNavigationLink
-        Name="mothersListDetail"
+        Name="link6"
         Command="!module/Commands[ScreenCommandShowmothersListDetail]" />
       <ApplicationNavigationLink
         Name="childrenListDetail"
@@ -129,17 +128,17 @@
           Value="TB" />
       </ApplicationNavigationGroup.Attributes>
       <ApplicationNavigationLink
-        Name="link2"
-        Command="!module/Commands[ScreenCommandShowpaciente_resistente_tbsListDetail]" />
-      <ApplicationNavigationLink
         Name="link3"
         Command="!module/Commands[ScreenCommandShowpacientetbsListDetail]" />
       <ApplicationNavigationLink
-        Name="link4"
-        Command="!module/Commands[ScreenCommandShowlaboratoriotbsListDetail]" />
+        Name="link2"
+        Command="!module/Commands[ScreenCommandShowpaciente_resistente_tbsListDetail]" />
       <ApplicationNavigationLink
         Name="link5"
         Command="!module/Commands[ScreenCommandShowamostrastbsListDetail]" />
+      <ApplicationNavigationLink
+        Name="link4"
+        Command="!module/Commands[ScreenCommandShowlaboratoriotbsListDetail]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group2">

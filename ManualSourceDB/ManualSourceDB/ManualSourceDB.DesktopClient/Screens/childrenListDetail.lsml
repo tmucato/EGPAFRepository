@@ -9,6 +9,8 @@
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="dbmanualsourceData" />
+      <DisplayName
+        Value="Criança" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -26,7 +28,7 @@
               Name="childList"
               Kind="Collection"
               DataType="CollectionView$child"
-              View="Microsoft.LightSwitch.RichClient:List">
+              View="Microsoft.LightSwitch.RichClient:DataGrid">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -45,6 +47,19 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
+                  Name="name"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="child/Properties[name]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   Name="nid_ccr"
                   Kind="Value"
                   DataType=":String">
@@ -58,14 +73,14 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="name"
+                  Name="mot_nid_cpn"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="child/Properties[name]" />
+                          Member="child/Properties[mot_nid_cpn]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -86,7 +101,8 @@
                 <ContentItem
                   Name="gender"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String"
+                  View="Microsoft.LightSwitch.RichClient:TextBox">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -95,29 +111,29 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.RichClient:RootCustomContentControl/Properties[CustomControl]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="System.Windows.Controls.ComboBoxItem, System.Windows"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
                   Name="phone"
                   Kind="Value"
-                  DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+                  DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?"
+                  View="Microsoft.LightSwitch.RichClient:TextBox">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
                           Member="child/Properties[phone]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="mot_nid_cpn"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="child/Properties[mot_nid_cpn]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -293,7 +309,7 @@
                 Name="phone1"
                 Kind="Value"
                 DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?"
-                View="Microsoft.LightSwitch.RichClient:ValueCustomContentControl">
+                View="Microsoft.LightSwitch.RichClient:TextBox">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

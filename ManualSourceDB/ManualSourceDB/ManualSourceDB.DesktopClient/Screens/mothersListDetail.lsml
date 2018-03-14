@@ -9,6 +9,8 @@
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="dbmanualsourceData" />
+      <DisplayName
+        Value="Mãe" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -26,7 +28,7 @@
               Name="motherList"
               Kind="Collection"
               DataType="CollectionView$mother"
-              View="Microsoft.LightSwitch.RichClient:List">
+              View="Microsoft.LightSwitch.RichClient:DataGrid">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -45,14 +47,14 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="nid_cpn"
+                  Name="name"
                   Kind="Value"
                   DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="mother/Properties[nid_cpn]" />
+                          Member="mother/Properties[name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -71,14 +73,14 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="name"
+                  Name="nid_cpn"
                   Kind="Value"
                   DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="mother/Properties[name]" />
+                          Member="mother/Properties[nid_cpn]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
