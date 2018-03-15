@@ -96,11 +96,11 @@
         Name="childrenListDetail"
         Command="!module/Commands[ScreenCommandShowchildrenListDetail]" />
       <ApplicationNavigationLink
-        Name="ccrsListDetail"
-        Command="!module/Commands[ScreenCommandShowccrsListDetail]" />
-      <ApplicationNavigationLink
         Name="cpnsListDetail"
         Command="!module/Commands[ScreenCommandShowcpnsListDetail]" />
+      <ApplicationNavigationLink
+        Name="ccrsListDetail"
+        Command="!module/Commands[ScreenCommandShowccrsListDetail]" />
       <ApplicationNavigationLink
         Name="cppsListDetail"
         Command="!module/Commands[ScreenCommandShowcppsListDetail]" />

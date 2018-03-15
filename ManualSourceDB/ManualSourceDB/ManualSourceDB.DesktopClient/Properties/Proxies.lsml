@@ -31,12 +31,6 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:child" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:cpn" />
     </EntityType.Attributes>
   </EntityType>
@@ -68,12 +62,6 @@
     <EntityType.Attributes>
       <Proxy
         Target="ServiceInterface:maternidade" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:mother" />
     </EntityType.Attributes>
   </EntityType>
   <EntityType>
@@ -244,4 +232,10 @@
         Target="ServiceInterface:tratamentotb" />
     </EntityType.Attributes>
   </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:mother_id" />
+    </Association.Attributes>
+  </Association>
 </Application>

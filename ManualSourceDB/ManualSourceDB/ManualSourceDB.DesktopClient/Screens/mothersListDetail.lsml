@@ -29,6 +29,10 @@
               Kind="Collection"
               DataType="CollectionView$mother"
               View="Microsoft.LightSwitch.RichClient:DataGrid">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Mães" />
+              </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -41,6 +45,10 @@
                 Name="RowTemplate"
                 Kind="Details"
                 DataType="mother">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Mãe" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression />
@@ -238,7 +246,7 @@
               DataType="mother">
               <ContentItem.Attributes>
                 <DisplayName
-                  Value="mother Details" />
+                  Value="Detalhes da Mãe" />
               </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
