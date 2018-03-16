@@ -11,5 +11,6 @@ namespace LightSwitchApplication
 {
     public partial class cpnsListDetail
     {
+     
     }
 }

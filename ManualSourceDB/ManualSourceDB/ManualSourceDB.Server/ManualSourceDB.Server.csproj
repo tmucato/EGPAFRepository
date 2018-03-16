@@ -243,6 +243,12 @@
     <LightSwitchModel Include="Properties\DataSources\dbmanualsourceData.lsml" />
     <LightSwitchModel Include="DataSources\dbmanualsourceData\t_us.lsml" />
     <LightSwitchModel Include="DataSources\dbmanualsourceData\tratamentotbs.lsml" />
+    <LightSwitchModel Include="DataSources\dbmanualsourceData\mother_cpns.lsml">
+      <DependentUpon>cpns.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\dbmanualsourceData\mothers_cpnfinal.lsml">
+      <DependentUpon>cpn_finals.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -238,4 +238,10 @@
         Target="ServiceInterface:mother_id" />
     </Association.Attributes>
   </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:idmother" />
+    </Association.Attributes>
+  </Association>
 </Application>

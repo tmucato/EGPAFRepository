@@ -104,6 +104,11 @@
             Value="Criança" />
         </NavigationProperty.Attributes>
       </NavigationProperty>
+      <NavigationProperty
+        Name="cpns"
+        Association="idmother"
+        FromEnd="mother"
+        ToEnd="cpn" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -207,6 +212,16 @@
         Name="child"
         EntitySet="children" />
     </AssociationSet>
+    <AssociationSet
+      Name="idmother"
+      Association="idmother">
+      <AssociationSetEnd
+        Name="mother"
+        EntitySet="mothers" />
+      <AssociationSetEnd
+        Name="cpn"
+        EntitySet="cpns" />
+    </AssociationSet>
   </EntityContainer>
   <Association
     Name="mother_id">
@@ -221,6 +236,21 @@
       Name="child"
       Multiplicity="Many"
       EntityType="child" />
+  </Association>
+  <Association
+    Name="idmother">
+    <AssociationEnd
+      Name="mother"
+      Multiplicity="One"
+      EntityType="mother">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="cpn"
+      Multiplicity="Many"
+      EntityType="cpn" />
   </Association>
   <DataService
     Name="dbmanualsourceDataDataService">
@@ -276,6 +306,27 @@
           Property="mother/Properties[dob]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="idmother">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="idmother" />
+        <SsdlAssociationSetEnd
+          End="dbmanualsourceData/Members[idmother]/Members[mother]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="dbmanualsourceData/Members[idmother]/Members[cpn]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="idmother" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
     <AssociationSetMapping
       AssociationSet="mother_id">
       <AssociationSetMapping.Attributes>

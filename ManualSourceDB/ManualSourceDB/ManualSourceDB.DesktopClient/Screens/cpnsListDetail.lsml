@@ -20,1547 +20,773 @@
         <ContentItem
           Name="ScreenLayout"
           Kind="Group"
-          View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+          View="Microsoft.LightSwitch.RichClient:PictureAndText">
           <ContentItem
-            Name="ListColumn"
-            Kind="Group">
+            Name="mothers"
+            Kind="Collection"
+            DataType="CollectionView$mother"
+            View="Microsoft.LightSwitch.RichClient:List">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Mãe" />
+            </ContentItem.Attributes>
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="cpnsListDetail/Properties[mothers]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
             <ContentItem
-              Name="cpnList"
-              Kind="Collection"
-              DataType="CollectionView$cpn"
-              View="Microsoft.LightSwitch.RichClient:List">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="cpnsListDetail/Properties[cpns]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-              <ContentItem
-                Name="RowTemplate"
-                Kind="Details"
-                DataType="cpn">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression />
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-                <ContentItem
-                  Name="nr_consulta"
-                  Kind="Value"
-                  DataType=":Int32?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[nr_consulta]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="idmother"
-                  Kind="Value"
-                  DataType=":Int64">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[idmother]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="nlivro"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[nlivro]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="nyear"
-                  Kind="Value"
-                  DataType=":Int32">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[nyear]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="visdate"
-                  Kind="Value"
-                  DataType=":DateTime">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[visdate]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="agegroup"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[agegroup]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="gestationalage"
-                  Kind="Value"
-                  DataType=":Int32?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[gestationalage]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="gageless12"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[gageless12]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="partnerpresence"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[partnerpresence]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="weight"
-                  Kind="Value"
-                  DataType=":Int32?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[weight]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="weightgainyno"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[weightgainyno]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="dag"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[dag]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="dam"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[dam]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="supnutr"
-                  Kind="Value"
-                  DataType=":Int32?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[supnutr]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="resultcured"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[resultcured]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="resultabandon"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[resultabandon]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="receiveddesparasitante"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[receiveddesparasitante]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="salferr_acfolico"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[salferr_acfolico]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="ta"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[ta]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="hgb"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[hgb]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="proteinuria"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[proteinuria]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="glicosuria"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[glicosuria]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="its_ulceragenital"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[its_ulceragenital]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="its_leucorreia"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[its_leucorreia]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="its_syndromictreatment"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[its_syndromictreatment]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="its_syphilistesting"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[its_syphilistesting]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="its_wsyphilistreat"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[its_wsyphilistreat]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="its_psyphilistreat"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[its_psyphilistreat]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="its_syphilistratmentmulhr"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[its_syphilistratmentmulhr]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="its_syphilistratmentparceir"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[its_syphilistratmentparceir]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="serostatusentcpn"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[serostatusentcpn]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="cpnhivtest"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[cpnhivtest]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="partnerhivtest"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[partnerhivtest]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="ctz"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[ctz]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="ctz_init_cont"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[ctz_init_cont]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="tarv"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[tarv]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="nvp"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[nvp]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="azt_nvp"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[azt_nvp]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="em_tarv_entrada"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[em_tarv_entrada]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="tarv_init_visit"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[tarv_init_visit]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="arv_cont"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[arv_cont]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="tip"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[tip]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="bednet"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[bednet]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="tdr_htz"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[tdr_htz]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="result_tdr_htz"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[result_tdr_htz]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="pos_malaria_treated"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[pos_malaria_treated]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="hpp"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[hpp]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="vat_1_dose"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[vat_1_dose]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="vat_2_5_dose"
-                  Kind="Value"
-                  DataType=":Boolean?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[vat_2_5_dose]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="tb_isoniazid"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[tb_isoniazid]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="tb_treatment"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[tb_treatment]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="obs"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[obs]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="providername"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpn/Properties[providername]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-              </ContentItem>
-              <ContentItem.CommandItems>
-                <ContentItem
-                  Name="cpns_AddAndEditNew"
-                  Kind="Command">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpnsListDetail/Properties[cpns]" />
-                        <CallExpression
-                          Target="AddAndEditNew" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="cpns_EditSelected"
-                  Kind="Command">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpnsListDetail/Properties[cpns]" />
-                        <CallExpression
-                          Target="EditSelected" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="cpns_DeleteSelected"
-                  Kind="Command">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="cpnsListDetail/Properties[cpns]" />
-                        <CallExpression
-                          Target="DeleteSelected" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-              </ContentItem.CommandItems>
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[AttachedLabelPosition]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <ConstantExpression
-                        Value="Collapsed"
-                        ResultType=":String" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <ConstantExpression
-                        Value="Stretch"
-                        ResultType=":String" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
-            </ContentItem>
-            <ContentItem.PropertySources>
-              <ControlPropertySource
-                Property="Microsoft.LightSwitch.RichClient:ColumnsLayout/Properties[WeightedColumnWidth]">
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <ConstantExpression
-                      Value="2"
-                      ResultType=":Double" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ControlPropertySource>
-            </ContentItem.PropertySources>
-          </ContentItem>
-          <ContentItem
-            Name="DetailsColumn"
-            Kind="Group">
-            <ContentItem
-              Name="cpnDetails"
+              Name="mothersTemplate"
               Kind="Details"
-              DataType="cpn">
-              <ContentItem.Attributes>
-                <DisplayName
-                  Value="cpn Details" />
-              </ContentItem.Attributes>
+              DataType="mother"
+              View="Microsoft.LightSwitch.RichClient:TableLayout">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="cpnsListDetail/Properties[cpns]" />
-                    <MemberExpression
-                      Member="SelectedItem" />
-                  </ChainExpression>
+                  <ChainExpression />
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
-                Name="nr_consulta1"
-                Kind="Value"
-                DataType=":Int32?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[nr_consulta]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="idmother1"
-                Kind="Value"
-                DataType=":Int64">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[idmother]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="nlivro1"
+                Name="nid_cpn"
                 Kind="Value"
                 DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="cpn/Properties[nlivro]" />
+                        Member="mother/Properties[nid_cpn]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
-                Name="nyear1"
-                Kind="Value"
-                DataType=":Int32">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[nyear]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="visdate1"
-                Kind="Value"
-                DataType=":DateTime">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[visdate]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="agegroup1"
+                Name="nid_tarv"
                 Kind="Value"
                 DataType=":String?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="cpn/Properties[agegroup]" />
+                        Member="mother/Properties[nid_tarv]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
-                Name="gestationalage1"
+                Name="name"
                 Kind="Value"
-                DataType=":Int32?">
+                DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="cpn/Properties[gestationalage]" />
+                        Member="mother/Properties[name]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
-                Name="gageless121"
-                Kind="Value"
-                DataType=":Boolean?">
+                Name="mother_cpns"
+                Kind="Collection"
+                DataType="CollectionView$cpn">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="cpn/Properties[gageless12]" />
+                        Member="cpnsListDetail/Properties[mother_cpns]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
+                <ContentItem
+                  Name="mother_cpnsTemplate"
+                  Kind="Details"
+                  DataType="cpn">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="nr_consulta"
+                    Kind="Value"
+                    DataType=":Int32?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[nr_consulta]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="nlivro"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[nlivro]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="nyear"
+                    Kind="Value"
+                    DataType=":Int32">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[nyear]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="visdate"
+                    Kind="Value"
+                    DataType=":DateTime">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[visdate]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="agegroup"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[agegroup]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="gestationalage"
+                    Kind="Value"
+                    DataType=":Int32?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[gestationalage]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="gageless12"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[gageless12]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="partnerpresence"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[partnerpresence]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="weight"
+                    Kind="Value"
+                    DataType=":Int32?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[weight]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="weightgainyno"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[weightgainyno]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="dag"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[dag]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="dam"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[dam]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="supnutr"
+                    Kind="Value"
+                    DataType=":Int32?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[supnutr]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="resultcured"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[resultcured]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="resultabandon"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[resultabandon]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="receiveddesparasitante"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[receiveddesparasitante]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="salferr_acfolico"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[salferr_acfolico]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="ta"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[ta]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="hgb"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[hgb]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="proteinuria"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[proteinuria]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="glicosuria"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[glicosuria]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="its_ulceragenital"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[its_ulceragenital]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="its_leucorreia"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[its_leucorreia]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="its_syndromictreatment"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[its_syndromictreatment]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="its_syphilistesting"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[its_syphilistesting]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="its_wsyphilistreat"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[its_wsyphilistreat]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="its_psyphilistreat"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[its_psyphilistreat]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="its_syphilistratmentmulhr"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[its_syphilistratmentmulhr]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="its_syphilistratmentparceir"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[its_syphilistratmentparceir]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="serostatusentcpn"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[serostatusentcpn]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="cpnhivtest"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[cpnhivtest]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="partnerhivtest"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[partnerhivtest]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="ctz"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[ctz]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="ctz_init_cont"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[ctz_init_cont]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="tarv"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[tarv]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="nvp"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[nvp]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="azt_nvp"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[azt_nvp]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="em_tarv_entrada"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[em_tarv_entrada]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="tarv_init_visit"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[tarv_init_visit]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="arv_cont"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[arv_cont]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="tip"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[tip]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="bednet"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[bednet]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="tdr_htz"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[tdr_htz]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="result_tdr_htz"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[result_tdr_htz]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="pos_malaria_treated"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[pos_malaria_treated]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="hpp"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[hpp]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="vat_1_dose"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[vat_1_dose]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="vat_2_5_dose"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[vat_2_5_dose]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="tb_isoniazid"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[tb_isoniazid]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="tb_treatment"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[tb_treatment]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="obs"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[obs]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="providername"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="cpn/Properties[providername]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
               </ContentItem>
-              <ContentItem
-                Name="partnerpresence1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[partnerpresence]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="weight1"
-                Kind="Value"
-                DataType=":Int32?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[weight]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="weightgainyno1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[weightgainyno]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="dag1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[dag]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="dam1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[dam]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="supnutr1"
-                Kind="Value"
-                DataType=":Int32?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[supnutr]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="resultcured1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[resultcured]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="resultabandon1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[resultabandon]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="receiveddesparasitante1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[receiveddesparasitante]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="salferr_acfolico1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[salferr_acfolico]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="ta1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[ta]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="hgb1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[hgb]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="proteinuria1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[proteinuria]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="glicosuria1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[glicosuria]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="its_ulceragenital1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[its_ulceragenital]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="its_leucorreia1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[its_leucorreia]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="its_syndromictreatment1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[its_syndromictreatment]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="its_syphilistesting1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[its_syphilistesting]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="its_wsyphilistreat1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[its_wsyphilistreat]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="its_psyphilistreat1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[its_psyphilistreat]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="its_syphilistratmentmulhr1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[its_syphilistratmentmulhr]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="its_syphilistratmentparceir1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[its_syphilistratmentparceir]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="serostatusentcpn1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[serostatusentcpn]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="cpnhivtest1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[cpnhivtest]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="partnerhivtest1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[partnerhivtest]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="ctz1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[ctz]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="ctz_init_cont1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[ctz_init_cont]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="tarv1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[tarv]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="nvp1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[nvp]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="azt_nvp1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[azt_nvp]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="em_tarv_entrada1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[em_tarv_entrada]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="tarv_init_visit1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[tarv_init_visit]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="arv_cont1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[arv_cont]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="tip1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[tip]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="bednet1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[bednet]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="tdr_htz1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[tdr_htz]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="result_tdr_htz1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[result_tdr_htz]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="pos_malaria_treated1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[pos_malaria_treated]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="hpp1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[hpp]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="vat_1_dose1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[vat_1_dose]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="vat_2_5_dose1"
-                Kind="Value"
-                DataType=":Boolean?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[vat_2_5_dose]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="tb_isoniazid1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[tb_isoniazid]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="tb_treatment1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[tb_treatment]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="obs1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[obs]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="providername1"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="cpn/Properties[providername]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <ConstantExpression
-                        Value="Top"
-                        ResultType=":String" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
             </ContentItem>
-            <ContentItem.PropertySources>
-              <ControlPropertySource
-                Property="Microsoft.LightSwitch.RichClient:ScrollableControl/Properties[IsVerticalScrollBarEnabled]">
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <ConstantExpression
-                      Value="True"
-                      ResultType=":Boolean" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ControlPropertySource>
-              <ControlPropertySource
-                Property="Microsoft.LightSwitch.RichClient:ColumnsLayout/Properties[WeightedColumnWidth]">
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <ConstantExpression
-                      Value="3"
-                      ResultType=":Double" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ControlPropertySource>
-            </ContentItem.PropertySources>
           </ContentItem>
         </ContentItem>
         <ContentItem.CommandItems>
@@ -1620,8 +846,41 @@
           <Generated />
         </ScreenMethod.Attributes>
       </ScreenMethod>
+      <ScreenMethod
+        Name="mother_cpnsAddAndEditNew">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="AddAndEditNew" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
     </Screen.Methods>
     <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="mothers"
+        PageSize="45"
+        PropertyType="CollectionView$mother">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="mothersQuery"
+            ReturnType="mother*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="dbmanualsourceData/Members[mothers]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="cpnsListDetail/Properties[mothers]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
       <ScreenCollectionProperty
         Name="cpns"
         PageSize="45"
@@ -1645,6 +904,71 @@
           <ChainExpression>
             <CallExpression
               Target="cpnsListDetail/Properties[cpns]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="mother_cpns"
+        PageSize="45"
+        PropertyType="CollectionView$cpn">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="mother_cpnsQuery"
+            ReturnType="cpn*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="dbmanualsourceData/Members[mother_cpns]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="cpnsListDetail/Properties[mother_cpns]/Query">
+              <ArgumentExpression
+                Parameter="mother_id">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="cpnsListDetail/Properties[mother_id]" />
+                  <MemberExpression
+                    Member="id" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="mother_id"
+        PropertyType="mother" />
+      <ScreenCollectionProperty
+        Name="ccrsegs"
+        PageSize="45"
+        PropertyType="CollectionView$ccrseg">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="ccrsegsQuery"
+            ReturnType="ccrseg*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="dbmanualsourceData/Members[ccrsegs]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="cpnsListDetail/Properties[ccrsegs]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>

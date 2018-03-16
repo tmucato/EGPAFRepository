@@ -33,14 +33,6 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="idmother"
-        PropertyType=":Int64">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="nlivro"
         PropertyType=":String">
         <EntityProperty.Attributes>
@@ -465,6 +457,11 @@
           <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="mother"
+        Association="idmother"
+        FromEnd="cpn"
+        ToEnd="mother" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -581,11 +578,6 @@
           Nullable="True"
           Type="int"
           Property="cpn/Properties[nr_consulta]" />
-        <SsdlProperty
-          Name="idmother"
-          Nullable="False"
-          Type="bigint"
-          Property="cpn/Properties[idmother]" />
         <SsdlProperty
           MaxLength="10"
           Name="nlivro"
@@ -872,6 +864,11 @@
           Nullable="True"
           Type="varchar"
           Property="cpn/Properties[providername]" />
+        <SsdlForeignKeyProperty
+          Name="idmother"
+          Nullable="False"
+          Type="int"
+          PropertyName="idmother" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>
