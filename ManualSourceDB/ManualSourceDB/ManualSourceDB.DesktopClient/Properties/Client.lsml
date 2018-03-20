@@ -55,9 +55,6 @@
       Name="ScreenCommandShowccrsListDetail"
       Target="!module/Methods[ShowccrsListDetail]" />
     <ApplicationCommand
-      Name="ScreenCommandShowcpnsListDetail"
-      Target="!module/Methods[ShowcpnsListDetail]" />
-    <ApplicationCommand
       Name="ScreenCommandShowcppsListDetail"
       Target="!module/Methods[ShowcppsListDetail]" />
     <ApplicationCommand
@@ -81,10 +78,14 @@
     <ApplicationCommand
       Name="ScreenCommandShowcsr_pfsListDetail"
       Target="!module/Methods[Showcsr_pfsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowcpnsListDetail"
+      Target="!module/Methods[ShowcpnsListDetail]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
-      Name="Tasks">
+      Name="Tasks"
+      DefaultItem="!module/NavigationItems[Tasks]/Children[cpnsListDetail]">
       <ApplicationNavigationGroup.Attributes>
         <DisplayName
           Value="SMI" />
@@ -96,9 +97,6 @@
         Name="childrenListDetail"
         Command="!module/Commands[ScreenCommandShowchildrenListDetail]" />
       <ApplicationNavigationLink
-        Name="cpnsListDetail"
-        Command="!module/Commands[ScreenCommandShowcpnsListDetail]" />
-      <ApplicationNavigationLink
         Name="ccrsListDetail"
         Command="!module/Commands[ScreenCommandShowccrsListDetail]" />
       <ApplicationNavigationLink
@@ -107,6 +105,9 @@
       <ApplicationNavigationLink
         Name="csr_pfsListDetail"
         Command="!module/Commands[ScreenCommandShowcsr_pfsListDetail]" />
+      <ApplicationNavigationLink
+        Name="cpnsListDetail"
+        Command="!module/Commands[ScreenCommandShowcpnsListDetail]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group">

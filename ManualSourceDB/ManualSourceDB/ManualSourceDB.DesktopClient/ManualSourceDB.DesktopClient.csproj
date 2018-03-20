@@ -242,9 +242,6 @@
     <Compile Include="Screens\childrenListDetail.lsml.cs">
       <DependentUpon>childrenListDetail.lsml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\cpnsListDetail.lsml.cs">
-      <DependentUpon>cpnsListDetail.lsml</DependentUpon>
-    </Compile>
     <Compile Include="Screens\cppsListDetail.lsml.cs">
       <DependentUpon>cppsListDetail.lsml</DependentUpon>
     </Compile>
@@ -284,7 +281,6 @@
     <LightSwitchModel Include="Screens\mothersListDetail.lsml" />
     <LightSwitchModel Include="Screens\childrenListDetail.lsml" />
     <LightSwitchModel Include="Screens\ccrsListDetail.lsml" />
-    <LightSwitchModel Include="Screens\cpnsListDetail.lsml" />
     <LightSwitchModel Include="Screens\cppsListDetail.lsml" />
     <LightSwitchModel Include="Screens\t_registodiariovgbsListDetail.lsml" />
     <LightSwitchModel Include="Screens\t_registodiarioppesListDetail.lsml" />
@@ -293,6 +289,7 @@
     <LightSwitchModel Include="Screens\pacientetbsListDetail.lsml" />
     <LightSwitchModel Include="Screens\amostrastbsListDetail.lsml" />
     <LightSwitchModel Include="Screens\csr_pfsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\cpnsListDetail.lsml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

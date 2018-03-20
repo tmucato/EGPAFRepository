@@ -30,6 +30,26 @@
         PropertyType=":Int32?">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <DisplayName
+            Value="Nr Consulta" />
+          <SupportedValue
+            DisplayName="1ª"
+            Value="1" />
+          <SupportedValue
+            DisplayName="2ª"
+            Value="2" />
+          <SupportedValue
+            DisplayName="3ª"
+            Value="3" />
+          <SupportedValue
+            DisplayName="4ª"
+            Value="4" />
+          <SupportedValue
+            DisplayName="5ª"
+            Value="5" />
+          <SupportedValue
+            DisplayName="6ª"
+            Value="6" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
